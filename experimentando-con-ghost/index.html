@@ -13,24 +13,24 @@
     <link rel="shortcut icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css?v=8e84a94a8d">
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css?v=b37d979a52">
 
 
     <link rel="canonical" href="http://localhost:2368/experimentando-con-ghost/">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="amphtml" href="http://localhost:2368/experimentando-con-ghost/amp/">
     
-    <meta property="og:site_name" content="PatoTech">
+    <meta property="og:site_name" content="Pato Díaz ">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Experimentando con Ghost">
-    <meta property="og:description" content="Este post es un experimento tratando de implementar las instrucciones de este artículo: Setup Ghost for GitHub Pages Conseguí hacer funcionar con algunas modificaciones, estoy trabajando en una publicación con las instrucciones actualizadas. Afortunadamente ya había utilizado anteriormente el lenguaje MarkDown al publicar en GitHub y en un servidor GitLab">
+    <meta property="og:description" content="Este post es el resultado de experimentar con las instrucciones de este artículo: Setup Ghost for GitHub Pages Las instrucciones son para un entorno Linux/MacOS, con ghost 0.7.8, mientras que yo necesitaba hacerlo correr en Windows 10 y con la última version disponible (0.11.7 a">
     <meta property="og:url" content="http://localhost:2368/experimentando-con-ghost/">
     <meta property="article:published_time" content="2017-03-22T21:59:00.000Z">
-    <meta property="article:modified_time" content="2017-03-22T21:59:00.000Z">
+    <meta property="article:modified_time" content="2017-03-24T00:46:27.000Z">
     <meta property="article:publisher" content="https://www.facebook.com/infraestructura.informatica">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Experimentando con Ghost">
-    <meta name="twitter:description" content="Este post es un experimento tratando de implementar las instrucciones de este artículo: Setup Ghost for GitHub Pages Conseguí hacer funcionar con algunas modificaciones, estoy trabajando en una publicación con las instrucciones actualizadas. Afortunadamente ya había utilizado anteriormente el lenguaje MarkDown al publicar en GitHub y en un servidor GitLab">
+    <meta name="twitter:description" content="Este post es el resultado de experimentar con las instrucciones de este artículo: Setup Ghost for GitHub Pages Las instrucciones son para un entorno Linux/MacOS, con ghost 0.7.8, mientras que yo necesitaba hacerlo correr en Windows 10 y con la última version disponible (0.11.7 a">
     <meta name="twitter:url" content="http://localhost:2368/experimentando-con-ghost/">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Patricio Diaz">
@@ -42,7 +42,7 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": "PatoTech",
+        "name": "Pato Díaz ",
         "logo": "http://localhost:2368/ghost/img/ghosticon.jpg"
     },
     "author": {
@@ -54,8 +54,8 @@
     "headline": "Experimentando con Ghost",
     "url": "http://localhost:2368/experimentando-con-ghost/",
     "datePublished": "2017-03-22T21:59:00.000Z",
-    "dateModified": "2017-03-22T21:59:00.000Z",
-    "description": "Este post es un experimento tratando de implementar las instrucciones de este artículo: Setup Ghost for GitHub Pages Conseguí hacer funcionar con algunas modificaciones, estoy trabajando en una publicación con las instrucciones actualizadas. Afortunadamente ya había utilizado anteriormente el lenguaje MarkDown al publicar en GitHub y en un servidor GitLab",
+    "dateModified": "2017-03-24T00:46:27.000Z",
+    "description": "Este post es el resultado de experimentar con las instrucciones de este artículo: Setup Ghost for GitHub Pages Las instrucciones son para un entorno Linux/MacOS, con ghost 0.7.8, mientras que yo necesitaba hacerlo correr en Windows 10 y con la última version disponible (0.11.7 a",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368"
@@ -64,7 +64,17 @@
     </script>
 
     <meta name="generator" content="Ghost 0.11">
-    <link rel="alternate" type="application/rss+xml" title="PatoTech" href="http://localhost:2368/rss/index.rss">
+    <link rel="alternate" type="application/rss+xml" title="Pato Díaz " href="http://localhost:2368/rss/index.rss">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30873973-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body class="post-template nav-closed">
 
@@ -104,9 +114,11 @@
         </header>
 
         <section class="post-content">
-            <p>Este post es un experimento tratando de implementar las instrucciones de este artículo: <a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/">Setup Ghost for GitHub Pages</a></p>
+            <p>Este post es el resultado de experimentar con las instrucciones de este artículo: <a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/">Setup Ghost for GitHub Pages</a></p>
 
-<p>Conseguí hacer funcionar con algunas modificaciones, estoy trabajando en una publicación con las instrucciones actualizadas.</p>
+<p>Las instrucciones son para un entorno Linux/MacOS, con ghost 0.7.8, mientras que yo necesitaba hacerlo correr en Windows 10 y con la última version disponible (0.11.7 a la hora de escribir esto) </p>
+
+<p>Conseguí ponerlo a funcionar siguiendo los pasos pero adaptándolos a los requisitos de las nuevas versiones y de Windows. Sstoy trabajando en una publicación con las instrucciones actualizadas y detalladas.</p>
 
 <p>Afortunadamente ya había utilizado anteriormente el lenguaje <a href="https://es.wikipedia.org/wiki/Markdown">MarkDown</a> al publicar en GitHub y en un servidor GitLab privado que había montado para un cliente. De paso les dejo un enlace las referencias rápidas de este lengiaje: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a>.</p>
 
@@ -180,7 +192,7 @@
 
 
         <footer class="site-footer clearfix">
-            <section class="copyright"><a href="http://localhost:2368">PatoTech</a> © 2017</section>
+            <section class="copyright"><a href="http://localhost:2368">Pato Díaz </a> © 2017</section>
             <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
         </footer>
 
@@ -188,8 +200,8 @@
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     
-    <script type="text/javascript" src="/assets/js/jquery.fitvids.js?v=8e84a94a8d"></script>
-    <script type="text/javascript" src="/assets/js/index.js?v=8e84a94a8d"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js?v=b37d979a52"></script>
+    <script type="text/javascript" src="/assets/js/index.js?v=b37d979a52"></script>
 
 </body>
 </html>
