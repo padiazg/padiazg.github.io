@@ -10,7 +10,7 @@
 
     <link rel="shortcut icon" href="../../favicon.ico">
 
-    <link rel="canonical" href="../">
+    <link rel="canonical" href="../index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
     
     <meta property="og:site_name" content="patotech">
@@ -60,7 +60,7 @@
     </script>
 
     <meta name="generator" content="Ghost 0.11">
-    <link rel="alternate" type="application/rss+xml" title="patotech" href="../../rss/">
+    <link rel="alternate" type="application/rss+xml" title="patotech" href="../../rss/index.html">
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,600,400">
     <style amp-custom>
