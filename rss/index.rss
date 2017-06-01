@@ -1,138 +1,137 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Pato Díaz ]]></title><description><![CDATA[Blog sobre tecnologías de la información, desarrollo e infraestructura.]]></description><link>https://padiazg.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 01 Jun 2017 04:33:11 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Ghost + Buster en Windows]]></title><description><![CDATA[<p>Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.</p>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Pato Díaz </title><description>Blog sobre tecnologías de la información, desarrollo e infraestructura.</description><link>https://padiazg.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 01 Jun 2017 04:33:11 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Ghost + Buster en Windows</title><description>&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
 
-<p>Tomé como punto de partida <a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/">este</a> de <a href="https://twitter.com/stefscherer">Stefan Scherer</a>. </p>
+&lt;p&gt;Tomé como punto de partida &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;este&lt;/a&gt; de &lt;a href="https://twitter.com/stefscherer"&gt;Stefan Scherer&lt;/a&gt;. &lt;/p&gt;
 
-<h2 id="requerimientos">Requerimientos</h2>
+&lt;h2 id="requerimientos"&gt;Requerimientos&lt;/h2&gt;
 
-<p>Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial: <br>
-* <a href="https://nodejs.org/en/">Node</a></p>]]></description><link>https://padiazg.github.io/ghost-buster-en-windows/</link><guid isPermaLink="false">3584ca7f-fb10-4a03-a61d-500db6884193</guid><dc:creator><![CDATA[Patricio Diaz]]></dc:creator><pubDate>Thu, 01 Jun 2017 04:32:06 GMT</pubDate><content:encoded><![CDATA[<p>Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.</p>
+&lt;p&gt;Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial: &lt;br&gt;
+* &lt;a href="https://nodejs.org/en/"&gt;Node&lt;/a&gt;&lt;/p&gt;</description><link>https://padiazg.github.io/ghost-buster-en-windows/</link><guid isPermaLink="false">3584ca7f-fb10-4a03-a61d-500db6884193</guid><dc:creator>Patricio Diaz</dc:creator><pubDate>Thu, 01 Jun 2017 04:32:06 GMT</pubDate><content:encoded>&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
 
-<p>Tomé como punto de partida <a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/">este</a> de <a href="https://twitter.com/stefscherer">Stefan Scherer</a>. </p>
+&lt;p&gt;Tomé como punto de partida &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;este&lt;/a&gt; de &lt;a href="https://twitter.com/stefscherer"&gt;Stefan Scherer&lt;/a&gt;. &lt;/p&gt;
 
-<h2 id="requerimientos">Requerimientos</h2>
+&lt;h2 id="requerimientos"&gt;Requerimientos&lt;/h2&gt;
 
-<p>Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial: <br>
-* <a href="https://nodejs.org/en/">Node v6</a> <br>
-* <a href="https://git-scm.com/download/win">Git</a> <br>
-* <a href="https://www.python.org/downloads/">Python 2.7</a> <br>
-* <a href="http://gnuwin32.sourceforge.net/packages/findutils.htm">GNU Find</a> <br>
-* <a href="http://gnuwin32.sourceforge.net/packages/sed.htm">GNU Sed</a> <br>
-* <a href="http://gnuwin32.sourceforge.net/packages/wget.htm">GNU Wget</a> </p>
+&lt;p&gt;Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial: &lt;br&gt;
+* &lt;a href="https://nodejs.org/en/"&gt;Node v6&lt;/a&gt; &lt;br&gt;
+* &lt;a href="https://git-scm.com/download/win"&gt;Git&lt;/a&gt; &lt;br&gt;
+* &lt;a href="https://www.python.org/downloads/"&gt;Python 2.7&lt;/a&gt; &lt;br&gt;
+* &lt;a href="http://gnuwin32.sourceforge.net/packages/findutils.htm"&gt;GNU Find&lt;/a&gt; &lt;br&gt;
+* &lt;a href="http://gnuwin32.sourceforge.net/packages/sed.htm"&gt;GNU Sed&lt;/a&gt; &lt;br&gt;
+* &lt;a href="http://gnuwin32.sourceforge.net/packages/wget.htm"&gt;GNU Wget&lt;/a&gt; &lt;/p&gt;
 
-<h2 id="descargamoseinstalamosghost">Descargamos e instalamos Ghost</h2>
+&lt;h2 id="descargamoseinstalamosghost"&gt;Descargamos e instalamos Ghost&lt;/h2&gt;
 
-<p>Descargamos la última version de <a href="https://ghost.org/es/developers/">aquí</a></p>
+&lt;p&gt;Descargamos la última version de &lt;a href="https://ghost.org/es/developers/"&gt;aquí&lt;/a&gt;&lt;/p&gt;
 
-<p>Creamos una carpeta llamada ghost y descomprimimos en ella el archivo que acabamos de bajar.</p>
+&lt;p&gt;Creamos una carpeta llamada ghost y descomprimimos en ella el archivo que acabamos de bajar.&lt;/p&gt;
 
-<h3 id="instalamoslasdependencias">Instalamos las dependencias</h3>
+&lt;h3 id="instalamoslasdependencias"&gt;Instalamos las dependencias&lt;/h3&gt;
 
-<pre><code>cd ghost  
+&lt;pre&gt;&lt;code&gt;cd ghost  
 npm install --production  
-</code></pre>
+&lt;/code&gt;&lt;/pre&gt;
 
-<h3 id="iniciamosghost">Iniciamos Ghost</h3>
+&lt;h3 id="iniciamosghost"&gt;Iniciamos Ghost&lt;/h3&gt;
 
-<pre><code>npm run start  
-</code></pre>
+&lt;pre&gt;&lt;code&gt;npm run start  
+&lt;/code&gt;&lt;/pre&gt;
 
-<h3 id="nosregistramosconghost">Nos registramos con Ghost</h3>
+&lt;h3 id="nosregistramosconghost"&gt;Nos registramos con Ghost&lt;/h3&gt;
 
-<p>Abrimos un navegador y apuntamos a  <a href="https://padiazg.github.io/ghost">https://padiazg.github.io/ghost</a></p>
+&lt;p&gt;Abrimos un navegador y apuntamos a  &lt;a href="https://padiazg.github.io/ghost"&gt;https://padiazg.github.io/ghost&lt;/a&gt;&lt;/p&gt;
 
-<p>Creamos una cuenta, pasamos por todos los pasos y llegamos al panel de control, ahí podemos ver el post original y aprender un poco del lenguaje Markdown. <br>
-<img src="https://padiazg.github.io/content/images/2017/06/ghost-registro.png" alt="">
-<img src="https://padiazg.github.io/content/images/2017/06/ghost-panel-control.png" alt=""></p>
+&lt;p&gt;Creamos una cuenta, pasamos por todos los pasos y llegamos al panel de control, ahí podemos ver el post original y aprender un poco del lenguaje Markdown. &lt;br&gt;
+&lt;img src="https://padiazg.github.io/content/images/2017/06/ghost-registro.png" alt=""&gt;
+&lt;img src="https://padiazg.github.io/content/images/2017/06/ghost-panel-control.png" alt=""&gt;&lt;/p&gt;
 
-<h2 id="tenemosblog">Tenemos blog</h2>
+&lt;h2 id="tenemosblog"&gt;Tenemos blog&lt;/h2&gt;
 
-<p>Hasta acá tenemos un blog totalmente funcional, que puede funcionar directamente si tuvieramos la infraestructura apropiada.</p>
+&lt;p&gt;Hasta acá tenemos un blog totalmente funcional, que puede funcionar directamente si tuvieramos la infraestructura apropiada.&lt;/p&gt;
 
-<p>Hay suficiente documentación y tutoriales de como administrar y publicar en Ghost, por lo que no voy a entrar en esos detalles.</p>
+&lt;p&gt;Hay suficiente documentación y tutoriales de como administrar y publicar en Ghost, por lo que no voy a entrar en esos detalles.&lt;/p&gt;
 
-<h2 id="githubpages">GitHub Pages</h2>
+&lt;h2 id="githubpages"&gt;GitHub Pages&lt;/h2&gt;
 
-<p>Ahora que ya tenemos nuestro blog funcionando, es hora de ocuparnos en publicarlo como páginas estáticas en GitHub.</p>
+&lt;p&gt;Ahora que ya tenemos nuestro blog funcionando, es hora de ocuparnos en publicarlo como páginas estáticas en GitHub.&lt;/p&gt;
 
-<p>Vea <a href="https://help.github.com/categories/github-pages-basics/">aquí</a> los detalles básicos. Está demás decir que necesitaremos una cuenta de GitHub.</p>
+&lt;p&gt;Vea &lt;a href="https://help.github.com/categories/github-pages-basics/"&gt;aquí&lt;/a&gt; los detalles básicos. Está demás decir que necesitaremos una cuenta de GitHub.&lt;/p&gt;
 
-<p>Usaremos la nomenclatura <code>nombreusuario/nombreusuario.github.io</code>. El nombre del repositorio debe estar siempre en minúsculas sin importar que el nombre del usuario tenga mayúsculas.</p>
+&lt;p&gt;Usaremos la nomenclatura &lt;code&gt;nombreusuario/nombreusuario.github.io&lt;/code&gt;. El nombre del repositorio debe estar siempre en minúsculas sin importar que el nombre del usuario tenga mayúsculas.&lt;/p&gt;
 
-<h2 id="buster">Buster</h2>
+&lt;h2 id="buster"&gt;Buster&lt;/h2&gt;
 
-<p>El repositorio <a href="https://github.com/axitkhurana/buster">original</a> está abandonado y no funciona correctamente con la versión actual de Ghost, pero encontré este <a href="https://github.com/skosch/buster">otro</a> en el que están haciendo el esfuerzo de continuar el desarrollo de este proyecto.</p>
+&lt;p&gt;El repositorio &lt;a href="https://github.com/axitkhurana/buster"&gt;original&lt;/a&gt; está abandonado y no funciona correctamente con la versión actual de Ghost, pero encontré este &lt;a href="https://github.com/skosch/buster"&gt;otro&lt;/a&gt; en el que están haciendo el esfuerzo de continuar el desarrollo de este proyecto.&lt;/p&gt;
 
-<p>El método sugerido en el repositorio <code>pip install git+https://github.com/skosch/buster</code> no funciona, al menos en mi máquina, por lo que iremos por otro camino.</p>
+&lt;p&gt;El método sugerido en el repositorio &lt;code&gt;pip install git+https://github.com/skosch/buster&lt;/code&gt; no funciona, al menos en mi máquina, por lo que iremos por otro camino.&lt;/p&gt;
 
-<h2 id="adecuamoselpath">Adecuamos el path</h2>
+&lt;h2 id="adecuamoselpath"&gt;Adecuamos el path&lt;/h2&gt;
 
-<p>Buster solo funciona con Python v2.7, por lo que ajustamos nuestro path para que utilice solo esa versión. Colateralmente debemos volver a especificar las carpetas del Git.</p>
+&lt;p&gt;Buster solo funciona con Python v2.7, por lo que ajustamos nuestro path para que utilice solo esa versión. Colateralmente debemos volver a especificar las carpetas del Git.&lt;/p&gt;
 
-<p>En una ventana de comandos (cmd):  </p>
+&lt;p&gt;En una ventana de comandos (cmd):  &lt;/p&gt;
 
-<pre><code>set path=C:\Python27\Scripts;C:\Python27;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;C:\Users\pato\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;  
-</code></pre>
+&lt;pre&gt;&lt;code&gt;set path=C:\Python27\Scripts;C:\Python27;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;C:\Users\pato\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;  
+&lt;/code&gt;&lt;/pre&gt;
 
-<p>Debemos cuidar de ajustar las carpetas del path de acuerdo a nuestro caso particular.</p>
+&lt;p&gt;Debemos cuidar de ajustar las carpetas del path de acuerdo a nuestro caso particular.&lt;/p&gt;
 
-<p>Dejamos abierta la ventana de comandos para ejecutae en ella los pasos siguientes</p>
+&lt;p&gt;Dejamos abierta la ventana de comandos para ejecutae en ella los pasos siguientes&lt;/p&gt;
 
-<h2 id="instalandobusteramano">Instalando Buster a mano</h2>
+&lt;h2 id="instalandobusteramano"&gt;Instalando Buster a mano&lt;/h2&gt;
 
-<p>Descargamos el repositorio, preferentemente en un directorio diferente al que usamos en los pasos anteriores.</p>
+&lt;p&gt;Descargamos el repositorio, preferentemente en un directorio diferente al que usamos en los pasos anteriores.&lt;/p&gt;
 
-<p>En una linea de comandos  </p>
+&lt;p&gt;En una linea de comandos  &lt;/p&gt;
 
-<pre><code>cd \proyectos\python  
+&lt;pre&gt;&lt;code&gt;cd \proyectos\python  
 git clone https://github.com/skosch/buster.git  
-</code></pre>
+&lt;/code&gt;&lt;/pre&gt;
 
-<h3 id="parcheamos">Parcheamos</h3>
+&lt;h3 id="parcheamos"&gt;Parcheamos&lt;/h3&gt;
 
-<p>Por alguna razón el archivo <mark>buster\_version.py</mark> tiene rastros de versionado que obviamente hacen que se de un error al tratar de instalar el paquete por cualquier método normal.</p>
+&lt;p&gt;Por alguna razón el archivo &lt;mark&gt;buster\_version.py&lt;/mark&gt; tiene rastros de versionado que obviamente hacen que se de un error al tratar de instalar el paquete por cualquier método normal.&lt;/p&gt;
 
-<p>Modificamos <mark>buster\_version.py</mark> para que quede de esta manera:  </p>
+&lt;p&gt;Modificamos &lt;mark&gt;buster\_version.py&lt;/mark&gt; para que quede de esta manera:  &lt;/p&gt;
 
-<pre><code>__version_info__ = (0, 1, 3)  
+&lt;pre&gt;&lt;code&gt;__version_info__ = (0, 1, 3)  
 __version__ = '.'.join(map(str, __version_info__))  
-</code></pre>
+&lt;/code&gt;&lt;/pre&gt;
 
-<h3 id="instalamosbuster">Instalamos Buster</h3>
+&lt;h3 id="instalamosbuster"&gt;Instalamos Buster&lt;/h3&gt;
 
-<pre><code>python setup.py install  
-</code></pre>
+&lt;pre&gt;&lt;code&gt;python setup.py install  
+&lt;/code&gt;&lt;/pre&gt;
 
-<h2 id="preparamoscarpetaesttica">Preparamos carpeta estática</h2>
+&lt;h2 id="preparamoscarpetaesttica"&gt;Preparamos carpeta estática&lt;/h2&gt;
 
-<p>Creamos una carpeta <code>static</code> que usará Buster en la carpeta donde tenemos instalado Ghost, luego sencillamente clonamos nuestro repositorio usando un nombre de carpeta  </p>
+&lt;p&gt;Creamos una carpeta &lt;code&gt;static&lt;/code&gt; que usará Buster en la carpeta donde tenemos instalado Ghost, luego sencillamente clonamos nuestro repositorio usando un nombre de carpeta  &lt;/p&gt;
 
-<pre><code>cd &lt;carpeta de Ghost&gt;  
+&lt;pre&gt;&lt;code&gt;cd &amp;lt;carpeta de Ghost&amp;gt;  
 mkdir static  
 git clone https://usuario:password@github.com/usuario/usuario.github.io.git static  
-</code></pre>
+&lt;/code&gt;&lt;/pre&gt;
 
-<h2 id="creamoscontenido">Creamos contenido</h2>
+&lt;h2 id="creamoscontenido"&gt;Creamos contenido&lt;/h2&gt;
 
-<p>A partir de aquí la configuración está completa, ya solo es cuestión de ir creando nuestros artículos y publicarlos.</p>
+&lt;p&gt;A partir de aquí la configuración está completa, ya solo es cuestión de ir creando nuestros artículos y publicarlos.&lt;/p&gt;
 
-<h2 id="exportamosghostconbuster">Exportamos Ghost con Buster</h2>
+&lt;h2 id="exportamosghostconbuster"&gt;Exportamos Ghost con Buster&lt;/h2&gt;
 
-<p>Todas nuestras publicaciones pueden ser exportadas a la carpeta <code>static</code> por Buster  </p>
+&lt;p&gt;Todas nuestras publicaciones pueden ser exportadas a la carpeta &lt;code&gt;static&lt;/code&gt; por Buster  &lt;/p&gt;
 
-<pre><code>buster generate --domain=http://localhost:2368  
+&lt;pre&gt;&lt;code&gt;buster generate --domain=http://localhost:2368  
 buster preview  
-</code></pre>
+&lt;/code&gt;&lt;/pre&gt;
 
-<p>Podemos apuntar nuestro navegador a <a href="http://localhost:9000">http://localhost:9000</a> y previsualizar como se ve nuestro blog como páginas estáticas.</p>
+&lt;p&gt;Podemos apuntar nuestro navegador a &lt;a href="http://localhost:9000"&gt;http://localhost:9000&lt;/a&gt; y previsualizar como se ve nuestro blog como páginas estáticas.&lt;/p&gt;
 
-<h2 id="ajustamoslosenlaces">Ajustamos los enlaces</h2>
+&lt;h2 id="ajustamoslosenlaces"&gt;Ajustamos los enlaces&lt;/h2&gt;
 
-<p>Antes de poder publicar nuestras páginas a GitHub Pages, debemos hacer ajustas los enlaces. Es uno de los bugs de Buster, supongo.</p>
+&lt;p&gt;Antes de poder publicar nuestras páginas a GitHub Pages, debemos hacer ajustas los enlaces. Es uno de los bugs de Buster, supongo.&lt;/p&gt;
 
-<p>Este script hará el truco:  </p>
+&lt;p&gt;Este script hará el truco:  &lt;/p&gt;
 
-<pre><code>set PATH=C:\Program Files (x86)\nodejs\;C:\Python27\Scripts;C:\Python27;C:\Users\pato\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;
+&lt;pre&gt;&lt;code&gt;set PATH=C:\Program Files (x86)\nodejs\;C:\Python27\Scripts;C:\Python27;C:\Users\pato\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;
 
 buster generate --domain=http://127.0.0.1:2368  
 
@@ -163,80 +162,241 @@ git push origin master
 cd ..
 
 :end
-</code></pre>
+&lt;/code&gt;&lt;/pre&gt;
 
-<h3 id="archivosbasuradesed">Archivos basura de Sed</h3>
+&lt;h3 id="archivosbasuradesed"&gt;Archivos basura de Sed&lt;/h3&gt;
 
-<p>La opción -i de Sed genera una copia de seguridad de cada archivo que modifica, y hasta ahora no encuentro una forma de frenar esto.</p>]]></content:encoded></item><item><title><![CDATA[Implementación algoritmo Soundex Español para Genexus]]></title><description><![CDATA[<p>El algoritmo <a href="https://es.wikipedia.org/wiki/Soundex">soundex</a> es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto que no es preciso cuando lo aplicamos a nombres o palabras en español, podría decirse incluso que no es usable en nuestro idioma.</p>
-=======
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[My gran blog]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 01 Jun 2017 03:08:12 GMT</lastBuildDate><atom:link href="/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Welcome to Ghost]]></title><description><![CDATA[<p>You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at <code>&lt;your blog URL&gt;/ghost/</code>. When you arrive, you can select this post from a list</p>]]></description><link>/welcome-to-ghost/</link><guid isPermaLink="false">7bf518af-5a52-4a67-a376-9ee59c623216</guid><category><![CDATA[Getting Started]]></category><dc:creator><![CDATA[Juan Perez]]></dc:creator><pubDate>Thu, 01 Jun 2017 00:08:08 GMT</pubDate><content:encoded><![CDATA[<p>You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at <code>&lt;your blog URL&gt;/ghost/</code>. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!</p>
->>>>>>> b0f458b138b8d462e771ec5638ab17be53538879
+&lt;p&gt;La opción -i de Sed genera una copia de seguridad de cada archivo que modifica, y hasta ahora no encuentro una forma de frenar esto.&lt;/p&gt;</content:encoded></item><item><title>Implementación algoritmo Soundex Español para Genexus</title><description>&lt;p&gt;El algoritmo &lt;a href="https://es.wikipedia.org/wiki/Soundex"&gt;soundex&lt;/a&gt; es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto que no es preciso cuando lo aplicamos a nombres o palabras en español, podría decirse incluso que no es usable en nuestro idioma.&lt;/p&gt;
 
-<h2 id="gettingstarted">Getting Started</h2>
+&lt;p&gt;Investigando un poco hace algunos años había encontrado&lt;/p&gt;</description><link>https://padiazg.github.io/implementacion-algoritmo-soundex-espanol-para-genexus/</link><guid isPermaLink="false">3689fd06-356e-4ef4-807b-be01965254e9</guid><category>soundex</category><category>genexus</category><dc:creator>Patricio Diaz</dc:creator><pubDate>Wed, 31 May 2017 03:21:30 GMT</pubDate><content:encoded>&lt;p&gt;El algoritmo &lt;a href="https://es.wikipedia.org/wiki/Soundex"&gt;soundex&lt;/a&gt; es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto que no es preciso cuando lo aplicamos a nombres o palabras en español, podría decirse incluso que no es usable en nuestro idioma.&lt;/p&gt;
 
-<p>Ghost uses something called Markdown for writing. Essentially, it's a shorthand way to manage your post formatting as you write!</p>
+&lt;p&gt;Investigando un poco hace algunos años había encontrado esta entrada &lt;a href="https://wiki.postgresql.org/wiki/SoundexESP"&gt;https://wiki.postgresql.org/wiki/SoundexESP&lt;/a&gt;, en la que me basé para crear sus equivalentes en distintos lenguages (VBA, T-SQL para Oracle). Por supuesto cuando se dió la necesidad le tocó a Genexus.&lt;/p&gt;
 
-<p>Writing in Markdown is really easy. In the left hand panel of Ghost, you simply write as you normally would. Where appropriate, you can use <em>shortcuts</em> to <strong>style</strong> your content. For example, a list:</p>
+&lt;h3 id="implementacin"&gt;Implementación&lt;/h3&gt;
 
-<ul>
-<li>Item number one</li>
-<li>Item number two
-<ul><li>A nested item</li></ul></li>
-<li>A final item</li>
-</ul>
+&lt;p&gt;La implementación la hice en un procedimiento llamado soundex, pero ustedes pueden llamarlo como mas les convenga&lt;/p&gt;
 
-<p>or with numbers!</p>
+&lt;p&gt;&lt;strong&gt;soundex:&lt;/strong&gt;&lt;/p&gt;
 
-<ol>
-<li>Remember to buy some milk  </li>
-<li>Drink the milk  </li>
-<li>Tweet that I remembered to buy the milk, and drank it</li>
-</ol>
+&lt;pre&gt;&lt;code&gt;/*
+ Implementación del algoritmo Soundex para el idioma español
 
-<h3 id="links">Links</h3>
+ variables               tipo
+ ----------------------- -----------
+ caracter                C(1)
+ caracteres_buscar       C(20)
+ caracteres_reemplazar   C(20)
+ i                       N(2)
+ primera_letra           C(1)
+ reemplazo               C(1)
+ resto                   C(20)
+ soundex                 C(20)
+ texto                   C(32)
+ tmp                     C(32)
 
-<p>Want to link to a source? No problem. If you paste in a URL, like <a href="http://ghost.org">http://ghost.org</a> - it'll automatically be linked up. But if you want to customise your anchor text, you can do that too! Here's a link to <a href="http://ghost.org">the Ghost website</a>. Neat.</p>
+ parámetros
+ -----------------------
+ in:&amp;amp;texto
+ out:&amp;amp;soundex
 
-<h3 id="whataboutimages">What about Images?</h3>
+*/
 
-<p>Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:</p>
+&amp;amp;soundex.SetEmpty()
+&amp;amp;tmp = &amp;amp;texto.Trim().ToUpper()
 
-<p><img src="https://ghost.org/images/ghost.png" alt="The Ghost Logo"></p>
+// Si no hay texto a procesar retornamos un texto vacío
+if &amp;amp;tmp.IsEmpty()
+    return
+endif
 
-<p>Not sure which image you want to use yet? That's ok too. Leave yourself a descriptive placeholder and keep writing. Come back later and drag and drop the image in to upload:</p>
+// realizamos un preprocesado del texto
+do 'limpieza'
 
-<h3 id="quoting">Quoting</h3>
+// aplicamos el algoritmo
+do 'soundex'
 
-<p>Sometimes a link isn't enough, you want to quote someone on what they've said. Perhaps you've started using a new blogging platform and feel the sudden urge to share their slogan? A quote might be just the way to do it!</p>
+Sub 'limpieza'
+    /*     1) limpieza     */
+    // eliminamos la H inicial (incluso si hay mas de una)
+    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('^(H+)(.*)', '$2')
 
-<blockquote>
-  <p>Ghost - Just a blogging platform</p>
-</blockquote>
+    // retornar vacío si no nos queda texto para analizar
+    if &amp;amp;tmp.IsEmpty()
+        return
+    endif
 
-<h3 id="workingwithcode">Working with Code</h3>
+    // eliminamos los acentos y la Ñ
+    &amp;amp;caracteres_buscar     = 'ÑÁÉÍÓÚÀÈÌÒÙÜ'
+    &amp;amp;caracteres_reemplazar = 'NAEIOUAEIOUU'
+    for &amp;amp;i=1 to &amp;amp;caracteres_buscar.Length()
+        &amp;amp;caracter = &amp;amp;caracteres_buscar.Substring(&amp;amp;i,1)
+        if &amp;amp;caracteres_buscar.IndexOf(&amp;amp;caracter)&amp;gt;0
+            &amp;amp;tmp = &amp;amp;tmp.Replace(&amp;amp;caracter, &amp;amp;caracteres_reemplazar.Substring(&amp;amp;i, 1))
+        endif // &amp;amp;buscar.IndexOf(&amp;amp;caracter)&amp;gt;0
+    endfor // &amp;amp;i=1 to &amp;amp;buscar.Length() ...
 
-<p>Got a streak of geek? We've got you covered there, too. You can write inline <code>&lt;code&gt;</code> blocks really easily with back ticks. Want to show off something more comprehensive? 4 spaces of indentation gets you there.</p>
+    // eliminamos caracteres no alfabéticos (números, signos, símbolos, etc)
+    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('[^A-Z]', '')
 
-<pre><code>.awesome-thing {
-    display: block;
-    width: 100%;
-}
-</code></pre>
+    /*     2) ajustar primera letra    */  
+    // fenómenos o casos especiales: GE y GI se convierten en JE y JI, CA en KA
+    &amp;amp;primera_letra = &amp;amp;tmp.Substring(1,1)
+    &amp;amp;resto = &amp;amp;tmp.Substring(2,&amp;amp;tmp.Length()-1) 
 
-<h3 id="readyforabreak">Ready for a Break?</h3>
+    do case
+        case &amp;amp;primera_letra = 'V'
+            &amp;amp;reemplazo = 'B'        // VACA -&amp;gt; BACA, VALOR -&amp;gt; BALOR
 
-<p>Throw 3 or more dashes down on any new line and you've got yourself a fancy new divider. Aw yeah.</p>
+        case &amp;amp;primera_letra = 'Z' or &amp;amp;primera_letra = 'X'
+            &amp;amp;reemplazo = 'S'        // ZAPATO -&amp;gt; SAPATO, XILÓFONO -&amp;gt; SILÓFONO
 
-<hr>
+        case &amp;amp;primera_letra = 'G'
+            and (&amp;amp;tmp.Substring(2,1)='E' or &amp;amp;tmp.Substring(2,1)='I')
+            &amp;amp;reemplazo = 'J'        // GIMNASIO -&amp;gt; JIMNASIO, GERANIO -&amp;gt; JERANIO
 
-<h3 id="advancedusage">Advanced Usage</h3>
+        case &amp;amp;primera_letra = 'C'
+            and &amp;amp;tmp.Substring(2,1)&amp;lt;&amp;gt;'H'
+            and &amp;amp;tmp.Substring(2,1)&amp;lt;&amp;gt;'E'
+            and &amp;amp;tmp.Substring(2,1)&amp;lt;&amp;gt;'I'
+            &amp;amp;reemplazo = 'K'        // CASA -&amp;gt; KASA, COLOR -&amp;gt; KOLOR, CULPA -&amp;gt; KULPA
 
-<<<<<<< HEAD
-<p>Conseguí ponerlo a funcionar siguiendo los pasos pero adaptándolos a los requisitos de las nuevas versiones y de Windows. Estoy trabajando en una publicación con las instrucciones actualizadas y detalladas.</p>
-=======
-<p>There's one fantastic secret about Markdown. If you want, you can write plain old HTML and it'll still work! Very flexible.</p>
->>>>>>> b0f458b138b8d462e771ec5638ab17be53538879
+        otherwise
+            &amp;amp;reemplazo = &amp;amp;primera_letra
 
-<p><input type="text" placeholder="I'm an input field!"></p>
+    endcase
 
-<p>That should be enough to get you started. Have fun - and let us know what you think :)</p>]]></content:encoded></item></channel></rss>
+    &amp;amp;tmp = &amp;amp;reemplazo + &amp;amp;resto
+
+    /*     3) corregir letras compuestas, volverlas una sola    */
+    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('CH', 'V')
+    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('QU', 'K')
+    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('LL', 'J')
+    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('CE', 'S')
+    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('CI', 'S')
+    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('YA', 'J')
+    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('YE', 'J')
+    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('YI', 'J')
+    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('YO', 'J')
+    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('YU', 'J')
+    //&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('GE', 'J')
+    //&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('GI', 'J')
+    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('NY', 'N')
+    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('NH', 'N') // anho, banho, tamanho, inhalador
+EndSub // 'limpieza' ...
+
+Sub 'soundex'
+
+    /* 4) obtener primera letra        */
+    &amp;amp;primera_letra = &amp;amp;tmp.Substring(1, 1)
+
+    /* 5) obtener el resto del texto    *
+    &amp;amp;resto = &amp;amp;tmp.Substring(2, &amp;amp;tmp.Length()-1)
+
+    /* 6) en el resto, eliminar vocales y consonantes fonéticas        */
+    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[AEIOUHWY]', '')
+
+    /* 7) convertir letras fonéticamente equivalentes a números. esto hace que B sea equivalente a V, C con S y Z, etc.    */
+    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[BPFV]',   '1')
+    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[CGKSXZ]', '2')
+    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[DT]',     '3')
+    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[L]',      '4')
+    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[MN]',     '5')
+    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[R]',      '6')
+    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[QJ]',     '7')
+
+    // eliminamos números iguales adyacentes
+    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('(\d)\1+', '$1') 
+    &amp;amp;soundex = &amp;amp;primera_letra + &amp;amp;resto.Trim()
+    if &amp;amp;soundex.Length() &amp;lt; 4
+        &amp;amp;soundex = padr(&amp;amp;soundex, 4, '0')
+    else
+        &amp;amp;soundex = &amp;amp;soundex.Substring(1,4)
+    endif
+
+EndSub // 'soundex' ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="prueba"&gt;Prueba&lt;/h3&gt;
+
+&lt;p&gt;A continuación podemos hacer unas pruebas para ver el algoritmo en funcionamiento, creamos otro procedimiento llamado prueba_soundex:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;prueba_soundex:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/*
+ Colocar los siguientes valores en las propiedades del procedimiento
+ -------------------------------------------------------------------
+ Main program: true
+ Call protocol: Command Line
+*/
+
+msg('hola =&amp;gt; ' + soundex.Udp('hola'), status)
+msg('ola =&amp;gt; ' + soundex.Udp('ola'), status)
+
+msg('zapato =&amp;gt; ' + soundex.Udp('zapato'), status)
+msg('sapato =&amp;gt; ' + soundex.Udp('sapato'), status)
+
+msg('Jimenez =&amp;gt; ' + soundex.Udp('Jimenez'), status)
+msg('Jiménez =&amp;gt; ' + soundex.Udp('Jiménez'), status)
+msg('Jimenes =&amp;gt; ' + soundex.Udp('Jimenes'), status)
+msg('Jiménes =&amp;gt; ' + soundex.Udp('Jiménes'), status)
+msg('Gimenez =&amp;gt; ' + soundex.Udp('Gimenez'), status)
+msg('Giménez =&amp;gt; ' + soundex.Udp('Giménez'), status)
+msg('Gimenes =&amp;gt; ' + soundex.Udp('Gimenes'), status)
+msg('Giménes =&amp;gt; ' + soundex.Udp('Giménes'), status)
+
+msg('Díaz =&amp;gt; ' + soundex.Udp('Díaz'), status)
+msg('días =&amp;gt; ' + soundex.Udp('días'), status)
+msg('dias =&amp;gt; ' + soundex.Udp('dias'), status)
+
+msg('mejico =&amp;gt; ' + soundex.Udp('mejico'), status)
+msg('mexico =&amp;gt; ' + soundex.Udp('mexico'), status)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Luego ejecutamos prueba_soundex y deberíamos de obtener la siguiente salida:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;"C:\Program Files\Java\jdk1.8.0_25\bin\java.exe"  atest_soundex
+hola =&amp;gt; O400
+ola =&amp;gt; O400
+zapato =&amp;gt; S130
+sapato =&amp;gt; S130
+Jimenez =&amp;gt; J520
+Jiménez =&amp;gt; J520
+Jimenes =&amp;gt; J520
+Jiménes =&amp;gt; J520
+Gimenez =&amp;gt; J520
+Giménez =&amp;gt; J520
+Gimenes =&amp;gt; J520
+Giménes =&amp;gt; J520
+Díaz =&amp;gt; D200
+días =&amp;gt; D200
+dias =&amp;gt; D200
+mejico =&amp;gt; M720
+mexico =&amp;gt; M200
+Execution Success
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Como puede verse el algoritmo es bastante preciso con palabras similares.  &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Los dos últimos ejemplos (mejico y mexico) son casos en los que el algoritmo -tal como está implementado aquí- no genera un código que indique que son similares. Tengo pendiente adaptar el algoritmo para cubrir estos casos.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="pensamientosfinales"&gt;Pensamientos finales&lt;/h3&gt;
+
+&lt;p&gt;Los escenarios donde aplicar eso de forma práctica pueden variar mucho, de hecho no se si podría usarse efectivamente con nombres completos.&lt;/p&gt;
+
+&lt;p&gt;En mi caso lo estuve utilizando para crear un diccionario de una tabla de nombres de calles. Primero se procesan las calles registradas (normalizadas), se separan en sus palabras componentes y se registran individualmente en un diccionario con su correspondiente código soundex. Se guarda la calle y su relación con sus palabras componentes.&lt;/p&gt;
+
+&lt;p&gt;Al introducir un nombre de calle para buscar, esta también se separa en sus palabras componentes, se calcula el código soundex para cada una y son estos códigos los que se buscan en el diccionario, por supuesto que el proceso es mas complejo y tiene mas validaciones, pero básicamente es así como funciona.&lt;/p&gt;
+
+&lt;p&gt;El código de ambos procedimientos pueden encontrarlos en &lt;a href="https://github.com/padiazg/soundex-genexus"&gt;https://github.com/padiazg/soundex-genexus&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title>Experimentando con Ghost</title><description>&lt;p&gt;Este post es el resultado de experimentar con las instrucciones de este artículo: &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;Setup Ghost for GitHub Pages&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Las instrucciones son para un entorno Linux/MacOS, con ghost 0.7.8, mientras que yo necesitaba hacerlo correr en Windows 10 y con la última version disponible (0.11.7 a&lt;/p&gt;</description><link>https://padiazg.github.io/experimentando-con-ghost/</link><guid isPermaLink="false">65044fd5-1bf0-4ea7-adaa-dd6933927ebd</guid><dc:creator>Patricio Diaz</dc:creator><pubDate>Wed, 22 Mar 2017 21:59:00 GMT</pubDate><content:encoded>&lt;p&gt;Este post es el resultado de experimentar con las instrucciones de este artículo: &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;Setup Ghost for GitHub Pages&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Las instrucciones son para un entorno Linux/MacOS, con ghost 0.7.8, mientras que yo necesitaba hacerlo correr en Windows 10 y con la última version disponible (0.11.7 a la hora de escribir esto) &lt;/p&gt;
+
+&lt;p&gt;Conseguí ponerlo a funcionar siguiendo los pasos pero adaptándolos a los requisitos de las nuevas versiones y de Windows. Estoy trabajando en una publicación con las instrucciones actualizadas y detalladas.&lt;/p&gt;
+
+&lt;p&gt;Afortunadamente ya había utilizado anteriormente el lenguaje &lt;a href="https://es.wikipedia.org/wiki/Markdown"&gt;MarkDown&lt;/a&gt; al publicar en GitHub y en un servidor GitLab privado que había montado para un cliente. De paso les dejo un enlace las referencias rápidas de este lengiaje: &lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"&gt;Markdown Cheatsheet&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Debo mencionar que este lenguaje se convirtió en el estandar de facto para documentación de proyectos, soportado por casi todas las plataformas de publicación, IDE y editores para código fuente.&lt;/p&gt;</content:encoded></item></channel></rss>
