@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Pato Díaz ]]></title><description><![CDATA[Blog sobre tecnologías de la información, desarrollo e infraestructura.]]></description><link>https://padiazg.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 01 Jun 2017 04:33:11 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Ghost + Buster en Windows]]></title><description><![CDATA[<p>Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.</p>
 
 <p>Tomé como punto de partida <a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/">este</a> de <a href="https://twitter.com/stefscherer">Stefan Scherer</a>. </p>
@@ -167,236 +168,75 @@ cd ..
 <h3 id="archivosbasuradesed">Archivos basura de Sed</h3>
 
 <p>La opción -i de Sed genera una copia de seguridad de cada archivo que modifica, y hasta ahora no encuentro una forma de frenar esto.</p>]]></content:encoded></item><item><title><![CDATA[Implementación algoritmo Soundex Español para Genexus]]></title><description><![CDATA[<p>El algoritmo <a href="https://es.wikipedia.org/wiki/Soundex">soundex</a> es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto que no es preciso cuando lo aplicamos a nombres o palabras en español, podría decirse incluso que no es usable en nuestro idioma.</p>
+=======
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[My gran blog]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 01 Jun 2017 03:08:12 GMT</lastBuildDate><atom:link href="/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Welcome to Ghost]]></title><description><![CDATA[<p>You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at <code>&lt;your blog URL&gt;/ghost/</code>. When you arrive, you can select this post from a list</p>]]></description><link>/welcome-to-ghost/</link><guid isPermaLink="false">7bf518af-5a52-4a67-a376-9ee59c623216</guid><category><![CDATA[Getting Started]]></category><dc:creator><![CDATA[Juan Perez]]></dc:creator><pubDate>Thu, 01 Jun 2017 00:08:08 GMT</pubDate><content:encoded><![CDATA[<p>You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at <code>&lt;your blog URL&gt;/ghost/</code>. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!</p>
+>>>>>>> b0f458b138b8d462e771ec5638ab17be53538879
 
-<p>Investigando un poco hace algunos años había encontrado</p>]]></description><link>https://padiazg.github.io/implementacion-algoritmo-soundex-espanol-para-genexus/</link><guid isPermaLink="false">3689fd06-356e-4ef4-807b-be01965254e9</guid><category><![CDATA[soundex]]></category><category><![CDATA[genexus]]></category><dc:creator><![CDATA[Patricio Diaz]]></dc:creator><pubDate>Wed, 31 May 2017 03:21:30 GMT</pubDate><content:encoded><![CDATA[<p>El algoritmo <a href="https://es.wikipedia.org/wiki/Soundex">soundex</a> es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto que no es preciso cuando lo aplicamos a nombres o palabras en español, podría decirse incluso que no es usable en nuestro idioma.</p>
+<h2 id="gettingstarted">Getting Started</h2>
 
-<p>Investigando un poco hace algunos años había encontrado esta entrada <a href="https://wiki.postgresql.org/wiki/SoundexESP">https://wiki.postgresql.org/wiki/SoundexESP</a>, en la que me basé para crear sus equivalentes en distintos lenguages (VBA, T-SQL para Oracle). Por supuesto cuando se dió la necesidad le tocó a Genexus.</p>
+<p>Ghost uses something called Markdown for writing. Essentially, it's a shorthand way to manage your post formatting as you write!</p>
 
-<h3 id="implementacin">Implementación</h3>
+<p>Writing in Markdown is really easy. In the left hand panel of Ghost, you simply write as you normally would. Where appropriate, you can use <em>shortcuts</em> to <strong>style</strong> your content. For example, a list:</p>
 
-<p>La implementación la hice en un procedimiento llamado soundex, pero ustedes pueden llamarlo como mas les convenga</p>
+<ul>
+<li>Item number one</li>
+<li>Item number two
+<ul><li>A nested item</li></ul></li>
+<li>A final item</li>
+</ul>
 
-<p><strong>soundex:</strong></p>
+<p>or with numbers!</p>
 
-<pre><code>/*
- Implementación del algoritmo Soundex para el idioma español
+<ol>
+<li>Remember to buy some milk  </li>
+<li>Drink the milk  </li>
+<li>Tweet that I remembered to buy the milk, and drank it</li>
+</ol>
 
- variables               tipo
- ----------------------- -----------
- caracter                C(1)
- caracteres_buscar       C(20)
- caracteres_reemplazar   C(20)
- i                       N(2)
- primera_letra           C(1)
- reemplazo               C(1)
- resto                   C(20)
- soundex                 C(20)
- texto                   C(32)
- tmp                     C(32)
+<h3 id="links">Links</h3>
 
- parámetros
- -----------------------
- in:&amp;texto
- out:&amp;soundex
+<p>Want to link to a source? No problem. If you paste in a URL, like <a href="http://ghost.org">http://ghost.org</a> - it'll automatically be linked up. But if you want to customise your anchor text, you can do that too! Here's a link to <a href="http://ghost.org">the Ghost website</a>. Neat.</p>
 
-*/
+<h3 id="whataboutimages">What about Images?</h3>
 
-&amp;soundex.SetEmpty()
-&amp;tmp = &amp;texto.Trim().ToUpper()
+<p>Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:</p>
 
-// Si no hay texto a procesar retornamos un texto vacío
-if &amp;tmp.IsEmpty()
-    return
-endif
+<p><img src="https://ghost.org/images/ghost.png" alt="The Ghost Logo"></p>
 
-// realizamos un preprocesado del texto
-do 'limpieza'
+<p>Not sure which image you want to use yet? That's ok too. Leave yourself a descriptive placeholder and keep writing. Come back later and drag and drop the image in to upload:</p>
 
-// aplicamos el algoritmo
-do 'soundex'
+<h3 id="quoting">Quoting</h3>
 
-Sub 'limpieza'
-    /*     1) limpieza     */
-    // eliminamos la H inicial (incluso si hay mas de una)
-    &amp;tmp = &amp;tmp.ReplaceRegEx('^(H+)(.*)', '$2')
-
-    // retornar vacío si no nos queda texto para analizar
-    if &amp;tmp.IsEmpty()
-        return
-    endif
-
-    // eliminamos los acentos y la Ñ
-    &amp;caracteres_buscar     = 'ÑÁÉÍÓÚÀÈÌÒÙÜ'
-    &amp;caracteres_reemplazar = 'NAEIOUAEIOUU'
-    for &amp;i=1 to &amp;caracteres_buscar.Length()
-        &amp;caracter = &amp;caracteres_buscar.Substring(&amp;i,1)
-        if &amp;caracteres_buscar.IndexOf(&amp;caracter)&gt;0
-            &amp;tmp = &amp;tmp.Replace(&amp;caracter, &amp;caracteres_reemplazar.Substring(&amp;i, 1))
-        endif // &amp;buscar.IndexOf(&amp;caracter)&gt;0
-    endfor // &amp;i=1 to &amp;buscar.Length() ...
-
-    // eliminamos caracteres no alfabéticos (números, signos, símbolos, etc)
-    &amp;tmp = &amp;tmp.ReplaceRegEx('[^A-Z]', '')
-
-    /*     2) ajustar primera letra    */  
-    // fenómenos o casos especiales: GE y GI se convierten en JE y JI, CA en KA
-    &amp;primera_letra = &amp;tmp.Substring(1,1)
-    &amp;resto = &amp;tmp.Substring(2,&amp;tmp.Length()-1) 
-
-    do case
-        case &amp;primera_letra = 'V'
-            &amp;reemplazo = 'B'        // VACA -&gt; BACA, VALOR -&gt; BALOR
-
-        case &amp;primera_letra = 'Z' or &amp;primera_letra = 'X'
-            &amp;reemplazo = 'S'        // ZAPATO -&gt; SAPATO, XILÓFONO -&gt; SILÓFONO
-
-        case &amp;primera_letra = 'G'
-            and (&amp;tmp.Substring(2,1)='E' or &amp;tmp.Substring(2,1)='I')
-            &amp;reemplazo = 'J'        // GIMNASIO -&gt; JIMNASIO, GERANIO -&gt; JERANIO
-
-        case &amp;primera_letra = 'C'
-            and &amp;tmp.Substring(2,1)&lt;&gt;'H'
-            and &amp;tmp.Substring(2,1)&lt;&gt;'E'
-            and &amp;tmp.Substring(2,1)&lt;&gt;'I'
-            &amp;reemplazo = 'K'        // CASA -&gt; KASA, COLOR -&gt; KOLOR, CULPA -&gt; KULPA
-
-        otherwise
-            &amp;reemplazo = &amp;primera_letra
-
-    endcase
-
-    &amp;tmp = &amp;reemplazo + &amp;resto
-
-    /*     3) corregir letras compuestas, volverlas una sola    */
-    &amp;tmp = &amp;tmp.ReplaceRegEx('CH', 'V')
-    &amp;tmp = &amp;tmp.ReplaceRegEx('QU', 'K')
-    &amp;tmp = &amp;tmp.ReplaceRegEx('LL', 'J')
-    &amp;tmp = &amp;tmp.ReplaceRegEx('CE', 'S')
-    &amp;tmp = &amp;tmp.ReplaceRegEx('CI', 'S')
-    &amp;tmp = &amp;tmp.ReplaceRegEx('YA', 'J')
-    &amp;tmp = &amp;tmp.ReplaceRegEx('YE', 'J')
-    &amp;tmp = &amp;tmp.ReplaceRegEx('YI', 'J')
-    &amp;tmp = &amp;tmp.ReplaceRegEx('YO', 'J')
-    &amp;tmp = &amp;tmp.ReplaceRegEx('YU', 'J')
-    //&amp;tmp = &amp;tmp.ReplaceRegEx('GE', 'J')
-    //&amp;tmp = &amp;tmp.ReplaceRegEx('GI', 'J')
-    &amp;tmp = &amp;tmp.ReplaceRegEx('NY', 'N')
-    &amp;tmp = &amp;tmp.ReplaceRegEx('NH', 'N') // anho, banho, tamanho, inhalador
-EndSub // 'limpieza' ...
-
-Sub 'soundex'
-
-    /* 4) obtener primera letra        */
-    &amp;primera_letra = &amp;tmp.Substring(1, 1)
-
-    /* 5) obtener el resto del texto    *
-    &amp;resto = &amp;tmp.Substring(2, &amp;tmp.Length()-1)
-
-    /* 6) en el resto, eliminar vocales y consonantes fonéticas        */
-    &amp;resto = &amp;resto.ReplaceRegEx('[AEIOUHWY]', '')
-
-    /* 7) convertir letras fonéticamente equivalentes a números. esto hace que B sea equivalente a V, C con S y Z, etc.    */
-    &amp;resto = &amp;resto.ReplaceRegEx('[BPFV]',   '1')
-    &amp;resto = &amp;resto.ReplaceRegEx('[CGKSXZ]', '2')
-    &amp;resto = &amp;resto.ReplaceRegEx('[DT]',     '3')
-    &amp;resto = &amp;resto.ReplaceRegEx('[L]',      '4')
-    &amp;resto = &amp;resto.ReplaceRegEx('[MN]',     '5')
-    &amp;resto = &amp;resto.ReplaceRegEx('[R]',      '6')
-    &amp;resto = &amp;resto.ReplaceRegEx('[QJ]',     '7')
-
-    // eliminamos números iguales adyacentes
-    &amp;resto = &amp;resto.ReplaceRegEx('(\d)\1+', '$1') 
-    &amp;soundex = &amp;primera_letra + &amp;resto.Trim()
-    if &amp;soundex.Length() &lt; 4
-        &amp;soundex = padr(&amp;soundex, 4, '0')
-    else
-        &amp;soundex = &amp;soundex.Substring(1,4)
-    endif
-
-EndSub // 'soundex' ...
-</code></pre>
-
-<h3 id="prueba">Prueba</h3>
-
-<p>A continuación podemos hacer unas pruebas para ver el algoritmo en funcionamiento, creamos otro procedimiento llamado prueba_soundex:</p>
-
-<p><strong>prueba_soundex:</strong></p>
-
-<pre><code>/*
- Colocar los siguientes valores en las propiedades del procedimiento
- -------------------------------------------------------------------
- Main program: true
- Call protocol: Command Line
-*/
-
-msg('hola =&gt; ' + soundex.Udp('hola'), status)
-msg('ola =&gt; ' + soundex.Udp('ola'), status)
-
-msg('zapato =&gt; ' + soundex.Udp('zapato'), status)
-msg('sapato =&gt; ' + soundex.Udp('sapato'), status)
-
-msg('Jimenez =&gt; ' + soundex.Udp('Jimenez'), status)
-msg('Jiménez =&gt; ' + soundex.Udp('Jiménez'), status)
-msg('Jimenes =&gt; ' + soundex.Udp('Jimenes'), status)
-msg('Jiménes =&gt; ' + soundex.Udp('Jiménes'), status)
-msg('Gimenez =&gt; ' + soundex.Udp('Gimenez'), status)
-msg('Giménez =&gt; ' + soundex.Udp('Giménez'), status)
-msg('Gimenes =&gt; ' + soundex.Udp('Gimenes'), status)
-msg('Giménes =&gt; ' + soundex.Udp('Giménes'), status)
-
-msg('Díaz =&gt; ' + soundex.Udp('Díaz'), status)
-msg('días =&gt; ' + soundex.Udp('días'), status)
-msg('dias =&gt; ' + soundex.Udp('dias'), status)
-
-msg('mejico =&gt; ' + soundex.Udp('mejico'), status)
-msg('mexico =&gt; ' + soundex.Udp('mexico'), status)
-</code></pre>
-
-<p>Luego ejecutamos prueba_soundex y deberíamos de obtener la siguiente salida:</p>
-
-<pre><code>"C:\Program Files\Java\jdk1.8.0_25\bin\java.exe"  atest_soundex
-hola =&gt; O400
-ola =&gt; O400
-zapato =&gt; S130
-sapato =&gt; S130
-Jimenez =&gt; J520
-Jiménez =&gt; J520
-Jimenes =&gt; J520
-Jiménes =&gt; J520
-Gimenez =&gt; J520
-Giménez =&gt; J520
-Gimenes =&gt; J520
-Giménes =&gt; J520
-Díaz =&gt; D200
-días =&gt; D200
-dias =&gt; D200
-mejico =&gt; M720
-mexico =&gt; M200
-Execution Success
-</code></pre>
-
-<p>Como puede verse el algoritmo es bastante preciso con palabras similares.  </p>
+<p>Sometimes a link isn't enough, you want to quote someone on what they've said. Perhaps you've started using a new blogging platform and feel the sudden urge to share their slogan? A quote might be just the way to do it!</p>
 
 <blockquote>
-  <p>Los dos últimos ejemplos (mejico y mexico) son casos en los que el algoritmo -tal como está implementado aquí- no genera un código que indique que son similares. Tengo pendiente adaptar el algoritmo para cubrir estos casos.</p>
+  <p>Ghost - Just a blogging platform</p>
 </blockquote>
 
-<h3 id="pensamientosfinales">Pensamientos finales</h3>
+<h3 id="workingwithcode">Working with Code</h3>
 
-<p>Los escenarios donde aplicar eso de forma práctica pueden variar mucho, de hecho no se si podría usarse efectivamente con nombres completos.</p>
+<p>Got a streak of geek? We've got you covered there, too. You can write inline <code>&lt;code&gt;</code> blocks really easily with back ticks. Want to show off something more comprehensive? 4 spaces of indentation gets you there.</p>
 
-<p>En mi caso lo estuve utilizando para crear un diccionario de una tabla de nombres de calles. Primero se procesan las calles registradas (normalizadas), se separan en sus palabras componentes y se registran individualmente en un diccionario con su correspondiente código soundex. Se guarda la calle y su relación con sus palabras componentes.</p>
+<pre><code>.awesome-thing {
+    display: block;
+    width: 100%;
+}
+</code></pre>
 
-<p>Al introducir un nombre de calle para buscar, esta también se separa en sus palabras componentes, se calcula el código soundex para cada una y son estos códigos los que se buscan en el diccionario, por supuesto que el proceso es mas complejo y tiene mas validaciones, pero básicamente es así como funciona.</p>
+<h3 id="readyforabreak">Ready for a Break?</h3>
 
-<p>El código de ambos procedimientos pueden encontrarlos en <a href="https://github.com/padiazg/soundex-genexus">https://github.com/padiazg/soundex-genexus</a></p>]]></content:encoded></item><item><title><![CDATA[Experimentando con Ghost]]></title><description><![CDATA[<p>Este post es el resultado de experimentar con las instrucciones de este artículo: <a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/">Setup Ghost for GitHub Pages</a></p>
+<p>Throw 3 or more dashes down on any new line and you've got yourself a fancy new divider. Aw yeah.</p>
 
-<p>Las instrucciones son para un entorno Linux/MacOS, con ghost 0.7.8, mientras que yo necesitaba hacerlo correr en Windows 10 y con la última version disponible (0.11.7 a</p>]]></description><link>https://padiazg.github.io/experimentando-con-ghost/</link><guid isPermaLink="false">65044fd5-1bf0-4ea7-adaa-dd6933927ebd</guid><dc:creator><![CDATA[Patricio Diaz]]></dc:creator><pubDate>Wed, 22 Mar 2017 21:59:00 GMT</pubDate><content:encoded><![CDATA[<p>Este post es el resultado de experimentar con las instrucciones de este artículo: <a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/">Setup Ghost for GitHub Pages</a></p>
+<hr>
 
-<p>Las instrucciones son para un entorno Linux/MacOS, con ghost 0.7.8, mientras que yo necesitaba hacerlo correr en Windows 10 y con la última version disponible (0.11.7 a la hora de escribir esto) </p>
+<h3 id="advancedusage">Advanced Usage</h3>
 
+<<<<<<< HEAD
 <p>Conseguí ponerlo a funcionar siguiendo los pasos pero adaptándolos a los requisitos de las nuevas versiones y de Windows. Estoy trabajando en una publicación con las instrucciones actualizadas y detalladas.</p>
+=======
+<p>There's one fantastic secret about Markdown. If you want, you can write plain old HTML and it'll still work! Very flexible.</p>
+>>>>>>> b0f458b138b8d462e771ec5638ab17be53538879
 
-<p>Afortunadamente ya había utilizado anteriormente el lenguaje <a href="https://es.wikipedia.org/wiki/Markdown">MarkDown</a> al publicar en GitHub y en un servidor GitLab privado que había montado para un cliente. De paso les dejo un enlace las referencias rápidas de este lengiaje: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a>.</p>
+<p><input type="text" placeholder="I'm an input field!"></p>
 
-<p>Debo mencionar que este lenguaje se convirtió en el estandar de facto para documentación de proyectos, soportado por casi todas las plataformas de publicación, IDE y editores para código fuente.</p>]]></content:encoded></item></channel></rss>
+<p>That should be enough to get you started. Have fun - and let us know what you think :)</p>]]></content:encoded></item></channel></rss>
