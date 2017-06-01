@@ -1,138 +1,138 @@
 <<<<<<< HEAD
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Pato Díaz </title><description>Blog sobre tecnologías de la información, desarrollo e infraestructura.</description><link>https://padiazg.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 01 Jun 2017 04:33:11 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Ghost + Buster en Windows</title><description>&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Pato Díaz ]]></title><description><![CDATA[Blog sobre tecnologías de la información, desarrollo e infraestructura.]]></description><link>https://padiazg.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 01 Jun 2017 04:33:11 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Ghost + Buster en Windows]]></title><description><![CDATA[<p>Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.</p>
 
-&lt;p&gt;Tomé como punto de partida &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;este&lt;/a&gt; de &lt;a href="https://twitter.com/stefscherer"&gt;Stefan Scherer&lt;/a&gt;. &lt;/p&gt;
+<p>Tomé como punto de partida <a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/">este</a> de <a href="https://twitter.com/stefscherer">Stefan Scherer</a>. </p>
 
-&lt;h2 id="requerimientos"&gt;Requerimientos&lt;/h2&gt;
+<h2 id="requerimientos">Requerimientos</h2>
 
-&lt;p&gt;Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial: &lt;br&gt;
-* &lt;a href="https://nodejs.org/en/"&gt;Node&lt;/a&gt;&lt;/p&gt;</description><link>https://padiazg.github.io/ghost-buster-en-windows/</link><guid isPermaLink="false">3584ca7f-fb10-4a03-a61d-500db6884193</guid><dc:creator>Patricio Diaz</dc:creator><pubDate>Thu, 01 Jun 2017 04:32:06 GMT</pubDate><content:encoded>&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
+<p>Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial: <br>
+* <a href="https://nodejs.org/en/">Node</a></p>]]></description><link>https://padiazg.github.io/ghost-buster-en-windows/</link><guid isPermaLink="false">3584ca7f-fb10-4a03-a61d-500db6884193</guid><dc:creator><![CDATA[Patricio Diaz]]></dc:creator><pubDate>Thu, 01 Jun 2017 04:32:06 GMT</pubDate><content:encoded><![CDATA[<p>Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.</p>
 
-&lt;p&gt;Tomé como punto de partida &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;este&lt;/a&gt; de &lt;a href="https://twitter.com/stefscherer"&gt;Stefan Scherer&lt;/a&gt;. &lt;/p&gt;
+<p>Tomé como punto de partida <a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/">este</a> de <a href="https://twitter.com/stefscherer">Stefan Scherer</a>. </p>
 
-&lt;h2 id="requerimientos"&gt;Requerimientos&lt;/h2&gt;
+<h2 id="requerimientos">Requerimientos</h2>
 
-&lt;p&gt;Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial: &lt;br&gt;
-* &lt;a href="https://nodejs.org/en/"&gt;Node v6&lt;/a&gt; &lt;br&gt;
-* &lt;a href="https://git-scm.com/download/win"&gt;Git&lt;/a&gt; &lt;br&gt;
-* &lt;a href="https://www.python.org/downloads/"&gt;Python 2.7&lt;/a&gt; &lt;br&gt;
-* &lt;a href="http://gnuwin32.sourceforge.net/packages/findutils.htm"&gt;GNU Find&lt;/a&gt; &lt;br&gt;
-* &lt;a href="http://gnuwin32.sourceforge.net/packages/sed.htm"&gt;GNU Sed&lt;/a&gt; &lt;br&gt;
-* &lt;a href="http://gnuwin32.sourceforge.net/packages/wget.htm"&gt;GNU Wget&lt;/a&gt; &lt;/p&gt;
+<p>Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial: <br>
+* <a href="https://nodejs.org/en/">Node v6</a> <br>
+* <a href="https://git-scm.com/download/win">Git</a> <br>
+* <a href="https://www.python.org/downloads/">Python 2.7</a> <br>
+* <a href="http://gnuwin32.sourceforge.net/packages/findutils.htm">GNU Find</a> <br>
+* <a href="http://gnuwin32.sourceforge.net/packages/sed.htm">GNU Sed</a> <br>
+* <a href="http://gnuwin32.sourceforge.net/packages/wget.htm">GNU Wget</a> </p>
 
-&lt;h2 id="descargamoseinstalamosghost"&gt;Descargamos e instalamos Ghost&lt;/h2&gt;
+<h2 id="descargamoseinstalamosghost">Descargamos e instalamos Ghost</h2>
 
-&lt;p&gt;Descargamos la última version de &lt;a href="https://ghost.org/es/developers/"&gt;aquí&lt;/a&gt;&lt;/p&gt;
+<p>Descargamos la última version de <a href="https://ghost.org/es/developers/">aquí</a></p>
 
-&lt;p&gt;Creamos una carpeta llamada ghost y descomprimimos en ella el archivo que acabamos de bajar.&lt;/p&gt;
+<p>Creamos una carpeta llamada ghost y descomprimimos en ella el archivo que acabamos de bajar.</p>
 
-&lt;h3 id="instalamoslasdependencias"&gt;Instalamos las dependencias&lt;/h3&gt;
+<h3 id="instalamoslasdependencias">Instalamos las dependencias</h3>
 
-&lt;pre&gt;&lt;code&gt;cd ghost  
+<pre><code>cd ghost  
 npm install --production  
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;h3 id="iniciamosghost"&gt;Iniciamos Ghost&lt;/h3&gt;
+<h3 id="iniciamosghost">Iniciamos Ghost</h3>
 
-&lt;pre&gt;&lt;code&gt;npm run start  
-&lt;/code&gt;&lt;/pre&gt;
+<pre><code>npm run start  
+</code></pre>
 
-&lt;h3 id="nosregistramosconghost"&gt;Nos registramos con Ghost&lt;/h3&gt;
+<h3 id="nosregistramosconghost">Nos registramos con Ghost</h3>
 
-&lt;p&gt;Abrimos un navegador y apuntamos a  &lt;a href="https://padiazg.github.io/ghost"&gt;https://padiazg.github.io/ghost&lt;/a&gt;&lt;/p&gt;
+<p>Abrimos un navegador y apuntamos a  <a href="https://padiazg.github.io/ghost">https://padiazg.github.io/ghost</a></p>
 
-&lt;p&gt;Creamos una cuenta, pasamos por todos los pasos y llegamos al panel de control, ahí podemos ver el post original y aprender un poco del lenguaje Markdown. &lt;br&gt;
-&lt;img src="https://padiazg.github.io/content/images/2017/06/ghost-registro.png" alt=""&gt;
-&lt;img src="https://padiazg.github.io/content/images/2017/06/ghost-panel-control.png" alt=""&gt;&lt;/p&gt;
+<p>Creamos una cuenta, pasamos por todos los pasos y llegamos al panel de control, ahí podemos ver el post original y aprender un poco del lenguaje Markdown. <br>
+<img src="https://padiazg.github.io/content/images/2017/06/ghost-registro.png" alt="">
+<img src="https://padiazg.github.io/content/images/2017/06/ghost-panel-control.png" alt=""></p>
 
-&lt;h2 id="tenemosblog"&gt;Tenemos blog&lt;/h2&gt;
+<h2 id="tenemosblog">Tenemos blog</h2>
 
-&lt;p&gt;Hasta acá tenemos un blog totalmente funcional, que puede funcionar directamente si tuvieramos la infraestructura apropiada.&lt;/p&gt;
+<p>Hasta acá tenemos un blog totalmente funcional, que puede funcionar directamente si tuvieramos la infraestructura apropiada.</p>
 
-&lt;p&gt;Hay suficiente documentación y tutoriales de como administrar y publicar en Ghost, por lo que no voy a entrar en esos detalles.&lt;/p&gt;
+<p>Hay suficiente documentación y tutoriales de como administrar y publicar en Ghost, por lo que no voy a entrar en esos detalles.</p>
 
-&lt;h2 id="githubpages"&gt;GitHub Pages&lt;/h2&gt;
+<h2 id="githubpages">GitHub Pages</h2>
 
-&lt;p&gt;Ahora que ya tenemos nuestro blog funcionando, es hora de ocuparnos en publicarlo como páginas estáticas en GitHub.&lt;/p&gt;
+<p>Ahora que ya tenemos nuestro blog funcionando, es hora de ocuparnos en publicarlo como páginas estáticas en GitHub.</p>
 
-&lt;p&gt;Vea &lt;a href="https://help.github.com/categories/github-pages-basics/"&gt;aquí&lt;/a&gt; los detalles básicos. Está demás decir que necesitaremos una cuenta de GitHub.&lt;/p&gt;
+<p>Vea <a href="https://help.github.com/categories/github-pages-basics/">aquí</a> los detalles básicos. Está demás decir que necesitaremos una cuenta de GitHub.</p>
 
-&lt;p&gt;Usaremos la nomenclatura &lt;code&gt;nombreusuario/nombreusuario.github.io&lt;/code&gt;. El nombre del repositorio debe estar siempre en minúsculas sin importar que el nombre del usuario tenga mayúsculas.&lt;/p&gt;
+<p>Usaremos la nomenclatura <code>nombreusuario/nombreusuario.github.io</code>. El nombre del repositorio debe estar siempre en minúsculas sin importar que el nombre del usuario tenga mayúsculas.</p>
 
-&lt;h2 id="buster"&gt;Buster&lt;/h2&gt;
+<h2 id="buster">Buster</h2>
 
-&lt;p&gt;El repositorio &lt;a href="https://github.com/axitkhurana/buster"&gt;original&lt;/a&gt; está abandonado y no funciona correctamente con la versión actual de Ghost, pero encontré este &lt;a href="https://github.com/skosch/buster"&gt;otro&lt;/a&gt; en el que están haciendo el esfuerzo de continuar el desarrollo de este proyecto.&lt;/p&gt;
+<p>El repositorio <a href="https://github.com/axitkhurana/buster">original</a> está abandonado y no funciona correctamente con la versión actual de Ghost, pero encontré este <a href="https://github.com/skosch/buster">otro</a> en el que están haciendo el esfuerzo de continuar el desarrollo de este proyecto.</p>
 
-&lt;p&gt;El método sugerido en el repositorio &lt;code&gt;pip install git+https://github.com/skosch/buster&lt;/code&gt; no funciona, al menos en mi máquina, por lo que iremos por otro camino.&lt;/p&gt;
+<p>El método sugerido en el repositorio <code>pip install git+https://github.com/skosch/buster</code> no funciona, al menos en mi máquina, por lo que iremos por otro camino.</p>
 
-&lt;h2 id="adecuamoselpath"&gt;Adecuamos el path&lt;/h2&gt;
+<h2 id="adecuamoselpath">Adecuamos el path</h2>
 
-&lt;p&gt;Buster solo funciona con Python v2.7, por lo que ajustamos nuestro path para que utilice solo esa versión. Colateralmente debemos volver a especificar las carpetas del Git.&lt;/p&gt;
+<p>Buster solo funciona con Python v2.7, por lo que ajustamos nuestro path para que utilice solo esa versión. Colateralmente debemos volver a especificar las carpetas del Git.</p>
 
-&lt;p&gt;En una ventana de comandos (cmd):  &lt;/p&gt;
+<p>En una ventana de comandos (cmd):  </p>
 
-&lt;pre&gt;&lt;code&gt;set path=C:\Python27\Scripts;C:\Python27;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;C:\Users\pato\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;  
-&lt;/code&gt;&lt;/pre&gt;
+<pre><code>set path=C:\Python27\Scripts;C:\Python27;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;C:\Users\pato\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;  
+</code></pre>
 
-&lt;p&gt;Debemos cuidar de ajustar las carpetas del path de acuerdo a nuestro caso particular.&lt;/p&gt;
+<p>Debemos cuidar de ajustar las carpetas del path de acuerdo a nuestro caso particular.</p>
 
-&lt;p&gt;Dejamos abierta la ventana de comandos para ejecutae en ella los pasos siguientes&lt;/p&gt;
+<p>Dejamos abierta la ventana de comandos para ejecutae en ella los pasos siguientes</p>
 
-&lt;h2 id="instalandobusteramano"&gt;Instalando Buster a mano&lt;/h2&gt;
+<h2 id="instalandobusteramano">Instalando Buster a mano</h2>
 
-&lt;p&gt;Descargamos el repositorio, preferentemente en un directorio diferente al que usamos en los pasos anteriores.&lt;/p&gt;
+<p>Descargamos el repositorio, preferentemente en un directorio diferente al que usamos en los pasos anteriores.</p>
 
-&lt;p&gt;En una linea de comandos  &lt;/p&gt;
+<p>En una linea de comandos  </p>
 
-&lt;pre&gt;&lt;code&gt;cd \proyectos\python  
+<pre><code>cd \proyectos\python  
 git clone https://github.com/skosch/buster.git  
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;h3 id="parcheamos"&gt;Parcheamos&lt;/h3&gt;
+<h3 id="parcheamos">Parcheamos</h3>
 
-&lt;p&gt;Por alguna razón el archivo &lt;mark&gt;buster\_version.py&lt;/mark&gt; tiene rastros de versionado que obviamente hacen que se de un error al tratar de instalar el paquete por cualquier método normal.&lt;/p&gt;
+<p>Por alguna razón el archivo <mark>buster\_version.py</mark> tiene rastros de versionado que obviamente hacen que se de un error al tratar de instalar el paquete por cualquier método normal.</p>
 
-&lt;p&gt;Modificamos &lt;mark&gt;buster\_version.py&lt;/mark&gt; para que quede de esta manera:  &lt;/p&gt;
+<p>Modificamos <mark>buster\_version.py</mark> para que quede de esta manera:  </p>
 
-&lt;pre&gt;&lt;code&gt;__version_info__ = (0, 1, 3)  
+<pre><code>__version_info__ = (0, 1, 3)  
 __version__ = '.'.join(map(str, __version_info__))  
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;h3 id="instalamosbuster"&gt;Instalamos Buster&lt;/h3&gt;
+<h3 id="instalamosbuster">Instalamos Buster</h3>
 
-&lt;pre&gt;&lt;code&gt;python setup.py install  
-&lt;/code&gt;&lt;/pre&gt;
+<pre><code>python setup.py install  
+</code></pre>
 
-&lt;h2 id="preparamoscarpetaesttica"&gt;Preparamos carpeta estática&lt;/h2&gt;
+<h2 id="preparamoscarpetaesttica">Preparamos carpeta estática</h2>
 
-&lt;p&gt;Creamos una carpeta &lt;code&gt;static&lt;/code&gt; que usará Buster en la carpeta donde tenemos instalado Ghost, luego sencillamente clonamos nuestro repositorio usando un nombre de carpeta  &lt;/p&gt;
+<p>Creamos una carpeta <code>static</code> que usará Buster en la carpeta donde tenemos instalado Ghost, luego sencillamente clonamos nuestro repositorio usando un nombre de carpeta  </p>
 
-&lt;pre&gt;&lt;code&gt;cd &amp;lt;carpeta de Ghost&amp;gt;  
+<pre><code>cd &lt;carpeta de Ghost&gt;  
 mkdir static  
 git clone https://usuario:password@github.com/usuario/usuario.github.io.git static  
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;h2 id="creamoscontenido"&gt;Creamos contenido&lt;/h2&gt;
+<h2 id="creamoscontenido">Creamos contenido</h2>
 
-&lt;p&gt;A partir de aquí la configuración está completa, ya solo es cuestión de ir creando nuestros artículos y publicarlos.&lt;/p&gt;
+<p>A partir de aquí la configuración está completa, ya solo es cuestión de ir creando nuestros artículos y publicarlos.</p>
 
-&lt;h2 id="exportamosghostconbuster"&gt;Exportamos Ghost con Buster&lt;/h2&gt;
+<h2 id="exportamosghostconbuster">Exportamos Ghost con Buster</h2>
 
-&lt;p&gt;Todas nuestras publicaciones pueden ser exportadas a la carpeta &lt;code&gt;static&lt;/code&gt; por Buster  &lt;/p&gt;
+<p>Todas nuestras publicaciones pueden ser exportadas a la carpeta <code>static</code> por Buster  </p>
 
-&lt;pre&gt;&lt;code&gt;buster generate --domain=http://localhost:2368  
+<pre><code>buster generate --domain=http://localhost:2368  
 buster preview  
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;p&gt;Podemos apuntar nuestro navegador a &lt;a href="http://localhost:9000"&gt;http://localhost:9000&lt;/a&gt; y previsualizar como se ve nuestro blog como páginas estáticas.&lt;/p&gt;
+<p>Podemos apuntar nuestro navegador a <a href="http://localhost:9000">http://localhost:9000</a> y previsualizar como se ve nuestro blog como páginas estáticas.</p>
 
-&lt;h2 id="ajustamoslosenlaces"&gt;Ajustamos los enlaces&lt;/h2&gt;
+<h2 id="ajustamoslosenlaces">Ajustamos los enlaces</h2>
 
-&lt;p&gt;Antes de poder publicar nuestras páginas a GitHub Pages, debemos hacer ajustas los enlaces. Es uno de los bugs de Buster, supongo.&lt;/p&gt;
+<p>Antes de poder publicar nuestras páginas a GitHub Pages, debemos hacer ajustas los enlaces. Es uno de los bugs de Buster, supongo.</p>
 
-&lt;p&gt;Este script hará el truco:  &lt;/p&gt;
+<p>Este script hará el truco:  </p>
 
-&lt;pre&gt;&lt;code&gt;set PATH=C:\Program Files (x86)\nodejs\;C:\Python27\Scripts;C:\Python27;C:\Users\pato\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;
+<pre><code>set PATH=C:\Program Files (x86)\nodejs\;C:\Python27\Scripts;C:\Python27;C:\Users\pato\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;
 
 buster generate --domain=http://127.0.0.1:2368  
 
@@ -163,83 +163,80 @@ git push origin master
 cd ..
 
 :end
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;h3 id="archivosbasuradesed"&gt;Archivos basura de Sed&lt;/h3&gt;
+<h3 id="archivosbasuradesed">Archivos basura de Sed</h3>
 
-&lt;p&gt;La opción -i de Sed genera una copia de seguridad de cada archivo que modifica, y hasta ahora no encuentro una forma de frenar esto.&lt;/p&gt;</content:encoded></item><item><title>Implementación algoritmo Soundex Español para Genexus</title><description>&lt;p&gt;El algoritmo &lt;a href="https://es.wikipedia.org/wiki/Soundex"&gt;soundex&lt;/a&gt; es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto que no es preciso cuando lo aplicamos a nombres o palabras en español, podría decirse incluso que no es usable en nuestro idioma.&lt;/p&gt;
-
-&lt;p&gt;Investigando un poco hace algunos años había encontrado&lt;/p&gt;</description><link>https://padiazg.github.io/implementacion-algoritmo-soundex-espanol-para-genexus/</link><guid isPermaLink="false">3689fd06-356e-4ef4-807b-be01965254e9</guid><category>soundex</category><category>genexus</category><dc:creator>Patricio Diaz</dc:creator><pubDate>Wed, 31 May 2017 03:21:30 GMT</pubDate><content:encoded>&lt;p&gt;El algoritmo &lt;a href="https://es.wikipedia.org/wiki/Soundex"&gt;soundex&lt;/a&gt; es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto que no es preciso cuando lo aplicamos a nombres o palabras en español, podría decirse incluso que no es usable en nuestro idioma.&lt;/p&gt;
+<p>La opción -i de Sed genera una copia de seguridad de cada archivo que modifica, y hasta ahora no encuentro una forma de frenar esto.</p>]]></content:encoded></item><item><title><![CDATA[Implementación algoritmo Soundex Español para Genexus]]></title><description><![CDATA[<p>El algoritmo <a href="https://es.wikipedia.org/wiki/Soundex">soundex</a> es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto que no es preciso cuando lo aplicamos a nombres o palabras en español, podría decirse incluso que no es usable en nuestro idioma.</p>
 =======
-<!DOCTYPE html>
-<html><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>My gran blog</title><description>Thoughts, stories and ideas.</description><link>/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 01 Jun 2017 03:08:12 GMT</lastBuildDate><atom:link href="/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Welcome to Ghost</title><description>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list&lt;/p&gt;</description><link>/welcome-to-ghost/</link><guid isPermaLink="false">7bf518af-5a52-4a67-a376-9ee59c623216</guid><category>Getting Started</category><dc:creator>Juan Perez</dc:creator><pubDate>Thu, 01 Jun 2017 00:08:08 GMT</pubDate><content:encoded>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!&lt;/p&gt;
-
-&lt;h2 id="gettingstarted"&gt;Getting Started&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[My gran blog]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 01 Jun 2017 03:08:12 GMT</lastBuildDate><atom:link href="/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Welcome to Ghost]]></title><description><![CDATA[<p>You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at <code>&lt;your blog URL&gt;/ghost/</code>. When you arrive, you can select this post from a list</p>]]></description><link>/welcome-to-ghost/</link><guid isPermaLink="false">7bf518af-5a52-4a67-a376-9ee59c623216</guid><category><![CDATA[Getting Started]]></category><dc:creator><![CDATA[Juan Perez]]></dc:creator><pubDate>Thu, 01 Jun 2017 00:08:08 GMT</pubDate><content:encoded><![CDATA[<p>You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at <code>&lt;your blog URL&gt;/ghost/</code>. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!</p>
 >>>>>>> b0f458b138b8d462e771ec5638ab17be53538879
 
-&lt;p&gt;Ghost uses something called Markdown for writing. Essentially, it's a shorthand way to manage your post formatting as you write!&lt;/p&gt;
+<h2 id="gettingstarted">Getting Started</h2>
 
-&lt;p&gt;Writing in Markdown is really easy. In the left hand panel of Ghost, you simply write as you normally would. Where appropriate, you can use &lt;em&gt;shortcuts&lt;/em&gt; to &lt;strong&gt;style&lt;/strong&gt; your content. For example, a list:&lt;/p&gt;
+<p>Ghost uses something called Markdown for writing. Essentially, it's a shorthand way to manage your post formatting as you write!</p>
 
-&lt;ul&gt;
-&lt;li&gt;Item number one&lt;/li&gt;
-&lt;li&gt;Item number two
-&lt;ul&gt;&lt;li&gt;A nested item&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;A final item&lt;/li&gt;
-&lt;/ul&gt;
+<p>Writing in Markdown is really easy. In the left hand panel of Ghost, you simply write as you normally would. Where appropriate, you can use <em>shortcuts</em> to <strong>style</strong> your content. For example, a list:</p>
 
-&lt;p&gt;or with numbers!&lt;/p&gt;
+<ul>
+<li>Item number one</li>
+<li>Item number two
+<ul><li>A nested item</li></ul></li>
+<li>A final item</li>
+</ul>
 
-&lt;ol&gt;
-&lt;li&gt;Remember to buy some milk  &lt;/li&gt;
-&lt;li&gt;Drink the milk  &lt;/li&gt;
-&lt;li&gt;Tweet that I remembered to buy the milk, and drank it&lt;/li&gt;
-&lt;/ol&gt;
+<p>or with numbers!</p>
 
-&lt;h3 id="links"&gt;Links&lt;/h3&gt;
+<ol>
+<li>Remember to buy some milk  </li>
+<li>Drink the milk  </li>
+<li>Tweet that I remembered to buy the milk, and drank it</li>
+</ol>
 
-&lt;p&gt;Want to link to a source? No problem. If you paste in a URL, like &lt;a href="http://ghost.org"&gt;http://ghost.org&lt;/a&gt; - it'll automatically be linked up. But if you want to customise your anchor text, you can do that too! Here's a link to &lt;a href="http://ghost.org"&gt;the Ghost website&lt;/a&gt;. Neat.&lt;/p&gt;
+<h3 id="links">Links</h3>
 
-&lt;h3 id="whataboutimages"&gt;What about Images?&lt;/h3&gt;
+<p>Want to link to a source? No problem. If you paste in a URL, like <a href="http://ghost.org">http://ghost.org</a> - it'll automatically be linked up. But if you want to customise your anchor text, you can do that too! Here's a link to <a href="http://ghost.org">the Ghost website</a>. Neat.</p>
 
-&lt;p&gt;Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:&lt;/p&gt;
+<h3 id="whataboutimages">What about Images?</h3>
 
-&lt;p&gt;&lt;img src="https://ghost.org/images/ghost.png" alt="The Ghost Logo"&gt;&lt;/p&gt;
+<p>Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:</p>
 
-&lt;p&gt;Not sure which image you want to use yet? That's ok too. Leave yourself a descriptive placeholder and keep writing. Come back later and drag and drop the image in to upload:&lt;/p&gt;
+<p><img src="https://ghost.org/images/ghost.png" alt="The Ghost Logo"></p>
 
-&lt;h3 id="quoting"&gt;Quoting&lt;/h3&gt;
+<p>Not sure which image you want to use yet? That's ok too. Leave yourself a descriptive placeholder and keep writing. Come back later and drag and drop the image in to upload:</p>
 
-&lt;p&gt;Sometimes a link isn't enough, you want to quote someone on what they've said. Perhaps you've started using a new blogging platform and feel the sudden urge to share their slogan? A quote might be just the way to do it!&lt;/p&gt;
+<h3 id="quoting">Quoting</h3>
 
-&lt;blockquote&gt;
-  &lt;p&gt;Ghost - Just a blogging platform&lt;/p&gt;
-&lt;/blockquote&gt;
+<p>Sometimes a link isn't enough, you want to quote someone on what they've said. Perhaps you've started using a new blogging platform and feel the sudden urge to share their slogan? A quote might be just the way to do it!</p>
 
-&lt;h3 id="workingwithcode"&gt;Working with Code&lt;/h3&gt;
+<blockquote>
+  <p>Ghost - Just a blogging platform</p>
+</blockquote>
 
-&lt;p&gt;Got a streak of geek? We've got you covered there, too. You can write inline &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; blocks really easily with back ticks. Want to show off something more comprehensive? 4 spaces of indentation gets you there.&lt;/p&gt;
+<h3 id="workingwithcode">Working with Code</h3>
 
-&lt;pre&gt;&lt;code&gt;.awesome-thing {
+<p>Got a streak of geek? We've got you covered there, too. You can write inline <code>&lt;code&gt;</code> blocks really easily with back ticks. Want to show off something more comprehensive? 4 spaces of indentation gets you there.</p>
+
+<pre><code>.awesome-thing {
     display: block;
     width: 100%;
 }
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;h3 id="readyforabreak"&gt;Ready for a Break?&lt;/h3&gt;
+<h3 id="readyforabreak">Ready for a Break?</h3>
 
-&lt;p&gt;Throw 3 or more dashes down on any new line and you've got yourself a fancy new divider. Aw yeah.&lt;/p&gt;
+<p>Throw 3 or more dashes down on any new line and you've got yourself a fancy new divider. Aw yeah.</p>
 
-&lt;hr&gt;
+<hr>
 
-&lt;h3 id="advancedusage"&gt;Advanced Usage&lt;/h3&gt;
+<h3 id="advancedusage">Advanced Usage</h3>
 
 <<<<<<< HEAD
-&lt;p&gt;Conseguí ponerlo a funcionar siguiendo los pasos pero adaptándolos a los requisitos de las nuevas versiones y de Windows. Estoy trabajando en una publicación con las instrucciones actualizadas y detalladas.&lt;/p&gt;
+<p>Conseguí ponerlo a funcionar siguiendo los pasos pero adaptándolos a los requisitos de las nuevas versiones y de Windows. Estoy trabajando en una publicación con las instrucciones actualizadas y detalladas.</p>
 =======
-&lt;p&gt;There's one fantastic secret about Markdown. If you want, you can write plain old HTML and it'll still work! Very flexible.&lt;/p&gt;
+<p>There's one fantastic secret about Markdown. If you want, you can write plain old HTML and it'll still work! Very flexible.</p>
 >>>>>>> b0f458b138b8d462e771ec5638ab17be53538879
 
-&lt;p&gt;&lt;input type="text" placeholder="I'm an input field!"&gt;&lt;/p&gt;
+<p><input type="text" placeholder="I'm an input field!"></p>
 
-&lt;p&gt;That should be enough to get you started. Have fun - and let us know what you think :)&lt;/p&gt;</content:encoded></item></channel></rss></html>
+<p>That should be enough to get you started. Have fun - and let us know what you think :)</p>]]></content:encoded></item></channel></rss>
