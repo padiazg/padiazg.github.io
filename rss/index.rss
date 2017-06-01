@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Pato Díaz </title><description>Blog sobre tecnologías de la información, desarrollo e infraestructura.</description><link>https://padiazg.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 01 Jun 2017 04:48:30 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Ghost + Buster en Windows</title><description>&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Pato Díaz </title><description>Blog sobre tecnologías de la información, desarrollo e infraestructura.</description><link>https://padiazg.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 01 Jun 2017 04:55:43 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Ghost + Buster en Windows</title><description>&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
 
 &lt;p&gt;Tomé como punto de partida &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;este&lt;/a&gt; de &lt;a href="https://twitter.com/stefscherer"&gt;Stefan Scherer&lt;/a&gt;. &lt;/p&gt;
 
@@ -89,7 +89,7 @@ git clone https://github.com/skosch/buster.git
 
 &lt;h3 id="parcheamos"&gt;Parcheamos&lt;/h3&gt;
 
-&lt;p&gt;Por alguna razón el archivo &lt;mark&gt;buster\_version.py&lt;/mark&gt; tiene rastros de versionado que obviamente hacen que se de un error al tratar de instalar el paquete por cualquier método normal.&lt;/p&gt;
+&lt;p&gt;Por alguna razón el archivo &lt;mark&gt;buster\_version.py&lt;/mark&gt; tiene rastros de versionado que obviamente hacen que se de un error al tratar de instalar, por cualquier método normal.&lt;/p&gt;
 
 &lt;p&gt;Modificamos &lt;mark&gt;buster\_version.py&lt;/mark&gt; para que quede de esta manera:  &lt;/p&gt;
 
@@ -163,6 +163,8 @@ cd ..
 
 :end
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Este script está basado en el de &lt;a href="https://padiazg.github.io/ghost-buster-en-windows/"&gt;Alex Ellix&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id="archivosbasuradesed"&gt;Archivos basura de Sed&lt;/h3&gt;
 
