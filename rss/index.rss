@@ -1,4 +1,172 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Pato Díaz </title><description>Blog sobre tecnologías de la información, desarrollo e infraestructura.</description><link>https://padiazg.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Wed, 31 May 2017 22:00:27 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Implementación algoritmo Soundex Español para Genexus</title><description>&lt;p&gt;El algoritmo &lt;a href="https://es.wikipedia.org/wiki/Soundex"&gt;soundex&lt;/a&gt; es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto que no es preciso cuando lo aplicamos a nombres o palabras en español, podría decirse incluso que no es usable en nuestro idioma.&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Pato Díaz </title><description>Blog sobre tecnologías de la información, desarrollo e infraestructura.</description><link>https://padiazg.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 01 Jun 2017 04:33:11 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Ghost + Buster en Windows</title><description>&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
+
+&lt;p&gt;Tomé como punto de partida &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;este&lt;/a&gt; de &lt;a href="https://twitter.com/stefscherer"&gt;Stefan Scherer&lt;/a&gt;. &lt;/p&gt;
+
+&lt;h2 id="requerimientos"&gt;Requerimientos&lt;/h2&gt;
+
+&lt;p&gt;Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial: &lt;br&gt;
+* &lt;a href="https://nodejs.org/en/"&gt;Node&lt;/a&gt;&lt;/p&gt;</description><link>https://padiazg.github.io/ghost-buster-en-windows/</link><guid isPermaLink="false">3584ca7f-fb10-4a03-a61d-500db6884193</guid><dc:creator>Patricio Diaz</dc:creator><pubDate>Thu, 01 Jun 2017 04:32:06 GMT</pubDate><content:encoded>&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
+
+&lt;p&gt;Tomé como punto de partida &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;este&lt;/a&gt; de &lt;a href="https://twitter.com/stefscherer"&gt;Stefan Scherer&lt;/a&gt;. &lt;/p&gt;
+
+&lt;h2 id="requerimientos"&gt;Requerimientos&lt;/h2&gt;
+
+&lt;p&gt;Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial: &lt;br&gt;
+* &lt;a href="https://nodejs.org/en/"&gt;Node v6&lt;/a&gt; &lt;br&gt;
+* &lt;a href="https://git-scm.com/download/win"&gt;Git&lt;/a&gt; &lt;br&gt;
+* &lt;a href="https://www.python.org/downloads/"&gt;Python 2.7&lt;/a&gt; &lt;br&gt;
+* &lt;a href="http://gnuwin32.sourceforge.net/packages/findutils.htm"&gt;GNU Find&lt;/a&gt; &lt;br&gt;
+* &lt;a href="http://gnuwin32.sourceforge.net/packages/sed.htm"&gt;GNU Sed&lt;/a&gt; &lt;br&gt;
+* &lt;a href="http://gnuwin32.sourceforge.net/packages/wget.htm"&gt;GNU Wget&lt;/a&gt; &lt;/p&gt;
+
+&lt;h2 id="descargamoseinstalamosghost"&gt;Descargamos e instalamos Ghost&lt;/h2&gt;
+
+&lt;p&gt;Descargamos la última version de &lt;a href="https://ghost.org/es/developers/"&gt;aquí&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Creamos una carpeta llamada ghost y descomprimimos en ella el archivo que acabamos de bajar.&lt;/p&gt;
+
+&lt;h3 id="instalamoslasdependencias"&gt;Instalamos las dependencias&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;cd ghost  
+npm install --production  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="iniciamosghost"&gt;Iniciamos Ghost&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;npm run start  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="nosregistramosconghost"&gt;Nos registramos con Ghost&lt;/h3&gt;
+
+&lt;p&gt;Abrimos un navegador y apuntamos a  &lt;a href="https://padiazg.github.io/ghost"&gt;https://padiazg.github.io/ghost&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Creamos una cuenta, pasamos por todos los pasos y llegamos al panel de control, ahí podemos ver el post original y aprender un poco del lenguaje Markdown. &lt;br&gt;
+&lt;img src="https://padiazg.github.io/content/images/2017/06/ghost-registro.png" alt=""&gt;
+&lt;img src="https://padiazg.github.io/content/images/2017/06/ghost-panel-control.png" alt=""&gt;&lt;/p&gt;
+
+&lt;h2 id="tenemosblog"&gt;Tenemos blog&lt;/h2&gt;
+
+&lt;p&gt;Hasta acá tenemos un blog totalmente funcional, que puede funcionar directamente si tuvieramos la infraestructura apropiada.&lt;/p&gt;
+
+&lt;p&gt;Hay suficiente documentación y tutoriales de como administrar y publicar en Ghost, por lo que no voy a entrar en esos detalles.&lt;/p&gt;
+
+&lt;h2 id="githubpages"&gt;GitHub Pages&lt;/h2&gt;
+
+&lt;p&gt;Ahora que ya tenemos nuestro blog funcionando, es hora de ocuparnos en publicarlo como páginas estáticas en GitHub.&lt;/p&gt;
+
+&lt;p&gt;Vea &lt;a href="https://help.github.com/categories/github-pages-basics/"&gt;aquí&lt;/a&gt; los detalles básicos. Está demás decir que necesitaremos una cuenta de GitHub.&lt;/p&gt;
+
+&lt;p&gt;Usaremos la nomenclatura &lt;code&gt;nombreusuario/nombreusuario.github.io&lt;/code&gt;. El nombre del repositorio debe estar siempre en minúsculas sin importar que el nombre del usuario tenga mayúsculas.&lt;/p&gt;
+
+&lt;h2 id="buster"&gt;Buster&lt;/h2&gt;
+
+&lt;p&gt;El repositorio &lt;a href="https://github.com/axitkhurana/buster"&gt;original&lt;/a&gt; está abandonado y no funciona correctamente con la versión actual de Ghost, pero encontré este &lt;a href="https://github.com/skosch/buster"&gt;otro&lt;/a&gt; en el que están haciendo el esfuerzo de continuar el desarrollo de este proyecto.&lt;/p&gt;
+
+&lt;p&gt;El método sugerido en el repositorio &lt;code&gt;pip install git+https://github.com/skosch/buster&lt;/code&gt; no funciona, al menos en mi máquina, por lo que iremos por otro camino.&lt;/p&gt;
+
+&lt;h2 id="adecuamoselpath"&gt;Adecuamos el path&lt;/h2&gt;
+
+&lt;p&gt;Buster solo funciona con Python v2.7, por lo que ajustamos nuestro path para que utilice solo esa versión. Colateralmente debemos volver a especificar las carpetas del Git.&lt;/p&gt;
+
+&lt;p&gt;En una ventana de comandos (cmd):  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;set path=C:\Python27\Scripts;C:\Python27;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;C:\Users\pato\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Debemos cuidar de ajustar las carpetas del path de acuerdo a nuestro caso particular.&lt;/p&gt;
+
+&lt;p&gt;Dejamos abierta la ventana de comandos para ejecutae en ella los pasos siguientes&lt;/p&gt;
+
+&lt;h2 id="instalandobusteramano"&gt;Instalando Buster a mano&lt;/h2&gt;
+
+&lt;p&gt;Descargamos el repositorio, preferentemente en un directorio diferente al que usamos en los pasos anteriores.&lt;/p&gt;
+
+&lt;p&gt;En una linea de comandos  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd \proyectos\python  
+git clone https://github.com/skosch/buster.git  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="parcheamos"&gt;Parcheamos&lt;/h3&gt;
+
+&lt;p&gt;Por alguna razón el archivo &lt;mark&gt;buster\_version.py&lt;/mark&gt; tiene rastros de versionado que obviamente hacen que se de un error al tratar de instalar el paquete por cualquier método normal.&lt;/p&gt;
+
+&lt;p&gt;Modificamos &lt;mark&gt;buster\_version.py&lt;/mark&gt; para que quede de esta manera:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;__version_info__ = (0, 1, 3)  
+__version__ = '.'.join(map(str, __version_info__))  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="instalamosbuster"&gt;Instalamos Buster&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;python setup.py install  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="preparamoscarpetaesttica"&gt;Preparamos carpeta estática&lt;/h2&gt;
+
+&lt;p&gt;Creamos una carpeta &lt;code&gt;static&lt;/code&gt; que usará Buster en la carpeta donde tenemos instalado Ghost, luego sencillamente clonamos nuestro repositorio usando un nombre de carpeta  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd &amp;lt;carpeta de Ghost&amp;gt;  
+mkdir static  
+git clone https://usuario:password@github.com/usuario/usuario.github.io.git static  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="creamoscontenido"&gt;Creamos contenido&lt;/h2&gt;
+
+&lt;p&gt;A partir de aquí la configuración está completa, ya solo es cuestión de ir creando nuestros artículos y publicarlos.&lt;/p&gt;
+
+&lt;h2 id="exportamosghostconbuster"&gt;Exportamos Ghost con Buster&lt;/h2&gt;
+
+&lt;p&gt;Todas nuestras publicaciones pueden ser exportadas a la carpeta &lt;code&gt;static&lt;/code&gt; por Buster  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;buster generate --domain=http://localhost:2368  
+buster preview  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Podemos apuntar nuestro navegador a &lt;a href="http://localhost:9000"&gt;http://localhost:9000&lt;/a&gt; y previsualizar como se ve nuestro blog como páginas estáticas.&lt;/p&gt;
+
+&lt;h2 id="ajustamoslosenlaces"&gt;Ajustamos los enlaces&lt;/h2&gt;
+
+&lt;p&gt;Antes de poder publicar nuestras páginas a GitHub Pages, debemos hacer ajustas los enlaces. Es uno de los bugs de Buster, supongo.&lt;/p&gt;
+
+&lt;p&gt;Este script hará el truco:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;set PATH=C:\Program Files (x86)\nodejs\;C:\Python27\Scripts;C:\Python27;C:\Users\pato\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;
+
+buster generate --domain=http://127.0.0.1:2368  
+
+echo "Corrigiendo enlaces a https"  
+find static -name *.html -type f -exec sed -i -e "s#http://localhost:2368#https://padiazg.github.io#g" {} ;  
+find static -name *.html -type f -exec sed -i -e "s#https://fonts.googleapis.com#https://fonts.googleapis.com#g" {} ;
+
+echo "Corrigiendo algunos posts"  
+find static -name *.html -type f -exec sed -i -e "s#open http://localhost:2368#open http://localhost:2368#g" {} ;  
+find static -name *.html -type f -exec sed -i -e "s#domain=http://localhost:2368#domain=http://localhost:2368#g" {} ;  
+find static -name *.html -type f -exec sed -i -e "s#s\#https://padiazg.github.io#s\#https://padiazg.github.io#g" {} ;
+
+echo "Removiendo index.html de los enlaces"  
+find static -name *.html -type f -exec sed -i -e "s#/#/#g" {} ;
+
+if [%1]==[deploy] goto deploy  
+buster preview  
+goto end
+
+:deploy
+cd static  
+echo "Agregando archivos..."  
+git add -A  
+echo "Confirmando..."  
+git commit -m "Update on the website at $(date)"  
+echo "Enviando a github ..."  
+git push origin master  
+cd ..
+
+:end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="archivosbasuradesed"&gt;Archivos basura de Sed&lt;/h3&gt;
+
+&lt;p&gt;La opción -i de Sed genera una copia de seguridad de cada archivo que modifica, y hasta ahora no encuentro una forma de frenar esto.&lt;/p&gt;</content:encoded></item><item><title>Implementación algoritmo Soundex Español para Genexus</title><description>&lt;p&gt;El algoritmo &lt;a href="https://es.wikipedia.org/wiki/Soundex"&gt;soundex&lt;/a&gt; es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto que no es preciso cuando lo aplicamos a nombres o palabras en español, podría decirse incluso que no es usable en nuestro idioma.&lt;/p&gt;
 
 &lt;p&gt;Investigando un poco hace algunos años había encontrado&lt;/p&gt;</description><link>https://padiazg.github.io/implementacion-algoritmo-soundex-espanol-para-genexus/</link><guid isPermaLink="false">3689fd06-356e-4ef4-807b-be01965254e9</guid><category>soundex</category><category>genexus</category><dc:creator>Patricio Diaz</dc:creator><pubDate>Wed, 31 May 2017 03:21:30 GMT</pubDate><content:encoded>&lt;p&gt;El algoritmo &lt;a href="https://es.wikipedia.org/wiki/Soundex"&gt;soundex&lt;/a&gt; es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto que no es preciso cuando lo aplicamos a nombres o palabras en español, podría decirse incluso que no es usable en nuestro idioma.&lt;/p&gt;
 
@@ -227,7 +395,7 @@ Execution Success
 
 &lt;p&gt;Las instrucciones son para un entorno Linux/MacOS, con ghost 0.7.8, mientras que yo necesitaba hacerlo correr en Windows 10 y con la última version disponible (0.11.7 a la hora de escribir esto) &lt;/p&gt;
 
-&lt;p&gt;Conseguí ponerlo a funcionar siguiendo los pasos pero adaptándolos a los requisitos de las nuevas versiones y de Windows. Sstoy trabajando en una publicación con las instrucciones actualizadas y detalladas.&lt;/p&gt;
+&lt;p&gt;Conseguí ponerlo a funcionar siguiendo los pasos pero adaptándolos a los requisitos de las nuevas versiones y de Windows. Estoy trabajando en una publicación con las instrucciones actualizadas y detalladas.&lt;/p&gt;
 
 &lt;p&gt;Afortunadamente ya había utilizado anteriormente el lenguaje &lt;a href="https://es.wikipedia.org/wiki/Markdown"&gt;MarkDown&lt;/a&gt; al publicar en GitHub y en un servidor GitLab privado que había montado para un cliente. De paso les dejo un enlace las referencias rápidas de este lengiaje: &lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"&gt;Markdown Cheatsheet&lt;/a&gt;.&lt;/p&gt;
 
