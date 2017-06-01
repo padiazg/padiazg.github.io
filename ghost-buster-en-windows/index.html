@@ -1,0 +1,360 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Ghost + Buster en Windows</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css?v=f6b7c8c23a">
+
+
+    <link rel="canonical" href="https://padiazg.github.io/ghost-buster-en-windows/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://padiazg.github.io/ghost-buster-en-windows/amp/">
+    
+    <meta property="og:site_name" content="Pato Díaz ">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Ghost + Buster en Windows">
+    <meta property="og:description" content="Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10. Tomé como punto de partida este de Stefan Scherer.  Requerimientos Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial:  * Node">
+    <meta property="og:url" content="https://padiazg.github.io/ghost-buster-en-windows/">
+    <meta property="article:published_time" content="2017-06-01T04:32:06.000Z">
+    <meta property="article:modified_time" content="2017-06-01T04:32:06.000Z">
+    <meta property="article:publisher" content="https://www.facebook.com/infraestructura.informatica">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Ghost + Buster en Windows">
+    <meta name="twitter:description" content="Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10. Tomé como punto de partida este de Stefan Scherer.  Requerimientos Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial:  * Node">
+    <meta name="twitter:url" content="https://padiazg.github.io/ghost-buster-en-windows/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Patricio Diaz">
+    <meta name="twitter:site" content="@padiazg">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Pato Díaz ",
+        "logo": "https://padiazg.github.io/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Patricio Diaz",
+        "url": "https://padiazg.github.io/author/patricio/",
+        "sameAs": []
+    },
+    "headline": "Ghost + Buster en Windows",
+    "url": "https://padiazg.github.io/ghost-buster-en-windows/",
+    "datePublished": "2017-06-01T04:32:06.000Z",
+    "dateModified": "2017-06-01T04:32:06.000Z",
+    "description": "Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10. Tomé como punto de partida este de Stefan Scherer.  Requerimientos Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial:  * Node",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://padiazg.github.io"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Pato Díaz " href="https://padiazg.github.io/rss/">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30873973-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home"><a href="https://padiazg.github.io/">Home</a></li>
+            <li class="nav-twitter"><a href="https://twitter.com/padiazg">Twitter</a></li>
+            <li class="nav-github"><a href="https://github.com/padiazg">GitHub</a></li>
+    </ul>
+        <a class="subscribe-button icon-feed" href="https://padiazg.github.io/rss/">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Ghost + Buster en Windows</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2017-06-01">01 June 2017</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.</p>
+
+<p>Tomé como punto de partida <a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/">este</a> de <a href="https://twitter.com/stefscherer">Stefan Scherer</a>. </p>
+
+<h2 id="requerimientos">Requerimientos</h2>
+
+<p>Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial: <br>
+* <a href="https://nodejs.org/en/">Node v6</a> <br>
+* <a href="https://git-scm.com/download/win">Git</a> <br>
+* <a href="https://www.python.org/downloads/">Python 2.7</a> <br>
+* <a href="http://gnuwin32.sourceforge.net/packages/findutils.htm">GNU Find</a> <br>
+* <a href="http://gnuwin32.sourceforge.net/packages/sed.htm">GNU Sed</a> <br>
+* <a href="http://gnuwin32.sourceforge.net/packages/wget.htm">GNU Wget</a> </p>
+
+<h2 id="descargamoseinstalamosghost">Descargamos e instalamos Ghost</h2>
+
+<p>Descargamos la última version de <a href="https://ghost.org/es/developers/">aquí</a></p>
+
+<p>Creamos una carpeta llamada ghost y descomprimimos en ella el archivo que acabamos de bajar.</p>
+
+<h3 id="instalamoslasdependencias">Instalamos las dependencias</h3>
+
+<pre><code>cd ghost  
+npm install --production  
+</code></pre>
+
+<h3 id="iniciamosghost">Iniciamos Ghost</h3>
+
+<pre><code>npm run start  
+</code></pre>
+
+<h3 id="nosregistramosconghost">Nos registramos con Ghost</h3>
+
+<p>Abrimos un navegador y apuntamos a  <a href="https://padiazg.github.io/ghost">https://padiazg.github.io/ghost</a></p>
+
+<p>Creamos una cuenta, pasamos por todos los pasos y llegamos al panel de control, ahí podemos ver el post original y aprender un poco del lenguaje Markdown. <br>
+<img src="/content/images/2017/06/ghost-registro.png" alt="">
+<img src="/content/images/2017/06/ghost-panel-control.png" alt=""></p>
+
+<h2 id="tenemosblog">Tenemos blog</h2>
+
+<p>Hasta acá tenemos un blog totalmente funcional, que puede funcionar directamente si tuvieramos la infraestructura apropiada.</p>
+
+<p>Hay suficiente documentación y tutoriales de como administrar y publicar en Ghost, por lo que no voy a entrar en esos detalles.</p>
+
+<h2 id="githubpages">GitHub Pages</h2>
+
+<p>Ahora que ya tenemos nuestro blog funcionando, es hora de ocuparnos en publicarlo como páginas estáticas en GitHub.</p>
+
+<p>Vea <a href="https://help.github.com/categories/github-pages-basics/">aquí</a> los detalles básicos. Está demás decir que necesitaremos una cuenta de GitHub.</p>
+
+<p>Usaremos la nomenclatura <code>nombreusuario/nombreusuario.github.io</code>. El nombre del repositorio debe estar siempre en minúsculas sin importar que el nombre del usuario tenga mayúsculas.</p>
+
+<h2 id="buster">Buster</h2>
+
+<p>El repositorio <a href="https://github.com/axitkhurana/buster">original</a> está abandonado y no funciona correctamente con la versión actual de Ghost, pero encontré este <a href="https://github.com/skosch/buster">otro</a> en el que están haciendo el esfuerzo de continuar el desarrollo de este proyecto.</p>
+
+<p>El método sugerido en el repositorio <code>pip install git+https://github.com/skosch/buster</code> no funciona, al menos en mi máquina, por lo que iremos por otro camino.</p>
+
+<h2 id="adecuamoselpath">Adecuamos el path</h2>
+
+<p>Buster solo funciona con Python v2.7, por lo que ajustamos nuestro path para que utilice solo esa versión. Colateralmente debemos volver a especificar las carpetas del Git.</p>
+
+<p>En una ventana de comandos (cmd):  </p>
+
+<pre><code>set path=C:\Python27\Scripts;C:\Python27;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;C:\Users\pato\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;  
+</code></pre>
+
+<p>Debemos cuidar de ajustar las carpetas del path de acuerdo a nuestro caso particular.</p>
+
+<p>Dejamos abierta la ventana de comandos para ejecutae en ella los pasos siguientes</p>
+
+<h2 id="instalandobusteramano">Instalando Buster a mano</h2>
+
+<p>Descargamos el repositorio, preferentemente en un directorio diferente al que usamos en los pasos anteriores.</p>
+
+<p>En una linea de comandos  </p>
+
+<pre><code>cd \proyectos\python  
+git clone https://github.com/skosch/buster.git  
+</code></pre>
+
+<h3 id="parcheamos">Parcheamos</h3>
+
+<p>Por alguna razón el archivo <mark>buster\_version.py</mark> tiene rastros de versionado que obviamente hacen que se de un error al tratar de instalar el paquete por cualquier método normal.</p>
+
+<p>Modificamos <mark>buster\_version.py</mark> para que quede de esta manera:  </p>
+
+<pre><code>__version_info__ = (0, 1, 3)  
+__version__ = '.'.join(map(str, __version_info__))  
+</code></pre>
+
+<h3 id="instalamosbuster">Instalamos Buster</h3>
+
+<pre><code>python setup.py install  
+</code></pre>
+
+<h2 id="preparamoscarpetaesttica">Preparamos carpeta estática</h2>
+
+<p>Creamos una carpeta <code>static</code> que usará Buster en la carpeta donde tenemos instalado Ghost, luego sencillamente clonamos nuestro repositorio usando un nombre de carpeta  </p>
+
+<pre><code>cd &lt;carpeta de Ghost&gt;  
+mkdir static  
+git clone https://usuario:password@github.com/usuario/usuario.github.io.git static  
+</code></pre>
+
+<h2 id="creamoscontenido">Creamos contenido</h2>
+
+<p>A partir de aquí la configuración está completa, ya solo es cuestión de ir creando nuestros artículos y publicarlos.</p>
+
+<h2 id="exportamosghostconbuster">Exportamos Ghost con Buster</h2>
+
+<p>Todas nuestras publicaciones pueden ser exportadas a la carpeta <code>static</code> por Buster  </p>
+
+<pre><code>buster generate --domain=http://localhost:2368  
+buster preview  
+</code></pre>
+
+<p>Podemos apuntar nuestro navegador a <a href="http://localhost:9000">http://localhost:9000</a> y previsualizar como se ve nuestro blog como páginas estáticas.</p>
+
+<h2 id="ajustamoslosenlaces">Ajustamos los enlaces</h2>
+
+<p>Antes de poder publicar nuestras páginas a GitHub Pages, debemos hacer ajustas los enlaces. Es uno de los bugs de Buster, supongo.</p>
+
+<p>Este script hará el truco:  </p>
+
+<pre><code>set PATH=C:\Program Files (x86)\nodejs\;C:\Python27\Scripts;C:\Python27;C:\Users\pato\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;
+
+buster generate --domain=http://127.0.0.1:2368  
+
+echo "Corrigiendo enlaces a https"  
+find static -name *.html -type f -exec sed -i -e "s#http://localhost:2368#https://padiazg.github.io#g" {} ;  
+find static -name *.html -type f -exec sed -i -e "s#https://fonts.googleapis.com#https://fonts.googleapis.com#g" {} ;
+
+echo "Corrigiendo algunos posts"  
+find static -name *.html -type f -exec sed -i -e "s#open http://localhost:2368#open http://localhost:2368#g" {} ;  
+find static -name *.html -type f -exec sed -i -e "s#domain=http://localhost:2368#domain=http://localhost:2368#g" {} ;  
+find static -name *.html -type f -exec sed -i -e "s#s\#https://padiazg.github.io#s\#https://padiazg.github.io#g" {} ;
+
+echo "Removiendo index.html de los enlaces"  
+find static -name *.html -type f -exec sed -i -e "s#/#/#g" {} ;
+
+if [%1]==[deploy] goto deploy  
+buster preview  
+goto end
+
+:deploy
+cd static  
+echo "Agregando archivos..."  
+git add -A  
+echo "Confirmando..."  
+git commit -m "Update on the website at $(date)"  
+echo "Enviando a github ..."  
+git push origin master  
+cd ..
+
+:end
+</code></pre>
+
+<h3 id="archivosbasuradesed">Archivos basura de Sed</h3>
+
+<p>La opción -i de Sed genera una copia de seguridad de cada archivo que modifica, y hasta ahora no encuentro una forma de frenar esto.</p>
+        </section>
+
+        <footer class="post-footer">
+
+
+
+            <section class="author">
+                <h4><a href="/author/patricio/">Patricio Diaz</a></h4>
+
+                    <p>Read <a href="/author/patricio/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Ghost%20%2B%20Buster%20en%20Windows&amp;url=https://padiazg.github.io/ghost-buster-en-windows/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://padiazg.github.io/ghost-buster-en-windows/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://padiazg.github.io/ghost-buster-en-windows/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+
+        </footer>
+		
+		<div id="disqus_thread"></div>
+		<script>
+
+		/**
+		*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+		*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+		/*
+		var disqus_config = function () {
+		this.page.url = 'https://padiazg.github.io/ghost-buster-en-windows/';  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = 'ghost-5'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		};
+		*/
+		(function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://patotech.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+		})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev no-cover" href="/implementacion-algoritmo-soundex-espanol-para-genexus/">
+        <section class="post">
+            <h2>Implementación algoritmo Soundex Español para Genexus</h2>
+            <p>El algoritmo soundex es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="https://padiazg.github.io">Pato Díaz </a> © 2017</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js?v=f6b7c8c23a"></script>
+    <script type="text/javascript" src="/assets/js/index.js?v=f6b7c8c23a"></script>
+
+</body>
