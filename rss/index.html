@@ -1,4 +1,91 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Pato Díaz ]]></title><description><![CDATA[Blog sobre tecnologías de la información, desarrollo e infraestructura.]]></description><link>https://padiazg.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 01 Jun 2017 05:03:37 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Ghost + Buster en Windows]]></title><description><![CDATA[<p>Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Pato Díaz ]]></title><description><![CDATA[Blog sobre tecnologías de la información, desarrollo e infraestructura.]]></description><link>https://padiazg.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Sun, 04 Jun 2017 23:42:24 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Códigos de barra como servicio]]></title><description><![CDATA[<p>En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417. </p>
+
+<p>El dilema es como integrar esa funcionalidad al desarrollo, ya sea como biblioteca nativa o consumiendo algún servicio externo.</p>
+
+<p>En ambos casos las desventajas son varias</p>]]></description><link>https://padiazg.github.io/codigos-de-barra-y-qr-como-servicio/</link><guid isPermaLink="false">e67db290-4d3b-40bc-9191-0eeed6dd0ed0</guid><category><![CDATA[node]]></category><category><![CDATA[express]]></category><category><![CDATA[códigos de barra]]></category><category><![CDATA[QR]]></category><category><![CDATA[EAN]]></category><dc:creator><![CDATA[Patricio Diaz]]></dc:creator><pubDate>Sun, 04 Jun 2017 23:21:53 GMT</pubDate><content:encoded><![CDATA[<p>En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417. </p>
+
+<p>El dilema es como integrar esa funcionalidad al desarrollo, ya sea como biblioteca nativa o consumiendo algún servicio externo.</p>
+
+<p>En ambos casos las desventajas son varias y el riesgo de usarlas es importante. </p>
+
+<h3 id="bibliotecasnativas">Bibliotecas nativas</h3>
+
+<p>El problema con las bibliotecas nativas es que no siempre se encuentra una para el lenguaje que estamos usando o para la plataforma donde estamos desplegando nuestro desarrollo, ya sea por que no exista, por licencia, costo, etc.</p>
+
+<h3 id="serviciosexternos">Servicios externos</h3>
+
+<p>En el caso de los servicios externos , aunque es muy cómodo simplemente llamar a una url y recuperar una imágen, estos servicios pueden dejar de existir, volverse muy lentos, cambiar su API, incluir costos, o simplemente el acceso a internet no es una opción.</p>
+
+<h3 id="serviciolocal">Servicio local</h3>
+
+<p>Por este motivo creé un servidor que exporte como servicios la generación de ciertos códigos de barra y bidimensionales de forma local.</p>
+
+<h3 id="tiposdecdigosgenerados">Tipos de códigos generados</h3>
+
+<p>Actualmente puede generar codigos EAN13, CODE39, CODE129, PDF417, QR, DataMatrix e Interleaved 2of 5, aunque la lista puede extenderse <br>
+a todos los formatos soportados por los proyectos <a href="https://github.com/epha/code-rescode">rescode</a> y <a href="https://github.com/metafloor/bwip-js">bwip-js</a> en los que está basado este desarrollo.</p>
+
+<h3 id="formatosdesalida">Formatos de salida</h3>
+
+<p>Por defecto se generan imágenes en formato PNG, y opcionalmente en formato JPG (ver requerimientos adicionales mas adelante)</p>
+
+<h3 id="instalacin">Instalación</h3>
+
+<p>El proyecto completo puede descargarse de <a href="https://github.com/padiazg/barcode-as-a-service">aquí</a>. </p>
+
+<p>Necesitamos <a href="https://nodejs.org/en/">NodeJS</a>, preferentemente en su última versión.</p>
+
+<p>Para poder generar imágenes en formato JPG se requiere tener instalado <a href="http://www.graphicsmagick.org/">GraphicsMagik</a>.</p>
+
+<pre><code>git clone https://github.com/padiazg/barcode-as-a-service.git  
+cd barcode-as-a-service  
+npm install  
+npm run start  
+</code></pre>
+
+<h3 id="mododeuso">Modo de uso</h3>
+
+<p>Apunta tu navedador a <code>http://localhost:3000</code> para ver una página de ayuda con ejemplos de uso.</p>
+
+<p>La forma de llamar al servicio es: <br>
+<code>http://serverhost:port/&lt;barcode&gt;?value=&lt;value&gt;&amp;scale=&lt;scale&gt;&amp;fmt=&lt;PNG|JPG&gt;</code></p>
+
+<p>Donde: <br>
+<strong><em>serverhost</em></strong> y <strong><em>port</em></strong> son la url de nuestro servidor <br>
+<strong><em>barcode</em></strong> es el tipo de código solicitado <br>
+<strong><em>value</em></strong> es el valor a generar <br>
+<strong><em>scale</em></strong> es la escala de la imágen (por defecto es 0) <br>
+<strong><em>fmt</em></strong> es el formato de imágen a generar. Valores posibles son PNG y JPG, por defecto es PNG.</p>
+
+<h3 id="ejemplos">Ejemplos:</h3>
+
+<p><strong>EAN13</strong> <br>
+<code>http://localhost:3000/ean13?value=7840058004215</code>
+<img src="https://padiazg.github.io/content/images/2017/06/ean13.png" alt=""></p>
+
+<p><strong>CODE39</strong> <br>
+<code>http://localhost:3000/code39?value=12345678</code>
+<img src="https://padiazg.github.io/content/images/2017/06/code39.png" alt=""></p>
+
+<p><strong>CODE128</strong> <br>
+<code>http://localhost:3000/code128?value=98380d7d-85df-456f-901d-3b325ee86e07</code>
+<img src="https://padiazg.github.io/content/images/2017/06/code128.png" alt=""></p>
+
+<p><strong>PDF417</strong> <br>
+<code>http://localhost:3000/pdf417?value=patricio+antonio+diaz+gimenez</code>
+<img src="https://padiazg.github.io/content/images/2017/06/pdf417.png" alt=""></p>
+
+<p><strong>QR</strong> <br>
+<code>http://localhost:3000/qr?value=patricio+antonio+diaz+gimenez</code>
+<img src="https://padiazg.github.io/content/images/2017/06/qr.png" alt=""></p>
+
+<p><strong>DataMatrix</strong> <br>
+<code>http://localhost:3000/datamatrix?value=patricio+antonio+diaz+gimenez</code>
+<img src="https://padiazg.github.io/content/images/2017/06/datamatrix.png" alt=""></p>
+
+<p><strong>Interleaved2of5</strong> <br>
+<code>http://localhost:3000/interleaved2of5?value=1234567890</code>
+<img src="https://padiazg.github.io/content/images/2017/06/interleaved2of5.png" alt=""></p>]]></content:encoded></item><item><title><![CDATA[Ghost + Buster en Windows]]></title><description><![CDATA[<p>Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.</p>
 
 <p>Tomé como punto de partida <a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/">este</a> tutorial de <a href="https://twitter.com/stefscherer">Stefan Scherer</a>. </p>
 

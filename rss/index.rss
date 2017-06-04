@@ -1,13 +1,99 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Pato Díaz </title><description>Blog sobre tecnologías de la información, desarrollo e infraestructura.</description><link>https://padiazg.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Thu, 01 Jun 2017 05:00:58 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Ghost + Buster en Windows</title><description>&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Pato Díaz </title><description>Blog sobre tecnologías de la información, desarrollo e infraestructura.</description><link>https://padiazg.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Sun, 04 Jun 2017 23:39:46 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Códigos de barra como servicio</title><description>&lt;p&gt;En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417. &lt;/p&gt;
 
-&lt;p&gt;Tomé como punto de partida &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;este&lt;/a&gt; de &lt;a href="https://twitter.com/stefscherer"&gt;Stefan Scherer&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;El dilema es como integrar esa funcionalidad al desarrollo, ya sea como biblioteca nativa o consumiendo algún servicio externo.&lt;/p&gt;
+
+&lt;p&gt;En ambos casos las desventajas son varias&lt;/p&gt;</description><link>https://padiazg.github.io/codigos-de-barra-y-qr-como-servicio/</link><guid isPermaLink="false">e67db290-4d3b-40bc-9191-0eeed6dd0ed0</guid><category>node</category><category>express</category><category>códigos de barra</category><category>QR</category><category>DataMatrix</category><dc:creator>Patricio Diaz</dc:creator><pubDate>Sun, 04 Jun 2017 23:21:53 GMT</pubDate><content:encoded>&lt;p&gt;En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417. &lt;/p&gt;
+
+&lt;p&gt;El dilema es como integrar esa funcionalidad al desarrollo, ya sea como biblioteca nativa o consumiendo algún servicio externo.&lt;/p&gt;
+
+&lt;p&gt;En ambos casos las desventajas son varias y el riesgo de usarlas es importante. &lt;/p&gt;
+
+&lt;h3 id="bibliotecasnativas"&gt;Bibliotecas nativas&lt;/h3&gt;
+
+&lt;p&gt;El problema con las bibliotecas nativas es que no siempre se encuentra una para el lenguaje que estamos usando o para la plataforma donde estamos desplegando nuestro desarrollo, ya sea por que no exista, por licencia, costo, etc.&lt;/p&gt;
+
+&lt;h3 id="serviciosexternos"&gt;Servicios externos&lt;/h3&gt;
+
+&lt;p&gt;En el caso de los servicios externos , aunque es muy cómodo simplemente llamar a una url y recuperar una imágen, estos servicios pueden dejar de existir, volverse muy lentos, cambiar su API, incluir costos, o simplemente el acceso a internet no es una opción.&lt;/p&gt;
+
+&lt;h3 id="serviciolocal"&gt;Servicio local&lt;/h3&gt;
+
+&lt;p&gt;Por este motivo creé un servidor que exporte como servicios la generación de ciertos códigos de barra y bidimensionales de forma local.&lt;/p&gt;
+
+&lt;h3 id="tiposdecdigosgenerados"&gt;Tipos de códigos generados&lt;/h3&gt;
+
+&lt;p&gt;Actualmente puede generar codigos EAN13, CODE39, CODE129, PDF417, QR, DataMatrix e Interleaved 2of 5, aunque la lista puede extenderse &lt;br&gt;
+a todos los formatos soportados por los proyectos &lt;a href="https://github.com/epha/code-rescode"&gt;rescode&lt;/a&gt; y &lt;a href="https://github.com/metafloor/bwip-js"&gt;bwip-js&lt;/a&gt; en los que está basado este desarrollo.&lt;/p&gt;
+
+&lt;h3 id="formatosdesalida"&gt;Formatos de salida&lt;/h3&gt;
+
+&lt;p&gt;Por defecto se generan imágenes en formato PNG, y opcionalmente en formato JPG (ver requerimientos adicionales mas adelante)&lt;/p&gt;
+
+&lt;h3 id="instalacin"&gt;Instalación&lt;/h3&gt;
+
+&lt;p&gt;El proyecto completo puede descargarse de &lt;a href="https://github.com/padiazg/barcode-as-a-service"&gt;aquí&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Necesitamos &lt;a href="https://nodejs.org/en/"&gt;NodeJS&lt;/a&gt;, preferentemente en su última versión.&lt;/p&gt;
+
+&lt;p&gt;Para poder generar imágenes en formato JPG se requiere tener instalado &lt;a href="http://www.graphicsmagick.org/"&gt;GraphicsMagik&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/padiazg/barcode-as-a-service.git  
+cd barcode-as-a-service  
+npm install  
+npm run start  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="mododeuso"&gt;Modo de uso&lt;/h3&gt;
+
+&lt;p&gt;Apunta tu navedador a &lt;code&gt;http://localhost:3000&lt;/code&gt; para ver una página de ayuda con ejemplos de uso.&lt;/p&gt;
+
+&lt;p&gt;La forma de llamar al servicio es: &lt;br&gt;
+&lt;code&gt;http://serverhost:port/&amp;lt;barcode&amp;gt;?value=&amp;lt;value&amp;gt;&amp;amp;scale=&amp;lt;scale&amp;gt;&amp;amp;fmt=&amp;lt;PNG|JPG&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Donde: &lt;br&gt;
+&lt;strong&gt;&lt;em&gt;serverhost&lt;/em&gt;&lt;/strong&gt; y &lt;strong&gt;&lt;em&gt;port&lt;/em&gt;&lt;/strong&gt; son la url de nuestro servidor &lt;br&gt;
+&lt;strong&gt;&lt;em&gt;barcode&lt;/em&gt;&lt;/strong&gt; es el tipo de código solicitado &lt;br&gt;
+&lt;strong&gt;&lt;em&gt;value&lt;/em&gt;&lt;/strong&gt; es el valor a generar &lt;br&gt;
+&lt;strong&gt;&lt;em&gt;scale&lt;/em&gt;&lt;/strong&gt; es la escala de la imágen (por defecto es 0) &lt;br&gt;
+&lt;strong&gt;&lt;em&gt;fmt&lt;/em&gt;&lt;/strong&gt; es el formato de imágen a generar. Valores posibles son PNG y JPG, por defecto es PNG.&lt;/p&gt;
+
+&lt;h3 id="ejemplos"&gt;Ejemplos:&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;EAN13&lt;/strong&gt; &lt;br&gt;
+&lt;code&gt;http://localhost:3000/ean13?value=7840058004215&lt;/code&gt;
+&lt;img src="https://padiazg.github.io/content/images/2017/06/ean13.png" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CODE39&lt;/strong&gt; &lt;br&gt;
+&lt;code&gt;http://localhost:3000/code39?value=12345678&lt;/code&gt;
+&lt;img src="https://padiazg.github.io/content/images/2017/06/code39.png" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CODE128&lt;/strong&gt; &lt;br&gt;
+&lt;code&gt;http://localhost:3000/code128?value=98380d7d-85df-456f-901d-3b325ee86e07&lt;/code&gt;
+&lt;img src="https://padiazg.github.io/content/images/2017/06/code128.png" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;PDF417&lt;/strong&gt; &lt;br&gt;
+&lt;code&gt;http://localhost:3000/pdf417?value=patricio+antonio+diaz+gimenez&lt;/code&gt;
+&lt;img src="https://padiazg.github.io/content/images/2017/06/pdf417.png" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;QR&lt;/strong&gt; &lt;br&gt;
+&lt;code&gt;http://localhost:3000/qr?value=patricio+antonio+diaz+gimenez&lt;/code&gt;
+&lt;img src="https://padiazg.github.io/content/images/2017/06/qr.png" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;DataMatrix&lt;/strong&gt; &lt;br&gt;
+&lt;code&gt;http://localhost:3000/datamatrix?value=patricio+antonio+diaz+gimenez&lt;/code&gt;
+&lt;img src="https://padiazg.github.io/content/images/2017/06/datamatrix.png" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Interleaved2of5&lt;/strong&gt; &lt;br&gt;
+&lt;code&gt;http://localhost:3000/interleaved2of5?value=1234567890&lt;/code&gt;
+&lt;img src="https://padiazg.github.io/content/images/2017/06/interleaved2of5.png" alt=""&gt;&lt;/p&gt;</content:encoded></item><item><title>Ghost + Buster en Windows</title><description>&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
+
+&lt;p&gt;Tomé como punto de partida &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;este&lt;/a&gt; tutorial de &lt;a href="https://twitter.com/stefscherer"&gt;Stefan Scherer&lt;/a&gt;. &lt;/p&gt;
 
 &lt;h2 id="requerimientos"&gt;Requerimientos&lt;/h2&gt;
 
-&lt;p&gt;Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial: &lt;br&gt;
-* &lt;a href="https://nodejs.org/en/"&gt;Node&lt;/a&gt;&lt;/p&gt;</description><link>https://padiazg.github.io/ghost-buster-en-windows/</link><guid isPermaLink="false">3584ca7f-fb10-4a03-a61d-500db6884193</guid><category>ghost</category><category>buster</category><category>python</category><category>windows</category><category>node</category><category>gnu</category><dc:creator>Patricio Diaz</dc:creator><pubDate>Thu, 01 Jun 2017 04:32:06 GMT</pubDate><content:encoded>&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
+&lt;p&gt;Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial:&lt;/p&gt;</description><link>https://padiazg.github.io/ghost-buster-en-windows/</link><guid isPermaLink="false">3584ca7f-fb10-4a03-a61d-500db6884193</guid><category>ghost</category><category>buster</category><category>python</category><category>windows</category><category>node</category><category>gnu</category><dc:creator>Patricio Diaz</dc:creator><pubDate>Thu, 01 Jun 2017 04:32:06 GMT</pubDate><content:encoded>&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
 
-&lt;p&gt;Tomé como punto de partida &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;este&lt;/a&gt; de &lt;a href="https://twitter.com/stefscherer"&gt;Stefan Scherer&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Tomé como punto de partida &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;este&lt;/a&gt; tutorial de &lt;a href="https://twitter.com/stefscherer"&gt;Stefan Scherer&lt;/a&gt;. &lt;/p&gt;
 
 &lt;h2 id="requerimientos"&gt;Requerimientos&lt;/h2&gt;
 
