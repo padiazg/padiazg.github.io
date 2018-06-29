@@ -1,274 +1,183 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Pato Díaz </title><description>Blog sobre tecnologías de la información, desarrollo e infraestructura.</description><link>https://padiazg.github.io/</link><generator>Ghost 0.11</generator><lastBuildDate>Sun, 04 Jun 2017 23:39:46 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Códigos de barra como servicio</title><description>&lt;p&gt;En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417. &lt;/p&gt;
-
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Pato Díaz </title><description>Blog sobre tecnologías de la información, desarrollo e infraestructura.</description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Pato Díaz </title><link>http://localhost:2368/</link></image><generator>Ghost 1.19</generator><lastBuildDate>Wed, 27 Jun 2018 02:02:15 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Códigos de barra como servicio</title><description>&lt;div class="kg-card-markdown"&gt;&lt;p&gt;En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417.&lt;/p&gt;
 &lt;p&gt;El dilema es como integrar esa funcionalidad al desarrollo, ya sea como biblioteca nativa o consumiendo algún servicio externo.&lt;/p&gt;
-
-&lt;p&gt;En ambos casos las desventajas son varias&lt;/p&gt;</description><link>https://padiazg.github.io/codigos-de-barra-y-qr-como-servicio/</link><guid isPermaLink="false">e67db290-4d3b-40bc-9191-0eeed6dd0ed0</guid><category>node</category><category>express</category><category>códigos de barra</category><category>QR</category><category>DataMatrix</category><dc:creator>Patricio Diaz</dc:creator><pubDate>Sun, 04 Jun 2017 23:21:53 GMT</pubDate><content:encoded>&lt;p&gt;En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417. &lt;/p&gt;
-
+&lt;p&gt;En ambos casos las desventajas son varias&lt;/p&gt;&lt;/div&gt;</description><link>http://localhost:2368/codigos-de-barra-y-qr-como-servicio/</link><guid isPermaLink="false">5b1f15e1b89b230001100a13</guid><category>node</category><category>express</category><category>códigos de barra</category><category>QR</category><category>EAN</category><dc:creator>Patricio Diaz</dc:creator><pubDate>Sun, 04 Jun 2017 23:21:53 GMT</pubDate><content:encoded>&lt;div class="kg-card-markdown"&gt;&lt;p&gt;En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417.&lt;/p&gt;
 &lt;p&gt;El dilema es como integrar esa funcionalidad al desarrollo, ya sea como biblioteca nativa o consumiendo algún servicio externo.&lt;/p&gt;
-
-&lt;p&gt;En ambos casos las desventajas son varias y el riesgo de usarlas es importante. &lt;/p&gt;
-
+&lt;p&gt;En ambos casos las desventajas son varias y el riesgo de usarlas es importante.&lt;/p&gt;
 &lt;h3 id="bibliotecasnativas"&gt;Bibliotecas nativas&lt;/h3&gt;
-
 &lt;p&gt;El problema con las bibliotecas nativas es que no siempre se encuentra una para el lenguaje que estamos usando o para la plataforma donde estamos desplegando nuestro desarrollo, ya sea por que no exista, por licencia, costo, etc.&lt;/p&gt;
-
 &lt;h3 id="serviciosexternos"&gt;Servicios externos&lt;/h3&gt;
-
 &lt;p&gt;En el caso de los servicios externos , aunque es muy cómodo simplemente llamar a una url y recuperar una imágen, estos servicios pueden dejar de existir, volverse muy lentos, cambiar su API, incluir costos, o simplemente el acceso a internet no es una opción.&lt;/p&gt;
-
 &lt;h3 id="serviciolocal"&gt;Servicio local&lt;/h3&gt;
-
 &lt;p&gt;Por este motivo creé un servidor que exporte como servicios la generación de ciertos códigos de barra y bidimensionales de forma local.&lt;/p&gt;
-
 &lt;h3 id="tiposdecdigosgenerados"&gt;Tipos de códigos generados&lt;/h3&gt;
-
-&lt;p&gt;Actualmente puede generar codigos EAN13, CODE39, CODE129, PDF417, QR, DataMatrix e Interleaved 2of 5, aunque la lista puede extenderse &lt;br&gt;
+&lt;p&gt;Actualmente puede generar codigos EAN13, CODE39, CODE129, PDF417, QR, DataMatrix e Interleaved 2of 5, aunque la lista puede extenderse&lt;br&gt;
 a todos los formatos soportados por los proyectos &lt;a href="https://github.com/epha/code-rescode"&gt;rescode&lt;/a&gt; y &lt;a href="https://github.com/metafloor/bwip-js"&gt;bwip-js&lt;/a&gt; en los que está basado este desarrollo.&lt;/p&gt;
-
 &lt;h3 id="formatosdesalida"&gt;Formatos de salida&lt;/h3&gt;
-
 &lt;p&gt;Por defecto se generan imágenes en formato PNG, y opcionalmente en formato JPG (ver requerimientos adicionales mas adelante)&lt;/p&gt;
-
 &lt;h3 id="instalacin"&gt;Instalación&lt;/h3&gt;
-
-&lt;p&gt;El proyecto completo puede descargarse de &lt;a href="https://github.com/padiazg/barcode-as-a-service"&gt;aquí&lt;/a&gt;. &lt;/p&gt;
-
+&lt;p&gt;El proyecto completo puede descargarse de &lt;a href="https://github.com/padiazg/barcode-as-a-service"&gt;aquí&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Necesitamos &lt;a href="https://nodejs.org/en/"&gt;NodeJS&lt;/a&gt;, preferentemente en su última versión.&lt;/p&gt;
-
 &lt;p&gt;Para poder generar imágenes en formato JPG se requiere tener instalado &lt;a href="http://www.graphicsmagick.org/"&gt;GraphicsMagik&lt;/a&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/padiazg/barcode-as-a-service.git  
-cd barcode-as-a-service  
-npm install  
-npm run start  
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/padiazg/barcode-as-a-service.git
+cd barcode-as-a-service
+npm install
+npm run start
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h3 id="mododeuso"&gt;Modo de uso&lt;/h3&gt;
-
 &lt;p&gt;Apunta tu navedador a &lt;code&gt;http://localhost:3000&lt;/code&gt; para ver una página de ayuda con ejemplos de uso.&lt;/p&gt;
-
-&lt;p&gt;La forma de llamar al servicio es: &lt;br&gt;
+&lt;p&gt;La forma de llamar al servicio es:&lt;br&gt;
 &lt;code&gt;http://serverhost:port/&amp;lt;barcode&amp;gt;?value=&amp;lt;value&amp;gt;&amp;amp;scale=&amp;lt;scale&amp;gt;&amp;amp;fmt=&amp;lt;PNG|JPG&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Donde: &lt;br&gt;
-&lt;strong&gt;&lt;em&gt;serverhost&lt;/em&gt;&lt;/strong&gt; y &lt;strong&gt;&lt;em&gt;port&lt;/em&gt;&lt;/strong&gt; son la url de nuestro servidor &lt;br&gt;
-&lt;strong&gt;&lt;em&gt;barcode&lt;/em&gt;&lt;/strong&gt; es el tipo de código solicitado &lt;br&gt;
-&lt;strong&gt;&lt;em&gt;value&lt;/em&gt;&lt;/strong&gt; es el valor a generar &lt;br&gt;
-&lt;strong&gt;&lt;em&gt;scale&lt;/em&gt;&lt;/strong&gt; es la escala de la imágen (por defecto es 0) &lt;br&gt;
-&lt;strong&gt;&lt;em&gt;fmt&lt;/em&gt;&lt;/strong&gt; es el formato de imágen a generar. Valores posibles son PNG y JPG, por defecto es PNG.&lt;/p&gt;
-
+&lt;p&gt;Donde:&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;serverhost&lt;/strong&gt;&lt;/em&gt; y &lt;em&gt;&lt;strong&gt;port&lt;/strong&gt;&lt;/em&gt; son la url de nuestro servidor&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;barcode&lt;/strong&gt;&lt;/em&gt; es el tipo de código solicitado&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;value&lt;/strong&gt;&lt;/em&gt; es el valor a generar&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;scale&lt;/strong&gt;&lt;/em&gt; es la escala de la imágen (por defecto es 0)&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;fmt&lt;/strong&gt;&lt;/em&gt; es el formato de imágen a generar. Valores posibles son PNG y JPG, por defecto es PNG.&lt;/p&gt;
 &lt;h3 id="ejemplos"&gt;Ejemplos:&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;EAN13&lt;/strong&gt; &lt;br&gt;
-&lt;code&gt;http://localhost:3000/ean13?value=7840058004215&lt;/code&gt;
-&lt;img src="https://padiazg.github.io/content/images/2017/06/ean13.png" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;CODE39&lt;/strong&gt; &lt;br&gt;
-&lt;code&gt;http://localhost:3000/code39?value=12345678&lt;/code&gt;
-&lt;img src="https://padiazg.github.io/content/images/2017/06/code39.png" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;CODE128&lt;/strong&gt; &lt;br&gt;
-&lt;code&gt;http://localhost:3000/code128?value=98380d7d-85df-456f-901d-3b325ee86e07&lt;/code&gt;
-&lt;img src="https://padiazg.github.io/content/images/2017/06/code128.png" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;PDF417&lt;/strong&gt; &lt;br&gt;
-&lt;code&gt;http://localhost:3000/pdf417?value=patricio+antonio+diaz+gimenez&lt;/code&gt;
-&lt;img src="https://padiazg.github.io/content/images/2017/06/pdf417.png" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;QR&lt;/strong&gt; &lt;br&gt;
-&lt;code&gt;http://localhost:3000/qr?value=patricio+antonio+diaz+gimenez&lt;/code&gt;
-&lt;img src="https://padiazg.github.io/content/images/2017/06/qr.png" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;DataMatrix&lt;/strong&gt; &lt;br&gt;
-&lt;code&gt;http://localhost:3000/datamatrix?value=patricio+antonio+diaz+gimenez&lt;/code&gt;
-&lt;img src="https://padiazg.github.io/content/images/2017/06/datamatrix.png" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Interleaved2of5&lt;/strong&gt; &lt;br&gt;
-&lt;code&gt;http://localhost:3000/interleaved2of5?value=1234567890&lt;/code&gt;
-&lt;img src="https://padiazg.github.io/content/images/2017/06/interleaved2of5.png" alt=""&gt;&lt;/p&gt;</content:encoded></item><item><title>Ghost + Buster en Windows</title><description>&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
-
-&lt;p&gt;Tomé como punto de partida &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;este&lt;/a&gt; tutorial de &lt;a href="https://twitter.com/stefscherer"&gt;Stefan Scherer&lt;/a&gt;. &lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;EAN13&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;http://localhost:3000/ean13?value=7840058004215&lt;/code&gt;&lt;br&gt;
+&lt;img src="http://localhost:2368/content/images/2017/06/ean13.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CODE39&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;http://localhost:3000/code39?value=12345678&lt;/code&gt;&lt;br&gt;
+&lt;img src="http://localhost:2368/content/images/2017/06/code39.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CODE128&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;http://localhost:3000/code128?value=98380d7d-85df-456f-901d-3b325ee86e07&lt;/code&gt;&lt;br&gt;
+&lt;img src="http://localhost:2368/content/images/2017/06/code128.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PDF417&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;http://localhost:3000/pdf417?value=patricio+antonio+diaz+gimenez&lt;/code&gt;&lt;br&gt;
+&lt;img src="http://localhost:2368/content/images/2017/06/pdf417.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;QR&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;http://localhost:3000/qr?value=patricio+antonio+diaz+gimenez&lt;/code&gt;&lt;br&gt;
+&lt;img src="http://localhost:2368/content/images/2017/06/qr.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DataMatrix&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;http://localhost:3000/datamatrix?value=patricio+antonio+diaz+gimenez&lt;/code&gt;&lt;br&gt;
+&lt;img src="http://localhost:2368/content/images/2017/06/datamatrix.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Interleaved2of5&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;http://localhost:3000/interleaved2of5?value=1234567890&lt;/code&gt;&lt;br&gt;
+&lt;img src="http://localhost:2368/content/images/2017/06/interleaved2of5.png" alt=""&gt;&lt;/p&gt;
+&lt;/div&gt;</content:encoded></item><item><title>Ghost + Buster en Windows</title><description>&lt;div class="kg-card-markdown"&gt;&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
+&lt;p&gt;Tomé como punto de partida &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;este&lt;/a&gt; tutorial de &lt;a href="https://twitter.com/stefscherer"&gt;Stefan Scherer&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="requerimientos"&gt;Requerimientos&lt;/h2&gt;
-
-&lt;p&gt;Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial:&lt;/p&gt;</description><link>https://padiazg.github.io/ghost-buster-en-windows/</link><guid isPermaLink="false">3584ca7f-fb10-4a03-a61d-500db6884193</guid><category>ghost</category><category>buster</category><category>python</category><category>windows</category><category>node</category><category>gnu</category><dc:creator>Patricio Diaz</dc:creator><pubDate>Thu, 01 Jun 2017 04:32:06 GMT</pubDate><content:encoded>&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
-
-&lt;p&gt;Tomé como punto de partida &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;este&lt;/a&gt; tutorial de &lt;a href="https://twitter.com/stefscherer"&gt;Stefan Scherer&lt;/a&gt;. &lt;/p&gt;
-
+&lt;p&gt;Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial:&lt;/p&gt;&lt;/div&gt;</description><link>http://localhost:2368/ghost-buster-en-windows/</link><guid isPermaLink="false">5b1f15e0b89b230001100a0c</guid><category>ghost</category><category>buster</category><category>python</category><category>windows</category><category>node</category><category>gnu</category><dc:creator>Patricio Diaz</dc:creator><pubDate>Thu, 01 Jun 2017 04:32:06 GMT</pubDate><content:encoded>&lt;div class="kg-card-markdown"&gt;&lt;p&gt;Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10.&lt;/p&gt;
+&lt;p&gt;Tomé como punto de partida &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;este&lt;/a&gt; tutorial de &lt;a href="https://twitter.com/stefscherer"&gt;Stefan Scherer&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="requerimientos"&gt;Requerimientos&lt;/h2&gt;
-
-&lt;p&gt;Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial: &lt;br&gt;
-* &lt;a href="https://nodejs.org/en/"&gt;Node v6&lt;/a&gt; &lt;br&gt;
-* &lt;a href="https://git-scm.com/download/win"&gt;Git&lt;/a&gt; &lt;br&gt;
-* &lt;a href="https://www.python.org/downloads/"&gt;Python 2.7&lt;/a&gt; &lt;br&gt;
-* &lt;a href="http://gnuwin32.sourceforge.net/packages/findutils.htm"&gt;GNU Find&lt;/a&gt; &lt;br&gt;
-* &lt;a href="http://gnuwin32.sourceforge.net/packages/sed.htm"&gt;GNU Sed&lt;/a&gt; &lt;br&gt;
-* &lt;a href="http://gnuwin32.sourceforge.net/packages/wget.htm"&gt;GNU Wget&lt;/a&gt; &lt;/p&gt;
-
+&lt;p&gt;Debemos asegurarnos de tener instalados ciertos programas para poder completar este tutorial:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://nodejs.org/en/"&gt;Node v6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://git-scm.com/download/win"&gt;Git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.python.org/downloads/"&gt;Python 2.7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://gnuwin32.sourceforge.net/packages/findutils.htm"&gt;GNU Find&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://gnuwin32.sourceforge.net/packages/sed.htm"&gt;GNU Sed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://gnuwin32.sourceforge.net/packages/wget.htm"&gt;GNU Wget&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id="descargamoseinstalamosghost"&gt;Descargamos e instalamos Ghost&lt;/h2&gt;
-
 &lt;p&gt;Descargamos la última version de &lt;a href="https://ghost.org/es/developers/"&gt;aquí&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;Creamos una carpeta llamada ghost y descomprimimos en ella el archivo que acabamos de bajar.&lt;/p&gt;
-
 &lt;h3 id="instalamoslasdependencias"&gt;Instalamos las dependencias&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;cd ghost  
-npm install --production  
+&lt;pre&gt;&lt;code&gt;cd ghost
+npm install --production
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h3 id="iniciamosghost"&gt;Iniciamos Ghost&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;npm run start  
+&lt;pre&gt;&lt;code&gt;npm run start
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h3 id="nosregistramosconghost"&gt;Nos registramos con Ghost&lt;/h3&gt;
-
-&lt;p&gt;Abrimos un navegador y apuntamos a  &lt;a href="https://padiazg.github.io/ghost"&gt;https://padiazg.github.io/ghost&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Creamos una cuenta, pasamos por todos los pasos y llegamos al panel de control, ahí podemos ver el post original y aprender un poco del lenguaje Markdown. &lt;br&gt;
-&lt;img src="https://padiazg.github.io/content/images/2017/06/ghost-registro.png" alt=""&gt;
-&lt;img src="https://padiazg.github.io/content/images/2017/06/ghost-panel-control.png" alt=""&gt;&lt;/p&gt;
-
+&lt;p&gt;Abrimos un navegador y apuntamos a  &lt;a href="http://localhost:2368/ghost"&gt;http://localhost:2368/ghost&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Creamos una cuenta, pasamos por todos los pasos y llegamos al panel de control, ahí podemos ver el post original y aprender un poco del lenguaje Markdown.&lt;br&gt;
+&lt;img src="http://localhost:2368/content/images/2017/06/ghost-registro.png" alt=""&gt;&lt;br&gt;
+&lt;img src="http://localhost:2368/content/images/2017/06/ghost-panel-control.png" alt=""&gt;&lt;/p&gt;
 &lt;h2 id="tenemosblog"&gt;Tenemos blog&lt;/h2&gt;
-
 &lt;p&gt;Hasta acá tenemos un blog totalmente funcional, que puede funcionar directamente si tuvieramos la infraestructura apropiada.&lt;/p&gt;
-
 &lt;p&gt;Hay suficiente documentación y tutoriales de como administrar y publicar en Ghost, por lo que no voy a entrar en esos detalles.&lt;/p&gt;
-
 &lt;h2 id="githubpages"&gt;GitHub Pages&lt;/h2&gt;
-
 &lt;p&gt;Ahora que ya tenemos nuestro blog funcionando, es hora de ocuparnos en publicarlo como páginas estáticas en GitHub.&lt;/p&gt;
-
 &lt;p&gt;Vea &lt;a href="https://help.github.com/categories/github-pages-basics/"&gt;aquí&lt;/a&gt; los detalles básicos. Está demás decir que necesitaremos una cuenta de GitHub.&lt;/p&gt;
-
 &lt;p&gt;Usaremos la nomenclatura &lt;code&gt;nombreusuario/nombreusuario.github.io&lt;/code&gt;. El nombre del repositorio debe estar siempre en minúsculas sin importar que el nombre del usuario tenga mayúsculas.&lt;/p&gt;
-
 &lt;h2 id="buster"&gt;Buster&lt;/h2&gt;
-
 &lt;p&gt;El repositorio &lt;a href="https://github.com/axitkhurana/buster"&gt;original&lt;/a&gt; está abandonado y no funciona correctamente con la versión actual de Ghost, pero encontré este &lt;a href="https://github.com/skosch/buster"&gt;otro&lt;/a&gt; en el que están haciendo el esfuerzo de continuar el desarrollo de este proyecto.&lt;/p&gt;
-
 &lt;p&gt;El método sugerido en el repositorio &lt;code&gt;pip install git+https://github.com/skosch/buster&lt;/code&gt; no funciona, al menos en mi máquina, por lo que iremos por otro camino.&lt;/p&gt;
-
 &lt;h2 id="adecuamoselpath"&gt;Adecuamos el path&lt;/h2&gt;
-
 &lt;p&gt;Buster solo funciona con Python v2.7, por lo que ajustamos nuestro path para que utilice solo esa versión. Colateralmente debemos volver a especificar las carpetas del Git.&lt;/p&gt;
-
-&lt;p&gt;En una ventana de comandos (cmd):  &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;set path=C:\Python27\Scripts;C:\Python27;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;C:\Users\pato\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;  
+&lt;p&gt;En una ventana de comandos (cmd):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;set path=C:\Python27\Scripts;C:\Python27;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;C:\Users\pato\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;Debemos cuidar de ajustar las carpetas del path de acuerdo a nuestro caso particular.&lt;/p&gt;
-
 &lt;p&gt;Dejamos abierta la ventana de comandos para ejecutae en ella los pasos siguientes&lt;/p&gt;
-
 &lt;h2 id="instalandobusteramano"&gt;Instalando Buster a mano&lt;/h2&gt;
-
 &lt;p&gt;Descargamos el repositorio, preferentemente en un directorio diferente al que usamos en los pasos anteriores.&lt;/p&gt;
-
-&lt;p&gt;En una linea de comandos  &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd \proyectos\python  
-git clone https://github.com/skosch/buster.git  
+&lt;p&gt;En una linea de comandos&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd \proyectos\python
+git clone https://github.com/skosch/buster.git
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h3 id="parcheamos"&gt;Parcheamos&lt;/h3&gt;
-
 &lt;p&gt;Por alguna razón el archivo &lt;mark&gt;buster\_version.py&lt;/mark&gt; tiene rastros de versionado que obviamente hacen que se de un error al tratar de instalar, por cualquier método normal.&lt;/p&gt;
-
-&lt;p&gt;Modificamos &lt;mark&gt;buster\_version.py&lt;/mark&gt; para que quede de esta manera:  &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;__version_info__ = (0, 1, 3)  
-__version__ = '.'.join(map(str, __version_info__))  
+&lt;p&gt;Modificamos &lt;mark&gt;buster\_version.py&lt;/mark&gt; para que quede de esta manera:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;__version_info__ = (0, 1, 3)
+__version__ = '.'.join(map(str, __version_info__))
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h3 id="instalamosbuster"&gt;Instalamos Buster&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;python setup.py install  
+&lt;pre&gt;&lt;code&gt;python setup.py install
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h2 id="preparamoscarpetaesttica"&gt;Preparamos carpeta estática&lt;/h2&gt;
-
-&lt;p&gt;Creamos una carpeta &lt;code&gt;static&lt;/code&gt; que usará Buster en la carpeta donde tenemos instalado Ghost, luego sencillamente clonamos nuestro repositorio usando un nombre de carpeta  &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd &amp;lt;carpeta de Ghost&amp;gt;  
-mkdir static  
-git clone https://usuario:password@github.com/usuario/usuario.github.io.git static  
+&lt;p&gt;Creamos una carpeta &lt;code&gt;static&lt;/code&gt; que usará Buster en la carpeta donde tenemos instalado Ghost, luego sencillamente clonamos nuestro repositorio usando un nombre de carpeta&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd &amp;lt;carpeta de Ghost&amp;gt;
+mkdir static
+git clone https://usuario:password@github.com/usuario/usuario.github.io.git static
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h2 id="creamoscontenido"&gt;Creamos contenido&lt;/h2&gt;
-
 &lt;p&gt;A partir de aquí la configuración está completa, ya solo es cuestión de ir creando nuestros artículos y publicarlos.&lt;/p&gt;
-
 &lt;h2 id="exportamosghostconbuster"&gt;Exportamos Ghost con Buster&lt;/h2&gt;
-
-&lt;p&gt;Todas nuestras publicaciones pueden ser exportadas a la carpeta &lt;code&gt;static&lt;/code&gt; por Buster  &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;buster generate --domain=http://localhost:2368  
-buster preview  
+&lt;p&gt;Todas nuestras publicaciones pueden ser exportadas a la carpeta &lt;code&gt;static&lt;/code&gt; por Buster&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;buster generate --domain=http://localhost:2368
+buster preview
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;Podemos apuntar nuestro navegador a &lt;a href="http://localhost:9000"&gt;http://localhost:9000&lt;/a&gt; y previsualizar como se ve nuestro blog como páginas estáticas.&lt;/p&gt;
-
 &lt;h2 id="ajustamoslosenlaces"&gt;Ajustamos los enlaces&lt;/h2&gt;
-
 &lt;p&gt;Antes de poder publicar nuestras páginas a GitHub Pages, debemos hacer ajustas los enlaces. Es uno de los bugs de Buster, supongo.&lt;/p&gt;
-
-&lt;p&gt;Este script hará el truco:  &lt;/p&gt;
-
+&lt;p&gt;Este script hará el truco:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;set PATH=C:\Program Files (x86)\nodejs\;C:\Python27\Scripts;C:\Python27;C:\Users\pato\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;
 
 buster generate --domain=http://127.0.0.1:2368  
 
-echo "Corrigiendo enlaces a https"  
-find static -name *.html -type f -exec sed -i -e "s#http://localhost:2368#https://padiazg.github.io#g" {} ;  
-find static -name *.html -type f -exec sed -i -e "s#https://fonts.googleapis.com#https://fonts.googleapis.com#g" {} ;
+echo &amp;quot;Corrigiendo enlaces a https&amp;quot;
+find static -name *.html -type f -exec sed -i -e &amp;quot;s#http://localhost:2368#https://padiazg.github.io#g&amp;quot; {} ;
+find static -name *.html -type f -exec sed -i -e &amp;quot;s#https://fonts.googleapis.com#https://fonts.googleapis.com#g&amp;quot; {} ;
 
-echo "Corrigiendo algunos posts"  
-find static -name *.html -type f -exec sed -i -e "s#open http://localhost:2368#open http://localhost:2368#g" {} ;  
-find static -name *.html -type f -exec sed -i -e "s#domain=http://localhost:2368#domain=http://localhost:2368#g" {} ;  
-find static -name *.html -type f -exec sed -i -e "s#s\#https://padiazg.github.io#s\#https://padiazg.github.io#g" {} ;
+echo &amp;quot;Corrigiendo algunos posts&amp;quot;
+find static -name *.html -type f -exec sed -i -e &amp;quot;s#open https://padiazg.github.io#open http://localhost:2368#g&amp;quot; {} ;
+find static -name *.html -type f -exec sed -i -e &amp;quot;s#domain=https://padiazg.github.io#domain=http://localhost:2368#g&amp;quot; {} ;
+find static -name *.html -type f -exec sed -i -e &amp;quot;s#s\#https://padiazg.github.io#s\#http://localhost:2368#g&amp;quot; {} ;
 
-echo "Removiendo index.html de los enlaces"  
-find static -name *.html -type f -exec sed -i -e "s#/#/#g" {} ;
+echo &amp;quot;Removiendo index.html de los enlaces&amp;quot;
+find static -name *.html -type f -exec sed -i -e &amp;quot;s#/#/#g&amp;quot; {} ;
 
-if [%1]==[deploy] goto deploy  
-buster preview  
+if [%1]==[deploy] goto deploy
+buster preview
 goto end
 
 :deploy
-cd static  
-echo "Agregando archivos..."  
-git add -A  
-echo "Confirmando..."  
-git commit -m "Update on the website at $(date)"  
-echo "Enviando a github ..."  
-git push origin master  
+cd static
+echo &amp;quot;Agregando archivos...&amp;quot;
+git add -A
+echo &amp;quot;Confirmando...&amp;quot;
+git commit -m &amp;quot;Update on the website at $(date)&amp;quot;
+echo &amp;quot;Enviando a github ...&amp;quot;
+git push origin master
 cd ..
 
 :end
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;Este script está basado en el de &lt;a href="https://github.com/alexellis/ghost-on-docker"&gt;Alex Ellis&lt;/a&gt;. Les recomiendo hechar una ojeado a su &lt;a href="http://blog.alexellis.io/"&gt;blog&lt;/a&gt;.&lt;/p&gt;
-
 &lt;h3 id="archivosbasuradesed"&gt;Archivos basura de Sed&lt;/h3&gt;
-
-&lt;p&gt;La opción -i de Sed genera una copia de seguridad de cada archivo que modifica, y hasta ahora no encuentro una forma de frenar esto.&lt;/p&gt;</content:encoded></item><item><title>Implementación algoritmo Soundex Español para Genexus</title><description>&lt;p&gt;El algoritmo &lt;a href="https://es.wikipedia.org/wiki/Soundex"&gt;soundex&lt;/a&gt; es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto que no es preciso cuando lo aplicamos a nombres o palabras en español, podría decirse incluso que no es usable en nuestro idioma.&lt;/p&gt;
-
-&lt;p&gt;Investigando un poco hace algunos años había encontrado&lt;/p&gt;</description><link>https://padiazg.github.io/implementacion-algoritmo-soundex-espanol-para-genexus/</link><guid isPermaLink="false">3689fd06-356e-4ef4-807b-be01965254e9</guid><category>soundex</category><category>genexus</category><dc:creator>Patricio Diaz</dc:creator><pubDate>Wed, 31 May 2017 03:21:30 GMT</pubDate><content:encoded>&lt;p&gt;El algoritmo &lt;a href="https://es.wikipedia.org/wiki/Soundex"&gt;soundex&lt;/a&gt; es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto que no es preciso cuando lo aplicamos a nombres o palabras en español, podría decirse incluso que no es usable en nuestro idioma.&lt;/p&gt;
-
+&lt;p&gt;La opción -i de Sed genera una copia de seguridad de cada archivo que modifica, y hasta ahora no encuentro una forma de frenar esto.&lt;/p&gt;
+&lt;/div&gt;</content:encoded></item><item><title>Implementación algoritmo Soundex Español para Genexus</title><description>&lt;div class="kg-card-markdown"&gt;&lt;p&gt;El algoritmo &lt;a href="https://es.wikipedia.org/wiki/Soundex"&gt;soundex&lt;/a&gt; es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto que no es preciso cuando lo aplicamos a nombres o palabras en español, podría decirse incluso que no es usable en nuestro idioma.&lt;/p&gt;
+&lt;p&gt;Investigando un poco hace algunos años había encontrado&lt;/p&gt;&lt;/div&gt;</description><link>http://localhost:2368/implementacion-algoritmo-soundex-espanol-para-genexus/</link><guid isPermaLink="false">5b1f15dfb89b230001100a09</guid><category>soundex</category><category>genexus</category><dc:creator>Patricio Diaz</dc:creator><pubDate>Wed, 31 May 2017 03:21:30 GMT</pubDate><content:encoded>&lt;div class="kg-card-markdown"&gt;&lt;p&gt;El algoritmo &lt;a href="https://es.wikipedia.org/wiki/Soundex"&gt;soundex&lt;/a&gt; es un algoritmo fonético, diseñado para indexar nombres por su pronunciación en Inglés. Es por esto que no es preciso cuando lo aplicamos a nombres o palabras en español, podría decirse incluso que no es usable en nuestro idioma.&lt;/p&gt;
 &lt;p&gt;Investigando un poco hace algunos años había encontrado esta entrada &lt;a href="https://wiki.postgresql.org/wiki/SoundexESP"&gt;https://wiki.postgresql.org/wiki/SoundexESP&lt;/a&gt;, en la que me basé para crear sus equivalentes en distintos lenguages (VBA, T-SQL para Oracle). Por supuesto cuando se dió la necesidad le tocó a Genexus.&lt;/p&gt;
-
 &lt;h3 id="implementacin"&gt;Implementación&lt;/h3&gt;
-
 &lt;p&gt;La implementación la hice en un procedimiento llamado soundex, pero ustedes pueden llamarlo como mas les convenga&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;soundex:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;/*
  Implementación del algoritmo Soundex para el idioma español
-
+ 
  variables               tipo
  ----------------------- -----------
  caracter                C(1)
@@ -294,7 +203,7 @@ cd ..
 
 // Si no hay texto a procesar retornamos un texto vacío
 if &amp;amp;tmp.IsEmpty()
-    return
+	return
 endif
 
 // realizamos un preprocesado del texto
@@ -304,112 +213,108 @@ do 'limpieza'
 do 'soundex'
 
 Sub 'limpieza'
-    /*     1) limpieza     */
-    // eliminamos la H inicial (incluso si hay mas de una)
-    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('^(H+)(.*)', '$2')
+	/*     1) limpieza     */
+	// eliminamos la H inicial (incluso si hay mas de una)
+	&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('^(H+)(.*)', '$2')
 
-    // retornar vacío si no nos queda texto para analizar
-    if &amp;amp;tmp.IsEmpty()
-        return
-    endif
+	// retornar vacío si no nos queda texto para analizar
+	if &amp;amp;tmp.IsEmpty()
+		return
+	endif
 
-    // eliminamos los acentos y la Ñ
-    &amp;amp;caracteres_buscar     = 'ÑÁÉÍÓÚÀÈÌÒÙÜ'
-    &amp;amp;caracteres_reemplazar = 'NAEIOUAEIOUU'
-    for &amp;amp;i=1 to &amp;amp;caracteres_buscar.Length()
-        &amp;amp;caracter = &amp;amp;caracteres_buscar.Substring(&amp;amp;i,1)
-        if &amp;amp;caracteres_buscar.IndexOf(&amp;amp;caracter)&amp;gt;0
-            &amp;amp;tmp = &amp;amp;tmp.Replace(&amp;amp;caracter, &amp;amp;caracteres_reemplazar.Substring(&amp;amp;i, 1))
-        endif // &amp;amp;buscar.IndexOf(&amp;amp;caracter)&amp;gt;0
-    endfor // &amp;amp;i=1 to &amp;amp;buscar.Length() ...
+	// eliminamos los acentos y la Ñ
+	&amp;amp;caracteres_buscar     = 'ÑÁÉÍÓÚÀÈÌÒÙÜ'
+	&amp;amp;caracteres_reemplazar = 'NAEIOUAEIOUU'
+	for &amp;amp;i=1 to &amp;amp;caracteres_buscar.Length()
+		&amp;amp;caracter = &amp;amp;caracteres_buscar.Substring(&amp;amp;i,1)
+		if &amp;amp;caracteres_buscar.IndexOf(&amp;amp;caracter)&amp;gt;0
+			&amp;amp;tmp = &amp;amp;tmp.Replace(&amp;amp;caracter, &amp;amp;caracteres_reemplazar.Substring(&amp;amp;i, 1))
+		endif // &amp;amp;buscar.IndexOf(&amp;amp;caracter)&amp;gt;0
+	endfor // &amp;amp;i=1 to &amp;amp;buscar.Length() ...
 
-    // eliminamos caracteres no alfabéticos (números, signos, símbolos, etc)
-    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('[^A-Z]', '')
+	// eliminamos caracteres no alfabéticos (números, signos, símbolos, etc)
+	&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('[^A-Z]', '')
 
-    /*     2) ajustar primera letra    */  
-    // fenómenos o casos especiales: GE y GI se convierten en JE y JI, CA en KA
-    &amp;amp;primera_letra = &amp;amp;tmp.Substring(1,1)
-    &amp;amp;resto = &amp;amp;tmp.Substring(2,&amp;amp;tmp.Length()-1) 
+	/*     2) ajustar primera letra    */  
+	// fenómenos o casos especiales: GE y GI se convierten en JE y JI, CA en KA
+	&amp;amp;primera_letra = &amp;amp;tmp.Substring(1,1)
+	&amp;amp;resto = &amp;amp;tmp.Substring(2,&amp;amp;tmp.Length()-1) 
 
-    do case
-        case &amp;amp;primera_letra = 'V'
-            &amp;amp;reemplazo = 'B'        // VACA -&amp;gt; BACA, VALOR -&amp;gt; BALOR
+	do case
+		case &amp;amp;primera_letra = 'V'
+			&amp;amp;reemplazo = 'B'        // VACA -&amp;gt; BACA, VALOR -&amp;gt; BALOR
 
-        case &amp;amp;primera_letra = 'Z' or &amp;amp;primera_letra = 'X'
-            &amp;amp;reemplazo = 'S'        // ZAPATO -&amp;gt; SAPATO, XILÓFONO -&amp;gt; SILÓFONO
+		case &amp;amp;primera_letra = 'Z' or &amp;amp;primera_letra = 'X'
+			&amp;amp;reemplazo = 'S'        // ZAPATO -&amp;gt; SAPATO, XILÓFONO -&amp;gt; SILÓFONO
 
-        case &amp;amp;primera_letra = 'G'
-            and (&amp;amp;tmp.Substring(2,1)='E' or &amp;amp;tmp.Substring(2,1)='I')
-            &amp;amp;reemplazo = 'J'        // GIMNASIO -&amp;gt; JIMNASIO, GERANIO -&amp;gt; JERANIO
+		case &amp;amp;primera_letra = 'G'
+			and (&amp;amp;tmp.Substring(2,1)='E' or &amp;amp;tmp.Substring(2,1)='I')
+			&amp;amp;reemplazo = 'J'        // GIMNASIO -&amp;gt; JIMNASIO, GERANIO -&amp;gt; JERANIO
 
-        case &amp;amp;primera_letra = 'C'
-            and &amp;amp;tmp.Substring(2,1)&amp;lt;&amp;gt;'H'
-            and &amp;amp;tmp.Substring(2,1)&amp;lt;&amp;gt;'E'
-            and &amp;amp;tmp.Substring(2,1)&amp;lt;&amp;gt;'I'
-            &amp;amp;reemplazo = 'K'        // CASA -&amp;gt; KASA, COLOR -&amp;gt; KOLOR, CULPA -&amp;gt; KULPA
+		case &amp;amp;primera_letra = 'C'
+			and &amp;amp;tmp.Substring(2,1)&amp;lt;&amp;gt;'H'
+			and &amp;amp;tmp.Substring(2,1)&amp;lt;&amp;gt;'E'
+			and &amp;amp;tmp.Substring(2,1)&amp;lt;&amp;gt;'I'
+			&amp;amp;reemplazo = 'K'        // CASA -&amp;gt; KASA, COLOR -&amp;gt; KOLOR, CULPA -&amp;gt; KULPA
 
-        otherwise
-            &amp;amp;reemplazo = &amp;amp;primera_letra
+		otherwise
+			&amp;amp;reemplazo = &amp;amp;primera_letra
 
-    endcase
+	endcase
 
-    &amp;amp;tmp = &amp;amp;reemplazo + &amp;amp;resto
+	&amp;amp;tmp = &amp;amp;reemplazo + &amp;amp;resto
 
-    /*     3) corregir letras compuestas, volverlas una sola    */
-    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('CH', 'V')
-    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('QU', 'K')
-    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('LL', 'J')
-    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('CE', 'S')
-    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('CI', 'S')
-    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('YA', 'J')
-    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('YE', 'J')
-    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('YI', 'J')
-    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('YO', 'J')
-    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('YU', 'J')
-    //&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('GE', 'J')
-    //&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('GI', 'J')
-    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('NY', 'N')
-    &amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('NH', 'N') // anho, banho, tamanho, inhalador
+	/*     3) corregir letras compuestas, volverlas una sola    */
+	&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('CH', 'V')
+	&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('QU', 'K')
+	&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('LL', 'J')
+	&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('CE', 'S')
+	&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('CI', 'S')
+	&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('YA', 'J')
+	&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('YE', 'J')
+	&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('YI', 'J')
+	&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('YO', 'J')
+	&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('YU', 'J')
+	//&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('GE', 'J')
+	//&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('GI', 'J')
+	&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('NY', 'N')
+	&amp;amp;tmp = &amp;amp;tmp.ReplaceRegEx('NH', 'N') // anho, banho, tamanho, inhalador
 EndSub // 'limpieza' ...
 
 Sub 'soundex'
 
-    /* 4) obtener primera letra        */
-    &amp;amp;primera_letra = &amp;amp;tmp.Substring(1, 1)
+	/* 4) obtener primera letra        */
+	&amp;amp;primera_letra = &amp;amp;tmp.Substring(1, 1)
+  
+	/* 5) obtener el resto del texto    *
+	&amp;amp;resto = &amp;amp;tmp.Substring(2, &amp;amp;tmp.Length()-1)
+   
+	/* 6) en el resto, eliminar vocales y consonantes fonéticas        */
+	&amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[AEIOUHWY]', '')
 
-    /* 5) obtener el resto del texto    *
-    &amp;amp;resto = &amp;amp;tmp.Substring(2, &amp;amp;tmp.Length()-1)
+	/* 7) convertir letras fonéticamente equivalentes a números. esto hace que B sea equivalente a V, C con S y Z, etc.    */
+	&amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[BPFV]',   '1')
+	&amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[CGKSXZ]', '2')
+	&amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[DT]',     '3')
+	&amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[L]',      '4')
+	&amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[MN]',     '5')
+	&amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[R]',      '6')
+	&amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[QJ]',     '7')
 
-    /* 6) en el resto, eliminar vocales y consonantes fonéticas        */
-    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[AEIOUHWY]', '')
-
-    /* 7) convertir letras fonéticamente equivalentes a números. esto hace que B sea equivalente a V, C con S y Z, etc.    */
-    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[BPFV]',   '1')
-    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[CGKSXZ]', '2')
-    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[DT]',     '3')
-    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[L]',      '4')
-    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[MN]',     '5')
-    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[R]',      '6')
-    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('[QJ]',     '7')
-
-    // eliminamos números iguales adyacentes
-    &amp;amp;resto = &amp;amp;resto.ReplaceRegEx('(\d)\1+', '$1') 
-    &amp;amp;soundex = &amp;amp;primera_letra + &amp;amp;resto.Trim()
-    if &amp;amp;soundex.Length() &amp;lt; 4
-        &amp;amp;soundex = padr(&amp;amp;soundex, 4, '0')
-    else
-        &amp;amp;soundex = &amp;amp;soundex.Substring(1,4)
-    endif
-
+	// eliminamos números iguales adyacentes
+	&amp;amp;resto = &amp;amp;resto.ReplaceRegEx('(\d)\1+', '$1') 
+	&amp;amp;soundex = &amp;amp;primera_letra + &amp;amp;resto.Trim()
+	if &amp;amp;soundex.Length() &amp;lt; 4
+		&amp;amp;soundex = padr(&amp;amp;soundex, 4, '0')
+	else
+		&amp;amp;soundex = &amp;amp;soundex.Substring(1,4)
+	endif
+	
 EndSub // 'soundex' ...
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h3 id="prueba"&gt;Prueba&lt;/h3&gt;
-
 &lt;p&gt;A continuación podemos hacer unas pruebas para ver el algoritmo en funcionamiento, creamos otro procedimiento llamado prueba_soundex:&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;prueba_soundex:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;/*
  Colocar los siguientes valores en las propiedades del procedimiento
  -------------------------------------------------------------------
@@ -439,10 +344,8 @@ msg('dias =&amp;gt; ' + soundex.Udp('dias'), status)
 msg('mejico =&amp;gt; ' + soundex.Udp('mejico'), status)
 msg('mexico =&amp;gt; ' + soundex.Udp('mexico'), status)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;Luego ejecutamos prueba_soundex y deberíamos de obtener la siguiente salida:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;"C:\Program Files\Java\jdk1.8.0_25\bin\java.exe"  atest_soundex
+&lt;pre&gt;&lt;code&gt;&amp;quot;C:\Program Files\Java\jdk1.8.0_25\bin\java.exe&amp;quot;  atest_soundex
 hola =&amp;gt; O400
 ola =&amp;gt; O400
 zapato =&amp;gt; S130
@@ -462,29 +365,13 @@ mejico =&amp;gt; M720
 mexico =&amp;gt; M200
 Execution Success
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Como puede verse el algoritmo es bastante preciso con palabras similares.  &lt;/p&gt;
-
+&lt;p&gt;Como puede verse el algoritmo es bastante preciso con palabras similares.&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;Los dos últimos ejemplos (mejico y mexico) son casos en los que el algoritmo -tal como está implementado aquí- no genera un código que indique que son similares. Tengo pendiente adaptar el algoritmo para cubrir estos casos.&lt;/p&gt;
+&lt;p&gt;Los dos últimos ejemplos (mejico y mexico) son casos en los que el algoritmo -tal como está implementado aquí- no genera un código que indique que son similares. Tengo pendiente adaptar el algoritmo para cubrir estos casos.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h3 id="pensamientosfinales"&gt;Pensamientos finales&lt;/h3&gt;
-
 &lt;p&gt;Los escenarios donde aplicar eso de forma práctica pueden variar mucho, de hecho no se si podría usarse efectivamente con nombres completos.&lt;/p&gt;
-
 &lt;p&gt;En mi caso lo estuve utilizando para crear un diccionario de una tabla de nombres de calles. Primero se procesan las calles registradas (normalizadas), se separan en sus palabras componentes y se registran individualmente en un diccionario con su correspondiente código soundex. Se guarda la calle y su relación con sus palabras componentes.&lt;/p&gt;
-
 &lt;p&gt;Al introducir un nombre de calle para buscar, esta también se separa en sus palabras componentes, se calcula el código soundex para cada una y son estos códigos los que se buscan en el diccionario, por supuesto que el proceso es mas complejo y tiene mas validaciones, pero básicamente es así como funciona.&lt;/p&gt;
-
-&lt;p&gt;El código de ambos procedimientos pueden encontrarlos en &lt;a href="https://github.com/padiazg/soundex-genexus"&gt;https://github.com/padiazg/soundex-genexus&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title>Experimentando con Ghost</title><description>&lt;p&gt;Este post es el resultado de experimentar con las instrucciones de este artículo: &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;Setup Ghost for GitHub Pages&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Las instrucciones son para un entorno Linux/MacOS, con ghost 0.7.8, mientras que yo necesitaba hacerlo correr en Windows 10 y con la última version disponible (0.11.7 a&lt;/p&gt;</description><link>https://padiazg.github.io/experimentando-con-ghost/</link><guid isPermaLink="false">65044fd5-1bf0-4ea7-adaa-dd6933927ebd</guid><dc:creator>Patricio Diaz</dc:creator><pubDate>Wed, 22 Mar 2017 21:59:00 GMT</pubDate><content:encoded>&lt;p&gt;Este post es el resultado de experimentar con las instrucciones de este artículo: &lt;a href="https://stefanscherer.github.io/setup-ghost-for-github-pages/"&gt;Setup Ghost for GitHub Pages&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Las instrucciones son para un entorno Linux/MacOS, con ghost 0.7.8, mientras que yo necesitaba hacerlo correr en Windows 10 y con la última version disponible (0.11.7 a la hora de escribir esto) &lt;/p&gt;
-
-&lt;p&gt;Conseguí ponerlo a funcionar siguiendo los pasos pero adaptándolos a los requisitos de las nuevas versiones y de Windows. Estoy trabajando en una publicación con las instrucciones actualizadas y detalladas.&lt;/p&gt;
-
-&lt;p&gt;Afortunadamente ya había utilizado anteriormente el lenguaje &lt;a href="https://es.wikipedia.org/wiki/Markdown"&gt;MarkDown&lt;/a&gt; al publicar en GitHub y en un servidor GitLab privado que había montado para un cliente. De paso les dejo un enlace las referencias rápidas de este lengiaje: &lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"&gt;Markdown Cheatsheet&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Debo mencionar que este lenguaje se convirtió en el estandar de facto para documentación de proyectos, soportado por casi todas las plataformas de publicación, IDE y editores para código fuente.&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;El código de ambos procedimientos pueden encontrarlos en &lt;a href="https://github.com/padiazg/soundex-genexus"&gt;https://github.com/padiazg/soundex-genexus&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</content:encoded></item></channel></rss>
