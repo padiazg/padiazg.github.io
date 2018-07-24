@@ -5,38 +5,30 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Códigos de barra como servicio</title>
+    <title>Docker como ambiente de desarrollo</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=bbac172617" />
 
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-    <link rel="canonical" href="http://localhost:2368/codigos-de-barra-y-qr-como-servicio/" />
+    <link rel="canonical" href="http://localhost:2368/docker-como-ambiente-de-desarrollo/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
-    <link rel="amphtml" href="http://localhost:2368/codigos-de-barra-y-qr-como-servicio/amp/" />
+    <link rel="amphtml" href="http://localhost:2368/docker-como-ambiente-de-desarrollo/amp/" />
     
     <meta property="og:site_name" content="Pato Díaz " />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Códigos de barra como servicio" />
-    <meta property="og:description" content="En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417. El dilema es como integrar esa funcionalidad al desarrollo, ya sea como biblioteca nativa o consumiendo algún servicio externo. En ambos casos las desventajas son varias" />
-    <meta property="og:url" content="http://localhost:2368/codigos-de-barra-y-qr-como-servicio/" />
-    <meta property="article:published_time" content="2017-06-04T23:21:53.000Z" />
-    <meta property="article:modified_time" content="2017-06-04T23:41:38.000Z" />
-    <meta property="article:tag" content="node" />
-    <meta property="article:tag" content="express" />
-    <meta property="article:tag" content="códigos de barra" />
-    <meta property="article:tag" content="QR" />
-    <meta property="article:tag" content="EAN" />
-    
+    <meta property="og:title" content="Docker como ambiente de desarrollo" />
+    <meta property="og:description" content="Docker tiene muchos usos, aquí muestro uno práctico en el que debía modificar, compilar y probar un bot escrito en Golang en Windows, pero pensado para ejecutarse en Linux. En estos días implementamos en ambiente de producción funciones serverless usando OpenFaaS. Usamos el mecanismo de monitoreo recomendado con Prometheus+Grafana" />
+    <meta property="og:url" content="http://localhost:2368/docker-como-ambiente-de-desarrollo/" />
+    <meta property="article:published_time" content="2018-07-24T15:27:23.000Z" />
+    <meta property="article:modified_time" content="2018-07-24T15:29:47.000Z" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Códigos de barra como servicio" />
-    <meta name="twitter:description" content="En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417. El dilema es como integrar esa funcionalidad al desarrollo, ya sea como biblioteca nativa o consumiendo algún servicio externo. En ambos casos las desventajas son varias" />
-    <meta name="twitter:url" content="http://localhost:2368/codigos-de-barra-y-qr-como-servicio/" />
+    <meta name="twitter:title" content="Docker como ambiente de desarrollo" />
+    <meta name="twitter:description" content="Docker tiene muchos usos, aquí muestro uno práctico en el que debía modificar, compilar y probar un bot escrito en Golang en Windows, pero pensado para ejecutarse en Linux. En estos días implementamos en ambiente de producción funciones serverless usando OpenFaaS. Usamos el mecanismo de monitoreo recomendado con Prometheus+Grafana" />
+    <meta name="twitter:url" content="http://localhost:2368/docker-como-ambiente-de-desarrollo/" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Patricio Diaz" />
-    <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="node, express, códigos de barra, QR, EAN" />
     <meta name="twitter:site" content="@padiazg" />
     
     <script type="application/ld+json">
@@ -59,12 +51,11 @@
         "url": "http://localhost:2368/author/patricio/",
         "sameAs": []
     },
-    "headline": "Códigos de barra como servicio",
-    "url": "http://localhost:2368/codigos-de-barra-y-qr-como-servicio/",
-    "datePublished": "2017-06-04T23:21:53.000Z",
-    "dateModified": "2017-06-04T23:41:38.000Z",
-    "keywords": "node, express, códigos de barra, QR, EAN",
-    "description": "En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417. El dilema es como integrar esa funcionalidad al desarrollo, ya sea como biblioteca nativa o consumiendo algún servicio externo. En ambos casos las desventajas son varias",
+    "headline": "Docker como ambiente de desarrollo",
+    "url": "http://localhost:2368/docker-como-ambiente-de-desarrollo/",
+    "datePublished": "2018-07-24T15:27:23.000Z",
+    "dateModified": "2018-07-24T15:29:47.000Z",
+    "description": "Docker tiene muchos usos, aquí muestro uno práctico en el que debía modificar, compilar y probar un bot escrito en Golang en Windows, pero pensado para ejecutarse en Linux. En estos días implementamos en ambiente de producción funciones serverless usando OpenFaaS. Usamos el mecanismo de monitoreo recomendado con Prometheus+Grafana",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -93,7 +84,7 @@ ghost.init({
 </script>
 
 </head>
-<body class="post-template tag-node tag-express tag-codigos-de-barra tag-qr tag-ean">
+<body class="post-template">
 
     <div class="site-wrapper">
 
@@ -127,73 +118,51 @@ ghost.init({
 <main id="site-main" class="site-main outer">
     <div class="inner">
 
-        <article class="post-full post tag-node tag-express tag-codigos-de-barra tag-qr tag-ean no-image">
+        <article class="post-full post no-image">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="2017-06-04">4 June 2017</time>
-                        <span class="date-divider">/</span> <a href="../tag/node/">node</a>
+                    <time class="post-full-meta-date" datetime="2018-07-24">24 July 2018</time>
                 </section>
-                <h1 class="post-full-title">Códigos de barra como servicio</h1>
+                <h1 class="post-full-title">Docker como ambiente de desarrollo</h1>
             </header>
 
 
             <section class="post-full-content">
-                <div class="kg-card-markdown"><p>En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417.</p>
-<p>El dilema es como integrar esa funcionalidad al desarrollo, ya sea como biblioteca nativa o consumiendo algún servicio externo.</p>
-<p>En ambos casos las desventajas son varias y el riesgo de usarlas es importante.</p>
-<h3 id="bibliotecasnativas">Bibliotecas nativas</h3>
-<p>El problema con las bibliotecas nativas es que no siempre se encuentra una para el lenguaje que estamos usando o para la plataforma donde estamos desplegando nuestro desarrollo, ya sea por que no exista, por licencia, costo, etc.</p>
-<h3 id="serviciosexternos">Servicios externos</h3>
-<p>En el caso de los servicios externos , aunque es muy cómodo simplemente llamar a una url y recuperar una imágen, estos servicios pueden dejar de existir, volverse muy lentos, cambiar su API, incluir costos, o simplemente el acceso a internet no es una opción.</p>
-<h3 id="serviciolocal">Servicio local</h3>
-<p>Por este motivo creé un servidor que exporte como servicios la generación de ciertos códigos de barra y bidimensionales de forma local.</p>
-<h3 id="tiposdecdigosgenerados">Tipos de códigos generados</h3>
-<p>Actualmente puede generar codigos EAN13, CODE39, CODE129, PDF417, QR, DataMatrix e Interleaved 2of 5, aunque la lista puede extenderse<br>
-a todos los formatos soportados por los proyectos <a href="https://github.com/epha/code-rescode">rescode</a> y <a href="https://github.com/metafloor/bwip-js">bwip-js</a> en los que está basado este desarrollo.</p>
-<h3 id="formatosdesalida">Formatos de salida</h3>
-<p>Por defecto se generan imágenes en formato PNG, y opcionalmente en formato JPG (ver requerimientos adicionales mas adelante)</p>
-<h3 id="instalacin">Instalación</h3>
-<p>El proyecto completo puede descargarse de <a href="https://github.com/padiazg/barcode-as-a-service">aquí</a>.</p>
-<p>Necesitamos <a href="https://nodejs.org/en/">NodeJS</a>, preferentemente en su última versión.</p>
-<p>Para poder generar imágenes en formato JPG se requiere tener instalado <a href="http://www.graphicsmagick.org/">GraphicsMagik</a>.</p>
-<pre><code>git clone https://github.com/padiazg/barcode-as-a-service.git
-cd barcode-as-a-service
-npm install
-npm run start
+                <div class="kg-card-markdown"><p>Docker tiene muchos usos, aquí muestro uno práctico en el que debía modificar, compilar y probar un bot escrito en Golang en Windows, pero pensado para ejecutarse en Linux.</p>
+<p>En estos días implementamos en ambiente de producción funciones serverless usando OpenFaaS. Usamos el mecanismo de monitoreo recomendado con Prometheus+Grafana que, dicho de paso, funciona perfectamente.</p>
+<p>Configuramos las alertas, por email era lo único disponible con nuestra infraestructura, pero nadie está mirando su bandeja de entrada a cada rato, por lo que funciona pero no es efectivo.</p>
+<p>Entonces me encontré con <a href="https://github.com/inCaller/prometheus_bot">prometheus_bot</a>, un bot para enrutar notificaciones de Prometheus a Telegram. Interesante, pero eso implica que la gente encargada del monitoreo se meta con nuestro Prometheus, lo que no estaba previsto y tampoco nos gustaba.</p>
+<p>Se me ocurrió que podría adaptar al bot para que funcione con alertas de Grafana. Pequeño detalle es que está escrito en Golang, y yo apenas experimenté &quot;hola mundo!&quot; y 2+2 = ? en ese lenguaje.<br>
+Como al final eso iba a correr en un Docker, me pregunté &quot;para qué instalar todo el entorno de desarrollo en mi Windows?&quot;, por lo que de inmediato:</p>
+<pre><code class="language-bash">&gt; cd f:/workspace/go 
+&gt; git clone https://github.com/inCaller/prometheus_bot.git grafana_bot
+&gt; docker run -it --rm -v f:\workspace\go\grafana_bot:/grafana_bot --env http_proxy=http://mi_proxy:3128/ --env https_proxy=http://mi_proxy:3128/ --name development golang:alpine sh
 </code></pre>
-<h3 id="mododeuso">Modo de uso</h3>
-<p>Apunta tu navedador a <code>http://localhost:3000</code> para ver una página de ayuda con ejemplos de uso.</p>
-<p>La forma de llamar al servicio es:<br>
-<code>http://serverhost:port/&lt;barcode&gt;?value=&lt;value&gt;&amp;scale=&lt;scale&gt;&amp;fmt=&lt;PNG|JPG&gt;</code></p>
-<p>Donde:<br>
-<em><strong>serverhost</strong></em> y <em><strong>port</strong></em> son la url de nuestro servidor<br>
-<em><strong>barcode</strong></em> es el tipo de código solicitado<br>
-<em><strong>value</strong></em> es el valor a generar<br>
-<em><strong>scale</strong></em> es la escala de la imágen (por defecto es 0)<br>
-<em><strong>fmt</strong></em> es el formato de imágen a generar. Valores posibles son PNG y JPG, por defecto es PNG.</p>
-<h3 id="ejemplos">Ejemplos:</h3>
-<p><strong>EAN13</strong><br>
-<code>http://localhost:3000/ean13?value=7840058004215</code><br>
-<img src="https://padiazg.github.io/content/images/2017/06/ean13.png" alt=""></p>
-<p><strong>CODE39</strong><br>
-<code>http://localhost:3000/code39?value=12345678</code><br>
-<img src="https://padiazg.github.io/content/images/2017/06/code39.png" alt=""></p>
-<p><strong>CODE128</strong><br>
-<code>http://localhost:3000/code128?value=98380d7d-85df-456f-901d-3b325ee86e07</code><br>
-<img src="https://padiazg.github.io/content/images/2017/06/code128.png" alt=""></p>
-<p><strong>PDF417</strong><br>
-<code>http://localhost:3000/pdf417?value=patricio+antonio+diaz+gimenez</code><br>
-<img src="https://padiazg.github.io/content/images/2017/06/pdf417.png" alt=""></p>
-<p><strong>QR</strong><br>
-<code>http://localhost:3000/qr?value=patricio+antonio+diaz+gimenez</code><br>
-<img src="https://padiazg.github.io/content/images/2017/06/qr.png" alt=""></p>
-<p><strong>DataMatrix</strong><br>
-<code>http://localhost:3000/datamatrix?value=patricio+antonio+diaz+gimenez</code><br>
-<img src="https://padiazg.github.io/content/images/2017/06/datamatrix.png" alt=""></p>
-<p><strong>Interleaved2of5</strong><br>
-<code>http://localhost:3000/interleaved2of5?value=1234567890</code><br>
-<img src="https://padiazg.github.io/content/images/2017/06/interleaved2of5.png" alt=""></p>
+<p>En unos segundos ya tenía el ambiente de desarrollo disponible. Las directivas <code>--env http_proxy=...</code> y <code>--env https_proxy=...</code> son porque donde necesité esto estoy detrás de un proxy corporativo. Me pareció un ejemplo interesante que debía conservar en este artículo.</p>
+<p>Uso Atom desde Windows para modificar el código, directamente desde <code>f:\workspace\go\grafana_bot</code>.</p>
+<p>Las compilaciones las realizo desde la imágen <code>development</code> que había creado antes, pero para ejecutar el bot uso otra, la que sería la imágen final.</p>
+<h3 id="compilacinenlaimgendevelopment">Compilación en la imágen development</h3>
+<pre><code class="language-bash"># una sola vez necesitamos instalar las dependencias
+$ apk --no-cache add make git nano curl &amp;&amp; \
+  cd grafana_bot &amp;&amp; \
+  go get -d -v
+
+# para crear el ejecutable, cada vez
+$ make clean &amp;&amp; make
+</code></pre>
+<h3 id="correrelejecutable">Correr el ejecutable</h3>
+<pre><code class="language-bash"># creamos el contenedor
+&gt; docker run -it --rm -v f:\workspace\go\grafana_bot:/app -p 9087:9087 --env http_proxy=http://mi_proxy:3128/ --env https_proxy=http://mi_proxy:3128/ --name grafana_bot alpine sh
+
+# instalamos la única dependencia necesaria para ejecutar
+$ apk add --no-cache ca-certificates
+
+$ cd grafana_bot
+$ ./grafana_bot -t my_template.tmpl
+</code></pre>
+<p>Debo aclarar que Grafana ya tiene como canal de alerta a Telegram, pero por cuestiones del proxy que ya mencioné no puedo acceder directamente a Internet desde ahí, además, &quot;para que hacerlo facil si dificil también se puede?&quot;.</p>
+<p>El código fuente del bot modificado, además de intrucciones para cada paso incluyendo crear el bot en Telegram y la configuración en Grafana pueden encontrarlos <a href="https://github.com/padiazg/grafana_bot">aquí</a></p>
 </div>
             </section>
 
@@ -224,8 +193,8 @@ npm run start
 				*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 				/*
 				var disqus_config = function () {
-				this.page.url = 'http://localhost:2368/codigos-de-barra-y-qr-como-servicio/';  // Replace PAGE_URL with your page's canonical URL variable
-				this.page.identifier = 'ghost-6'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				this.page.url = 'http://localhost:2368/docker-como-ambiente-de-desarrollo/';  // Replace PAGE_URL with your page's canonical URL variable
+				this.page.identifier = 'ghost-5b4657e3627f520001666e33'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 				};
 				*/
 				(function() { // DON'T EDIT BELOW THIS LINE
@@ -246,33 +215,17 @@ npm run start
 <aside class="read-next outer">
     <div class="inner">
         <div class="read-next-feed">
-                <article class="read-next-card"
 
-                >
-                    <header class="read-next-card-header">
-                        <small class="read-next-card-header-sitetitle">&mdash; Pato Díaz  &mdash;</small>
-                        <h3 class="read-next-card-header-title"><a href="../tag/node/">node</a></h3>
-                    </header>
-                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
-</div>
-                    <div class="read-next-card-content">
-                        <ul>
-                            <li><a href="../ghost-buster-en-windows/">Ghost + Buster en Windows</a></li>
-                        </ul>
-                    </div>
-                    <footer class="read-next-card-footer">
-                        <a href="../tag/node/">1 post →</a>
-                    </footer>
-                </article>
 
-                <article class="post-card post no-image">
+                <article class="post-card post tag-node tag-express tag-codigos-de-barra tag-qr tag-ean no-image">
     <div class="post-card-content">
-        <a class="post-card-content-link" href="../docker-como-ambiente-de-desarrollo/">
+        <a class="post-card-content-link" href="../codigos-de-barra-y-qr-como-servicio/">
             <header class="post-card-header">
-                <h2 class="post-card-title">Docker como ambiente de desarrollo</h2>
+                    <span class="post-card-tags">node</span>
+                <h2 class="post-card-title">Códigos de barra como servicio</h2>
             </header>
             <section class="post-card-excerpt">
-                <p>Docker tiene muchos usos, aquí muestro uno práctico en el que debía modificar, compilar y probar un bot escrito en Golang en Windows, pero pensado para ejecutarse en Linux. En estos días implementamos</p>
+                <p>En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417. El dilema es como integrar esa funcionalidad al desarrollo,</p>
             </section>
         </a>
         <footer class="post-card-meta">
@@ -280,29 +233,7 @@ npm run start
             <ul class="author-list">
             </ul>
 
-            <span class="reading-time">2 min read</span>
-
-        </footer>
-    </div>
-</article>
-
-                <article class="post-card post tag-ghost-tag tag-buster tag-python tag-windows tag-node tag-gnu no-image">
-    <div class="post-card-content">
-        <a class="post-card-content-link" href="../ghost-buster-en-windows/">
-            <header class="post-card-header">
-                    <span class="post-card-tags">ghost</span>
-                <h2 class="post-card-title">Ghost + Buster en Windows</h2>
-            </header>
-            <section class="post-card-excerpt">
-                <p>Aunque ya tengo otros temas y materiales para publicar, me pareció que lo justo sería publicar primero los pasos que me tomó hacerlo funcionar en Windows 10. Tomé como punto de partida este</p>
-            </section>
-        </a>
-        <footer class="post-card-meta">
-
-            <ul class="author-list">
-            </ul>
-
-            <span class="reading-time">3 min read</span>
+            <span class="reading-time">1 min read</span>
 
         </footer>
     </div>
@@ -319,17 +250,17 @@ npm run start
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Códigos de barra como servicio</div>
+    <div class="floating-header-title">Docker como ambiente de desarrollo</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=C%C3%B3digos%20de%20barra%20como%20servicio&amp;url=http://localhost:2368/codigos-de-barra-y-qr-como-servicio/"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Docker%20como%20ambiente%20de%20desarrollo&amp;url=http://localhost:2368/docker-como-ambiente-de-desarrollo/"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/codigos-de-barra-y-qr-como-servicio/"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/docker-como-ambiente-de-desarrollo/"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
         </a>

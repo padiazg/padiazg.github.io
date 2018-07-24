@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Pato Díaz ]]></title><description><![CDATA[Blog sobre tecnologías de la información, desarrollo e infraestructura.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Pato Díaz </title><link>http://localhost:2368/</link></image><generator>Ghost 1.19</generator><lastBuildDate>Wed, 27 Jun 2018 02:02:15 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Códigos de barra como servicio]]></title><description><![CDATA[<div class="kg-card-markdown"><p>En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Pato Díaz ]]></title><description><![CDATA[Blog sobre tecnologías de la información, desarrollo e infraestructura.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Pato Díaz </title><link>http://localhost:2368/</link></image><generator>Ghost 1.19</generator><lastBuildDate>Tue, 24 Jul 2018 15:32:35 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Docker como ambiente de desarrollo]]></title><description><![CDATA[<div class="kg-card-markdown"><p>Docker tiene muchos usos, aquí muestro uno práctico en el que debía modificar, compilar y probar un bot escrito en Golang en Windows, pero pensado para ejecutarse en Linux.</p>
+<p>En estos días implementamos en ambiente de producción funciones serverless usando OpenFaaS. Usamos el mecanismo de monitoreo recomendado con Prometheus+Grafana</p></div>]]></description><link>http://localhost:2368/docker-como-ambiente-de-desarrollo/</link><guid isPermaLink="false">5b4657e3627f520001666e33</guid><dc:creator><![CDATA[Patricio Diaz]]></dc:creator><pubDate>Tue, 24 Jul 2018 15:27:23 GMT</pubDate><content:encoded><![CDATA[<div class="kg-card-markdown"><p>Docker tiene muchos usos, aquí muestro uno práctico en el que debía modificar, compilar y probar un bot escrito en Golang en Windows, pero pensado para ejecutarse en Linux.</p>
+<p>En estos días implementamos en ambiente de producción funciones serverless usando OpenFaaS. Usamos el mecanismo de monitoreo recomendado con Prometheus+Grafana que, dicho de paso, funciona perfectamente.</p>
+<p>Configuramos las alertas, por email era lo único disponible con nuestra infraestructura, pero nadie está mirando su bandeja de entrada a cada rato, por lo que funciona pero no es efectivo.</p>
+<p>Entonces me encontré con <a href="https://github.com/inCaller/prometheus_bot">prometheus_bot</a>, un bot para enrutar notificaciones de Prometheus a Telegram. Interesante, pero eso implica que la gente encargada del monitoreo se meta con nuestro Prometheus, lo que no estaba previsto y tampoco nos gustaba.</p>
+<p>Se me ocurrió que podría adaptar al bot para que funcione con alertas de Grafana. Pequeño detalle es que está escrito en Golang, y yo apenas experimenté &quot;hola mundo!&quot; y 2+2 = ? en ese lenguaje.<br>
+Como al final eso iba a correr en un Docker, me pregunté &quot;para qué instalar todo el entorno de desarrollo en mi Windows?&quot;, por lo que de inmediato:</p>
+<pre><code class="language-bash">&gt; cd f:/workspace/go 
+&gt; git clone https://github.com/inCaller/prometheus_bot.git grafana_bot
+&gt; docker run -it --rm -v f:\workspace\go\grafana_bot:/grafana_bot --env http_proxy=http://mi_proxy:3128/ --env https_proxy=http://mi_proxy:3128/ --name development golang:alpine sh
+</code></pre>
+<p>En unos segundos ya tenía el ambiente de desarrollo disponible. Las directivas <code>--env http_proxy=...</code> y <code>--env https_proxy=...</code> son porque donde necesité esto estoy detrás de un proxy corporativo. Me pareció un ejemplo interesante que debía conservar en este artículo.</p>
+<p>Uso Atom desde Windows para modificar el código, directamente desde <code>f:\workspace\go\grafana_bot</code>.</p>
+<p>Las compilaciones las realizo desde la imágen <code>development</code> que había creado antes, pero para ejecutar el bot uso otra, la que sería la imágen final.</p>
+<h3 id="compilacinenlaimgendevelopment">Compilación en la imágen development</h3>
+<pre><code class="language-bash"># una sola vez necesitamos instalar las dependencias
+$ apk --no-cache add make git nano curl &amp;&amp; \
+  cd grafana_bot &amp;&amp; \
+  go get -d -v
+
+# para crear el ejecutable, cada vez
+$ make clean &amp;&amp; make
+</code></pre>
+<h3 id="correrelejecutable">Correr el ejecutable</h3>
+<pre><code class="language-bash"># creamos el contenedor
+&gt; docker run -it --rm -v f:\workspace\go\grafana_bot:/app -p 9087:9087 --env http_proxy=http://mi_proxy:3128/ --env https_proxy=http://mi_proxy:3128/ --name grafana_bot alpine sh
+
+# instalamos la única dependencia necesaria para ejecutar
+$ apk add --no-cache ca-certificates
+
+$ cd grafana_bot
+$ ./grafana_bot -t my_template.tmpl
+</code></pre>
+<p>Debo aclarar que Grafana ya tiene como canal de alerta a Telegram, pero por cuestiones del proxy que ya mencioné no puedo acceder directamente a Internet desde ahí, además, &quot;para que hacerlo facil si dificil también se puede?&quot;.</p>
+<p>El código fuente del bot modificado, además de intrucciones para cada paso incluyendo crear el bot en Telegram y la configuración en Grafana pueden encontrarlos <a href="https://github.com/padiazg/grafana_bot">aquí</a></p>
+</div>]]></content:encoded></item><item><title><![CDATA[Códigos de barra como servicio]]></title><description><![CDATA[<div class="kg-card-markdown"><p>En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417.</p>
 <p>El dilema es como integrar esa funcionalidad al desarrollo, ya sea como biblioteca nativa o consumiendo algún servicio externo.</p>
 <p>En ambos casos las desventajas son varias</p></div>]]></description><link>http://localhost:2368/codigos-de-barra-y-qr-como-servicio/</link><guid isPermaLink="false">5b1f15e1b89b230001100a13</guid><category><![CDATA[node]]></category><category><![CDATA[express]]></category><category><![CDATA[códigos de barra]]></category><category><![CDATA[QR]]></category><category><![CDATA[EAN]]></category><dc:creator><![CDATA[Patricio Diaz]]></dc:creator><pubDate>Sun, 04 Jun 2017 23:21:53 GMT</pubDate><content:encoded><![CDATA[<div class="kg-card-markdown"><p>En algún momento de nuestra vida como desarrolladores necesitaremos generar algún tipo de codigo de barra, y últimamente códigos bidimensionales como QR o PDF417.</p>
 <p>El dilema es como integrar esa funcionalidad al desarrollo, ya sea como biblioteca nativa o consumiendo algún servicio externo.</p>
