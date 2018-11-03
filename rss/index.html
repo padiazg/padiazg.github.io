@@ -1,4 +1,203 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Pato Díaz ]]></title><description><![CDATA[Blog sobre tecnologías de la información, desarrollo e infraestructura.]]></description><link>https://padiazg.github.io/</link><image><url>https://padiazg.github.io/favicon.png</url><title>Pato Díaz </title><link>https://padiazg.github.io/</link></image><generator>Ghost 1.19</generator><lastBuildDate>Tue, 24 Jul 2018 15:32:35 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Docker como ambiente de desarrollo]]></title><description><![CDATA[<div class="kg-card-markdown"><p>Docker tiene muchos usos, aquí muestro uno práctico en el que debía modificar, compilar y probar un bot escrito en Golang en Windows, pero pensado para ejecutarse en Linux.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Pato Díaz ]]></title><description><![CDATA[Blog sobre tecnologías de la información, desarrollo e infraestructura.]]></description><link>https://padiazg.github.io/</link><image><url>https://padiazg.github.io/favicon.png</url><title>Pato Díaz </title><link>https://padiazg.github.io/</link></image><generator>Ghost 1.19</generator><lastBuildDate>Sat, 03 Nov 2018 17:24:08 GMT</lastBuildDate><atom:link href="https://padiazg.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Using GraphQL in OpenFaaS functions]]></title><description><![CDATA[<div class="kg-card-markdown"><p>This is the first of a series of articles in which I'll be covering how to use the GraphQL query language to build functions and deploy them on OpenFaaS.</p>
+<h1 id="background">Background</h1>
+<p>I'll assume you have some experience using GraphQL, if not go to the <a href="https://graphql.org/learn/">official page</a>, don't forget to check how</p></div>]]></description><link>https://padiazg.github.io/graphql-on-opesfaas/</link><guid isPermaLink="false">5bdbabdb4e565200012e2d80</guid><dc:creator><![CDATA[Patricio Diaz]]></dc:creator><pubDate>Sat, 03 Nov 2018 16:52:15 GMT</pubDate><media:content url="https://padiazg.github.io/content/images/2018/11/banner-1559405_1920-1.jpg" medium="image"/><content:encoded><![CDATA[<div class="kg-card-markdown"><img src="https://padiazg.github.io/content/images/2018/11/banner-1559405_1920-1.jpg" alt="Using GraphQL in OpenFaaS functions"><p>This is the first of a series of articles in which I'll be covering how to use the GraphQL query language to build functions and deploy them on OpenFaaS.</p>
+<h1 id="background">Background</h1>
+<p>I'll assume you have some experience using GraphQL, if not go to the <a href="https://graphql.org/learn/">official page</a>, don't forget to check how to use it with your favorite language <a href="https://graphql.org/code/">here</a>, then come back.</p>
+<h1 id="letsstartwiththebasics">Let's start with the basics</h1>
+<p>I'll use the example for JavaScript found at the GraphQL docs.</p>
+<ol>
+<li>Create a folder and change to it</li>
+</ol>
+<pre><code class="language-bash">$ mkdir graphql01 &amp;&amp; cd graphql01
+</code></pre>
+<ol start="2">
+<li>Install graphql module</li>
+</ol>
+<pre><code class="language-bash">$ npm install graphql
+</code></pre>
+<ol start="3">
+<li>Copy the code below to a file named <code>hello.js</code></li>
+</ol>
+<pre><code class="language-javascript">const { graphql, buildSchema } = require('graphql');
+
+// schema
+const schema = buildSchema(`
+type Query {
+	hello: String
+}
+`);
+
+// resolver
+const root = { hello: () =&gt; 'Hello world!' };
+
+// query
+const query = '{ hello }';
+
+// call the graphql engine
+graphql(schema, query, root)
+	.then(response =&gt; { console.log(response); });
+</code></pre>
+<ol start="4">
+<li>Run the code</li>
+</ol>
+<pre><code class="language-bash">$ node hello.js
+{ hello: 'Hello world!' } }
+</code></pre>
+<h1 id="nowtheopenfaasversion">Now the OpenFaaS version</h1>
+<p>As we will be using the plain engine it's not tied to any invocation method, so we can try it with the standard <code>node</code> template as with the new <code>node10-express</code> template. Let's do it.</p>
+<h2 id="standardnodetemplate">Standard Node template</h2>
+<p>Before all create a folder and get into it</p>
+<ol>
+<li>Create a new project using <code>faas-cli</code> using the standard <code>node</code> template, replace <strong>padiazg</strong> with your user for the Docker Hub, or the address of your private registry if you have one.</li>
+</ol>
+<pre><code class="language-bash">$ faas-cli new graphql01 --lang node --prefix padiazg
+</code></pre>
+<ol start="2">
+<li>Modify <code>handler.js</code> to match the code below</li>
+</ol>
+<pre><code class="language-javascript">&quot;use strict&quot;
+const { graphql, buildSchema } = require('graphql');
+
+// schema
+const schema = buildSchema(`
+  type Query {
+    hello: String
+  }
+`);
+
+// resolver
+const root = { hello: () =&gt; 'Hello world! from OpenFaaS' };
+
+module.exports = (context, callback) =&gt; {
+    
+    // here we call the graphql engine, the query is expected to come in 
+    // the context parameter
+    graphql(schema, context, root)
+        .then( response =&gt; { callback(undefined, response); })
+        .catch(err =&gt; { callback(err, undefined); })
+        ;
+}
+</code></pre>
+<ol start="3">
+<li>Take care of dependencies<br>
+At this point you can go to the folder where <code>handler.js</code> lies and do a <code>npm i --save graphql</code>, or edit the <code>package.json</code> and add this:</li>
+</ol>
+<pre><code class="language-json">   ...
+  &quot;dependencies&quot;: {
+	...
+    &quot;graphql&quot;: &quot;^14.0.2&quot;
+  }
+  ...
+</code></pre>
+<ol start="4">
+<li>Deploy the function using</li>
+</ol>
+<pre><code class="language-bash">$ faas-cli up -f graphql01.yml
+</code></pre>
+<blockquote>
+<p>After the node10-espress example we'll cover how to do some tests, if you are impatient you can check that section now before continue.</p>
+</blockquote>
+<h2 id="node10expresstemplate">Node10-express template</h2>
+<p>As the previous example, create a folder an go into it.</p>
+<ol>
+<li>Pull the template. You can actually use any of the both node-express templates, but we will use the newer one.</li>
+</ol>
+<pre><code class="language-bash">$ faas-cli template pull https://github.com/openfaas-incubator/node10-express-template
+</code></pre>
+<ol start="2">
+<li>Create a new project using <code>faas-cli</code> using the <code>node10-express</code> template, replace <strong>padiazg</strong> with your user for the Docker Hub, or the address of your private registry if you have one.</li>
+</ol>
+<pre><code class="language-bash">$ faas-cli new graphql02 --lang node10-express --prefix padiazg
+</code></pre>
+<ol start="3">
+<li>Update <code>handler.js</code> with this code:</li>
+</ol>
+<pre><code class="language-javascript">&quot;use strict&quot;
+
+const { graphql, buildSchema } = require('graphql');
+
+const schema = buildSchema(`
+  type Query {
+    hello: String
+  }
+`);
+
+const root = { hello: () =&gt; 'Hello world! from OpenFaaS' };
+
+module.exports = (event, context) =&gt; {
+    graphql(schema, event.body, root)
+        .then( response =&gt; {
+            context
+                .status(200)
+                .succeed(response);
+        })
+        .catch(err =&gt; {
+            context
+                .status(500)
+                .fail(response);
+        });
+}
+</code></pre>
+<ol start="4">
+<li>Take care of dependencies<br>
+Same procedure than the prior example, at the same folder where <code>handler.js</code> is run <code>npm i --save graphql</code>, or edit the <code>package.json</code> and add this:</li>
+</ol>
+<pre><code class="language-json">   ...
+  &quot;dependencies&quot;: {
+	...
+    &quot;graphql&quot;: &quot;^14.0.2&quot;
+  }
+  ...
+</code></pre>
+<ol start="5">
+<li>Deploy the function using</li>
+</ol>
+<pre><code class="language-bash">$ faas-cli up -f graphql02.yml
+</code></pre>
+<h2 id="testyourfunction">Test your function</h2>
+<p>We can test the functions we just deployed by several ways, next I'll use the one you like.</p>
+<h3 id="usingtheportal">Using the Portal</h3>
+<p>Locate one of the functions  and use <code>{ hello }</code> as request body.</p>
+<h3 id="usingfaascli">Using faas-cli</h3>
+<pre><code class="language-bash">$ echo { hello } | faas-cli.exe invoke graphql01
+</code></pre>
+<h3 id="usingcurl">Using curl</h3>
+<pre><code class="language-bash">$ curl -X POST --data-ascii '{ hello }' http://localhost:31112/function/graphql02
+</code></pre>
+<p>You should get something like this</p>
+<pre><code class="language-json">{&quot;data&quot;:{&quot;hello&quot;:&quot;Hello world! from OpenFaaS&quot;}}
+</code></pre>
+<h1 id="afewwordsabouttheformatoftheresult">A few words about the format of the result</h1>
+<p>The GraphQL engine always returns a json with either a <code>data</code>or <code>error</code> attribute.</p>
+<p>If the query was successful <code>data</code> contains result of it.</p>
+<pre><code class="language-graphql">{
+	&quot;data&quot;: {
+		&quot;hello&quot;:&quot;Hello world! from OpenFaaS&quot;
+	}
+}
+</code></pre>
+<p>In the other hand, if something went wrong during the execution of the query, and the engine could catch it, an <code>error</code> attribute will be returned with some information about the exception.</p>
+<p>As an example we can simulate we misspelled out object, and see what comes back</p>
+<pre><code class="language-bash">$ echo &quot;{hell}&quot; | faas-cli invoke graphql02 --gateway=http://localhost:31112 | python -m json.tool
+{
+    &quot;errors&quot;: [
+        {
+            &quot;locations&quot;: [
+                {
+                    &quot;column&quot;: 2,
+                    &quot;line&quot;: 1
+                }
+            ],
+            &quot;message&quot;: &quot;Cannot query field \&quot;hell\&quot; on type \&quot;Query\&quot;. Did you mean \&quot;hello\&quot;?&quot;
+        }
+    ]
+}
+</code></pre>
+<h1 id="conclusion">Conclusion</h1>
+<p>I hope that with this simple examples you could start using GraphQL with this amazing platform that OpenFaaS is. As you can see, it's not so difficult.<br>
+In next articles I'll cover some more elaborated examples, as the ability to be able to answer queries for more than one object, as well as regarding parameters, pros and cons, and other aspects that will come in mind later.</p>
+<p>I you have any question or suggestion you an reach me by email (<a href="mailto:padiazg@gmail.com">padiazg@gmail.com</a>), or comment below.</p>
+</div>]]></content:encoded></item><item><title><![CDATA[Docker como ambiente de desarrollo]]></title><description><![CDATA[<div class="kg-card-markdown"><p>Docker tiene muchos usos, aquí muestro uno práctico en el que debía modificar, compilar y probar un bot escrito en Golang en Windows, pero pensado para ejecutarse en Linux.</p>
 <p>En estos días implementamos en ambiente de producción funciones serverless usando OpenFaaS. Usamos el mecanismo de monitoreo recomendado con Prometheus+Grafana</p></div>]]></description><link>https://padiazg.github.io/docker-como-ambiente-de-desarrollo/</link><guid isPermaLink="false">5b4657e3627f520001666e33</guid><dc:creator><![CDATA[Patricio Diaz]]></dc:creator><pubDate>Tue, 24 Jul 2018 15:27:23 GMT</pubDate><content:encoded><![CDATA[<div class="kg-card-markdown"><p>Docker tiene muchos usos, aquí muestro uno práctico en el que debía modificar, compilar y probar un bot escrito en Golang en Windows, pero pensado para ejecutarse en Linux.</p>
 <p>En estos días implementamos en ambiente de producción funciones serverless usando OpenFaaS. Usamos el mecanismo de monitoreo recomendado con Prometheus+Grafana que, dicho de paso, funciona perfectamente.</p>
 <p>Configuramos las alertas, por email era lo único disponible con nuestra infraestructura, pero nadie está mirando su bandeja de entrada a cada rato, por lo que funciona pero no es efectivo.</p>
