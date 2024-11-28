@@ -5,6 +5,8 @@ title = 'How to sync your Obsidian vault using GitHub: A complete guide'
 +++
 # How to sync your Obsidian vault using GitHub: A complete guide
 
+Also published at [dev.to](https://dev.to/padiazg/how-to-sync-your-obsidian-vault-using-github-a-complete-guide-2l08)
+
 ## Introduction
 
 Obsidian has become a powerful tool for note-taking and personal knowledge management, but one question often comes up: "How can I sync my notes across devices?" While Obsidian offers a paid sync service, there's a robust alternative using GitHub that's both free and secure. In this guide, I'll walk you through setting up GitHub synchronization for your Obsidian vault, whether you're on desktop or mobile.
