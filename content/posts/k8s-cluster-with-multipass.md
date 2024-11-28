@@ -1,6 +1,6 @@
 +++
 date = '2024-11-13T19:22:31-03:00'
-draft = true
+draft = false
 title = 'Setting up a local Kubernetes environment with Multipass and bridge networking'
 +++
 # Setting up a local Kubernetes environment with Multipass and bridge networking

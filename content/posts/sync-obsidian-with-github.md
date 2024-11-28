@@ -1,6 +1,6 @@
 +++
 date = '2024-11-01T19:17:55-03:00'
-draft = true
+draft = false
 title = 'How to sync your Obsidian vault using GitHub: A complete guide'
 +++
 # How to sync your Obsidian vault using GitHub: A complete guide
