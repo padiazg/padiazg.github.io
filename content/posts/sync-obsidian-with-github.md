@@ -3,8 +3,6 @@ date = '2024-11-01T19:17:55-03:00'
 draft = false
 title = 'How to sync your Obsidian vault using GitHub: A complete guide'
 +++
-# How to sync your Obsidian vault using GitHub: A complete guide
-
 Also published at [dev.to](https://dev.to/padiazg/how-to-sync-your-obsidian-vault-using-github-a-complete-guide-2l08)
 
 ## Introduction

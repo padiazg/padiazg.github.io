@@ -3,7 +3,7 @@ date = '2024-11-13T19:22:31-03:00'
 draft = false
 title = 'Setting up a local Kubernetes environment with Multipass and bridge networking'
 +++
-# Setting up a local Kubernetes environment with Multipass and bridge networking
+Also published at [dev.to](https://dev.to/padiazg/setting-up-a-local-kubernetes-environment-with-multipass-and-bridge-networking-4cpa)
 
 ## Introduction
 Preparing for the Certified Kubernetes Application Developer (CKAD) certification requires a reliable environment for hands-on practice. While cloud providers are often recommended, setting up a local environment can be more cost-effective and provide valuable learning opportunities. In this guide, I'll walk you through creating a robust local Kubernetes environment using Ubuntu's Multipass and bridge networking.

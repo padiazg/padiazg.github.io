@@ -3,8 +3,6 @@ date = '2024-09-17T16:17:09-03:00'
 draft = false
 title = 'From Pi to Sky: How My Kubernetes Cluster Evolved Beyond Raspberry'
 +++
-# From Pi to Sky: How My Kubernetes Cluster Evolved Beyond Raspberry
-
 Also published at [dev.to](https://dev.to/padiazg/from-pi-to-sky-how-my-kubernetes-cluster-evolved-beyond-raspberry-nf2)
 
 Ever embarked on a project that seemed straightforward at first, only to find yourself tumbling down a rabbit hole of challenges and discoveries? That's exactly what happened when I decided to breathe new life into my ageing Kubernetes cluster. What began as a simple upgrade turned into an odyssey through the world of single-board computers, operating systems, and DIY ingenuity.
