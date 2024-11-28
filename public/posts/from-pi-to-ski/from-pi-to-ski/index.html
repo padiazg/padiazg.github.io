@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>From Pi to Ski | My New Hugo Site</title>
+<meta name="keywords" content="">
+<meta name="description" content="From Pi to Sky: How My Kubernetes Cluster Evolved Beyond Raspberry
+Also published at dev.to
+Ever embarked on a project that seemed straightforward at first, only to find yourself tumbling down a rabbit hole of challenges and discoveries? That&rsquo;s exactly what happened when I decided to breathe new life into my ageing Kubernetes cluster. What began as a simple upgrade turned into an odyssey through the world of single-board computers, operating systems, and DIY ingenuity.
+It all started a few years ago with a Raspberry Pi 2, four Raspberry Pi Zeros, and a cluster hat from 8086.net. Little did I know that this modest setup would lead me on a journey spanning multiple hardware platforms, wrestling with ARM architectures, and ultimately crafting my own solutions to keep my cluster alive and kicking.
+In this post, I&rsquo;ll take you through the twists and turns of my cluster resurrection project. From the initial roadblocks of discontinued support to the thrill of discovering alternative hardware, and finally, to the satisfaction of creating custom solutions. Whether you&rsquo;re a fellow tinkerer, a Kubernetes enthusiast, or simply curious about the world of single-board computing, buckle up – this tale of perseverance and problem-solving might just inspire your next tech adventure.">
+<meta name="author" content="Pato Diaz">
+<link rel="canonical" href="http://localhost:1313/posts/from-pi-to-ski/from-pi-to-ski/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/from-pi-to-ski/from-pi-to-ski/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XVV3SNH9TH"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XVV3SNH9TH');
+        }
+      </script><meta property="og:url" content="http://localhost:1313/posts/from-pi-to-ski/from-pi-to-ski/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="From Pi to Ski">
+  <meta property="og:description" content="From Pi to Sky: How My Kubernetes Cluster Evolved Beyond Raspberry Also published at dev.to
+Ever embarked on a project that seemed straightforward at first, only to find yourself tumbling down a rabbit hole of challenges and discoveries? That’s exactly what happened when I decided to breathe new life into my ageing Kubernetes cluster. What began as a simple upgrade turned into an odyssey through the world of single-board computers, operating systems, and DIY ingenuity. It all started a few years ago with a Raspberry Pi 2, four Raspberry Pi Zeros, and a cluster hat from 8086.net. Little did I know that this modest setup would lead me on a journey spanning multiple hardware platforms, wrestling with ARM architectures, and ultimately crafting my own solutions to keep my cluster alive and kicking. In this post, I’ll take you through the twists and turns of my cluster resurrection project. From the initial roadblocks of discontinued support to the thrill of discovering alternative hardware, and finally, to the satisfaction of creating custom solutions. Whether you’re a fellow tinkerer, a Kubernetes enthusiast, or simply curious about the world of single-board computing, buckle up – this tale of perseverance and problem-solving might just inspire your next tech adventure.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-09-17T16:17:09-03:00">
+    <meta property="article:modified_time" content="2024-09-17T16:17:09-03:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="From Pi to Ski">
+<meta name="twitter:description" content="From Pi to Sky: How My Kubernetes Cluster Evolved Beyond Raspberry
+Also published at dev.to
+Ever embarked on a project that seemed straightforward at first, only to find yourself tumbling down a rabbit hole of challenges and discoveries? That&rsquo;s exactly what happened when I decided to breathe new life into my ageing Kubernetes cluster. What began as a simple upgrade turned into an odyssey through the world of single-board computers, operating systems, and DIY ingenuity.
+It all started a few years ago with a Raspberry Pi 2, four Raspberry Pi Zeros, and a cluster hat from 8086.net. Little did I know that this modest setup would lead me on a journey spanning multiple hardware platforms, wrestling with ARM architectures, and ultimately crafting my own solutions to keep my cluster alive and kicking.
+In this post, I&rsquo;ll take you through the twists and turns of my cluster resurrection project. From the initial roadblocks of discontinued support to the thrill of discovering alternative hardware, and finally, to the satisfaction of creating custom solutions. Whether you&rsquo;re a fellow tinkerer, a Kubernetes enthusiast, or simply curious about the world of single-board computing, buckle up – this tale of perseverance and problem-solving might just inspire your next tech adventure.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "From Pi to Ski",
+      "item": "http://localhost:1313/posts/from-pi-to-ski/from-pi-to-ski/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "From Pi to Ski",
+  "name": "From Pi to Ski",
+  "description": "From Pi to Sky: How My Kubernetes Cluster Evolved Beyond Raspberry Also published at dev.to\nEver embarked on a project that seemed straightforward at first, only to find yourself tumbling down a rabbit hole of challenges and discoveries? That\u0026rsquo;s exactly what happened when I decided to breathe new life into my ageing Kubernetes cluster. What began as a simple upgrade turned into an odyssey through the world of single-board computers, operating systems, and DIY ingenuity. It all started a few years ago with a Raspberry Pi 2, four Raspberry Pi Zeros, and a cluster hat from 8086.net. Little did I know that this modest setup would lead me on a journey spanning multiple hardware platforms, wrestling with ARM architectures, and ultimately crafting my own solutions to keep my cluster alive and kicking. In this post, I\u0026rsquo;ll take you through the twists and turns of my cluster resurrection project. From the initial roadblocks of discontinued support to the thrill of discovering alternative hardware, and finally, to the satisfaction of creating custom solutions. Whether you\u0026rsquo;re a fellow tinkerer, a Kubernetes enthusiast, or simply curious about the world of single-board computing, buckle up – this tale of perseverance and problem-solving might just inspire your next tech adventure.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "From Pi to Sky: How My Kubernetes Cluster Evolved Beyond Raspberry Also published at dev.to\nEver embarked on a project that seemed straightforward at first, only to find yourself tumbling down a rabbit hole of challenges and discoveries? That’s exactly what happened when I decided to breathe new life into my ageing Kubernetes cluster. What began as a simple upgrade turned into an odyssey through the world of single-board computers, operating systems, and DIY ingenuity. It all started a few years ago with a Raspberry Pi 2, four Raspberry Pi Zeros, and a cluster hat from 8086.net. Little did I know that this modest setup would lead me on a journey spanning multiple hardware platforms, wrestling with ARM architectures, and ultimately crafting my own solutions to keep my cluster alive and kicking. In this post, I’ll take you through the twists and turns of my cluster resurrection project. From the initial roadblocks of discontinued support to the thrill of discovering alternative hardware, and finally, to the satisfaction of creating custom solutions. Whether you’re a fellow tinkerer, a Kubernetes enthusiast, or simply curious about the world of single-board computing, buckle up – this tale of perseverance and problem-solving might just inspire your next tech adventure.\nA bit of history The Initial Setup It all began a few years ago when I stumbled upon the cluster hats from 8086.net. Intrigued by the possibility of creating my own Kubernetes cluster, I decided to take the plunge. That old Raspberry Pi 2 Model B that had been gathering dust in a drawer finally would have a purpose! For the cluster nodes, there’s nothing to think about, just got some Raspberry Pi Zeros. Little did I know that acquiring these tiny powerhouses would be my first hurdle. Due to their popularity and supply constraints, most suppliers had implemented a strict one-per-customer limit. Undeterred, I embarked on a quest that led me to four different suppliers just to obtain the necessary quartet of Zeros.\nWith all the hardware in hand, I assembled my cluster. The Raspberry Pi 2 served as the controller, while the four Zeros, neatly arranged on the cluster hats, formed the nodes. I opted for K3s, a lightweight Kubernetes distribution perfect for my modest hardware. For a while, everything hummed along smoothly. My little cluster was up and running, handling tasks and teaching me the ins and outs of Kubernetes management.\nThe Fall of 32-bit and the Quest for Alternatives The bliss was short-lived. As technology marched forward, K8s and K3s made the decision to drop support for ARM 32-bit architectures. Suddenly, my trusty Raspberry Pi Zeros were obsolete for this purpose. I found myself at a crossroads – should I abandon the project or find a way to adapt? My first instinct was to look at the Raspberry Pi Zero 2 W, a 64-bit capable successor. However, I quickly ran into familiar problems: high prices and purchase limits. It was déjà vu all over again.\nEnter the Banana Pi In my search for alternatives, I stumbled upon the Banana Pi M2 Zero. These boards were not only drop-in replacements with the same form factor and pinout as the Pi Zeros, but they also sported 64-bit processors. Best of all, they were significantly cheaper and had no quantity limitations.\nThanks to a helpful thread on the Cluster Hat’s Google Groups page, I found pre-built images and enough information to get the Banana Pis up and running as nodes. My cluster was back in business, now with 64-bit capable nodes.\nThe Final Evolution: Orange Pi CM4 Recently, I decided it was time for the controller board to join the 64-bit party. In the spirit of exploration (and, admittedly, for the fun of it), I opted for an Orange Pi CM4 with a base board to replace the ageing Raspberry Pi 2. The form factor and pinout matched, making it a perfect candidate. However, this final upgrade proved to be the most challenging. There were no pre-built images for using the Orange Pi as a controller with the cluster hat. I found myself diving deep into the differences between Raspbian/Raspberry Pi OS and the various operating systems available for the Orange Pi.\nThe Home Stretch: Custom Solutions Over the next couple of weeks, I immersed myself in learning the intricacies of operating systems for Orange Pi and Banana Pi. I spent countless hours refactoring and updating the original scripts provided by Cluster Hat. It was a journey of discovery, frustration, and ultimately, triumph. The result of this labor was the creation of two GitHub repositories containing scripts to smoothly create images for both the Orange Pi CM4 controller and the Banana Pi M2 Zero nodes. What started as a simple cluster project had evolved into a deep dive into single-board computing, operating systems, and custom software solutions.\nHands on! Controller board The main components used on the controller board:\nOrange Pi CM4 4G32G+CM4 Base Board: RK3566 CPU, 4G DDR4 RAM, 32G eMMC on-board storage A 128G 2242 M.2 NVME PCIe 3.0x4 SSD card (optional, I plan to use it for PVC provisioning on Kubernetes) 3.5mm pitch screw terminal. For independently powering the hat, see [here](3.5mm pitch screw terminal) Get the images From the repo Download the images from the releases page on the repo and skip to the Burn it section below\nBuild them yourself You might want to fine-tune or customize the images.\n# clone the repo $ git clone git@github.com:padiazg/clusterhat-orangepi-cm4.git $ cd clusterhat-orangepi-cm4 # create the required folders $ mkdir -p build/dest build/img build/mnt Download a base image from here into the build/img folder, I use the Ubuntu Jammy server image as it was the most updated and flawless from the options available.\nI don’t provide a shell example for it as there’s no way, I think, to download a Google Drive file straightforwardly with wget or curl\nTime to create the images\n$ cd build # you need sudo because of losetup and mount used in the scripts $ sudo ./create.sh Orangepicm4_1.0.6 # once the script has finished the images should be in build/dest $ ls -l dest Burn it Burn the image into an SD card by using any method you’re comfortable with: Raspberry Pi Imager, Balena Etcher, dd\n# list the block storages to find your SD $ lsblk AME MAJ:MIN RM SIZE RO TYPE MOUNTPOINTS sda 8:0 0 698,6G 0 disk └─sda1 8:1 0 698,6G 0 part /home/pato/vaults/backup sdb 8:16 0 931,5G 0 disk └─sdb1 8:17 0 931,5G 0 part /home/pato/vaults/mis-cosas sdc 8:32 1 29,7G 0 disk └─sdc1 8:33 1 29,4G 0 part zram0 251:0 0 16G 0 disk [SWAP] nvme0n1 259:0 0 931,5G 0 disk ├─nvme0n1p1 259:1 0 1022M 0 part /boot/efi ├─nvme0n1p2 259:2 0 4G 0 part /recovery ├─nvme0n1p3 259:3 0 922,5G 0 part / └─nvme0n1p4 259:4 0 4G 0 part └─cryptswap 252:0 0 4G 0 crypt [SWAP] # the SD is at /dev/sdc in this example $ sudo umount /dev/sdc $ sudo dd bs=1M if=build/dest/Orangepicm4_1.0.6-1-ubuntu_jammy_server_linux5.10.160-ClusterCTRL-CNAT.img of=/dev/sdc status=progress Boot and access the controller Place the SD card into the board and power it. Find out what’s the IP address assigned to the board, there are many ways but here’s one:\n$ sudo nmap -sS 192.168.1.0/24 ... Nmap scan report for pi.hole (192.168.1.100) Host is up (0.00018s latency). Not shown: 994 closed ports PORT STATE SERVICE 22/tcp open ssh 53/tcp open domain 80/tcp open http 81/tcp open hosts2-ns 443/tcp open https 8443/tcp open https-alt MAC Address: DC:A6:32:BB:97:30 (Raspberry Pi Trading) Nmap scan report for clusterhat-01.local.patodiaz.io (192.168.1.110) Host is up (0.00045s latency). Not shown: 995 closed ports PORT STATE SERVICE 22/tcp open ssh 111/tcp open rpcbind 2049/tcp open nfs 5555/tcp open freeciv 8000/tcp open http-alt MAC Address: 00:00:A4:ED:A7:29 (Acorn Computers Limited) Nmap scan report for cnat.local (192.168.1.235) Host is up (0.00056s latency). Not shown: 995 closed ports PORT STATE SERVICE 22/tcp open ssh 111/tcp open rpcbind 2049/tcp open nfs 5555/tcp open freeciv 49175/tcp open unknown MAC Address: 00:00:A4:FD:FF:FD (Acorn Computers Limited) ... I leverage Pi-hole’s DHCP capabilities to implement MAC address-based static IP assignment for key devices within my local network. This approach allows for consistent addressing of critical nodes. Furthermore, I utilize Pi-hole’s local DNS functionality to pair each of these static IP addresses with a corresponding domain name, facilitating easier identification and access to these devices across the network.\nYou should be able to access the controller now. The default username and password is “pi:clusterctrl”\n$ ssh pi@192.168.1.213 Boot from eMMC You might also want to use the eMMC storage, so you don’t need a SD card to boot. In such a case, you still need the SD to boot the board and copy the OS to the eMMC. This procedure is described in the manual found here\nCreate a bootable SD. Use any base image, or those you created or downloaded from the repo, as long as it can boot the board. Copy the image to the SD\n# mount the SD card to copy the image $ mount /dev/sdc /mnt/p2 $ cp dest/Orangepicm4_1.0.6-1-ubuntu_jammy_server_linux5.10.160-ClusterCTRL-CNAT.img /mnt/p2/home/your_user Boot the board with the SD, then copy the image to the eMMC\n# identify the eMMC device $ ls /dev/mmcblk*boot0 | cut -c1-12** /dev/mmcblk0 # clear the device, use the device from the prior step $ sudo dd bs=1M if=/dev/zero of=/dev/mmcblk0 count=5000 status=progress # copy the image $ sudo dd bs=1M \\ if=Orangepicm4_1.0.6-1-ubuntu_jammy_server_linux5.10.160-ClusterCTRL-CNAT.img \\ of=/dev/mmcblk0 \\ status=progress # reboot $ sync \u0026\u0026 reboot Unplug the SD to allow the board to boot from the eMMC.\nThe nodes As nodes, I’m using four Banana Pi M2 Zero. The reasons are that they are cheap, the CPU has four 64-bit cores, and there’s no restriction on how many I can buy at once, amongst other improvements you can check on their wiki The instructions for creating the images are pretty much the same as those for the controller, so I’ll try not to make it longer.\nGet the images From the repo Download the images from the releases page on the repo and skip to the Burn it section below\nBuild them yourself # clone the repo $ git clone git@github.com:padiazg/clusterhat-orangepi-cm4.git $ cd clusterhat-orangepi-cm4 # create the required folders $ mkdir -p build/dest build/img build/mnt To get a base image for the BPi M2 Zero that works well with the cluster hat is a bit trickier, mostly because of kernel support for usb-otg which is fundamental for the nodes. Download the Debian Bullseye base image from here into the build/img folder, here’s a direct link. This one works as expected, and is the most updated I could successfully make it work.\nI use a custom setting to create images prepared to work with a CNAT controller because it is what I use in my infra. I’ll explain later the differences between using a CNAT and a CBRIDGE controller.\nI create a config-local.sh file next to the config.sh file\n#!/bin/sh UPGRADE=1 GROWLITE=\"2G\" CNAT_IMAGES=1 Now create the images\n$ cd build $ sudo ./create.sh Armbian_22.08.0 # the images should be in build/dest $ ls -l dest Burn it # list the block storages to find your SD $ lsblk # SD is at /dev/sdc for this example $ sudo umount /dev/sdc $ sudo dd bs=1M if=build/dest/Armbian_22.08.0-1-trunk_Bananapim2zero_bullseye_current_5.15.43-ClusterCTRL-p1-CNAT.img of=/dev/sdc status=progress Boot and access the node Place the SD card into the node. To start the node we need to use the clusterctrl tool. Please read the cluster-hat control page to get familiarized with the basic tasks\nAt the controller\n# get some info about the cluster-hat $ clusterctrl status # start the P1 node $ clusterctrl on p1 # stop the P1 node $ clusterctrl off p1 Let’s explain a bit the networking\n## the network interfaces $ ip link 1: lo: mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 2: eth0: mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000 link/ether 00:00:a4:ed:a7:29 brd ff:ff:ff:ff:ff:ff 6: wlan0: mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000 link/ether 54:78:c9:0d:8c:34 brd ff:ff:ff:ff:ff:ff 7: brint: mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default qlen 1000 link/ether ce:90:04:cf:0c:74 brd ff:ff:ff:ff:ff:ff 11: br0: mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000 link/ether 00:00:a4:ed:a7:29 brd ff:ff:ff:ff:ff:ff 39: ethpi2: mtu 1500 qdisc fq_codel master br0 state UNKNOWN mode DEFAULT group default qlen 1000 link/ether 00:22:82:ff:fe:02 brd ff:ff:ff:ff:ff:ff 41: ethpi3: mtu 1500 qdisc fq_codel master br0 state UNKNOWN mode DEFAULT group default qlen 1000 link/ether 00:22:82:ff:fe:03 brd ff:ff:ff:ff:ff:ff 42: ethpi4: mtu 1500 qdisc fq_codel master br0 state UNKNOWN mode DEFAULT group default qlen 1000 link/ether 00:22:82:ff:fe:04 brd ff:ff:ff:ff:ff:ff ... # the addresses assigned to each one $ ip a 1: lo: mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: eth0: mtu 1500 qdisc mq state UP group default qlen 1000 link/ether 00:00:a4:ed:a7:29 brd ff:ff:ff:ff:ff:ff inet 192.168.1.110/24 brd 192.168.1.255 scope global dynamic eth0 valid_lft 80240sec preferred_lft 80240sec inet6 fe80::200:a4ff:feed:a729/64 scope link valid_lft forever preferred_lft forever 3: brint: mtu 1500 qdisc noqueue state DOWN group default qlen 1000 link/ether ce:90:04:cf:0c:74 brd ff:ff:ff:ff:ff:ff inet 172.19.180.254/24 brd 172.19.180.255 scope global brint valid_lft forever preferred_lft forever 4: br0: mtu 1500 qdisc noqueue state UP group default qlen 1000 link/ether 00:00:a4:ed:a7:29 brd ff:ff:ff:ff:ff:ff inet 172.19.181.254/24 brd 172.19.181.255 scope global br0 valid_lft forever preferred_lft forever inet6 fe80::200:a4ff:feed:a729/64 scope link valid_lft forever preferred_lft forever 5: ethpi1: mtu 1500 qdisc fq_codel master br0 state UNKNOWN group default qlen 1000 link/ether 00:22:82:ff:fe:01 brd ff:ff:ff:ff:ff:ff inet6 fe80::222:82ff:feff:fe01/64 scope link valid_lft forever preferred_lft forever 6: ethpi2: mtu 1500 qdisc fq_codel master br0 state UNKNOWN group default qlen 1000 link/ether 00:22:82:ff:fe:02 brd ff:ff:ff:ff:ff:ff inet6 fe80::222:82ff:feff:fe02/64 scope link valid_lft forever preferred_lft forever 7: ethpi3: mtu 1500 qdisc fq_codel master br0 state UNKNOWN group default qlen 1000 link/ether 00:22:82:ff:fe:03 brd ff:ff:ff:ff:ff:ff inet6 fe80::222:82ff:feff:fe03/64 scope link valid_lft forever preferred_lft forever 8: ethpi4: mtu 1500 qdisc fq_codel master br0 state UNKNOWN group default qlen 1000 link/ether 00:22:82:ff:fe:04 brd ff:ff:ff:ff:ff:ff inet6 fe80::222:82ff:feff:fe04/64 scope link valid_lft forever preferred_lft forever ... The ethpix interfaces are added to the br0 bridge, they share the 171.19.181.0/24 network:\n# the controller $ ping 172.19.181.254 # the P1 node $ ping 172.19.181.1 # the P2 node $ ping 172.19.181.2 # the P3 node $ ping 172.19.181.3 # the P4 node $ ping 172.19.181.4 Worth mentioning that the mac-addresses of each node follow the pattern 00:22:82:ff:fe:0x where x is a number between 1 and 4 matching the node number. This is very useful when assigning IP addresses based on the mac-addresses, especially if we are in a CBRIDGE configuration.\nYou should be able to ssh any of the nodes using the info above\n$ ssh pi@172.19.181.1 # P1 $ ssh pi@172.19.181.2 # P2 # and so on Difference between CBRIDGE and CNAT The main difference between the two is how nodes get an IP address, and how the cluster components access the network. At both configurations the br0 network is configured and each node is assigned the internal ip addresses as mentioned before, but the main difference is how the traffic is routed to the rest of the network and other networks like the internet.\nIn a CBRIDGE configuration the nodes get bridged through the controller network and access the network directly. Each node will get an ip address either manually or via an DHCP present in the network, as if it is a device directly connected to the network. In the other hand, in a CNAT configuration, the nodes traffic is nated and the controller acts as a router hiding the nodes from the outside.\nConclusion: Lessons Learned and the Road Ahead As I sit back and reflect on this journey, from those first Raspberry Pi Zeros to the current setup with Banana Pi nodes and an Orange Pi controller, I’m struck by how much I’ve learned and how far this project has come.\nWhat started as a simple desire to build a Kubernetes cluster became a crash course in hardware compatibility, operating system intricacies, and the importance of community knowledge. Each obstacle - from supply constraints to architecture changes - pushed me to think creatively and expand my skillset.\nPerhaps the most valuable lesson was the reminder that in the world of technology, change is the only constant. The ability to adapt, whether it’s finding alternative hardware or writing custom scripts, is crucial. This project also reinforced the power of open-source communities. Without the shared knowledge and pre-built images from other enthusiasts, many of the hurdles would have been much harder to overcome.\nThe two GitHub repositories I’ve created for image creation are not just the end result of this project, but also my contribution back to the community that helped me along the way. I hope that other tinkerers and cluster enthusiasts will find them useful in their own journeys.\nLooking ahead, I’m excited about the possibilities this upgraded cluster opens up. With more powerful, 64-bit capable nodes and a controller, I can explore more complex Kubernetes deployments and perhaps even venture into edge computing scenarios. By the way, I already have two Orange Pi Zero 2W with 2GB RAM each, even more powerful than the Banana Pi M2 Zero,and also just saw there are some Radxa ZERO 3W with 4G of RAM, both of them bringing new challenges to this project.\nThis project may have started with a handful of Pis and a dream, but it’s grown into so much more. It’s a testament to the joy of problem-solving, the power of perseverance, and the endless possibilities when you’re willing to think outside the (Raspberry Pi) box.\nSo, what’s next? Who knows - but I’m certain it will involve more tinkering, learning, and pushing the boundaries of what’s possible with these amazing single-board computers. The sky’s the limit!\n",
+  "wordCount" : "2983",
+  "inLanguage": "en",
+  "datePublished": "2024-09-17T16:17:09-03:00",
+  "dateModified": "2024-09-17T16:17:09-03:00",
+  "author":{
+    "@type": "Person",
+    "name": "Pato Diaz"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/from-pi-to-ski/from-pi-to-ski/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My New Hugo Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      From Pi to Ski
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-meta"><span title='2024-09-17 16:17:09 -0300 -0300'>September 17, 2024</span>&nbsp;·&nbsp;15 min&nbsp;·&nbsp;Pato Diaz
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#from-pi-to-sky-how-my-kubernetes-cluster-evolved-beyond-raspberry" aria-label="From Pi to Sky: How My Kubernetes Cluster Evolved Beyond Raspberry">From Pi to Sky: How My Kubernetes Cluster Evolved Beyond Raspberry</a><ul>
+                        
+                <li>
+                    <a href="#a-bit-of-history" aria-label="A bit of history">A bit of history</a><ul>
+                        
+                <li>
+                    <a href="#the-initial-setup" aria-label="The Initial Setup">The Initial Setup</a></li>
+                <li>
+                    <a href="#the-fall-of-32-bit-and-the-quest-for-alternatives" aria-label="The Fall of 32-bit and the Quest for Alternatives">The Fall of 32-bit and the Quest for Alternatives</a></li>
+                <li>
+                    <a href="#enter-the-banana-pi" aria-label="Enter the Banana Pi">Enter the Banana Pi</a></li>
+                <li>
+                    <a href="#the-final-evolution-orange-pi-cm4" aria-label="The Final Evolution: Orange Pi CM4">The Final Evolution: Orange Pi CM4</a></li>
+                <li>
+                    <a href="#the-home-stretch-custom-solutions" aria-label="The Home Stretch: Custom Solutions">The Home Stretch: Custom Solutions</a></li></ul>
+                </li>
+                <li>
+                    <a href="#hands-on" aria-label="Hands on!">Hands on!</a><ul>
+                        
+                <li>
+                    <a href="#controller-board" aria-label="Controller board">Controller board</a><ul>
+                        
+                <li>
+                    <a href="#get-the-images" aria-label="Get the images">Get the images</a><ul>
+                        
+                <li>
+                    <a href="#from-the-repo" aria-label="From the repo">From the repo</a></li>
+                <li>
+                    <a href="#build-them-yourself" aria-label="Build them yourself">Build them yourself</a></li></ul>
+                </li>
+                <li>
+                    <a href="#burn-it" aria-label="Burn it">Burn it</a></li>
+                <li>
+                    <a href="#boot-and-access-the-controller" aria-label="Boot and access the controller">Boot and access the controller</a></li>
+                <li>
+                    <a href="#boot-from-emmc" aria-label="Boot from eMMC">Boot from eMMC</a></li></ul>
+                </li>
+                <li>
+                    <a href="#the-nodes" aria-label="The nodes">The nodes</a><ul>
+                        
+                <li>
+                    <a href="#get-the-images-1" aria-label="Get the images">Get the images</a><ul>
+                        
+                <li>
+                    <a href="#from-the-repo-1" aria-label="From the repo">From the repo</a></li>
+                <li>
+                    <a href="#build-them-yourself-1" aria-label="Build them yourself">Build them yourself</a></li></ul>
+                </li>
+                <li>
+                    <a href="#burn-it-1" aria-label="Burn it">Burn it</a></li>
+                <li>
+                    <a href="#boot-and-access-the-node" aria-label="Boot and access the node">Boot and access the node</a></li></ul>
+                </li>
+                <li>
+                    <a href="#difference-between-cbridge-and-cnat" aria-label="Difference between CBRIDGE and CNAT">Difference between CBRIDGE and CNAT</a></li></ul>
+                </li>
+                <li>
+                    <a href="#conclusion-lessons-learned-and-the-road-ahead" aria-label="Conclusion: Lessons Learned and the Road Ahead">Conclusion: Lessons Learned and the Road Ahead</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="from-pi-to-sky-how-my-kubernetes-cluster-evolved-beyond-raspberry">From Pi to Sky: How My Kubernetes Cluster Evolved Beyond Raspberry<a hidden class="anchor" aria-hidden="true" href="#from-pi-to-sky-how-my-kubernetes-cluster-evolved-beyond-raspberry">#</a></h1>
+<p>Also published at <a href="https://dev.to/padiazg/from-pi-to-sky-how-my-kubernetes-cluster-evolved-beyond-raspberry-nf2">dev.to</a></p>
+<p>Ever embarked on a project that seemed straightforward at first, only to find yourself tumbling down a rabbit hole of challenges and discoveries? That&rsquo;s exactly what happened when I decided to breathe new life into my ageing Kubernetes cluster. What began as a simple upgrade turned into an odyssey through the world of single-board computers, operating systems, and DIY ingenuity.
+It all started a few years ago with a Raspberry Pi 2, four Raspberry Pi Zeros, and a cluster hat from 8086.net. Little did I know that this modest setup would lead me on a journey spanning multiple hardware platforms, wrestling with ARM architectures, and ultimately crafting my own solutions to keep my cluster alive and kicking.
+In this post, I&rsquo;ll take you through the twists and turns of my cluster resurrection project. From the initial roadblocks of discontinued support to the thrill of discovering alternative hardware, and finally, to the satisfaction of creating custom solutions. Whether you&rsquo;re a fellow tinkerer, a Kubernetes enthusiast, or simply curious about the world of single-board computing, buckle up – this tale of perseverance and problem-solving might just inspire your next tech adventure.</p>
+<h2 id="a-bit-of-history">A bit of history<a hidden class="anchor" aria-hidden="true" href="#a-bit-of-history">#</a></h2>
+<h3 id="the-initial-setup">The Initial Setup<a hidden class="anchor" aria-hidden="true" href="#the-initial-setup">#</a></h3>
+<p>It all began a few years ago when I stumbled upon the cluster hats from 8086.net. Intrigued by the possibility of creating my own Kubernetes cluster, I decided to take the plunge. That old Raspberry Pi 2 Model B that had been gathering dust in a drawer finally would have a purpose!
+For the cluster nodes, there&rsquo;s nothing to think about, just got some Raspberry Pi Zeros. Little did I know that acquiring these tiny powerhouses would be my first hurdle. Due to their popularity and supply constraints, most suppliers had implemented a strict one-per-customer limit. Undeterred, I embarked on a quest that led me to four different suppliers just to obtain the necessary quartet of Zeros.</p>
+<p><img alt="cluster-hat-and-four-raspberry-pi-zeros" loading="lazy" src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xueymmm7mhrw8a5u243l.jpg"></p>
+<p>With all the hardware in hand, I assembled my cluster. The Raspberry Pi 2 served as the controller, while the four Zeros, neatly arranged on the cluster hats, formed the nodes. I opted for K3s, a lightweight Kubernetes distribution perfect for my modest hardware. For a while, everything hummed along smoothly. My little cluster was up and running, handling tasks and teaching me the ins and outs of Kubernetes management.</p>
+<p><img alt="all-boards-assembled" loading="lazy" src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vkx0p02p89hcya55iy9k.jpg"></p>
+<h3 id="the-fall-of-32-bit-and-the-quest-for-alternatives">The Fall of 32-bit and the Quest for Alternatives<a hidden class="anchor" aria-hidden="true" href="#the-fall-of-32-bit-and-the-quest-for-alternatives">#</a></h3>
+<p>The bliss was short-lived. As technology marched forward, K8s and K3s made the decision to drop support for ARM 32-bit architectures. Suddenly, my trusty Raspberry Pi Zeros were obsolete for this purpose. I found myself at a crossroads – should I abandon the project or find a way to adapt?
+My first instinct was to look at the Raspberry Pi Zero 2 W, a 64-bit capable successor. However, I quickly ran into familiar problems: high prices and purchase limits. It was déjà vu all over again.</p>
+<h3 id="enter-the-banana-pi">Enter the Banana Pi<a hidden class="anchor" aria-hidden="true" href="#enter-the-banana-pi">#</a></h3>
+<p>In my search for alternatives, I stumbled upon the Banana Pi M2 Zero. These boards were not only drop-in replacements with the same form factor and pinout as the Pi Zeros, but they also sported 64-bit processors. Best of all, they were significantly cheaper and had no quantity limitations.</p>
+<p><img alt="orange-pi-on-cluster-hat" loading="lazy" src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8zh75e68zqar3wchcadf.jpg">
+Thanks to a helpful thread on the Cluster Hat&rsquo;s Google Groups page, I found pre-built images and enough information to get the Banana Pis up and running as nodes. My cluster was back in business, now with 64-bit capable nodes.</p>
+<h3 id="the-final-evolution-orange-pi-cm4">The Final Evolution: Orange Pi CM4<a hidden class="anchor" aria-hidden="true" href="#the-final-evolution-orange-pi-cm4">#</a></h3>
+<p>Recently, I decided it was time for the controller board to join the 64-bit party. In the spirit of exploration (and, admittedly, for the fun of it), I opted for an Orange Pi CM4 with a base board to replace the ageing Raspberry Pi 2. The form factor and pinout matched, making it a perfect candidate.
+However, this final upgrade proved to be the most challenging. There were no pre-built images for using the Orange Pi as a controller with the cluster hat. I found myself diving deep into the differences between Raspbian/Raspberry Pi OS and the various operating systems available for the Orange Pi.</p>
+<h3 id="the-home-stretch-custom-solutions">The Home Stretch: Custom Solutions<a hidden class="anchor" aria-hidden="true" href="#the-home-stretch-custom-solutions">#</a></h3>
+<p>Over the next couple of weeks, I immersed myself in learning the intricacies of operating systems for Orange Pi and Banana Pi. I spent countless hours refactoring and updating the original scripts provided by Cluster Hat. It was a journey of discovery, frustration, and ultimately, triumph.
+The result of this labor was the creation of two GitHub repositories containing scripts to smoothly create images for both the Orange Pi CM4 controller and the Banana Pi M2 Zero nodes. What started as a simple cluster project had evolved into a deep dive into single-board computing, operating systems, and custom software solutions.</p>
+<h2 id="hands-on">Hands on!<a hidden class="anchor" aria-hidden="true" href="#hands-on">#</a></h2>
+<h3 id="controller-board">Controller board<a hidden class="anchor" aria-hidden="true" href="#controller-board">#</a></h3>
+<p>The main components used on the controller board:</p>
+<ul>
+<li><a href="https://www.aliexpress.us/item/3256805807016286.html">Orange Pi CM4 4G32G+CM4 Base Board</a>: RK3566 CPU, 4G DDR4 RAM, 32G eMMC on-board storage</li>
+<li><a href="https://www.aliexpress.us/item/3256806166171564.html">A 128G 2242 M.2 NVME PCIe 3.0x4 SSD card</a> (optional, I plan to use it for PVC provisioning on Kubernetes)</li>
+<li>3.5mm pitch screw terminal. For independently powering the hat, see [here](3.5mm pitch screw terminal)</li>
+</ul>
+<h4 id="get-the-images">Get the images<a hidden class="anchor" aria-hidden="true" href="#get-the-images">#</a></h4>
+<h5 id="from-the-repo">From the repo<a hidden class="anchor" aria-hidden="true" href="#from-the-repo">#</a></h5>
+<p>Download the images from  the <a href="https://github.com/padiazg/clusterhat-orangepi-cm4/releases">releases</a> page on the repo and skip to the <a href="#burn-it-opi">Burn it</a> section below</p>
+<h5 id="build-them-yourself">Build them yourself<a hidden class="anchor" aria-hidden="true" href="#build-them-yourself">#</a></h5>
+<p>You might want to fine-tune or customize the images.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># clone the repo</span>
+</span></span><span style="display:flex;"><span>$ git clone git@github.com:padiazg/clusterhat-orangepi-cm4.git
+</span></span><span style="display:flex;"><span>$ cd clusterhat-orangepi-cm4
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># create the required folders</span>
+</span></span><span style="display:flex;"><span>$ mkdir -p build/dest build/img build/mnt
+</span></span></code></pre></div><p>Download a base image from <a href="http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-CM4-1.htm">here</a> into the <code>build/img</code> folder, I use the <a href="https://drive.google.com/file/d/1Y4KED4elo9A2YaJaRleE6WL5iy5carfV/view?usp=drive_link">Ubuntu Jammy server</a> image as it was the most updated and flawless from the options available.</p>
+<blockquote>
+<p>I don&rsquo;t provide a shell example for it as there&rsquo;s no way, I think, to download a Google Drive file straightforwardly with wget or curl</p>
+</blockquote>
+<p>Time to create the images</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ cd build
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># you need sudo because of losetup and mount used in the scripts</span>
+</span></span><span style="display:flex;"><span>$ sudo ./create.sh Orangepicm4_1.0.6
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># once the script has finished the images should be in build/dest</span>
+</span></span><span style="display:flex;"><span>$ ls -l dest
+</span></span></code></pre></div><h4 id="burn-it">Burn it<a hidden class="anchor" aria-hidden="true" href="#burn-it">#</a></h4>
+<p>Burn the image into an SD card by using any method you&rsquo;re comfortable with: Raspberry Pi Imager, Balena Etcher, dd</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># list the block storages to find your SD</span>
+</span></span><span style="display:flex;"><span>$ lsblk
+</span></span><span style="display:flex;"><span>AME          MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+</span></span><span style="display:flex;"><span>sda             8:0    <span style="color:#ae81ff">0</span> 698,6G  <span style="color:#ae81ff">0</span> disk  
+</span></span><span style="display:flex;"><span>└─sda1          8:1    <span style="color:#ae81ff">0</span> 698,6G  <span style="color:#ae81ff">0</span> part  /home/pato/vaults/backup
+</span></span><span style="display:flex;"><span>sdb             8:16   <span style="color:#ae81ff">0</span> 931,5G  <span style="color:#ae81ff">0</span> disk  
+</span></span><span style="display:flex;"><span>└─sdb1          8:17   <span style="color:#ae81ff">0</span> 931,5G  <span style="color:#ae81ff">0</span> part  /home/pato/vaults/mis-cosas
+</span></span><span style="display:flex;"><span>sdc             8:32   <span style="color:#ae81ff">1</span>  29,7G  <span style="color:#ae81ff">0</span> disk  
+</span></span><span style="display:flex;"><span>└─sdc1          8:33   <span style="color:#ae81ff">1</span>  29,4G  <span style="color:#ae81ff">0</span> part  
+</span></span><span style="display:flex;"><span>zram0         251:0    <span style="color:#ae81ff">0</span>    16G  <span style="color:#ae81ff">0</span> disk  <span style="color:#f92672">[</span>SWAP<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>nvme0n1       259:0    <span style="color:#ae81ff">0</span> 931,5G  <span style="color:#ae81ff">0</span> disk  
+</span></span><span style="display:flex;"><span>├─nvme0n1p1   259:1    <span style="color:#ae81ff">0</span>  1022M  <span style="color:#ae81ff">0</span> part  /boot/efi
+</span></span><span style="display:flex;"><span>├─nvme0n1p2   259:2    <span style="color:#ae81ff">0</span>     4G  <span style="color:#ae81ff">0</span> part  /recovery
+</span></span><span style="display:flex;"><span>├─nvme0n1p3   259:3    <span style="color:#ae81ff">0</span> 922,5G  <span style="color:#ae81ff">0</span> part  /
+</span></span><span style="display:flex;"><span>└─nvme0n1p4   259:4    <span style="color:#ae81ff">0</span>     4G  <span style="color:#ae81ff">0</span> part  
+</span></span><span style="display:flex;"><span>  └─cryptswap 252:0    <span style="color:#ae81ff">0</span>     4G  <span style="color:#ae81ff">0</span> crypt <span style="color:#f92672">[</span>SWAP<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># the SD is at /dev/sdc in this example </span>
+</span></span><span style="display:flex;"><span>$ sudo umount /dev/sdc 
+</span></span><span style="display:flex;"><span>$ sudo dd bs<span style="color:#f92672">=</span>1M <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>build/dest/Orangepicm4_1.0.6-1-ubuntu_jammy_server_linux5.10.160-ClusterCTRL-CNAT.img of<span style="color:#f92672">=</span>/dev/sdc status<span style="color:#f92672">=</span>progress
+</span></span></code></pre></div><h4 id="boot-and-access-the-controller">Boot and access the controller<a hidden class="anchor" aria-hidden="true" href="#boot-and-access-the-controller">#</a></h4>
+<p>Place the SD card into the board and power it.
+Find out what&rsquo;s the IP address assigned to the board, there are many ways but here&rsquo;s one:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ sudo nmap -sS 192.168.1.0/24
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> pi.hole <span style="color:#f92672">(</span>192.168.1.100<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.00018s latency<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Not shown: <span style="color:#ae81ff">994</span> closed ports
+</span></span><span style="display:flex;"><span>PORT     STATE SERVICE
+</span></span><span style="display:flex;"><span>22/tcp   open  ssh
+</span></span><span style="display:flex;"><span>53/tcp   open  domain
+</span></span><span style="display:flex;"><span>80/tcp   open  http
+</span></span><span style="display:flex;"><span>81/tcp   open  hosts2-ns
+</span></span><span style="display:flex;"><span>443/tcp  open  https
+</span></span><span style="display:flex;"><span>8443/tcp open  https-alt
+</span></span><span style="display:flex;"><span>MAC Address: DC:A6:32:BB:97:30 <span style="color:#f92672">(</span>Raspberry Pi Trading<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> clusterhat-01.local.patodiaz.io <span style="color:#f92672">(</span>192.168.1.110<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.00045s latency<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Not shown: <span style="color:#ae81ff">995</span> closed ports
+</span></span><span style="display:flex;"><span>PORT     STATE SERVICE
+</span></span><span style="display:flex;"><span>22/tcp   open  ssh
+</span></span><span style="display:flex;"><span>111/tcp  open  rpcbind
+</span></span><span style="display:flex;"><span>2049/tcp open  nfs
+</span></span><span style="display:flex;"><span>5555/tcp open  freeciv
+</span></span><span style="display:flex;"><span>8000/tcp open  http-alt
+</span></span><span style="display:flex;"><span>MAC Address: 00:00:A4:ED:A7:29 <span style="color:#f92672">(</span>Acorn Computers Limited<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> cnat.local <span style="color:#f92672">(</span>192.168.1.235<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.00056s latency<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Not shown: <span style="color:#ae81ff">995</span> closed ports
+</span></span><span style="display:flex;"><span>PORT      STATE SERVICE
+</span></span><span style="display:flex;"><span>22/tcp    open  ssh
+</span></span><span style="display:flex;"><span>111/tcp   open  rpcbind
+</span></span><span style="display:flex;"><span>2049/tcp  open  nfs
+</span></span><span style="display:flex;"><span>5555/tcp  open  freeciv
+</span></span><span style="display:flex;"><span>49175/tcp open  unknown
+</span></span><span style="display:flex;"><span>MAC Address: 00:00:A4:FD:FF:FD <span style="color:#f92672">(</span>Acorn Computers Limited<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><blockquote>
+<p>I leverage Pi-hole&rsquo;s DHCP capabilities to implement MAC address-based static IP assignment for key devices within my local network. This approach allows for consistent addressing of critical nodes. Furthermore, I utilize Pi-hole&rsquo;s local DNS functionality to pair each of these static IP addresses with a corresponding domain name, facilitating easier identification and access to these devices across the network.</p>
+</blockquote>
+<p>You should be able to access the controller now. The default username and password is &ldquo;pi:clusterctrl&rdquo;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ ssh pi@192.168.1.213
+</span></span></code></pre></div><h4 id="boot-from-emmc">Boot from eMMC<a hidden class="anchor" aria-hidden="true" href="#boot-from-emmc">#</a></h4>
+<p>You might also want to use the eMMC storage, so you don&rsquo;t need a SD card to boot. In such a case, you still need the SD to boot the board and copy the OS to the eMMC. This procedure is described in the manual found <a href="http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-CM4-1.html">here</a></p>
+<p>Create a bootable SD. Use any base image, or those you created or downloaded from the repo, as long as it can boot the board.
+Copy the image to the SD</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># mount the SD card to copy the image</span>
+</span></span><span style="display:flex;"><span>$ mount /dev/sdc /mnt/p2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ cp dest/Orangepicm4_1.0.6-1-ubuntu_jammy_server_linux5.10.160-ClusterCTRL-CNAT.img /mnt/p2/home/your_user
+</span></span></code></pre></div><p>Boot the board with the SD, then copy the image to the eMMC</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># identify the eMMC device</span>
+</span></span><span style="display:flex;"><span>$ ls /dev/mmcblk*boot0 | cut -c1-12**
+</span></span><span style="display:flex;"><span>/dev/mmcblk0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># clear the device, use the device from the prior step</span>
+</span></span><span style="display:flex;"><span>$ sudo dd bs<span style="color:#f92672">=</span>1M <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero of<span style="color:#f92672">=</span>/dev/mmcblk0 count<span style="color:#f92672">=</span><span style="color:#ae81ff">5000</span> status<span style="color:#f92672">=</span>progress
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># copy the image</span>
+</span></span><span style="display:flex;"><span>$ sudo dd bs<span style="color:#f92672">=</span>1M <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	<span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>Orangepicm4_1.0.6-1-ubuntu_jammy_server_linux5.10.160-ClusterCTRL-CNAT.img <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	of<span style="color:#f92672">=</span>/dev/mmcblk0 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	status<span style="color:#f92672">=</span>progress
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># reboot</span>
+</span></span><span style="display:flex;"><span>$ sync <span style="color:#f92672">&amp;&amp;</span> reboot
+</span></span></code></pre></div><p>Unplug the SD to allow the board to boot from the eMMC.</p>
+<h3 id="the-nodes">The nodes<a hidden class="anchor" aria-hidden="true" href="#the-nodes">#</a></h3>
+<p>As nodes, I&rsquo;m using four <a href="https://www.aliexpress.us/item/3256803540350120.html">Banana Pi M2 Zero</a>. The reasons are that they are cheap, the CPU has four 64-bit cores, and there&rsquo;s no restriction on how many I can buy at once, amongst other improvements you can check on their <a href="https://wiki.banana-pi.org/Banana_Pi_BPI-M2_ZERO">wiki</a>
+The instructions for creating the images are pretty much the same as those for the controller, so I&rsquo;ll try not to make it longer.</p>
+<h4 id="get-the-images-1">Get the images<a hidden class="anchor" aria-hidden="true" href="#get-the-images-1">#</a></h4>
+<h5 id="from-the-repo-1">From the repo<a hidden class="anchor" aria-hidden="true" href="#from-the-repo-1">#</a></h5>
+<p>Download the images from  the <a href="https://github.com/padiazg/clusterhat-bananapi-m2-zero/releases">releases</a> page on the repo and skip to the <a href="#burn-it-bpi">Burn it</a> section below</p>
+<h5 id="build-them-yourself-1">Build them yourself<a hidden class="anchor" aria-hidden="true" href="#build-them-yourself-1">#</a></h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># clone the repo</span>
+</span></span><span style="display:flex;"><span>$ git clone git@github.com:padiazg/clusterhat-orangepi-cm4.git
+</span></span><span style="display:flex;"><span>$ cd clusterhat-orangepi-cm4
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># create the required folders</span>
+</span></span><span style="display:flex;"><span>$ mkdir -p build/dest build/img build/mnt
+</span></span></code></pre></div><p>To get a base image for the BPi M2 Zero that works well with the cluster hat is a bit trickier, mostly because of kernel support for usb-otg which is fundamental for the nodes.
+Download the Debian Bullseye base image from <a href="https://github.com/TuryRx/Banana-pi-m2-zero-Images">here</a> into the <code>build/img</code> folder, here&rsquo;s a direct <a href="https://www.mediafire.com/file/ahqfobon44htbud/Armbian_22.08.0-trunk_Bananapim2zero_bullseye_current_5.15.43_Server.rar/file">link</a>. This one works as expected, and is the most updated I could successfully make it work.</p>
+<p>I use a custom setting to create images prepared to work with a CNAT controller because it is what I use in my infra. I&rsquo;ll explain later the differences between using a CNAT and a CBRIDGE controller.</p>
+<p>I create a <em>config-local.sh</em> file next to the config.sh file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/sh
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>UPGRADE<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>GROWLITE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2G&#34;</span>
+</span></span><span style="display:flex;"><span>CNAT_IMAGES<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p>Now create the images</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ cd build
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ sudo ./create.sh Armbian_22.08.0  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># the images should be in build/dest</span>
+</span></span><span style="display:flex;"><span>$ ls -l dest
+</span></span></code></pre></div><h4 id="burn-it-1">Burn it<a hidden class="anchor" aria-hidden="true" href="#burn-it-1">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># list the block storages to find your SD</span>
+</span></span><span style="display:flex;"><span>$ lsblk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SD is at /dev/sdc for this example </span>
+</span></span><span style="display:flex;"><span>$ sudo umount /dev/sdc 
+</span></span><span style="display:flex;"><span>$ sudo dd bs<span style="color:#f92672">=</span>1M <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>build/dest/Armbian_22.08.0-1-trunk_Bananapim2zero_bullseye_current_5.15.43-ClusterCTRL-p1-CNAT.img of<span style="color:#f92672">=</span>/dev/sdc status<span style="color:#f92672">=</span>progress
+</span></span></code></pre></div><h4 id="boot-and-access-the-node">Boot and access the node<a hidden class="anchor" aria-hidden="true" href="#boot-and-access-the-node">#</a></h4>
+<p>Place the SD card into the node. To start the node we need to use the <code>clusterctrl</code> tool.
+Please read the <a href="https://clusterctrl.com/setup-control">cluster-hat control page</a> to get familiarized with the basic tasks</p>
+<p>At the controller</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># get some info about the cluster-hat</span>
+</span></span><span style="display:flex;"><span>$ clusterctrl status
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># start the P1 node</span>
+</span></span><span style="display:flex;"><span>$ clusterctrl on p1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># stop the P1 node</span>
+</span></span><span style="display:flex;"><span>$ clusterctrl off p1
+</span></span></code></pre></div><p>Let&rsquo;s explain a bit the networking</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">## the network interfaces</span>
+</span></span><span style="display:flex;"><span>$ ip link
+</span></span><span style="display:flex;"><span>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">65536</span> qdisc noqueue state UNKNOWN mode DEFAULT group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+</span></span><span style="display:flex;"><span>2: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc mq state UP mode DEFAULT group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether 00:00:a4:ed:a7:29 brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>6: wlan0: &lt;BROADCAST,MULTICAST&gt; mtu <span style="color:#ae81ff">1500</span> qdisc noop state DOWN mode DEFAULT group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether 54:78:c9:0d:8c:34 brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>7: brint: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc noqueue state DOWN mode DEFAULT group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether ce:90:04:cf:0c:74 brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>11: br0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc noqueue state UP mode DEFAULT group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether 00:00:a4:ed:a7:29 brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>39: ethpi2: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc fq_codel master br0 state UNKNOWN mode DEFAULT group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether 00:22:82:ff:fe:02 brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>41: ethpi3: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc fq_codel master br0 state UNKNOWN mode DEFAULT group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether 00:22:82:ff:fe:03 brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>42: ethpi4: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc fq_codel master br0 state UNKNOWN mode DEFAULT group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether 00:22:82:ff:fe:04 brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># the addresses assigned to each one</span>
+</span></span><span style="display:flex;"><span>$ ip a
+</span></span><span style="display:flex;"><span>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">65536</span> qdisc noqueue state UNKNOWN group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+</span></span><span style="display:flex;"><span>    inet 127.0.0.1/8 scope host lo
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>    inet6 ::1/128 scope host 
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>2: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc mq state UP group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether 00:00:a4:ed:a7:29 brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>    inet 192.168.1.110/24 brd 192.168.1.255 scope global dynamic eth0
+</span></span><span style="display:flex;"><span>       valid_lft 80240sec preferred_lft 80240sec
+</span></span><span style="display:flex;"><span>    inet6 fe80::200:a4ff:feed:a729/64 scope link 
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>3: brint: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc noqueue state DOWN group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether ce:90:04:cf:0c:74 brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>    inet 172.19.180.254/24 brd 172.19.180.255 scope global brint
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>4: br0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc noqueue state UP group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether 00:00:a4:ed:a7:29 brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>    inet 172.19.181.254/24 brd 172.19.181.255 scope global br0
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>    inet6 fe80::200:a4ff:feed:a729/64 scope link 
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>5: ethpi1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc fq_codel master br0 state UNKNOWN group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether 00:22:82:ff:fe:01 brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>    inet6 fe80::222:82ff:feff:fe01/64 scope link 
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>6: ethpi2: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc fq_codel master br0 state UNKNOWN group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether 00:22:82:ff:fe:02 brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>    inet6 fe80::222:82ff:feff:fe02/64 scope link 
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>7: ethpi3: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc fq_codel master br0 state UNKNOWN group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether 00:22:82:ff:fe:03 brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>    inet6 fe80::222:82ff:feff:fe03/64 scope link 
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>8: ethpi4: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#ae81ff">1500</span> qdisc fq_codel master br0 state UNKNOWN group default qlen <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether 00:22:82:ff:fe:04 brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>    inet6 fe80::222:82ff:feff:fe04/64 scope link 
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>The <code>ethpix</code> interfaces are added to the <code>br0</code> bridge, they share the <code>171.19.181.0/24</code> network:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># the controller</span>
+</span></span><span style="display:flex;"><span>$ ping 172.19.181.254
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># the P1 node</span>
+</span></span><span style="display:flex;"><span>$ ping 172.19.181.1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># the P2 node</span>
+</span></span><span style="display:flex;"><span>$ ping 172.19.181.2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># the P3 node</span>
+</span></span><span style="display:flex;"><span>$ ping 172.19.181.3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># the P4 node</span>
+</span></span><span style="display:flex;"><span>$ ping 172.19.181.4
+</span></span></code></pre></div><p>Worth mentioning that the mac-addresses of each node follow the pattern <code>00:22:82:ff:fe:0x</code> where <code>x</code> is a number between 1 and 4 matching the node number. This is very useful when assigning IP addresses based on the mac-addresses, especially if we are in a CBRIDGE configuration.</p>
+<p>You should be able to ssh any of the nodes using the info above</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ ssh pi@172.19.181.1 <span style="color:#75715e"># P1</span>
+</span></span><span style="display:flex;"><span>$ ssh pi@172.19.181.2 <span style="color:#75715e"># P2</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># and so on</span>
+</span></span></code></pre></div><h3 id="difference-between-cbridge-and-cnat">Difference between CBRIDGE and CNAT<a hidden class="anchor" aria-hidden="true" href="#difference-between-cbridge-and-cnat">#</a></h3>
+<p>The main difference between the two is how nodes get an IP address, and how the cluster components access the network.
+At both configurations the br0 network is configured and each node is assigned the internal ip addresses as mentioned before, but the main difference is how the traffic is routed to the rest of the network and other networks like the internet.</p>
+<p>In a CBRIDGE configuration the nodes get bridged through the controller network and access the network directly. Each node will get an ip address either manually or via an DHCP present in the network, as if it is a device directly connected to the network.
+In the other hand, in a CNAT configuration, the nodes traffic is nated and the controller acts as a router hiding the nodes from the outside.</p>
+<h2 id="conclusion-lessons-learned-and-the-road-ahead">Conclusion: Lessons Learned and the Road Ahead<a hidden class="anchor" aria-hidden="true" href="#conclusion-lessons-learned-and-the-road-ahead">#</a></h2>
+<p><img alt="Image description" loading="lazy" src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zpvcve8ukfyjuwj6c51z.png">
+As I sit back and reflect on this journey, from those first Raspberry Pi Zeros to the current setup with Banana Pi nodes and an Orange Pi controller, I&rsquo;m struck by how much I&rsquo;ve learned and how far this project has come.<br>
+What started as a simple desire to build a Kubernetes cluster became a crash course in hardware compatibility, operating system intricacies, and the importance of community knowledge. Each obstacle - from supply constraints to architecture changes - pushed me to think creatively and expand my skillset.<br>
+Perhaps the most valuable lesson was the reminder that in the world of technology, change is the only constant. The ability to adapt, whether it&rsquo;s finding alternative hardware or writing custom scripts, is crucial. This project also reinforced the power of open-source communities. Without the shared knowledge and pre-built images from other enthusiasts, many of the hurdles would have been much harder to overcome.<br>
+The two GitHub repositories I&rsquo;ve created for image creation are not just the end result of this project, but also my contribution back to the community that helped me along the way. I hope that other tinkerers and cluster enthusiasts will find them useful in their own journeys.<br>
+Looking ahead, I&rsquo;m excited about the possibilities this upgraded cluster opens up. With more powerful, 64-bit capable nodes and a controller, I can explore more complex Kubernetes deployments and perhaps even venture into edge computing scenarios. By the way, I already have two Orange Pi Zero 2W with 2GB RAM each, even more powerful than the Banana Pi M2 Zero,and also just saw there are some Radxa ZERO 3W with 4G of RAM, both of them bringing new challenges to this project.<br>
+This project may have started with a handful of Pis and a dream, but it&rsquo;s grown into so much more. It&rsquo;s a testament to the joy of problem-solving, the power of perseverance, and the endless possibilities when you&rsquo;re willing to think outside the (Raspberry Pi) box.<br>
+So, what&rsquo;s next? Who knows - but I&rsquo;m certain it will involve more tinkering, learning, and pushing the boundaries of what&rsquo;s possible with these amazing single-board computers. The sky&rsquo;s the limit!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share From Pi to Ski on x"
+            href="https://x.com/intent/tweet/?text=From%20Pi%20to%20Ski&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2ffrom-pi-to-ski%2ffrom-pi-to-ski%2f&amp;hashtags=">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share From Pi to Ski on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2ffrom-pi-to-ski%2ffrom-pi-to-ski%2f&amp;title=From%20Pi%20to%20Ski&amp;summary=From%20Pi%20to%20Ski&amp;source=http%3a%2f%2flocalhost%3a1313%2fposts%2ffrom-pi-to-ski%2ffrom-pi-to-ski%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share From Pi to Ski on reddit"
+            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2ffrom-pi-to-ski%2ffrom-pi-to-ski%2f&title=From%20Pi%20to%20Ski">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share From Pi to Ski on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2ffrom-pi-to-ski%2ffrom-pi-to-ski%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share From Pi to Ski on whatsapp"
+            href="https://api.whatsapp.com/send?text=From%20Pi%20to%20Ski%20-%20http%3a%2f%2flocalhost%3a1313%2fposts%2ffrom-pi-to-ski%2ffrom-pi-to-ski%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share From Pi to Ski on telegram"
+            href="https://telegram.me/share/url?text=From%20Pi%20to%20Ski&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2ffrom-pi-to-ski%2ffrom-pi-to-ski%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share From Pi to Ski on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=From%20Pi%20to%20Ski&u=http%3a%2f%2flocalhost%3a1313%2fposts%2ffrom-pi-to-ski%2ffrom-pi-to-ski%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="http://localhost:1313/">My New Hugo Site</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

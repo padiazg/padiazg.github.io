@@ -1,0 +1,103 @@
+baseURL: 'https://example.org/'
+languageCode: 'en-us'
+title: 'Pato Diaz'
+theme: 'papermod'
+
+enableGitInfo: true
+enableRobotsTXT: true
+enableInlineShortcodes: true
+enableEmoji: true
+# pygmentsUseClasses: true
+# pygmentsCodeFences: true
+
+googleAnalytics: G-XVV3SNH9TH
+
+menu:
+  main:
+    - name: Posts
+      url: posts/
+    - name: Search
+      url: search/
+
+params:
+  env: production
+  author: Pato Diaz
+
+  ShowShareButtons: true
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  ShowAllPagesInArchive: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  displayFullLangName: true
+
+  defaultTheme: auto
+
+  homeInfoParams:
+    Title: Welcome to my blog
+    Content: |
+
+      I'm Patricio (Pato) Díaz, a passionate enthusiast about programming and infraestructure.
+      Most of the content of this blog is from notes and findings I collect during my researchs, usually started by a curiosity about some topic.
+      Open to opportunities. You can find me on 👇
+
+  profileMode:
+    enabled: false
+    Content: |
+
+      I'm Patricio (Pato) Díaz, a passionate enthusiast about programming and infraestructure.
+      Most of the content of this blog is from notes and findings I collect during my researchs, usually started by a curiosity about some topic.
+      Open to opportunities. You can find me on 👇
+
+    buttons:
+      - name: Posts
+        url: "/posts"
+      - name: Archive
+        url: "/archive"
+      - name: Github
+        url: "https://github.com/"
+
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/padiazg"
+    - name: github
+      url: "https://github.com/padiazg"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/patricio-diaz-g/"
+
+#   mainSections:
+#     - archieve
+#   #   - articles
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
+  math: true
+
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+        enable: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
