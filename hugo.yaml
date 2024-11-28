@@ -38,17 +38,19 @@ params:
     Content: |
 
       I'm Patricio (Pato) Díaz, a passionate enthusiast about programming and infraestructure.
-      Most of the content of this blog is from notes and findings I collect during my researchs, usually started by a curiosity about some topic.
-      Open to opportunities. You can find me on 👇
+      Most of the content of this blog is from notes and findings I collect during my researchs, usually started by a curiosity about some topic.  
+      Open to opportunities.   
+      You can find me on 👇
 
   profileMode:
     enabled: false
     Content: |
 
       I'm Patricio (Pato) Díaz, a passionate enthusiast about programming and infraestructure.
-      Most of the content of this blog is from notes and findings I collect during my researchs, usually started by a curiosity about some topic.
-      Open to opportunities. You can find me on 👇
-
+      Most of the content of this blog is from notes and findings I collect during my researchs, usually started by a curiosity about some topic.  
+      Open to opportunities.   
+      You can find me on 👇
+      
     buttons:
       - name: Posts
         url: "/posts"
