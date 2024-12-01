@@ -10,7 +10,10 @@ enableEmoji: true
 # pygmentsUseClasses: true
 # pygmentsCodeFences: true
 
-googleAnalytics: G-XVV3SNH9TH
+services:
+  googleAnalytics:
+    id: G-XVV3SNH9TH
+
 
 menu:
   main:
