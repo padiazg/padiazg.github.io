@@ -1,6 +1,6 @@
 +++
 date = '2024-11-30T09:49:49-03:00'
-draft = true
+draft = false
 title = 'Numerical root-finding algorithms: Foundations, theory, and advanced methods. Part 1'
 +++
 Root-finding is one of the core problems in computational mathematics. Whether you're solving equations, optimizing functions, or modeling real-world phenomena, the need to find the roots of functions is ubiquitous. This article explores the foundations of root-finding algorithms, their mathematical principles, convergence properties, and real-world applications. Additionally, we will dive into advanced techniques, such as the Secant Method and Brent’s Method, which extend and improve upon traditional approaches.
