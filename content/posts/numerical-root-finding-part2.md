@@ -6,7 +6,8 @@ title = 'Numerical root-finding algorithms: Bisection, Newton-Raphson and Bisect
 
 Continuing our series on root-finding algorithms, this article delves deeper into the **Bisection** (linear convergence), **Newton-Raphson** (quadratic convergence), and **Secant** (super linear convergence) methods. Each of these algorithms has unique strengths, making them suitable for different scenarios. To illustrate their application, we will use the example of calculating the square root of a number—a simple yet insightful problem.
 
- I know using an approximation algorithm to calculate a square root might seem excessive, but please bear with me along this article. I chose the square root because the function is straightforward, and its derivative is relatively simple to calculate, allowing us to work through the exercises with greater ease.
+Using an approximation algorithm to calculate a square root might seem excessive, but please bear with me throughout this article. I chose the square root because the function is straightforward, and its derivative is relatively simple to calculate, allowing us to work through the exercises more easily.
+
 $$
 \begin{align}
 x&=\sqrt{m} &\text{define x as the square root of m} \\
@@ -36,8 +37,6 @@ $$
 1. Repeat this process until the interval is sufficiently small, such that \(∣b−a∣\) is within a predefined tolerance.
 
 ### Use case: Square root
-I understand that using an approximation algorithm to calculate the square root of a number might seem excessive, but please bear with me in this section. I chose the square root because the function is straightforward, and its derivative (we will use it in the next article) is relatively simple to calculate, allowing us to work through the exercises with greater ease.
-
 #### For \(m=2\)
 Means we want to get the result for this equation: \(x=\sqrt{m}\). 
 
@@ -322,7 +321,7 @@ The **secant method** is a numerical algorithm used to approximate solutions to 
 
 ### How It Works:
 
-The secant method starts with two initial approximations, \(x_0\) and \(x_1\)​, for the root of \(f(x) = 0\). These approximations are used to compute a new estimate, \(​, by intersecting the secant line (the line passing through \)(x_0, f(x_0))\( and \)(x_1, f(x_1))\( with the \)x$-axis. The formula for updating the estimate is:
+The secant method starts with two initial approximations, \(x_0\) and \(x_1\)​, for the root of \(f(x) = 0\). These approximations are used to compute a new estimate, \(x_{2}\)​, by intersecting the secant line (the line passing through \)(x_0, f(x_0))\( and \)(x_1, f(x_1))\( with the \)x$-axis. The formula for updating the estimate is:
 $$
 x_{n+1} = x_n - \frac{f(x_n)(x_n - x_{n-1})}{f(x_n) - f(x_{n-1})}
 $$
@@ -402,7 +401,7 @@ $$
 ## Code examples
 The repo with examples for these algorithms is [here](https://github.com/padiazg/root-finding-algorithms-examples/tree/master). I won't dive deep into the code in this article, but feel free to contact me directly if you have any doubts or suggestions, but I want you try to run the code and the benchmarks so we can take a look at the results in the next section.
 
-Follow this steps:
+Follow these steps:
 ```shell
 # clone the repo
 git clone https://github.com/padiazg/root-finding-algorithms-examples.git
@@ -479,7 +478,7 @@ Here are some key observations:
     - **Newton-Raphson**: Achieves the same level of accuracy in significantly fewer iterations (4 for \(\sqrt{2}\)​, 5 for \(\sqrt{13}\) ​, and 8 for \(\sqrt{354}\)​) because of its quadratic convergence rate.
     - **Secant**: Falls between Bisection and Newton -Raphson in terms of iterations (5 for \(\sqrt{2}\)​, 7 for \(\sqrt{13}\)​, and 11 for \(\sqrt{354}\)​), benefiting from superlinear convergence without requiring derivative calculations.
 3. Benchmarks
-	- **Bisection**: The computational cost grows moderately with larger values (e.g., 733 ns/op for \(sqrt{2}​ vs. 1679 ns/op for \)\sqrt{6632888162}$).
+	- **Bisection**: The computational cost grows moderately with larger values (e.g., 733 ns/op for \(\sqrt{2}\)​ vs. 1679 ns/op for \)\sqrt{6632888162}$).
 	- **Newton-Raphson**: Outperforms both Bisection and Secant, with the lowest execution times across all values (e.g., 14.47 ns/op for \(\sqrt{2}\), 99.88 ns/op for \(\sqrt{6632888162}\)).
 	- **Secant**: Faster than Bisection but slower than Newton-Raphson (e.g., 27.15 ns/op for \(\sqrt{2}\), 196.7 ns/op for \(\sqrt{6632888162}\)).
 
