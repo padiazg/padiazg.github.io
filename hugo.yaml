@@ -13,7 +13,8 @@ enableEmoji: true
 services:
   googleAnalytics:
     id: G-XVV3SNH9TH
-
+  disqus:
+    shortname: patricios-blog
 
 menu:
   main:
@@ -35,6 +36,8 @@ params:
   displayFullLangName: true
 
   defaultTheme: auto
+
+  comments: true
 
   homeInfoParams:
     Title: Welcome to my blog
