@@ -496,3 +496,6 @@ In this article we explored the **Bisection**, **Newton-Raphson**, and **Secant*
 - **Secant** offers a balance between computational cost and convergence rate, requiring no derivative calculation while converging super-linearly.
 
 Through the practical example of calculating square roots, we illustrated the strengths and limitations of these methods in numerical problem-solving. As we progress in this series, we will delve into some more specific examples and how they can be used in real world use cases.
+
+## Links
+- [Numerical root-finding algorithms: Bisection, Newton-Raphson and Bisection. Part2](https://padiazg.github.io/posts/numerical-root-finding-part2/)

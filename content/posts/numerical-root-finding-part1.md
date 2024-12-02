@@ -181,3 +181,6 @@ In this article, we have examined the core principles of **root-finding algorith
 In real-world applications across fields like **engineering**, **computer graphics**, and **economics**, the **Newton-Raphson Method** is often the preferred choice due to its superior speed and precision. However, the **Bisection Method** still holds value in scenarios where reliability and guaranteed convergence are more important than speed.
 
 As we move forward in this series, we will explore some real world use cases with their corresponding example code. 
+
+## Links
+- [Numerical root-finding algorithms: Foundations, theory, and advanced methods. Part 1](https://padiazg.github.io/posts/numerical-root-finding-part1/)
