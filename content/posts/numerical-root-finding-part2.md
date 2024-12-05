@@ -18,7 +18,7 @@ f(x)&=x^2-m &\text{define f(x) as the function whose root we seek} \\
 $$
 
 Check the [Code Examples](#code-examples) at the end of the article for the link to the repo with the code.
-
+---
 ## 1. Bisection
 The bisection algorithm is a simple and reliable numerical method for finding roots of continuous functions. It is particularly well-suited for situations where the function is continuous and the root lies within a known interval. Unlike some other methods, the bisection algorithm guarantees convergence to a root, provided the conditions are met, making it a popular choice for solving equations of the form \(f(x) = 0\).
 ### How It Works:
@@ -206,7 +206,7 @@ a_{37}&=18,81488772 &r_{37}&=18,81488772 &b_{37}&=18,81488772 &f_{37}(a)&=-0,000
 &&\sqrt{354}&=18,81488772
 \end{align*}
 $$
-
+---
 ## 2.  Newton-Raphson
 The Newton-Raphson method is an efficient and widely used numerical technique for finding approximate solutions to equations of the form \(f(x) = 0\). It is particularly effective for equations that are difficult or impossible to solve algebraically. The method uses an iterative approach, starting with an initial guess for the root and refining this estimate with each step.
 
@@ -315,6 +315,7 @@ x_{10} &= \frac{x_{9}^2+m}{2x_{9}} &\to \frac{18,8148877222^2+354}{2\times18,814
 &&\sqrt{354} &= 18,8148877222
 \end{align*}
 $$
+---
 ## 3. Secant
 
 The **secant method** is a numerical algorithm used to approximate solutions to equations of the form \(f(x) = 0\). It is similar to the Newton-Raphson method but does not require the explicit computation of the derivative of \(f(x)\). Instead, the secant method uses a finite difference approximation of the derivative, making it a practical choice when the derivative is difficult or costly to calculate.
@@ -498,4 +499,4 @@ In this article we explored the **Bisection**, **Newton-Raphson**, and **Secant*
 Through the practical example of calculating square roots, we illustrated the strengths and limitations of these methods in numerical problem-solving. As we progress in this series, we will delve into some more specific examples and how they can be used in real world use cases.
 
 ## Links
-- [Numerical root-finding algorithms: Bisection, Newton-Raphson and Bisection. Part2](https://padiazg.github.io/posts/numerical-root-finding-part2/)
+- [Numerical root-finding algorithms: Foundations, theory, and advanced methods. Part 1](https://padiazg.github.io/posts/numerical-root-finding-part1/)
