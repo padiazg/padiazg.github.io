@@ -500,3 +500,5 @@ Through the practical example of calculating square roots, we illustrated the st
 
 ## Links
 - [Numerical root-finding algorithms: Foundations, theory, and advanced methods. Part 1](https://padiazg.github.io/posts/numerical-root-finding-part1/)
+- Numerical root-finding algorithms: Bisection, Newton-Raphson and Secant. Part2
+- [Numerical root-finding algorithms: An unconventional approach. Part3](https://padiazg.github.io/posts/numerical-root-finding-part3/)

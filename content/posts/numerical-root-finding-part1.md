@@ -183,4 +183,6 @@ In real-world applications across fields like **engineering**, **computer graphi
 As we move forward in this series, we will explore some real world use cases with their corresponding example code. 
 
 ## Links
+- Numerical root-finding algorithms: Foundations, theory, and advanced methods. Part 1
 - [Numerical root-finding algorithms: Bisection, Newton-Raphson and Secant. Part2](https://padiazg.github.io/posts/numerical-root-finding-part2/)
+- [Numerical root-finding algorithms: An unconventional approach. Part3](https://padiazg.github.io/posts/numerical-root-finding-part3/)
