@@ -1,6 +1,6 @@
 +++
 date = '2024-12-14T15:00:36-03:00'
-draft = true
+draft = false
 title = 'Numerical root-finding algorithms: An unconventional approach. Part3'
 +++
 **An unconventional approach to solving with Lambert's W function**
