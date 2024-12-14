@@ -5,7 +5,7 @@ title = 'Numerical root-finding algorithms: An unconventional approach. Part3'
 +++
 **An unconventional approach to solving with Lambert's W function**
 
-Before we move on to a practical real world use case for an approximation root finding algorithm I want to share nn anecdote from a time when out of simple curiosity, and a bit of boredom, I managed to solve an equation for which we are supposed to use Lambert's W function, but I solved it by approximating the root using Newton-Raphson.
+Before we move on to a practical real-world use case for an approximation root-finding algorithm, I want to share an anecdote from a time when, out of simple curiosity and a bit of boredom, I managed to solve an equation typically requiring the Lambert W function by approximating the root using the Newton-Raphson method.
 
 ## 1. The video
 One day, a [video](https://www.youtube.com/watch?v=mJwfpcXwYRU) on solving the equation \(2^x + x = 5\) popped up in my YouTube feed. The \(x\) in the exponent immediately piqued my curiosity. After watching the entire video, I was introduced to the Lambert W function—"Nice to meet you," I thought. For a moment, I debated whether I should dive deeper into learning about it, or consider how I might use it in the future. Then, I took another look at the equation and noticed it was a differentiable function. That's when it hit me: I should tackle the problem using one of the root-finding algorithms.
