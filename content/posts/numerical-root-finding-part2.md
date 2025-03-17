@@ -1,7 +1,7 @@
 +++
 date = '2024-12-02T03:09:20-03:00'
 draft = false
-title = 'Numerical root-finding algorithms: Bisection, Newton-Raphson and Secant. Part2'
+title = 'Numerical root-finding algorithms: Bisection, Newton-Raphson and Secant. Part 2'
 +++
 
 Continuing our series on root-finding algorithms, this article delves deeper into the **Bisection** (linear convergence), **Newton-Raphson** (quadratic convergence), and **Secant** (super linear convergence) methods. Each of these algorithms has unique strengths, making them suitable for different scenarios. To illustrate their application, we will use the example of calculating the square root of a number—a simple yet insightful problem.
