@@ -103,6 +103,8 @@ markup:
           - - \(
             - \)
         enable: true
+    renderer:
+      unsafe: true  # Allows HTML in markdown files
 
 outputs:
   home:

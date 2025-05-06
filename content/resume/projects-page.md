@@ -1,0 +1,50 @@
+---
+title: "Projects"
+date: 2025-04-27
+draft: false
+---
+
+# Projects
+
+## Barcode Generator
+**Role:** Owner  
+**URL:** [https://github.com/padiazg/barcode-generator](https://github.com/padiazg/barcode-generator)
+
+Allows you to generate a wide variety of 1D & 2D codes. Written in Node.js, this project can generate a wide variety of 1D and 2D codes.
+
+## go-zh07
+**Role:** Owner  
+**URL:** [https://github.com/padiazg/go-zh07](https://github.com/padiazg/go-zh07)
+
+Golang library to read the Winsen ZH07 & ZH06 particulate matter sensors. ZH06 and ZH07 are laser dust sensor modules to check air quality. Developed to collaborate with the [airelib.re](https://airelib.re/) initiative.
+
+## go-sps30
+**Role:** Owner  
+**URL:** [https://github.com/padiazg/go-sps30](https://github.com/padiazg/go-sps30)
+
+Golang library to read the Sensirion SPS30 particulate matter sensor. SPS30 is an MCERTS-certified particulate matter (PM) sensor that works over i2c and serial. Developed to collaborate with the [airelib.re](https://airelib.re/) initiative.
+
+## harbour-alpine
+**Role:** Contributor  
+**URL:** [https://github.com/padiazg/harbour-alpine](https://github.com/padiazg/harbour-alpine)
+
+Harbour compiler on Docker/Alpine. Patch for the Harbour compiler to run on Alpine. Part of an OpenFaaS PoC to reuse old dbase/clipper/fox code in serverless functions.
+
+## go-oas/docs
+**Role:** Contributor  
+**URL:** [https://github.com/go-oas/docs](https://github.com/go-oas/docs)
+
+Automatically generate RESTful API documentation for GO projects - aligned with Open API Specification standard. Added features needed to auto-generate OAS documentation out of auto-generated API by QOR v3 framework, used by Tyk's Enterprise Developer Portal. Release 1.1.0 ([https://github.com/go-oas/docs/releases/tag/v1.1.0](https://github.com/go-oas/docs/releases/tag/v1.1.0)) was sponsored by me.
+
+## OpenFaaS
+**Role:** Contributor  
+**URL:** [https://github.com/openfaas/faas/blob/master/community.md](https://github.com/openfaas/faas/blob/master/community.md)
+
+OpenFaaS® makes it easy for developers to deploy event-driven functions and microservices to Kubernetes without repetitive, boilerplate coding. Actively collaborated with the project in its early days, researching, testing and advocating.
+
+## Publications and Talks
+
+### Kubecon + Cloudnativecon North America 2018
+**Topic:** Digital Transformation of Vision Banco Paraguay with serverless functions  
+**Date:** December 2018  
+**URL:** [https://www.youtube.com/watch?v=mPjI34qj5vU](https://www.youtube.com/watch?v=mPjI34qj5vU)
