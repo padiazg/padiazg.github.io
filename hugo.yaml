@@ -34,6 +34,7 @@ params:
   ShowCodeCopyButtons: true
   ShowToc: true
   displayFullLangName: true
+  canonifyURL: true
 
   defaultTheme: auto
 

@@ -8,8 +8,8 @@ draft: false
 # Patricio Díaz
 
 **Location:** Paraguay  
-**Contact:** +595961178540 | [patricio@patodiaz.io](mailto:patricio@patodiaz.io)  
-**Links:** [LinkedIn](#) | [GitHub](https://github.com/padiazg) | [Blog](#)
+**Contact:** +595961178540 | [padiazg@gmail.com](mailto:padiazg@gmail.com)  
+**Links:** [LinkedIn](https://www.linkedin.com/in/patricio-diaz-g/) | [GitHub](https://github.com/padiazg) | [Blog](https://padiazg.github.io)
 
 ## Profile Summary
 
