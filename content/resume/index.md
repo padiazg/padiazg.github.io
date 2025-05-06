@@ -81,5 +81,5 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
 
 - **Kubecon + Cloudnativecon North America 2018:** [Digital Transformation of Vision Banco Paraguay with serverless functions](https://www.youtube.com/watch?v=mPjI34qj5vU)
 
-
+- ** :**
 [View Full CV →](full-cv)
