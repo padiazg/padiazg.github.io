@@ -50,7 +50,9 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
     highlight="Developed 3 mission-critical systems introducing cutting-edge technologies and implemented private cloud solutions for serverless functions"
 >}}
 
+[View Full Experience →](experience)
 [View Full Experience →](/experience)
+[View Full Experience →]({{ .URL | relURL }}/experience)
 
 ## Featured Projects
 
