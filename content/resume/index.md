@@ -17,6 +17,8 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
 
 **Looking for a challenging remote role to drive impactful results in software engineering.**
 
+**Available to join any role immediately**
+
 ## Expertise Highlights
 
 - **Languages:** Go, JavaScript/TypeScript, Delphi, Python, PHP, Java
@@ -48,7 +50,7 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
     highlight="Developed 3 mission-critical systems introducing cutting-edge technologies and implemented private cloud solutions for serverless functions"
 >}}
 
-[View Full Experience →](experience)
+[View Full Experience →](/experience)
 
 ## Featured Projects
 
