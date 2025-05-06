@@ -13,7 +13,7 @@ draft: false
 
 ## Profile Summary
 
-Seasoned Senior Software Engineer with 38+ years of programming experience and 3+ years as a Technical Leader. Skilled in backend development, Golang, SQL/NoSQL databases, cloud solutions (GCP, AWS), containerization (Docker, Kubernetes), and microservices architecture. Proven expertise in Test-Driven Development (TDD), Agile methodologies, and delivering scalable, secure, and innovative solutions.
+Passionate Software Engineer and Technical Leader with a proven track record of delivering impactful solutions. A dedicated problem solver who thrives in collaborative environments while building and mentoring high-performing teams. Committed to fostering a harmonious, healthy, and productive workplace where team members can grow professionally. Approaches each project with unwavering dedication to quality, resilience when facing challenges, and adaptability to evolving requirements. Values continuous learning and embraces new technologies to create innovative solutions.
 
 **Looking for a challenging remote role to drive impactful results in software engineering.**
 
@@ -48,7 +48,7 @@ Seasoned Senior Software Engineer with 38+ years of programming experience and 3
     highlight="Developed 3 mission-critical systems introducing cutting-edge technologies and implemented private cloud solutions for serverless functions"
 >}}
 
-[View Full Experience →](/experience)
+[View Full Experience →](experience)
 
 ## Featured Projects
 
@@ -73,10 +73,10 @@ Seasoned Senior Software Engineer with 38+ years of programming experience and 3
     description="Collaborated in early stages of this serverless framework for Kubernetes"
 >}}
 
-[View All Projects →](/projects)
+[View All Projects →](projects)
 
 ## Speaking Engagements
 
 - **Kubecon + Cloudnativecon North America 2018:** [Digital Transformation of Vision Banco Paraguay with serverless functions](https://www.youtube.com/watch?v=mPjI34qj5vU)
 
-[View Full CV →](/cv)
+[View Full CV →](full-cv)
