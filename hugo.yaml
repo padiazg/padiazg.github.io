@@ -34,9 +34,9 @@ params:
   ShowCodeCopyButtons: true
   ShowToc: true
   displayFullLangName: true
-  canonifyURL: true
-  relativeURLs: true
-  baseURL: "https://padiazg.github.io/"
+  # canonifyURL: true
+  # relativeURLs: true
+  # baseURL: "https://padiazg.github.io/"
 
   defaultTheme: auto
 
