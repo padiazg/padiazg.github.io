@@ -52,7 +52,7 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
 
 [View Full Experience →](experience)
 [View Full Experience →](/experience)
-[View Full Experience →]({{ .URL | relURL }}/experience)
+[View Full Experience →]({{< relref "/experience" >}})
 
 ## Featured Projects
 

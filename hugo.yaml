@@ -35,6 +35,8 @@ params:
   ShowToc: true
   displayFullLangName: true
   canonifyURL: true
+  relativeURLs: true
+  baseURL: "https://padiazg.github.io/"
 
   defaultTheme: auto
 
@@ -64,7 +66,7 @@ params:
       - name: Archive
         url: "/archive"
       - name: Github
-        url: "https://github.com/"
+        url: "https://github.com/padiazg"
 
   socialIcons:
     - name: twitter
