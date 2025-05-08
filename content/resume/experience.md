@@ -65,7 +65,7 @@ draft: false
 - Trained developers in up-to-date technologies and languages.
 - Modernized the bank's technology stack.
 
-**Skills:** Genexus, Java, Javascript, Node.js, Vue.js, RPG, IBM iSeries, IBM i OS, IBM z/OS, IBM DB/2, Websphere MQ, Websphere Application Server, JBoss Application Server, Apache Tomcat, Active MQ, FaaS, Microservices, REST, SOAP, WebSockets, OAuth, CI/CD, Software Development, Open-Source, Clean Code, Development Patterns, Modularity
+**Skills:** Genexus 9~Evo2, Java, Javascript, Node.js, Vue.js, RPG, IBM iSeries, IBM i OS, IBM z/OS, IBM DB/2, Websphere MQ, Websphere Application Server, JBoss Application Server, Apache Tomcat, Active MQ, FaaS, Microservices, REST, SOAP, WebSockets, OAuth, CI/CD, Software Development, Open-Source, Clean Code, Development Patterns, Modularity
 
 ## Software Engineer
 **Neuland Cooperative Ltd** | *Mar 2009 - Mar 2011*
@@ -78,7 +78,7 @@ draft: false
 - Successfully managed distributed database system across multiple locations.
 - Improved system reliability and performance through optimized database maintenance.
 
-**Skills:** Oracle, Genexus, Visual Basic, Database Administration, System Development, Distributed Systems
+**Skills:** Oracle, PL/SQL, Genexus 9, Visual Basic, Database Administration, System Development, Distributed Systems
 
 ## Owner
 **I+I Infraestructura Informática** | *2009 - 2012*
@@ -89,11 +89,11 @@ draft: false
 **Key Achievements:**
 - Designed and supervised implementation of new physical and logical network structure for ESSAP S.A.
 - Implemented a new VoIP call center for ESSAP S.A., increasing response capacity by 400%.
-- Planned and implemented VoIP solution for three in-house call centers for Electroban S.A.
-- Developed software solutions for financial and other organizations.
+- Planned and implemented VoIP solution for 3 in-house call centers at Electroban S.A.
+- Developed/updated software solutions for financial and other organizations.
 - Maintained and enhanced PHP+MS-SQL-based systems for Voicenter SA.
 
-**Skills:** CISCO systems, structured networks, VoIP, Software Development, Open-Source, PHP, MS-SQL, Linux, microservices, security
+**Skills:** CISCO systems, structured networks, VoIP, Software Development, Open-Source, Genexus, PHP, MS-SQL, Linux, microservices, security
 
 ## Software Engineer / Technical Leader
 **The Derby S.R.L.** | *Jul 2007 - Feb 2009*

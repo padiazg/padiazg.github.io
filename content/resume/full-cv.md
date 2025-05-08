@@ -125,7 +125,7 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
 - Trained and mentored lots of developers in up-to-date technologies and languages.
 - Took the technology used by the bank to the cutting edge.
 
-**Skills:** Genexus, Java, Javascript, Node.js, Vue.js, RPG, IBM iSeries, IBM i OS, IBM z/OS, IBM DB/2, Websphere MQ, Websphere Application Server, JBoss Application Server, Apache Tomcat, Active MQ, FaaS, Microservices, REST, SOAP, WebSockets, OAuth, CI/CD, Software Development, Open-Source, Clean Code, Development Patterns, Modularity
+**Skills:** Genexus 9~Evo2, Java, Javascript, Node.js, Vue.js, RPG, IBM iSeries, IBM i OS, IBM z/OS, IBM DB/2, Websphere MQ, Websphere Application Server, JBoss Application Server, Apache Tomcat, Active MQ, FaaS, Microservices, REST, SOAP, WebSockets, OAuth, CI/CD, Software Development, Open-Source, Clean Code, Development Patterns, Modularity
 
 ### Software Engineer
 **Neuland Cooperative Ltd** | *Mar 2009 - Mar 2011*
@@ -138,12 +138,21 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
 - Successfully managed distributed database system across multiple locations.
 - Improved system reliability and performance through optimised database maintenance.
 
-**Skills:** Oracle, Genexus, Visual Basic, Database Administration, System Development, Distributed Systems
+**Skills:** Oracle, PL/SQL, Genexus 9, Visual Basic, Database Administration, System Development, Distributed Systems
 
 ### Owner
-**I+I Infraestructura Informática** | *2009 - 2012* (continued)
+**I+I Infraestructura Informática** | *2009 - 2012* 
+- Worked with various institutions solving issues from networking infrastructure to custom software development.
+- Implemented VoIP solutions, CI/CD pipelines, containerization and orchestration.
 
-**Skills:** CISCO systems, structured networks, VoIP, Software Development, Open-Source, PHP, MS-SQL, Linux, microservices, security.
+**Key Achievements:**
+- Designed and supervised implementation of new physical and logical network structure for ESSAP S.A.
+- Implemented a new VoIP call center for ESSAP S.A., increasing response capacity by 400%.
+- Planned and implemented VoIP solution for 3 in-house call centers at Electroban S.A.
+- Developed/updated software solutions for financial and other organizations.
+- Maintained and enhanced PHP+MS-SQL-based systems for Voicenter SA.
+
+**Skills:** CISCO systems, structured networks, VoIP, Software Development, Open-Source, Genexus, PHP, MS-SQL, Linux, microservices, security
 
 ### Software Engineer / Technical Leader
 **The Derby S.R.L.** | *Jul 2007 - Feb 2009*
@@ -327,7 +336,52 @@ OpenFaaS® makes it easy for developers to deploy event-driven functions and mic
 
 ## Publications and Talks
 
+### Hacktoberfest 2022
+**Date:**October 2022
+**Guest:** “Código abierto”, tema de encuentro entre estudiantes, graduados y miembros de sectores tecnológicos
+**URL:** https://www.pol.una.py/2022/codigo-abierto-tema-de-encuentro-entre-estudiantes-graduados-y-miembros-de-sectores-tecnologicos/
+
+### Hacktoberfest Online Asunción 2020 
+**Date:** October 2020
+**Speaker:** OpenFaas - ServerLess Functions
+**URL:** https://events.mlh.io/events/4702-hacktoberfest-online-asuncion-2020
+https://www.youtube.com/live/raveANAfGcg?si=zTjg5ZnAmLMEjgOv&t=26574
+**Speaker:** Combinando NodeJS y GraphQL
+**URL:** https://events.mlh.io/events/4702-hacktoberfest-online-asuncion-2020
+https://www.youtube.com/live/raveANAfGcg?si=po_PkBS3KXpZG5-l&t=22667
+https://github.com/padiazg/hacktoberfest-practica-graphql-nodejs
+
+### Primer MeetUp Facultad de Ciencias y Tecnología - UNCA 
+**Date:** June 2020
+**Speaker:** La zona de confort
+**URL:** https://www.youtube.com/live/HO7S4kAxlnQ?si=oVzVtCWXXjxCJ781&t=284
+
+### 4to Encuentro Testing Paraguay
+**Date:** November 2019
+**Workshop:** Testing en etápas de CI/CD con Gitlab
+**URL:** https://www.facebook.com/ComunidadTestingPY/photos/pb.100070010193782.-2207520000/151997556165651/?type=3
+**Speaker:** Testing en la era del Serverless
+**URL:** https://www.facebook.com/ComunidadTestingPY/photos/pb.100070010193782.-2207520000/165620044803402/?type=3
+
+### Taller Docker 101 by Docker Paraguay Group
+**Date:** July 2019
+**Organizer/Speaker:** Docker 101
+**URL:** https://x.com/DockerParaguay/status/1147340698611589121
+**URL:** https://github.com/padiazg/taller-docker-101
+
+### PythonPy Meetup Enero 2019
+**Date:** January 2019
+**Topic:** GraphQL: de Cero a Serverless
+**URL:** https://x.com/PythonParaguay/status/1086340319765905408?mx=2
+**URL:** https://www.youtube.com/live/bEeGmIIvVSw?t=1244s
+
+
 ### Kubecon + Cloudnativecon North America 2018
-**Topic:** Digital Transformation of Vision Banco Paraguay with serverless functions  
 **Date:** December 2018  
+**Speaker:** Digital Transformation of Vision Banco Paraguay with serverless functions  
 **URL:** [https://www.youtube.com/watch?v=mPjI34qj5vU](https://www.youtube.com/watch?v=mPjI34qj5vU)
+
+### PythonPy Meetup Abril 2018
+**Date:** April 2018
+**Speaker:** Serverless local con OpenFaas
+**URL:** https://www.youtube.com/live/1_c6BnDg_2M?si=U1mSgR_ewk2Im6tZ&t=6730
