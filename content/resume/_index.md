@@ -5,11 +5,11 @@ date: 2025-04-27
 draft: false
 ---
 
-# Patricio Díaz
-
 **Location:** Paraguay  
 **Contact:** +595961178540 | [padiazg@gmail.com](mailto:padiazg@gmail.com)  
 **Links:** [LinkedIn](https://www.linkedin.com/in/patricio-diaz-g/) | [GitHub](https://github.com/padiazg) | [Blog](https://padiazg.github.io)
+
+---
 
 ## Profile Summary
 
@@ -19,6 +19,8 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
 
 **Available to join any role immediately**
 
+---
+
 ## Expertise Highlights
 
 - **Languages:** Go, JavaScript/TypeScript, Delphi, Python, PHP, Java
@@ -26,6 +28,8 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
 - **Databases:** PostgreSQL, MySQL, MongoDB, Redis, Oracle
 - **Architecture:** Microservices, Event-Driven, Distributed Systems
 - **Development:** TDD, CI/CD, REST, gRPC, GraphQL
+
+---
 
 ## Key Professional Experience
 
@@ -52,6 +56,8 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
 
 [View Full Experience →](experience)
 
+---
+
 ## Featured Projects
 
 {{< project 
@@ -77,12 +83,18 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
 
 [View All Projects →](projects)
 
+---
+
 ## Speaking Engagements
 
 - **Kubecon + Cloudnativecon North America 2018:** [Digital Transformation of Vision Banco Paraguay with serverless functions](https://www.youtube.com/watch?v=mPjI34qj5vU)
 
+[View All Publications and Talks](publicatons-n-talks)
+
+---
+
 [View All Education & certifications](education-certifications)
 
-[View All Publications and Talks](publicatons-n-talks)
+---
 
 [View Full CV →](full-cv)
