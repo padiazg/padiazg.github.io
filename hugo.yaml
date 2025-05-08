@@ -78,8 +78,8 @@ params:
     - name: linkedin
       url: "https://www.linkedin.com/in/patricio-diaz-g/"
 
-#   mainSections:
-#     - archieve
+  mainSections:
+    - posts
 #   #   - articles
 
   fuseOpts:
