@@ -1,4 +1,8 @@
 ---
+build:
+  list: never
+  publishResources: false
+  render: always
 title: "Skills & Technologies"
 date: 2025-04-27
 draft: false
