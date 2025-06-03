@@ -10,6 +10,10 @@ draft: false
 
 # Projects
 
+## Go Struct Analyzer
+**Role:** Owner  [github](https://github.com/padiazg/go-struct-analyzer)  
+A VS Code extension that shows memory size and padding information for Go structs, helping you optimize memory usage and understand struct layout.
+
 ## Barcode Generator 
 **Role:** Owner  [github](https://github.com/padiazg/barcode-generator)  
 Allows you to generate a wide variety of 1D & 2D codes. Written in Node.js, this project can generate a wide variety of 1D and 2D codes.
