@@ -83,7 +83,7 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 >}}
 
 {{< project 
-    name="codapi/sandboxes:
+    name="codapi/sandboxes"
     role="Contributor"
     url="https://github.com/nalgeon/sandboxes"
     description="Contributed the LaTeX sandbox"
