@@ -11,12 +11,12 @@ draft: false
 # Patricio Díaz
 
 **Location:** Paraguay  
-**Contact:** +595961178540 | [padiazg@gmail.com](mailto:padiazg@gmail.com)  
-**Links:** [LinkedIn](https://www.linkedin.com/in/patricio-diaz-g/) | [GitHub](https://github.com/padiazg) | [Blog](https://padiazg.github.io)
+**Contact:** [+595961178540](wa.me/595961178540) | [padiazg@gmail.com](padiazg@gmail.com)  
+**Links:** [LinkedIn](https://www.linkedin.com/in/patricio-diaz-g/) | [GitHub](https://github.com/padiazg) | [Blog](https://padiazg.github.io/)
 
 ## Profile Summary
 
-Passionate Software Engineer and Technical Leader with a proven track record of delivering impactful solutions. A dedicated problem solver who thrives in collaborative environments while building and mentoring high-performing teams. Committed to fostering a harmonious, healthy, and productive workplace where team members can grow professionally. Approaches each project with unwavering dedication to quality, resilience when facing challenges, and adaptability to evolving requirements. Values continuous learning and embraces new technologies to create innovative solutions.
+Senior Software Engineer and Technical Leader with 16+ years of experience delivering scalable solutions and leading high-performing engineering teams. Currently serving dual Technical Leadership roles, architecting cloud-native payment solutions and leading cross-border financial integrations. Proven track record of transforming proof-of-concepts into production-ready enterprise products, mentoring 20+ developers, and implementing DevOps practices that reduced deployment time by 80%. Expert in Go, microservices architecture, hexagonal architecture, CQRS, DDD, and cloud technologies with experience scaling teams from 1 to 8 members while maintaining 95%+ feature delivery rates.
 
 ## Core Technologies
 
@@ -33,9 +33,9 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
 ### Cloud & Infrastructure
 - **Platforms:** GCP, AWS
 - **Containers:** Docker, Kubernetes, Docker Swarm
-- **FaaS:** OpenFaaS, Cloud Functions
-- **Monitoring:** Prometheus, Grafana, Fluentd
-- **Message Queues:** NATS, RabbitMQ, WebSphere MQ, ActiveMQ
+- **FaaS:** OpenFaaS, Lambda
+- **Monitoring & Observability:** Prometheus, Grafana, Fluentd 
+- **Message Queues:** NATS, AMQP, MQTT
 
 ### Development Tools & Frameworks
 - **Version Control:** Git, SVN
@@ -43,7 +43,8 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
 - **Frontend:** React, Vue.js
 - **API:** REST, gRPC, GraphQL, SOAP
 - **Testing:** TDD, Unit Testing, E2E Testing, Mutation Testing
-- **Architecture:** Microservices, Event-Driven, Distributed Systems
+- **Architecture:** Microservices, Hexagonal Architecture, CQRS, DDD, Event-Driven Architecture, Serverless (FaaS), Distributed Systems
+- **Authentication:** Authentik, Keycloak
 
 ### Operating Systems
 - **Linux (since 1993):** Slackware, Debian, Ubuntu, Alpine
@@ -69,6 +70,35 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
 - Early technology adopter with proven ability to identify and implement emerging solutions
 
 ## Professional Experience
+
+### **Technical Lead \- Golang Backend**
+
+**[AR Santex LLC](https://santexgroup.com) (Client Project)** | Remote | June 2025 \- October 2025
+
+**Leading cross-border financial integration between Argentinian digital wallet and Chilean banking institution**
+
+* **Technical Leadership:** Led development team of 3 engineers in building scalable integration platform, managing all aspects of project delivery from architecture design to stakeholder reporting  
+* **Cloud Architecture:** Designed and implemented serverless architecture using AWS Lambda, API Gateway, Aurora, EventBridge, and Secrets Manager, ensuring high availability and security compliance for financial transactions  
+* **Team Management:** Mentored 2 backend developers, conducted code reviews, and established development best practices for the team  
+* **Stakeholder Communication:** Provided regular progress reports to stakeholders, managed expectations, and delivered accurate effort estimations for project milestones  
+* **DevOps Excellence:** Established local development environment using LocalStack, awslambdarpc, Docker, and Kubernetes, enabling efficient testing and deployment workflows
+
+**Technologies:** Go, AWS Lambda, AWS EC2, AWS API Gateway, AWS Aurora, AWS EventBridge, AWS Secrets Manager, LocalStack, Docker, Kubernetes
+
+**Senior Software Engineer**
+
+**[SEGEL SA](https://segel.com.py/)** | Remote | June 2025 \- Present
+
+**Architecting payment gateway solution and modernizing enterprise technology stack**
+
+* **Product Development:** Leading development of POSsible Payments, a cloud-native payment gateway integrated with logistics and retail equipment offerings, serving merchants across the region  
+* **Architecture Design:** Implemented hexagonal architecture, CQRS patterns, and Domain-Driven Design (DDD) principles to ensure scalability, maintainability, and testability of payment processing systems  
+* **Technical Consulting:** Providing guidance across multiple development teams to modernize legacy applications into cloud-native solutions, improving regional competitiveness  
+* **Infrastructure & DevOps:** Built comprehensive observability stack with Prometheus, Grafana, and Fluentd; implemented authentication using Authentik and message queuing with NATS  
+* **Mentorship:** Tutoring engineering teams on cloud-native best practices, architectural patterns, and code quality standards to elevate technical capabilities organization-wide  
+* **Technology Stack:** Designed microservices architecture using PostgreSQL, Redis, and NATS for high-throughput payment processing
+
+**Technologies:** Go, Kubernetes, Authentik, NATS, PostgreSQL, Redis, Fluentd, Prometheus, Grafana, Hexagonal Architecture, CQRS, DDD
 
 ### Sr. Software Engineer / Technical Leader
 **[Tyk Technologies Ltd](https://www.tyk.io)** | *Nov 2020 - May 2024*
