@@ -13,7 +13,7 @@ draft: false
 
 ## Profile Summary
 
-Passionate Software Engineer and Technical Leader with a proven track record of delivering impactful solutions. A dedicated problem solver who thrives in collaborative environments while building and mentoring high-performing teams. Committed to fostering a harmonious, healthy, and productive workplace where team members can grow professionally. Approaches each project with unwavering dedication to quality, resilience when facing challenges, and adaptability to evolving requirements. Values continuous learning and embraces new technologies to create innovative solutions.
+Senior Software Engineer and Technical Leader with 16+ years of experience delivering scalable solutions and leading high-performing engineering teams. Currently serving dual Technical Leadership roles, architecting cloud-native payment solutions and leading cross-border financial integrations. Proven track record of transforming proof-of-concepts into production-ready enterprise products, mentoring 20+ developers, and implementing DevOps practices that reduced deployment time by 80%. Expert in Go, microservices architecture, hexagonal architecture, CQRS, DDD, and cloud technologies with experience scaling teams from 1 to 8 members while maintaining 95%+ feature delivery rates.
 
 **Looking for a challenging remote role to drive impactful results in software engineering.**
 
@@ -23,15 +23,30 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
 
 ## Expertise Highlights
 
-- **Languages:** Go, JavaScript/TypeScript, Delphi, Python, PHP, Java
-- **Cloud & Infrastructure:** GCP, AWS, Docker, Kubernetes, OpenFaaS
-- **Databases:** PostgreSQL, MySQL, MongoDB, Redis, Oracle
-- **Architecture:** Microservices, Event-Driven, Distributed Systems
-- **Development:** TDD, CI/CD, REST, gRPC, GraphQL
+- **Programming Languages:** Go (Golang), JavaScript, Node.js, PHP, Java, Python, TypeScript
+- **Cloud & DevOps:** AWS (Lambda, EC2, API Gateway, Aurora, EventBridge, Secrets Manager), Google Cloud Platform (GCP), Docker, Kubernetes, LocalStack, CI/CD, Terraform
+- **Databases:** PostgreSQL, MySQL/MariaDB, MongoDB, Oracle, IBM DB2, Redis
+- **Architecture Patterns:** Microservices, Hexagonal Architecture, CQRS, DDD, Event-Driven Architecture, Serverless (FaaS), Distributed Systems
+- **Frameworks & Tools:** React, Vue.js, gRPC, REST APIs, GraphQL, WebSockets, AMQP, GORM, QOR, NATS, OpenID Connect.
+- **Monitoring & Observability:** Prometheus, Grafana, Fluentd
+- **Leadership:** Team Building, Technical Mentoring, Project Management, Agile/Scrum, Stakeholder Management
 
 ---
 
 ## Key Professional Experience
+{{< experience 
+    company="Santex Group"
+    position="Technical Leader"
+    period="Jun 2025 - Oct 2025 (4 month project)"
+    highlight="Leading cross-border financial integration between Argentinian digital wallet and Chilean banking institution"
+>}}
+
+{{< experience 
+    company="SEGEL SA"
+    position="Senior Software Engineer / Technical Leader"
+    period="June 2025 \- Present"
+    highlight="Architecting payment gateway solution and modernizing enterprise technology stack"
+>}}
 
 {{< experience 
     company="Tyk Technologies Ltd"
@@ -59,6 +74,20 @@ Passionate Software Engineer and Technical Leader with a proven track record of 
 ---
 
 ## Featured Projects
+
+{{< project 
+    name="Go Struct Analyzer"
+    role="Owner"
+    url="https://github.com/padiazg/go-struct-analyzer"
+    description="A VS Code extension to show memory size and padding information for Go structs, helping you optimize memory usage and understand struct layout. Published at [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=PatricioDiaz.go-struct-analyzer) and [Open VSX Registry](https://open-vsx.org/extension/PatricioDiaz/go-struct-analyzer), featured at [The Applied Go Weekly Newsletter](https://newsletter.appliedgo.net/archive/2025-06-22-go-before-you-wait/)"
+>}}
+
+{{< project 
+    name="codapi/sandboxes:
+    role="Contributor"
+    url="https://github.com/nalgeon/sandboxes"
+    description="Contributed the LaTeX sandbox"
+>}}
 
 {{< project 
     name="Barcode Generator"

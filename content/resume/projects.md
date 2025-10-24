@@ -12,7 +12,12 @@ draft: false
 
 ## Go Struct Analyzer
 **Role:** Owner  [github](https://github.com/padiazg/go-struct-analyzer)  
-A VS Code extension that shows memory size and padding information for Go structs, helping you optimize memory usage and understand struct layout.
+A VS Code extension to show memory size and padding information for Go structs, helping you optimize memory usage and understand struct layout.
+Published at [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=PatricioDiaz.go-struct-analyzer) and [Open VSX Registry](https://open-vsx.org/extension/PatricioDiaz/go-struct-analyzer), featured at [The Applied Go Weekly Newsletter](https://newsletter.appliedgo.net/archive/2025-06-22-go-before-you-wait/)
+
+## Codapi Sandboxes
+**Role:** Contributor  [github](https://github.com/nalgeon/sandboxes)  
+Contributed the LaTeX sandbox
 
 ## Barcode Generator 
 **Role:** Owner  [github](https://github.com/padiazg/barcode-generator)  
