@@ -6,7 +6,7 @@ draft: false
 ---
 
 **Location:** Paraguay  
-**Contact:** +595961178540 | [padiazg@gmail.com](mailto:padiazg@gmail.com)  
+**Contact:** [+595961178540](wa.me/595961178540) | [padiazg@gmail.com](mailto:padiazg@gmail.com)  
 **Links:** [LinkedIn](https://www.linkedin.com/in/patricio-diaz-g/) | [GitHub](https://github.com/padiazg) | [Blog](https://padiazg.github.io)
 
 ---
