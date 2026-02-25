@@ -46,6 +46,9 @@ draft: false
 - MongoDB
 - Redis
 
+### Time-Series
+- InfluxDB
+
 ### Legacy
 - dBase
 - Clipper
@@ -74,6 +77,8 @@ draft: false
 
 ### Message Queues
 - NATS
+- MQTT
+- AMQP
 - RabbitMQ
 - WebSphere MQ
 - ActiveMQ
@@ -105,9 +110,18 @@ draft: false
 - E2E Testing
 - Mutation Testing
 
+### Authentication
+- Authentik
+- Keycloak
+
 ### Architecture
 - Microservices
+- Hexagonal Architecture
+- CQRS
+- Event Sourcing
+- DDD
 - Event-Driven
+- Serverless (FaaS)
 - Distributed Systems
 
 ## Operating Systems
@@ -139,7 +153,8 @@ draft: false
 - WebSocket
 
 ### Security
-- OAuth
+- OAuth2/OIDC
+- JWT
 - Firewalls
 - VPN
 

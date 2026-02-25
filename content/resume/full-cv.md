@@ -28,6 +28,7 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 ### Databases & Data Storage
 - **SQL:** Oracle, PostgreSQL, MySQL, MS SQL Server, DB2
 - **NoSQL:** MongoDB, Redis
+- **Time-Series:** InfluxDB
 - **Legacy:** dBase, Clipper, FoxPro, Clarion
 
 ### Cloud & Infrastructure
@@ -43,8 +44,8 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 - **Frontend:** React, Vue.js
 - **API:** REST, gRPC, GraphQL, SOAP
 - **Testing:** TDD, Unit Testing, E2E Testing, Mutation Testing
-- **Architecture:** Microservices, Hexagonal Architecture, CQRS, DDD, Event-Driven Architecture, Serverless (FaaS), Distributed Systems
-- **Authentication:** Authentik, Keycloak
+- **Architecture:** Microservices, Hexagonal Architecture, CQRS, Event Sourcing, DDD, Event-Driven Architecture, Serverless (FaaS), Distributed Systems
+- **Authentication:** Authentik, Keycloak, JWT, OAuth2/OIDC
 
 ### Operating Systems
 - **Linux (since 1993):** Slackware, Debian, Ubuntu, Alpine
@@ -87,18 +88,18 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 
 **Senior Software Engineer**
 
-**[SEGEL SA](https://segel.com.py/)** | Remote | June 2025 \- Present
+**[SEGEL SI](https://segel.com.py/)** | Remote | June 2025 \- February 2026
 
-**Architecting payment gateway solution and modernizing enterprise technology stack**
+**IoT data pipeline, payment gateway, and enterprise technology modernization**
 
-* **Product Development:** Leading development of POSsible Payments, a cloud-native payment gateway integrated with logistics and retail equipment offerings, serving merchants across the region  
-* **Architecture Design:** Implemented hexagonal architecture, CQRS patterns, and Domain-Driven Design (DDD) principles to ensure scalability, maintainability, and testability of payment processing systems  
-* **Technical Consulting:** Providing guidance across multiple development teams to modernize legacy applications into cloud-native solutions, improving regional competitiveness  
-* **Infrastructure & DevOps:** Built comprehensive observability stack with Prometheus, Grafana, and Fluentd; implemented authentication using Authentik and message queuing with NATS  
-* **Mentorship:** Tutoring engineering teams on cloud-native best practices, architectural patterns, and code quality standards to elevate technical capabilities organization-wide  
-* **Technology Stack:** Designed microservices architecture using PostgreSQL, Redis, and NATS for high-throughput payment processing
+* **IoT Platform:** Designed and developed a zero-dependency Go library for decoding BLE sensor payloads from 11+ device types (vibration, leak, motion, distance, beacons, presence) using a registration-based registry pattern
+* **Data Pipeline:** Built a real-time IoT sensor data processing pipeline implementing hexagonal architecture: ingesting data via MQTT, decoding with a concurrent worker pool, and persisting to InfluxDB with exponential-backoff retry logic and full Prometheus observability (12 metrics, liveness/readiness endpoints)
+* **Payment Gateway:** Led development of POSsible Payments, a cloud-native payment processing system covering the full transaction lifecycle (authorization, batching, clearing, settlement) using CQRS, Event Sourcing, and NATS JetStream
+* **Architecture Design:** Applied hexagonal architecture, CQRS, Event Sourcing, and Domain-Driven Design (DDD) across all systems to ensure scalability, maintainability, and testability
+* **Infrastructure & DevOps:** Built comprehensive observability stack with Prometheus, Grafana, and Fluentd; implemented OAuth2/OIDC authentication using Authentik with RBAC-based multi-tenant merchant isolation
+* **Mentorship:** Guided engineering teams on cloud-native best practices, architectural patterns, and code quality standards
 
-**Technologies:** Go, Kubernetes, Authentik, NATS, PostgreSQL, Redis, Fluentd, Prometheus, Grafana, Hexagonal Architecture, CQRS, DDD
+**Technologies:** Go, BLE, MQTT, InfluxDB, Hexagonal Architecture, CQRS, Event Sourcing, DDD, NATS JetStream, PostgreSQL, Redis, JWT, OAuth2/OIDC, Authentik, Prometheus, Grafana, Fluentd, Docker, Kubernetes
 
 ### Sr. Software Engineer / Technical Leader
 **[Tyk Technologies Ltd](https://www.tyk.io)** | *Nov 2020 - May 2024*
@@ -329,19 +330,20 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 ## Projects
 
 ### Go Struct Analyzer
-**Role:** Owner  [github](https://github.com/padiazg/go-struct-analyzer)  
+**Role:** Owner  [github](https://github.com/padiazg/go-struct-analyzer)
 A VS Code extension tho show memory size and padding information for Go structs, helping you optimize memory usage and understand struct layout.
 Published at [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=PatricioDiaz.go-struct-analyzer) and [Open VSX Registry](https://open-vsx.org/extension/PatricioDiaz/go-struct-analyzer), featured at [The Applied Go Weekly Newsletter](https://newsletter.appliedgo.net/archive/2025-06-22-go-before-you-wait/)
+
+### hexago
+**Role:** Owner  [github](https://github.com/padiazg/hexago)
+An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Automates project structure and component generation with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), component generators (services, domain entities, adapters, workers, database migrations), architecture compliance validation, and a multi-source customizable template system.
 
 ### Codapi Sandboxes
 **Role:** Contributor  [github](https://github.com/nalgeon/sandboxes)  
 Contributed the LaTeX sandbox
 
-### Barcode Generator 
-**Role:** Owner  [github](https://github.com/padiazg/barcode-generator)  
-Allows you to generate a wide variety of 1D & 2D codes. Written in Node.js, this project can generate a wide variety of 1D and 2D codes.
-### Barcode Generator 
-**Role:** Owner  [github](https://github.com/padiazg/barcode-generator)  
+### Barcode Generator
+**Role:** Owner  [github](https://github.com/padiazg/barcode-generator)
 Allows you to generate a wide variety of 1D & 2D codes. Written in Node.js, this project can generate a wide variety of 1D and 2D codes.
 
 ### go-zh07

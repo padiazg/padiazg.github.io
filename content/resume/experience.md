@@ -10,6 +10,20 @@ draft: false
 
 # Professional Experience
 
+## Sr. Software Engineer
+**SEGEL SI** | *Jun 2025 - Feb 2026*
+
+- Designed and developed a Go library for decoding BLE IoT sensor payloads from 11+ device types using a registration-based registry pattern with zero external runtime dependencies.
+- Built a real-time IoT sensor data processing pipeline implementing hexagonal architecture: ingesting data via MQTT, decoding with a concurrent worker pool, and persisting to InfluxDB with exponential-backoff retry logic and full Prometheus observability.
+- Developed a scalable microservices payment processing system  covering the full credit card transaction lifecycle—authorization, batching, clearing, and settlement—using CQRS, Event Sourcing, NATS JetStream messaging, PostgreSQL, Redis, and OAuth2/OIDC authentication.
+
+**Key Achievements:**
+- Delivered a zero-dependency BLE decoder library covering 11+ sensor types with a clean, extensible registry API.
+- Architected an end-to-end IoT pipeline with graceful shutdown, structured JSON logging, and full observability (12 Prometheus metrics, liveness/readiness health endpoints).
+- Designed a payment microservices system with 4 independent services, event-driven inter-service communication via NATS JetStream, and RBAC-based multi-tenant merchant isolation.
+
+**Skills:** Golang, IoT, BLE, MQTT, InfluxDB, Hexagonal Architecture, Microservices, CQRS, Event Sourcing, NATS JetStream, PostgreSQL, Redis, JWT, OAuth2/OIDC, Prometheus, Grafana, Docker, Cobra, Viper
+
 ## Sr. Software Engineer / Technical Leader
 **[Tyk Technologies Ltd](https://www.tyk.io)** | *Nov 2020 - May 2024*
 
