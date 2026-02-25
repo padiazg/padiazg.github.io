@@ -10,14 +10,15 @@ draft: false
 
 # Projects
 
+## HexaGo
+![Hexago Gopher](https://raw.githubusercontent.com/padiazg/hexago/refs/heads/master/logo.png)
+**Role:** Owner  [github](https://github.com/padiazg/hexago)  
+An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Automates project structure and component generation with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), component generators (services, domain entities, adapters, workers, database migrations), architecture compliance validation, and a multi-source customizable template system.
+
 ## Go Struct Analyzer
 **Role:** Owner  [github](https://github.com/padiazg/go-struct-analyzer)  
 A VS Code extension to show memory size and padding information for Go structs, helping you optimize memory usage and understand struct layout.
 Published at [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=PatricioDiaz.go-struct-analyzer) and [Open VSX Registry](https://open-vsx.org/extension/PatricioDiaz/go-struct-analyzer), featured at [The Applied Go Weekly Newsletter](https://newsletter.appliedgo.net/archive/2025-06-22-go-before-you-wait/)
-
-## hexago
-**Role:** Owner  [github](https://github.com/padiazg/hexago)
-An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Automates project structure and component generation with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), component generators (services, domain entities, adapters, workers, database migrations), architecture compliance validation, and a multi-source customizable template system.
 
 ## Codapi Sandboxes
 **Role:** Contributor  [github](https://github.com/nalgeon/sandboxes)  

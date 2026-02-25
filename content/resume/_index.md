@@ -35,17 +35,17 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 
 ## Key Professional Experience
 {{< experience 
+    company="SEGEL SI"
+    position="Senior Software Engineer"
+    period="June 2025 - Feb 2026"
+    highlight="Architecting payment gateway solution and modernizing enterprise technology stack. Designed and developed a Go library for decoding BLE IoT sensor payloads and a real-time IoT sensor data processing pipeline implementing hexagonal architecture: ingesting data via MQTT, decoding with a concurrent worker pool, and persisting to InfluxDB with exponential-backoff retry logic and full Prometheus observability"
+>}}
+
+{{< experience 
     company="Santex Group"
     position="Technical Leader"
     period="Jun 2025 - Oct 2025 (4 month project)"
     highlight="Leading cross-border financial integration between Argentinian digital wallet and Chilean banking institution"
->}}
-
-{{< experience 
-    company="SEGEL SA"
-    position="Senior Software Engineer / Technical Leader"
-    period="June 2025 \- Present"
-    highlight="Architecting payment gateway solution and modernizing enterprise technology stack"
 >}}
 
 {{< experience 
@@ -80,6 +80,13 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
     role="Owner"
     url="https://github.com/padiazg/go-struct-analyzer"
     description="A VS Code extension to show memory size and padding information for Go structs, helping you optimize memory usage and understand struct layout. Published at [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=PatricioDiaz.go-struct-analyzer) and [Open VSX Registry](https://open-vsx.org/extension/PatricioDiaz/go-struct-analyzer), featured at [The Applied Go Weekly Newsletter](https://newsletter.appliedgo.net/archive/2025-06-22-go-before-you-wait/)"
+>}}
+
+{{< project 
+    name="HexaGo"
+    role="Owner"
+    url="https://padiazg.github.io/hexago/"
+    description="An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Automates project structure and component generation with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), component generators (services, domain entities, adapters, workers, database migrations), architecture compliance validation, and a multi-source customizable template system."
 >}}
 
 {{< project 
