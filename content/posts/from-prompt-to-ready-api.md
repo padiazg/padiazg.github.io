@@ -21,6 +21,7 @@ The system must:
 - Generate stock reports and low-stock alerts.
 
 Stack: **Go 1.25 · Chi · PostgreSQL · golang-migrate · UUID v4 · Cobra/Viper**
+
 ---
 
 ## Pre-requisites
@@ -1221,3 +1222,5 @@ These could be good subjects for next iterations with Claude Code
 
 ### Final thoughts
 I'm quite happy with the outcome of this experiment, with just 3 iterations with Claude Code we ended up with a fully functional API. I'm aware that the result doesn't implement any kind of security, but the structure is solid and adding it shouldn't be a problem at all.
+
+By the way, the project is [here](https://github.com/padiazg/pantry) if anybody wants to check it.
