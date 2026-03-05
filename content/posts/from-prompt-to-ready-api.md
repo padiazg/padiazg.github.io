@@ -20,8 +20,6 @@ The system must:
 - Validate that stock never goes negative.
 - Generate stock reports and low-stock alerts.
 
-Stack: **Go 1.25 · Chi · PostgreSQL · golang-migrate · UUID v4 · Cobra/Viper**
-
 ---
 
 ## Pre-requisites
