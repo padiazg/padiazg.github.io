@@ -11,16 +11,34 @@ draft: false
 # Projects
 
 ## HexaGo
+
 ![Hexago Gopher](https://raw.githubusercontent.com/padiazg/hexago/refs/heads/master/logo.png)
 **Role:** Owner  [github](https://github.com/padiazg/hexago)  
 An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Automates project structure and component generation with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), component generators (services, domain entities, adapters, workers, database migrations), architecture compliance validation, and a multi-source customizable template system.
 
 ## Go Struct Analyzer
+
 **Role:** Owner  [github](https://github.com/padiazg/go-struct-analyzer)  
 A VS Code extension to show memory size and padding information for Go structs, helping you optimize memory usage and understand struct layout.
 Published at [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=PatricioDiaz.go-struct-analyzer) and [Open VSX Registry](https://open-vsx.org/extension/PatricioDiaz/go-struct-analyzer), featured at [The Applied Go Weekly Newsletter](https://newsletter.appliedgo.net/archive/2025-06-22-go-before-you-wait/)
 
+## go-crap
+
+**Role:** Owner  [github](https://github.com/padiazg/go-testgen)  
+CRAP score calculator for Go projects. Calculates the CRAP score (cyclomatic complexity × coverage) for every function in a Go module.
+
+## go-testgen
+
+**Role:** Owner  [github](https://github.com/padiazg/go-testgen)  
+A CLI tool to generate unit test scaffolding for Go projects. It produces closure-based check functions, a before hook for mock setup, and table-driven tests that compose cleanly as test suites grow.
+
+## test-finder
+
+**Role:** Owner  [github](https://github.com/padiazg/test-finder)  
+A CLI tool to discover Go modules and analyze their test coverage across directories.
+
 ## Codapi Sandboxes
+
 **Role:** Contributor  [github](https://github.com/nalgeon/sandboxes)  
 Contributed the LaTeX sandbox
 

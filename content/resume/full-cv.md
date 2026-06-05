@@ -329,59 +329,72 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 
 ## Projects
 
+### hexago
+
+**Role:** Owner  [github](https://github.com/padiazg/hexago)
+An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Automates project structure and component generation with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), component generators (services, domain entities, adapters, workers, database migrations), architecture compliance validation, and a multi-source customizable template system.
+
 ### Go Struct Analyzer
+
 **Role:** Owner  [github](https://github.com/padiazg/go-struct-analyzer)
 A VS Code extension tho show memory size and padding information for Go structs, helping you optimize memory usage and understand struct layout.
 Published at [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=PatricioDiaz.go-struct-analyzer) and [Open VSX Registry](https://open-vsx.org/extension/PatricioDiaz/go-struct-analyzer), featured at [The Applied Go Weekly Newsletter](https://newsletter.appliedgo.net/archive/2025-06-22-go-before-you-wait/)
 
-### hexago
-**Role:** Owner  [github](https://github.com/padiazg/hexago)
-An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Automates project structure and component generation with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), component generators (services, domain entities, adapters, workers, database migrations), architecture compliance validation, and a multi-source customizable template system.
+## go-crap
+
+**Role:** Owner  [github](https://github.com/padiazg/go-testgen)  
+CRAP score calculator for Go projects. Calculates the CRAP score (cyclomatic complexity × coverage) for every function in a Go module.
+
+## go-testgen
+
+**Role:** Owner  [github](https://github.com/padiazg/go-testgen)  
+A CLI tool to generate unit test scaffolding for Go projects. It produces closure-based check functions, a before hook for mock setup, and table-driven tests that compose cleanly as test suites grow.
+
+## test-finder
+
+**Role:** Owner  [github](https://github.com/padiazg/test-finder)  
+A CLI tool to discover Go modules and analyze their test coverage across directories.
 
 ### Codapi Sandboxes
+
 **Role:** Contributor  [github](https://github.com/nalgeon/sandboxes)  
 Contributed the LaTeX sandbox
 
 ### Barcode Generator
+
 **Role:** Owner  [github](https://github.com/padiazg/barcode-generator)
 Allows you to generate a wide variety of 1D & 2D codes. Written in Node.js, this project can generate a wide variety of 1D and 2D codes.
 
-### go-zh07
-**Role:** Owner [github](https://github.com/padiazg/go-zh07)  
-Golang library to read the Winsen ZH07 & ZH06 particulate matter sensors. ZH06 and ZH07 are laser dust sensor modules to check air quality. Developed to collaborate with the [airelib.re](https://airelib.re/) initiative.
-
-### go-sps30
-**Role:** Owner (https://github.com/padiazg/go-sps30)  
-Golang library to read the Sensirion SPS30 particulate matter sensor. SPS30 is an MCERTS-certified particulate matter (PM) sensor that works over i2c and serial. Developed to collaborate with the [airelib.re](https://airelib.re/) initiative.
-
-### harbour-alpine
-**Role:** Contributor [github](https://github.com/padiazg/harbour-alpine)  
-Harbour compiler on Docker/Alpine. Patch for the Harbour compiler to run on Alpine. Part of an OpenFaaS PoC to reuse old dbase/clipper/fox code in serverless functions.
-
 ### go-oas/docs
+
 **Role:** Contributor  [github](https://github.com/go-oas/docs)  
 Automatically generate RESTful API documentation for GO projects - aligned with Open API Specification standard. Added features needed to auto-generate OAS documentation out of auto-generated API by QOR v3 framework, used by Tyk's Enterprise Developer Portal. Release 1.1.0 ([https://github.com/go-oas/docs/releases/tag/v1.1.0](https://github.com/go-oas/docs/releases/tag/v1.1.0)) was sponsored by me.
 
 ### OpenFaaS
+
 **Role:** Contributor  [github](https://github.com/openfaas/faas/blob/master/community.md)  
 OpenFaaS® makes it easy for developers to deploy event-driven functions and microservices to Kubernetes without repetitive, boilerplate coding. Actively collaborated with the project in its early days, researching, testing and advocating.
 
 ## Publications and Talks
 
-### Hacktoberfest 2022 
+### Hacktoberfest 2022
+
 **Date:** October 2022  
 **Guest:** “Código abierto”, tema de encuentro entre estudiantes, graduados y miembros de sectores tecnológicos [link](https://www.pol.una.py/2022/codigo-abierto-tema-de-encuentro-entre-estudiantes-graduados-y-miembros-de-sectores-tecnologicos)  
 
 ### Hacktoberfest Online Asunción 2020 
+
 **Date:** October 2020  
 **Speaker:** OpenFaas - ServerLess Functions [link](https://events.mlh.io/events/4702-hacktoberfest-online-asuncion-2020) [youtube](https://www.youtube.com/live/raveANAfGcg?si=zTjg5ZnAmLMEjgOv&t=26574)  
 **Speaker:** Combinando NodeJS y GraphQL [link](https://events.mlh.io/events/4702-hacktoberfest-online-asuncion-2020) [youtube](https://www.youtube.com/live/raveANAfGcg?si=po_PkBS3KXpZG5-l&t=22667) [code](https://github.com/padiazg/hacktoberfest-practica-graphql-nodejs)  
 
 ### Primer MeetUp Facultad de Ciencias y Tecnología - UNCA 
+
 **Date:** June 2020  
 **Speaker:** La zona de confort [youtube](https://www.youtube.com/live/HO7S4kAxlnQ?si=oVzVtCWXXjxCJ781&t=284)  
 
 ### 4to Encuentro Testing Paraguay
+
 **Date:** November 2019  
 **Workshop:** Testing en etápas de CI/CD con Gitlab [fecebook](https://www.facebook.com/ComunidadTestingPY/photos/pb.100070010193782.-2207520000/151997556165651/?type=3)  
 **Speaker:** Testing en la era del Serverless  [fecebook](https://www.facebook.com/ComunidadTestingPY/photos/pb.100070010193782.-2207520000/165620044803402/?type=3)  
