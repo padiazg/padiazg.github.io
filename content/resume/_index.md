@@ -90,17 +90,38 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 >}}
 
 {{< project 
+    name="Go Struct Analyzer"
+    role="Owner"
+    url="https://github.com/padiazg/go-struct-analyzer"
+    description="A VS Code extension tho show memory size and padding information for Go structs, helping you optimize memory usage and understand struct layout."
+>}}
+
+{{< project 
+    name="go-crap"
+    role="Owner"
+    url="https://github.com/padiazg/go-crap"
+    description="CRAP score calculator for Go projects. Calculates the CRAP score (cyclomatic complexity × coverage) for every function in a Go module."
+>}}
+
+{{< project 
+    name="go-testgen"
+    role="Owner"
+    url="https://github.com/padiazg/go-testgen"
+    description="A CLI tool to generate unit test scaffolding for Go projects. It produces closure-based check functions, a before hook for mock setup, and table-driven tests that compose cleanly as test suites grow."
+>}}
+
+{{< project 
+    name="test-finder"
+    role="Owner"
+    url="https://github.com/padiazg/test-finder"
+    description="A CLI tool to discover Go modules and analyze their test coverage across directories."
+>}}
+
+{{< project 
     name="codapi/sandboxes"
     role="Contributor"
     url="https://github.com/nalgeon/sandboxes"
     description="Contributed the LaTeX sandbox"
->}}
-
-{{< project 
-    name="Barcode Generator"
-    role="Owner"
-    url="https://github.com/padiazg/barcode-generator"
-    description="Node.js application to generate a wide variety of 1D & 2D codes"
 >}}
 
 {{< project 

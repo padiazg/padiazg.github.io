@@ -342,7 +342,7 @@ Published at [Visual Studio Code Marketplace](https://marketplace.visualstudio.c
 
 ## go-crap
 
-**Role:** Owner  [github](https://github.com/padiazg/go-testgen)  
+**Role:** Owner  [github](https://github.com/padiazg/go-crap)  
 CRAP score calculator for Go projects. Calculates the CRAP score (cyclomatic complexity × coverage) for every function in a Go module.
 
 ## go-testgen
