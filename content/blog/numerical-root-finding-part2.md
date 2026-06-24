@@ -18,32 +18,44 @@ f(x)&=x^2-m &\text{define f(x) as the function whose root we seek} \\
 $$
 
 Check the [Code Examples](#code-examples) at the end of the article for the link to the repo with the code.
+
 ---
+
 ## 1. Bisection
+
 The bisection algorithm is a simple and reliable numerical method for finding roots of continuous functions. It is particularly well-suited for situations where the function is continuous and the root lies within a known interval. Unlike some other methods, the bisection algorithm guarantees convergence to a root, provided the conditions are met, making it a popular choice for solving equations of the form \(f(x) = 0\).
-### How It Works:
+
+### How It Works
+
 The method starts with an interval \([a,b]\) where the function \(f(x)\) changes sign. This means \(f(a) \cdot f(b) < 0\), indicating that a root lies somewhere in the interval (due to the Intermediate Value Theorem). The algorithm then repeatedly bisects the interval, narrowing it down until the root is approximated to a desired level of accuracy.
 
 The steps are:
-1. Compute the midpoint of the interval: 
+
+1. Compute the midpoint of the interval:
+
 $$
 r = \frac{a + b}{2}
 $$
-3. Evaluate \(f(r)\):
+
+2. Evaluate \(f(r)\):
     - If \(f(r) = 0\), \(c\) is the exact root, and the algorithm stops.
     - If \(f(a) \cdot f(r) < 0\), the root lies in the subinterval \([a,r]\), so \(b\) is updated to \(r\).
-    -  Otherwise,  the root lies in the subinterval \([r, b]\), so \(a\) is updated to \(r\)
+    - Otherwise,  the root lies in the subinterval \([r, b]\), so \(a\) is updated to \(r\)
 
-1. Repeat this process until the interval is sufficiently small, such that \(∣b−a∣\) is within a predefined tolerance.
+3. Repeat this process until the interval is sufficiently small, such that \(∣b−a∣\) is within a predefined tolerance.
 
 ### Use case: Square root
-#### For \(m=2\)
-Means we want to get the result for this equation: \(x=\sqrt{m}\). 
+
+**For \(m=2\)**
+
+Means we want to get the result for this equation: \(x=\sqrt{m}\).
 
 Let´s take \([a.b]=[0,2]\) as the values bracket.  We know the square root of a number \(m\) satisfies \(0 \leq \sqrt{m} \leq m\) only if \(m \geq 1\), for \(0 \leq m < 1\), \(\sqrt{m} \geq m\).  So, it's safe to use this numbers for this exercise.
+
 - On each iteration we will evaluate only \(f_{n}(a) \cdot f_{n}(r)\) as they are exclusive with \(f_{n}(b) \cdot f_{n}(r)\). if one is positive the other is negative.
-- If \(f(r)=0\) then we stop. 
+- If \(f(r)=0\) then we stop.
 - If we don't need an exact result and we are happy with certain amount of precision we ca use the error to check if we achieved the precision we need. ex: if we need 4 digits precision we can check for \(err \leq 0.00001\), which the example below this is satisfied at \(r_{18}\).
+
 $$
 \begin{align}
 m &= 2 \\
@@ -55,19 +67,19 @@ x &= r_{n} & \text{if } f_{n}(r)=0 \text{, stop iterating} \\
 v_{n+1} &= f_{n}(a) \cdot f_{n}(r) & \text{evaluate} \\
 \\
 a_{n+1}  &=  
-  \begin{cases} 
+  \begin{cases}
   a_{n} & \text{if } v_{n+1} < 0 \\
   r_{n} & \text{otherwise}
   \end{cases} \\
 \\
 b_{n+1}  &=  
-  \begin{cases} 
+  \begin{cases}
   r_{n} & \text{if } v_{n+1} < 0 \\
   b_{n} & \text{otherwise}
   \end{cases} \\
 \\
 e_{n} &= b_{n}-a_{n} & \text{error} \\
-\end{align} 
+\end{align}
 $$
 $$
 \begin{align*}
@@ -104,7 +116,9 @@ a_{29}&=1,41421356 &r_{29}&=1,41421356 &b_{29}&=1,41421356 &f_{29}(a)&=-0,000000
 &&\sqrt{2} &= 1,4142135624
 \end{align*}
 $$
-#### For \(m=13\)
+
+**For \(m=13\)**
+
 $$
 \begin{align}
 m &= 13 \\
@@ -154,7 +168,9 @@ a_{35}&=3,60555128 &r_{35}&=3,60555128 &b_{35}&=3,60555128 &f_{35}(a)&=0,0 &f_{3
 &&\sqrt{13} &= 3,60555128
 \end{align*}
 $$
-#### For \(m=354\) 
+
+**For \(m=354\)**
+
 $$
 \begin{align}
 m &= 354 \\
@@ -206,21 +222,27 @@ a_{37}&=18,81488772 &r_{37}&=18,81488772 &b_{37}&=18,81488772 &f_{37}(a)&=-0,000
 &&\sqrt{354}&=18,81488772
 \end{align*}
 $$
+
 ---
+
 ## 2.  Newton-Raphson
+
 The Newton-Raphson method is an efficient and widely used numerical technique for finding approximate solutions to equations of the form \(f(x) = 0\). It is particularly effective for equations that are difficult or impossible to solve algebraically. The method uses an iterative approach, starting with an initial guess for the root and refining this estimate with each step.
 
 ### How it works
+
 At its core, the Newton-Raphson method relies on the concept of tangent lines. For a given function \(f(x)\)), the method approximates the root by finding the point where the tangent to the curve at a given \(x_n\)​ intersects the \(x\)-axis. Mathematically, the iteration formula is expressed as:
 $$
 x_{n+1}=x_{n}-\frac{f(x_{n})}{f'(x_{n})}
 $$
 Here:
+
 - \(x_n\)​ is the current approximation of the root.
 - \(f(x_n)\) is the value of the function at \(x_n\)​.
 - \(f'(x_n)\) is the derivative of the function at \(x_n\)​, which represents the slope of the tangent.
 
-The process is repeated until the successive approximations converge to a value within a desired level of accuracy. 
+The process is repeated until the successive approximations converge to a value within a desired level of accuracy.
+
 ### Use case: Square root
 
 $$
@@ -256,8 +278,11 @@ so we now have a simpler formula to work with
 $$
 x_{n+1}=\frac{x_{n}^2+m}{2x_{n}}
 $$
+
 ### Let's find some roots
-#### For \(m=2\)
+
+**For \(m=2\)**
+
 means we want to get the result for this equation: \(x=\sqrt{m}\), also let's take the same value for the starting guest, which for this particular scenario it's a safe guest.
 $$
 \begin{align*}
@@ -275,7 +300,8 @@ x_5&=\frac{x_{4}^2+m}{2x_{4}}&\to \frac{1,4142135624^2+2}{2\times1,4142135624} &
 \end{align*}
 $$
 
-#### For \(m=13\)
+**For \(m=13\)**
+
 $$
 \begin{align*}
 m &= 13 \\
@@ -294,7 +320,8 @@ x_7 &= \frac{x_{6}^2+m}{2x_{6}} \to &\frac{3,6055512755^2+13}{2\times3,605551275
 \end{align*}
 $$
 
-#### For  \(m=354\)
+**For  \(m=354\)**
+
 $$
 \begin{align*}
 m &= 354 \\
@@ -315,25 +342,30 @@ x_{10} &= \frac{x_{9}^2+m}{2x_{9}} &\to \frac{18,8148877222^2+354}{2\times18,814
 &&\sqrt{354} &= 18,8148877222
 \end{align*}
 $$
+
 ---
+
 ## 3. Secant
 
 The **secant method** is a numerical algorithm used to approximate solutions to equations of the form \(f(x) = 0\). It is similar to the Newton-Raphson method but does not require the explicit computation of the derivative of \(f(x)\). Instead, the secant method uses a finite difference approximation of the derivative, making it a practical choice when the derivative is difficult or costly to calculate.
 
-### How It Works:
+### How It Works
 
 The secant method starts with two initial approximations, \(x_0\) and \(x_1\)​, for the root of \(f(x) = 0\). These approximations are used to compute a new estimate, \(x_{2}\)​, by intersecting the secant line (the line passing through \)(x_0, f(x_0))\( and \)(x_1, f(x_1))\( with the \)x$-axis. The formula for updating the estimate is:
 $$
 x_{n+1} = x_n - \frac{f(x_n)(x_n - x_{n-1})}{f(x_n) - f(x_{n-1})}
 $$
 Here:
+
 - \(x_n\) and \(x_{n-1}\)​ are the two most recent estimates of the root.
 - \(f(x_n)\) and \(f(x_{n-1})\) are the function values at these points.
 
 This process is repeated until the difference between successive approximations is smaller than a predefined tolerance or until the function value at the current estimate is sufficiently close to zero.
 
 ### Use case: Square root
-#### For \(m=2\)
+
+**For \(m=2\)**
+
 $$
 \begin{align}
 m &= 2 \\
@@ -360,7 +392,8 @@ x0_{6}&=1,41421356 &x1_{6}&=1,41421356 &x2_{6}&=1,41421356 &fx0_{6}&=0,0 &fx1_{6
 \end{align}
 $$
 
-#### For \(m=13\)
+**For \(m=13\)**
+
 $$
 \begin{align}
 x0_{0}&=13,0 &x1_{0}&=12,0 &x2_{0}&=12,0 &fx0_{0}&=156,0 &fx1_{0}&=131,0 &e_{0}&=5,24\\
@@ -378,7 +411,8 @@ x0_{9}&=3,60555128 &x1_{9}&=3,60555128 &x2_{9}&=3,60555128 &fx0_{9}&=0,0 &fx1_{9
 \end{align}
 $$
 
-#### For \(m=354\)
+**For \(m=354\)**
+
 $$
 \begin{align}
 x0_{0}&=354,0 &x1_{0}&=353,0 &x2_{0}&=353,0 &fx0_{0}&=124962,0 &fx1_{0}&=124255,0 &e_{0}&=175,74964639\\
@@ -400,9 +434,11 @@ x0_{12}&=18,81488772 &x1_{12}&=18,81488772 &x2_{12}&=18,81488772 &fx0_{12}&=0,00
 $$
 
 ## Code examples
-The repo with examples for these algorithms is [here](https://github.com/padiazg/root-finding-algorithms-examples/tree/master). I won't dive deep into the code in this article, but feel free to contact me directly if you have any doubts or suggestions, but I want you try to run the code and the benchmarks so we can take a look at the results in the next section.
+
+The repo with examples for these algorithms is [root-finding-algorithms-examples](https://github.com/padiazg/root-finding-algorithms-examples/tree/master). I won't dive deep into the code in this article, but feel free to contact me directly if you have any doubts or suggestions, but I want you try to run the code and the benchmarks so we can take a look at the results in the next section.
 
 Follow these steps:
+
 ```shell
 # clone the repo
 git clone https://github.com/padiazg/root-finding-algorithms-examples.git
@@ -418,7 +454,9 @@ go test -bench=.
 ```
 
 ## Benchmarks
+
 Once you have cloned and run the examples, let's take a look at the results
+
 ```shell
 $ go run main.go bisection.go newton-raphson.go secant.go --show-summary --values 2,13,354
 threshold: 0.0000001 | max-iter: 64
@@ -449,28 +487,29 @@ goos: darwin
 goarch: amd64
 pkg: github.com/padiazg/go-aproximation-demo
 cpu: Intel(R) Core(TM) i9-9980HK CPU @ 2.40GHz
-BenchmarkSqrtBisection2-16                 	 1561058	       733.2 ns/op
-BenchmarkSqrtBisection16-16                	 1397647	       859.2 ns/op
-BenchmarkSqrtBisection32-16                	 1418907	       849.9 ns/op
-BenchmarkSqrtBisection79543-16             	  949737	      1286 ns/op
-BenchmarkSqrtBisection6632888162-16        	  632889	      1679 ns/op
-BenchmarkSqrtNewtonRaphson2-16             	80412462	        14.47 ns/op
-BenchmarkSqrtNewtonRaphson16-16            	58465778	        20.13 ns/op
-BenchmarkSqrtNewtonRaphson32-16            	47134106	        24.45 ns/op
-BenchmarkSqrtNewtonRaphson79543-16         	23997736	        48.41 ns/op
-BenchmarkSqrtNewtonRaphson6632888162-16    	11614274	        99.88 ns/op
-BenchmarkSqrtSecant2-16                    	39359683	        27.15 ns/op
-BenchmarkSqrtSecant16-16                   	28226810	        39.72 ns/op
-BenchmarkSqrtSecant32-16                   	25197651	        48.48 ns/op
-BenchmarkSqrtSecant79543-16                	10315800	       113.1 ns/op
-BenchmarkSqrtSecant6632888162-16           	 6023776	       196.7 ns/op
+BenchmarkSqrtBisection2-16                   1561058        733.2 ns/op
+BenchmarkSqrtBisection16-16                  1397647        859.2 ns/op
+BenchmarkSqrtBisection32-16                  1418907        849.9 ns/op
+BenchmarkSqrtBisection79543-16                949737       1286 ns/op
+BenchmarkSqrtBisection6632888162-16           632889       1679 ns/op
+BenchmarkSqrtNewtonRaphson2-16              80412462         14.47 ns/op
+BenchmarkSqrtNewtonRaphson16-16             58465778         20.13 ns/op
+BenchmarkSqrtNewtonRaphson32-16             47134106         24.45 ns/op
+BenchmarkSqrtNewtonRaphson79543-16          23997736         48.41 ns/op
+BenchmarkSqrtNewtonRaphson6632888162-16     11614274         99.88 ns/op
+BenchmarkSqrtSecant2-16                     39359683         27.15 ns/op
+BenchmarkSqrtSecant16-16                    28226810         39.72 ns/op
+BenchmarkSqrtSecant32-16                    25197651         48.48 ns/op
+BenchmarkSqrtSecant79543-16                 10315800        113.1 ns/op
+BenchmarkSqrtSecant6632888162-16             6023776        196.7 ns/op
 PASS
-ok  	github.com/padiazg/go-aproximation-demo	21.194s
+ok   github.com/padiazg/go-aproximation-demo 21.194s
 ```
 
 As we predicted in theory, Newton-Raphson outperforms Bisection and Secant, but Secant falls behind it for just small margin.
 
 Here are some key observations:
+
 1. **Accuracy**:
     - All three algorithms converge to highly accurate approximations of the square root (e.g., \(\sqrt{2} \approx 1.4142136\)).
     - Small differences in the last decimal place result from algorithm-specific behavior or computational precision.
@@ -479,14 +518,16 @@ Here are some key observations:
     - **Newton-Raphson**: Achieves the same level of accuracy in significantly fewer iterations (4 for \(\sqrt{2}\)​, 5 for \(\sqrt{13}\) ​, and 8 for \(\sqrt{354}\)​) because of its quadratic convergence rate.
     - **Secant**: Falls between Bisection and Newton -Raphson in terms of iterations (5 for \(\sqrt{2}\)​, 7 for \(\sqrt{13}\)​, and 11 for \(\sqrt{354}\)​), benefiting from superlinear convergence without requiring derivative calculations.
 3. Benchmarks
-	- **Bisection**: The computational cost grows moderately with larger values (e.g., 733 ns/op for \(\sqrt{2}\)​ vs. 1679 ns/op for \)\sqrt{6632888162}$).
-	- **Newton-Raphson**: Outperforms both Bisection and Secant, with the lowest execution times across all values (e.g., 14.47 ns/op for \(\sqrt{2}\), 99.88 ns/op for \(\sqrt{6632888162}\)).
-	- **Secant**: Faster than Bisection but slower than Newton-Raphson (e.g., 27.15 ns/op for \(\sqrt{2}\), 196.7 ns/op for \(\sqrt{6632888162}\)).
+
+- **Bisection**: The computational cost grows moderately with larger values (e.g., 733 ns/op for \(\sqrt{2}\)​ vs. 1679 ns/op for \)\sqrt{6632888162}$).
+- **Newton-Raphson**: Outperforms both Bisection and Secant, with the lowest execution times across all values (e.g., 14.47 ns/op for \(\sqrt{2}\), 99.88 ns/op for \(\sqrt{6632888162}\)).
+- **Secant**: Faster than Bisection but slower than Newton-Raphson (e.g., 27.15 ns/op for \(\sqrt{2}\), 196.7 ns/op for \(\sqrt{6632888162}\)).
 
 Given this data,  which one you should pick depends on the theory we mentioned in the previous article:
- * If you have access to the derivative of function you definitely should pick **Newton-Raphson**
- * If the derivative is not available, or too hard to get, a good candidate is **Secant** as it performs very close to **Newton-Rapson**
- * If none of above is possible, then you fall back to **BIsection**, shich is safer and has an assured convergence if you can guess correctly  the brackets for the function.
+
+- If you have access to the derivative of function you definitely should pick **Newton-Raphson**
+- If the derivative is not available, or too hard to get, a good candidate is **Secant** as it performs very close to **Newton-Rapson**
+- If none of above is possible, then you fall back to **BIsection**, shich is safer and has an assured convergence if you can guess correctly  the brackets for the function.
 
 ## Conclusion
 
@@ -499,6 +540,7 @@ In this article we explored the **Bisection**, **Newton-Raphson**, and **Secant*
 Through the practical example of calculating square roots, we illustrated the strengths and limitations of these methods in numerical problem-solving. As we progress in this series, we will delve into some more specific examples and how they can be used in real world use cases.
 
 ## Links
-- [Numerical root-finding algorithms: Foundations, theory, and advanced methods. Part 1](https://padiazg.github.io/posts/numerical-root-finding-part1/)
+
+- [Numerical root-finding algorithms: Foundations, theory, and advanced methods. Part 1](https://padiazg.github.io/blog/numerical-root-finding-part1/)
 - Numerical root-finding algorithms: Bisection, Newton-Raphson and Secant. Part2
-- [Numerical root-finding algorithms: An unconventional approach. Part3](https://padiazg.github.io/posts/numerical-root-finding-part3/)
+- [Numerical root-finding algorithms: An unconventional approach. Part3](https://padiazg.github.io/blog/numerical-root-finding-part3/)

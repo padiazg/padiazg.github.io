@@ -18,8 +18,10 @@ services:
 
 menu:
   main:
-    - name: Posts
-      url: posts/
+    - name: Blog
+      url: blog/
+    - name: Projects
+      url: projects/
     - name: Search
       url: search/
     - name: Resume
@@ -44,30 +46,20 @@ params:
 
   comments: true
 
-  homeInfoParams:
-    Title: Welcome to my blog
-    Content: |
-
-      I'm Patricio (Pato) Díaz, a passionate enthusiast about programming and infraestructure.
-      Most of the content of this blog is from notes and findings I collect during my researchs, usually started by a curiosity about some topic.  
-      Open to opportunities.   
-      You can find me on 👇
-
   profileMode:
-    enabled: false
-    Content: |
-
-      I'm Patricio (Pato) Díaz, a passionate enthusiast about programming and infraestructure.
-      Most of the content of this blog is from notes and findings I collect during my researchs, usually started by a curiosity about some topic.  
-      Open to opportunities.   
-      You can find me on 👇
-      
+    enabled: true
+    title: "Pato Diaz"
+    subtitle: "Senior Software Engineer · Go · Open Source · Cloud"
+    imageUrl: "profile.jpg"
+    imageTitle: "Pato Diaz"
+    imageWidth: 160
+    imageHeight: 160
     buttons:
-      - name: Posts
-        url: "/posts"
-      - name: Archive
-        url: "/archive"
-      - name: Github
+      - name: Blog
+        url: "/blog"
+      - name: Projects
+        url: "/projects"
+      - name: GitHub
         url: "https://github.com/padiazg"
 
   socialIcons:
@@ -79,7 +71,7 @@ params:
       url: "https://www.linkedin.com/in/patricio-diaz-g/"
 
   mainSections:
-    - posts
+    - blog
 #   #   - articles
 
   fuseOpts:

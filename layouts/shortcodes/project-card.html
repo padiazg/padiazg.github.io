@@ -1,0 +1,36 @@
+{{- $name := .Get "name" -}}
+{{- $repo := .Get "repo" -}}
+{{- $fallbackDesc := .Get "description" | default "" -}}
+{{- $docs := .Get "docs" | default "" -}}
+{{- $inner := .Inner | default "" -}}
+
+{{- $description := $fallbackDesc -}}
+{{- with try (resources.GetRemote (printf "https://api.github.com/repos/%s" $repo)) -}}
+  {{- with .Value -}}
+    {{- $data := . | transform.Unmarshal -}}
+    {{- with $data.description -}}
+      {{- $description = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<div class="project-card">
+  <h3>{{ $name }}</h3>
+  <div class="project-badges">
+    <img src="https://img.shields.io/github/stars/{{ $repo }}?style=flat-square&label=stars" alt="GitHub stars" loading="lazy">
+    <img src="https://img.shields.io/github/forks/{{ $repo }}?style=flat-square&label=forks" alt="GitHub forks" loading="lazy">
+    <img src="https://img.shields.io/github/last-commit/{{ $repo }}?style=flat-square&label=updated" alt="Last commit" loading="lazy">
+  </div>
+  {{- if $description }}
+  <div class="project-description">{{ $description | markdownify }}</div>
+  {{- end }}
+  <div class="project-links">
+    {{- if $docs }}
+    <a href="{{ $docs }}" target="_blank" rel="noopener">Docs &rarr;</a>
+    {{- end }}
+    <a href="https://github.com/{{ $repo }}" target="_blank" rel="noopener">Source &rarr;</a>
+    {{- if $inner }}
+    <span>{{ $inner | markdownify }}</span>
+    {{- end }}
+  </div>
+</div>

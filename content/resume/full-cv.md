@@ -18,27 +18,33 @@ draft: false
 
 Senior Software Engineer and Technical Leader with 16+ years of experience delivering scalable solutions and leading high-performing engineering teams. Currently serving dual Technical Leadership roles, architecting cloud-native payment solutions and leading cross-border financial integrations. Proven track record of transforming proof-of-concepts into production-ready enterprise products, mentoring 20+ developers, and implementing DevOps practices that reduced deployment time by 80%. Expert in Go, microservices architecture, hexagonal architecture, CQRS, DDD, and cloud technologies with experience scaling teams from 1 to 8 members while maintaining 95%+ feature delivery rates.
 
+---
+
 ## Core Technologies
 
 ### Programming Languages
+
 - **Expert:** Go, JavaScript/TypeScript, Delphi, Visual FoxPro
 - **Proficient:** Python, PHP, Java, Pascal, Rust, Assembly, C/C++
 - **Legacy Experience:** BASIC, Clipper, RPG, COBOL
 
 ### Databases & Data Storage
+
 - **SQL:** Oracle, PostgreSQL, MySQL, MS SQL Server, DB2
 - **NoSQL:** MongoDB, Redis
 - **Time-Series:** InfluxDB
 - **Legacy:** dBase, Clipper, FoxPro, Clarion
 
 ### Cloud & Infrastructure
+
 - **Platforms:** GCP, AWS
 - **Containers:** Docker, Kubernetes, Docker Swarm
 - **FaaS:** OpenFaaS, Lambda
-- **Monitoring & Observability:** Prometheus, Grafana, Fluentd 
+- **Monitoring & Observability:** Prometheus, Grafana, Fluentd
 - **Message Queues:** NATS, AMQP, MQTT
 
 ### Development Tools & Frameworks
+
 - **Version Control:** Git, SVN
 - **CI/CD:** Jenkins, GitHub Actions, GitLab CI/CD
 - **Frontend:** React, Vue.js
@@ -48,16 +54,20 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 - **Authentication:** Authentik, Keycloak, JWT, OAuth2/OIDC
 
 ### Operating Systems
+
 - **Linux (since 1993):** Slackware, Debian, Ubuntu, Alpine
 - **Enterprise:** IBM i OS, IBM z/OS, AIX
 - **Other:** Windows Server, MacOS
 - **Legacy:** DOS, Earlier Windows (3.x, 95, 98, and so on)
 
 ### Infrastructure & Networking
+
 - **Protocols:** TCP/IP, VoIP, WebSocket
 - **Security:** OAuth, Firewalls, VPN
 - **Hardware:** CISCO Systems, Structured Networks
 - **Services:** DNS, Load Balancing, Proxy, Gateway
+
+---
 
 ## Core Competencies
 
@@ -72,36 +82,43 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 
 ## Professional Experience
 
-### **Technical Lead \- Golang Backend**
+---
 
-**[AR Santex LLC](https://santexgroup.com) (Client Project)** | Remote | June 2025 \- October 2025
+### Technical Lead \- Golang Backend
 
-**Leading cross-border financial integration between Argentinian digital wallet and Chilean banking institution**
+**[AR Santex LLC](https://santexgroup.com)** (Client Project) | Remote | June 2025 \- October 2025
 
-* **Technical Leadership:** Led development team of 3 engineers in building scalable integration platform, managing all aspects of project delivery from architecture design to stakeholder reporting  
-* **Cloud Architecture:** Designed and implemented serverless architecture using AWS Lambda, API Gateway, Aurora, EventBridge, and Secrets Manager, ensuring high availability and security compliance for financial transactions  
-* **Team Management:** Mentored 2 backend developers, conducted code reviews, and established development best practices for the team  
-* **Stakeholder Communication:** Provided regular progress reports to stakeholders, managed expectations, and delivered accurate effort estimations for project milestones  
-* **DevOps Excellence:** Established local development environment using LocalStack, awslambdarpc, Docker, and Kubernetes, enabling efficient testing and deployment workflows
+#### Leading cross-border financial integration between Argentinian digital wallet and Chilean banking institution
+
+- **Technical Leadership:** Led development team of 3 engineers in building scalable integration platform, managing all aspects of project delivery from architecture design to stakeholder reporting  
+- **Cloud Architecture:** Designed and implemented serverless architecture using AWS Lambda, API Gateway, Aurora, EventBridge, and Secrets Manager, ensuring high availability and security compliance for financial transactions  
+- **Team Management:** Mentored 2 backend developers, conducted code reviews, and established development best practices for the team  
+- **Stakeholder Communication:** Provided regular progress reports to stakeholders, managed expectations, and delivered accurate effort estimations for project milestones  
+- **DevOps Excellence:** Established local development environment using LocalStack, awslambdarpc, Docker, and Kubernetes, enabling efficient testing and deployment workflows
 
 **Technologies:** Go, AWS Lambda, AWS EC2, AWS API Gateway, AWS Aurora, AWS EventBridge, AWS Secrets Manager, LocalStack, Docker, Kubernetes
 
-**Senior Software Engineer**
+---
+
+### Senior Software Engineer
 
 **[SEGEL SI](https://segel.com.py/)** | Remote | June 2025 \- February 2026
 
-**IoT data pipeline, payment gateway, and enterprise technology modernization**
+#### IoT data pipeline, payment gateway, and enterprise technology modernization
 
-* **IoT Platform:** Designed and developed a zero-dependency Go library for decoding BLE sensor payloads from 11+ device types (vibration, leak, motion, distance, beacons, presence) using a registration-based registry pattern
-* **Data Pipeline:** Built a real-time IoT sensor data processing pipeline implementing hexagonal architecture: ingesting data via MQTT, decoding with a concurrent worker pool, and persisting to InfluxDB with exponential-backoff retry logic and full Prometheus observability (12 metrics, liveness/readiness endpoints)
-* **Payment Gateway:** Led development of POSsible Payments, a cloud-native payment processing system covering the full transaction lifecycle (authorization, batching, clearing, settlement) using CQRS, Event Sourcing, and NATS JetStream
-* **Architecture Design:** Applied hexagonal architecture, CQRS, Event Sourcing, and Domain-Driven Design (DDD) across all systems to ensure scalability, maintainability, and testability
-* **Infrastructure & DevOps:** Built comprehensive observability stack with Prometheus, Grafana, and Fluentd; implemented OAuth2/OIDC authentication using Authentik with RBAC-based multi-tenant merchant isolation
-* **Mentorship:** Guided engineering teams on cloud-native best practices, architectural patterns, and code quality standards
+- **IoT Platform:** Designed and developed a zero-dependency Go library for decoding BLE sensor payloads from 11+ device types (vibration, leak, motion, distance, beacons, presence) using a registration-based registry pattern
+- **Data Pipeline:** Built a real-time IoT sensor data processing pipeline implementing hexagonal architecture: ingesting data via MQTT, decoding with a concurrent worker pool, and persisting to InfluxDB with exponential-backoff retry logic and full Prometheus observability (12 metrics, liveness/readiness endpoints)
+- **Payment Gateway:** Led development of POSsible Payments, a cloud-native payment processing system covering the full transaction lifecycle (authorization, batching, clearing, settlement) using CQRS, Event Sourcing, and NATS JetStream
+- **Architecture Design:** Applied hexagonal architecture, CQRS, Event Sourcing, and Domain-Driven Design (DDD) across all systems to ensure scalability, maintainability, and testability
+- **Infrastructure & DevOps:** Built comprehensive observability stack with Prometheus, Grafana, and Fluentd; implemented OAuth2/OIDC authentication using Authentik with RBAC-based multi-tenant merchant isolation
+- **Mentorship:** Guided engineering teams on cloud-native best practices, architectural patterns, and code quality standards
 
 **Technologies:** Go, BLE, MQTT, InfluxDB, Hexagonal Architecture, CQRS, Event Sourcing, DDD, NATS JetStream, PostgreSQL, Redis, JWT, OAuth2/OIDC, Authentik, Prometheus, Grafana, Fluentd, Docker, Kubernetes
 
+---
+
 ### Sr. Software Engineer / Technical Leader
+
 **[Tyk Technologies Ltd](https://www.tyk.io)** | *Nov 2020 - May 2024*
 
 - Collaborated a minimum of 75% of the product roadmap with the product manager, and led 100% of the development of the Enterprise Developer Portal yearly and quarterly.
@@ -115,13 +132,17 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 - Helped the QA to implement E2E tests, going from 0% to 90% of features tested.
 
 **Key Achievements:**
+
 - We incubated the Enterprise Developer Portal from an internal PoC (30% features ready) to a production-ready (95% features) product.
 - Built the team from 1 dev (myself) to 4 devs, 1 QA, 1 PM, 1 UX, 1 SM and 1 TL.
 - Planed 75% of the roadmap and ensured the squad delivered 100% of the product sticking to the long-term plans.
 
 **Skills:** Golang, Project Management, Team Leadership, Software Development, Open-Source, Go-oas/docs, Microservices, REST, gRPC, CI/CD, QOR, GORM, Unit Testing, Mutation Testing, Clean Code, Development Patterns, Modularity, E2E Testing
 
+---
+
 ### DevOps Engineer / Full Stack Developer
+
 **On Campus Marketing** | *Oct 2019 - Sep 2020*
 
 - Developed around 10% of front-end and back-end code to implement several integrations with third-party software.
@@ -132,13 +153,17 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 - Managed the 3 databases used for development, staging and production.
 
 **Key Achievements:**
+
 - Collaborated to integrate third-party platforms like NetSuite and Akeneo with the company's in-house developed stack.
 - Developed several back-end and front-end features needed by the product.
 - Improved cloud resource usage (Google Cloud) reducing costs.
 
 **Skills:** Golang, Javascript, PHP, React, GCP, CI/CD, Microservices, REST, gRPC, FaaS, Unit-testing, Software Development, Open-Source, Unit Testing, Clean Code, Development Patterns, Modularity, E2E Testing
 
+---
+
 ### External IT Consultant
+
 **Vision Banco SAECA** | *May 2012 - Oct 2019*
 
 - Solved and fixed 100% of a technical issue on an application developed internally which constantly made the main servers crash and take hours to recover.
@@ -152,13 +177,17 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 - Mentored and trained at least 10 developers from 4 teams.
 
 **Key Achievements:**
+
 - Enabled the bank to operate more efficiently regarding data processing and computing resource consumption.
 - Trained and mentored lots of developers in up-to-date technologies and languages.
 - Took the technology used by the bank to the cutting edge.
 
 **Skills:** Genexus 9~Evo2, Java, Javascript, Node.js, Vue.js, RPG, IBM iSeries, IBM i OS, IBM z/OS, IBM DB/2, Websphere MQ, Websphere Application Server, JBoss Application Server, Apache Tomcat, Active MQ, FaaS, Microservices, REST, SOAP, WebSockets, OAuth, CI/CD, Software Development, Open-Source, Clean Code, Development Patterns, Modularity
 
+---
+
 ### Software Engineer
+
 **Neuland Cooperative Ltd** | *Mar 2009 - Mar 2011*
 
 - Developed modules for existing systems and created new libraries for system extensions.
@@ -166,17 +195,23 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 - Implemented database replication and synchronisation solutions.
 
 **Key Achievements:**
+
 - Successfully managed distributed database system across multiple locations.
 - Improved system reliability and performance through optimised database maintenance.
 
 **Skills:** Oracle, PL/SQL, Genexus 9, Visual Basic, Database Administration, System Development, Distributed Systems
 
+---
+
 ### Owner
-**I+I Infraestructura Informática** | *2009 - 2012* 
+
+**I+I Infraestructura Informática** | *2009 - 2012*
+
 - Worked with various institutions solving issues from networking infrastructure to custom software development.
 - Implemented VoIP solutions, CI/CD pipelines, containerization and orchestration.
 
 **Key Achievements:**
+
 - Designed and supervised implementation of new physical and logical network structure for ESSAP S.A.
 - Implemented a new VoIP call center for ESSAP S.A., increasing response capacity by 400%.
 - Planned and implemented VoIP solution for 3 in-house call centers at Electroban S.A.
@@ -185,7 +220,10 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 
 **Skills:** CISCO systems, structured networks, VoIP, Software Development, Open-Source, Genexus, PHP, MS-SQL, Linux, microservices, security
 
+---
+
 ### Software Engineer / Technical Leader
+
 **The Derby S.R.L.** | *Jul 2007 - Feb 2009*
 
 - Led a team of 7 developers managing 20+ concurrent projects.
@@ -194,13 +232,17 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 - Created and modified several Delphi components for process automation and database connectivity.
 
 **Key Achievements:**
+
 - Developed a client/server system for mobile phone location services integrating LBS, GIS, and OpenGIS.
 - Built a web-based interface allowing access to location services from any browser.
 - Implemented automated database synchronisation across distributed systems.
 
 **Skills:** Delphi, Oracle, MS-SQL, MySQL, PostgreSQL, GIS, OpenGIS, Client/Server Architecture, Team Leadership, Project Management
 
+---
+
 ### IT Operations Manager
+
 **DSP Express Courrier** | *Aug 2006 - Jul 2007*
 
 - Managed operational and administrative tasks while developing custom software solutions.
@@ -208,6 +250,7 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 - Developed automated address geocoding tools for large address databases.
 
 **Key Achievements:**
+
 - Created prototype tools for automatic geocoding of extensive address lists.
 - Improved operational efficiency through custom software solutions.
 
@@ -215,7 +258,10 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 
 ## Early Career Highlights (1992-2006)
 
+---
+
 ### Programming Consultant
+
 **Duckman Consulting** | *2000 - 2004*
 
 - Provided IT consulting, software development, and system maintenance for EU-funded projects, NGOs, and government institutions.
@@ -224,7 +270,10 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 
 **Skills:** Linux, C++, Delphi, Visual FoxPro, Pascal, Database Administration, Network Administration
 
+---
+
 ### Software Developer
+
 **ALA Project 90/24** | *1994 - 1998*
 
 - Developed multiple custom applications for project management, procurement, and monitoring.
@@ -233,33 +282,46 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 
 **Skills:** Clipper, dBase, Pascal, Assembly, Network Administration
 
+---
+
 ## Programming Journey
 
 ### 1986-1988
+
 - BASIC on Commodore 128 (hobby)
 
 ### 1988-1991
+
 - dBase III+, Foxbase, DOS programming
 
 ### 1991-1998
+
 - Clipper, FoxPro, Pascal, C, C++, Assembly
 
 ### 1993
+
 - Early Linux adopter (Slackware 1.1, MySQL), began open source journey
 
 ### 1998-2000
+
 - Visual Basic, Visual FoxPro, web technologies
 
 ### 2000-2010
+
 - Delphi, Oracle, Java, SQL, advanced Linux/open source
 
 ### 2010-present
+
 - Modern stack (Go, JavaScript, Rust, Cloud platforms)
+
+---
 
 ## Education
 
 **Computer Science (not graduated)**  
 *Facultad Politécnica - UNA* | 1997 - 2011
+
+---
 
 ## Certifications
 
@@ -327,12 +389,9 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 - **CCNA 1: Networking Basics**  
   *UCSA (Universidad del Cono Sur de las Américas)* | March 2008
 
+---
+
 ## Projects
-
-### hexago
-
-**Role:** Owner  [github](https://github.com/padiazg/hexago)
-An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Automates project structure and component generation with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), component generators (services, domain entities, adapters, workers, database migrations), architecture compliance validation, and a multi-source customizable template system.
 
 ### Go Struct Analyzer
 
@@ -340,15 +399,25 @@ An opinionated CLI scaffolding tool for Go developers building applications foll
 A VS Code extension tho show memory size and padding information for Go structs, helping you optimize memory usage and understand struct layout.
 Published at [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=PatricioDiaz.go-struct-analyzer) and [Open VSX Registry](https://open-vsx.org/extension/PatricioDiaz/go-struct-analyzer), featured at [The Applied Go Weekly Newsletter](https://newsletter.appliedgo.net/archive/2025-06-22-go-before-you-wait/)
 
+### hexago
+
+**Role:** Owner  [docs](https://padiazg.github.io/hexago/) [github](https://github.com/padiazg/hexago)
+An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Automates project structure and component generation with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), component generators (services, domain entities, adapters, workers, database migrations), architecture compliance validation, and a multi-source customizable template system.
+
 ## go-crap
 
-**Role:** Owner  [github](https://github.com/padiazg/go-crap)  
+**Role:** Owner  [docs](https://padiazg.github.io/go-crap/) [github](https://github.com/padiazg/go-crap)  
 CRAP score calculator for Go projects. Calculates the CRAP score (cyclomatic complexity × coverage) for every function in a Go module.
 
 ## go-testgen
 
-**Role:** Owner  [github](https://github.com/padiazg/go-testgen)  
+**Role:** Owner  [docs](https://padiazg.github.io/go-testgen/) [github](https://github.com/padiazg/go-testgen)  
 A CLI tool to generate unit test scaffolding for Go projects. It produces closure-based check functions, a before hook for mock setup, and table-driven tests that compose cleanly as test suites grow.
+
+## unit-test-book
+
+**Role:** Owner  [docs](https://padiazg.github.io/unit-test-book/) [github](https://github.com/padiazg/unit-test-book)  
+A hands-on guide to Go unit testing through real-world patterns extracted from 7 production Go projects. Covers table-driven tests, closure-check pattern, mocking, HTTP/I/O, concurrency, and integration testing.
 
 ## test-finder
 
@@ -375,20 +444,22 @@ Automatically generate RESTful API documentation for GO projects - aligned with 
 **Role:** Contributor  [github](https://github.com/openfaas/faas/blob/master/community.md)  
 OpenFaaS® makes it easy for developers to deploy event-driven functions and microservices to Kubernetes without repetitive, boilerplate coding. Actively collaborated with the project in its early days, researching, testing and advocating.
 
+---
+
 ## Publications and Talks
 
 ### Hacktoberfest 2022
 
 **Date:** October 2022  
-**Guest:** “Código abierto”, tema de encuentro entre estudiantes, graduados y miembros de sectores tecnológicos [link](https://www.pol.una.py/2022/codigo-abierto-tema-de-encuentro-entre-estudiantes-graduados-y-miembros-de-sectores-tecnologicos)  
+**Guest:** “Código abierto”, tema de encuentro entre estudiantes, graduados y miembros de sectores tecnológicos [event link](https://www.pol.una.py/2022/codigo-abierto-tema-de-encuentro-entre-estudiantes-graduados-y-miembros-de-sectores-tecnologicos)  
 
-### Hacktoberfest Online Asunción 2020 
+### Hacktoberfest Online Asunción 2020
 
 **Date:** October 2020  
-**Speaker:** OpenFaas - ServerLess Functions [link](https://events.mlh.io/events/4702-hacktoberfest-online-asuncion-2020) [youtube](https://www.youtube.com/live/raveANAfGcg?si=zTjg5ZnAmLMEjgOv&t=26574)  
-**Speaker:** Combinando NodeJS y GraphQL [link](https://events.mlh.io/events/4702-hacktoberfest-online-asuncion-2020) [youtube](https://www.youtube.com/live/raveANAfGcg?si=po_PkBS3KXpZG5-l&t=22667) [code](https://github.com/padiazg/hacktoberfest-practica-graphql-nodejs)  
+**Speaker:** OpenFaas - ServerLess Functions [event link](https://events.mlh.io/events/4702-hacktoberfest-online-asuncion-2020) [youtube](https://www.youtube.com/live/raveANAfGcg?si=zTjg5ZnAmLMEjgOv&t=26574)  
+**Speaker:** Combinando NodeJS y GraphQL [event link](https://events.mlh.io/events/4702-hacktoberfest-online-asuncion-2020) [youtube](https://www.youtube.com/live/raveANAfGcg?si=po_PkBS3KXpZG5-l&t=22667) [code](https://github.com/padiazg/hacktoberfest-practica-graphql-nodejs)  
 
-### Primer MeetUp Facultad de Ciencias y Tecnología - UNCA 
+### Primer MeetUp Facultad de Ciencias y Tecnología - UNCA
 
 **Date:** June 2020  
 **Speaker:** La zona de confort [youtube](https://www.youtube.com/live/HO7S4kAxlnQ?si=oVzVtCWXXjxCJ781&t=284)  
@@ -400,17 +471,21 @@ OpenFaaS® makes it easy for developers to deploy event-driven functions and mic
 **Speaker:** Testing en la era del Serverless  [fecebook](https://www.facebook.com/ComunidadTestingPY/photos/pb.100070010193782.-2207520000/165620044803402/?type=3)  
 
 ### Taller Docker 101 by Docker Paraguay Group
+
 **Date:** July 2019  
-**Organizer/Speaker:** Docker 101 [link](https://x.com/DockerParaguay/status/1147340698611589121) [code](https://github.com/padiazg/taller-docker-101)  
+**Organizer/Speaker:** Docker 101 [event link](https://x.com/DockerParaguay/status/1147340698611589121) [code](https://github.com/padiazg/taller-docker-101)  
 
 ### PythonPy Meetup Enero 2019
+
 **Date:** January 2019  
-**Topic:** GraphQL: de Cero a Serverless [link](https://x.com/PythonParaguay/status/1086340319765905408?mx=2) [youtube](https://www.youtube.com/live/bEeGmIIvVSw?t=1244s)  
+**Topic:** GraphQL: de Cero a Serverless [event link](https://x.com/PythonParaguay/status/1086340319765905408?mx=2) [youtube](https://www.youtube.com/live/bEeGmIIvVSw?t=1244s)  
 
 ### Kubecon + Cloudnativecon North America 2018
+
 **Date:** December 2018  
 **Speaker:** Digital Transformation of Vision Banco Paraguay with serverless functions [youtube](https://www.youtube.com/watch?v=mPjI34qj5vU)  
 
 ### PythonPy Meetup Abril 2018
+
 **Date:** April 2018
-**Speaker:** Serverless local con OpenFaas [youtube](https://www.youtube.com/live/1_c6BnDg_2M?si=U1mSgR_ewk2Im6tZ&t=6730)  
+**Speaker:** Serverless local con OpenFaas [youtube](https://www.youtube.com/live/1_c6BnDg_2M?si=U1mSgR_ewk2Im6tZ&t=6730)
