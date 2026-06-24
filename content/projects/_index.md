@@ -8,9 +8,11 @@ title: "Projects"
 
 {{< project-card name="go-crap" repo="padiazg/go-crap" docs="https://padiazg.github.io/go-crap" description="CRAP (Change Risk Anti-Patterns) score calculator for Go projects. Calculates cyclomatic complexity × coverage for every function in a Go module." >}}{{< /project-card >}}
 
-{{< project-card name="Go Struct Analyzer" repo="padiazg/go-struct-analyzer" description="VS Code extension showing memory size and padding information for Go structs, helping optimize memory usage and understand struct layout." >}}
-[VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=PatricioDiaz.go-struct-analyzer) | [Open VSX Registry](https://open-vsx.org/extension/PatricioDiaz/go-struct-analyzer)
-{{< /project-card >}}
+{{< vsce-card name="Go Struct Analyzer"
+  id="PatricioDiaz.go-struct-analyzer"
+  openvsx_id="PatricioDiaz/go-struct-analyzer"
+  repo="padiazg/go-struct-analyzer"
+  description="VS Code extension showing memory size and padding information for Go structs, helping optimize memory usage and understand struct layout." >}}
 
 {{< project-card name="unit-test-book" repo="padiazg/unit-test-book" docs="https://padiazg.github.io/unit-test-book/" description="Guide and reference for writing effective unit tests. Covers patterns, best practices, and practical examples across multiple languages." >}}{{< /project-card >}}
 

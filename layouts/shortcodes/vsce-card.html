@@ -1,0 +1,14 @@
+<div class="project-card">
+  <h3>{{ .Get "name" }}</h3>
+  <div class="project-badges">
+    <img src="https://shieldcn.dev/vscode/installs/{{ .Get "openvsx_id" }}.svg?size=xs&split=true&label=VS+Marketplace" alt="VS Code Marketplace Downloads">
+    <img src="https://shieldcn.dev/openvsx/downloads/{{ .Get "openvsx_id" }}.svg?size=xs&split=true&label=OpenVSX" alt="OpenVSX Downloads">
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/{{ .Get "repo" }}" target="_blank">GitHub</a>
+    {{- with .Get "docs" }}<a href="{{ . }}" target="_blank">Docs</a>{{ end }}
+    <a href="https://marketplace.visualstudio.com/items?itemName={{ .Get "id" }}" target="_blank">VS Code Marketplace</a>
+    <a href="https://open-vsx.org/extension/{{ .Get "openvsx_id" }}" target="_blank">Open VSX Registry</a>
+  </div>
+  <p class="project-description">{{ .Get "description" }}</p>
+</div>
