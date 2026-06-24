@@ -1,0 +1,64 @@
+.projects-cta {
+  margin: calc(var(--gap) * 1.5) 0 var(--gap);
+  padding: calc(var(--gap) * 1.5);
+  background: var(--entry);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.projects-cta h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.projects-cta p {
+  margin: 0;
+  color: var(--secondary);
+}
+
+.project-card {
+  margin-bottom: var(--gap);
+  padding: calc(var(--gap) * 1.25);
+  background: var(--entry);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: box-shadow 0.2s;
+}
+
+.project-card:hover {
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+
+.project-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.3rem;
+}
+
+.project-badges {
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.project-badges img {
+  vertical-align: middle;
+}
+
+.project-description {
+  margin: 0 0 0.75rem;
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.project-links a {
+  font-weight: 500;
+}

@@ -3,16 +3,18 @@ date = '2024-12-14T15:00:36-03:00'
 draft = false
 title = 'Numerical root-finding algorithms: An unconventional approach. Part 3'
 +++
-**An unconventional approach to solving with Lambert's W function**
+## An unconventional approach to solving with Lambert's W function
 
 Before we move on to a practical real-world use case for an approximation root-finding algorithm, I want to share an anecdote from a time when, out of simple curiosity and a bit of boredom, I managed to solve an equation typically requiring the Lambert W function by approximating the root using the Newton-Raphson method.
 
 ## 1. The video
+
 One day, a [video](https://www.youtube.com/watch?v=mJwfpcXwYRU) on solving the equation \(2^x + x = 5\) popped up in my YouTube feed. The \(x\) in the exponent immediately piqued my curiosity. After watching the entire video, I was introduced to the Lambert W function—"Nice to meet you," I thought. For a moment, I debated whether I should dive deeper into learning about it, or consider how I might use it in the future. Then, I took another look at the equation and noticed it was a differentiable function. That's when it hit me: I should tackle the problem using one of the root-finding algorithms.
 
 ## 2. Hands on
-Let's methodologically assemble the iterative equation and see if we can converge into a root. 
-From here, the Newton-Raphson iterative formula is applied:
+
+Let's methodologically assemble the iterative equation and see if we can converge into a root.  
+From here, the Newton-Raphson iterative formula is applied:  
 
 $$
 \begin{align}
@@ -73,8 +75,11 @@ x_{38} &= x_{37}-\frac{2^{x_{37}} + x_{37} - 5}{log(2) \cdot 2^{x_{37}} + 1}&=1,
 x_{39} &= x_{38}-\frac{2^{x_{38}} + x_{38} - 5}{log(2) \cdot 2^{x_{38}} + 1}&=1,71562069 - \frac{2^{1,71562069} + 1,71562069- 5}{0,3010299957 \cdot 2^{1,71562069} + 1}&={\color{red}\underline{1,7156207}}{\color{gray}64} &|x_{39}-x_{38}| &=0,00000008 \\
 \end{align}
 $$
+
 It took 39 iterations to achieve 7-decimal precision for the root. While this number seems high, the convergence was steady, with significant progress in the first 10 iterations.
+
 ## 3. Wrapping up
+
 Using a root-finding algorithm like **Newton-Raphson** to solve instead of the **Lambert W** function offers several advantages in implementation simplicity. The Lambert W function is mathematically elegant but *less commonly supported in programming libraries*, making its direct application a challenge in some environments. On the other hand, root-finding algorithms require only basic mathematical tools available in almost every computational framework.
 
 Despite requiring 39 iterations to achieve a solution with 7-decimal precision, the iterative process was straightforward. It followed a mechanical pattern: evaluate the function, compute the derivative, and update the guess. In cases where computational time is not critical—like this mathematical exploration—such methods provide a robust alternative that leverages fundamental calculus.
@@ -82,6 +87,7 @@ Despite requiring 39 iterations to achieve a solution with 7-decimal precision, 
 This journey underscores the versatility of mathematical problem-solving. By revisiting a problem with a fresh perspective, we see how classical techniques can rival or complement specialized tools. Whether for academic curiosity or practical applications, understanding these foundational approaches broadens our computational toolkit.
 
 ## Links
-- [Numerical root-finding algorithms: Foundations, theory, and advanced methods. Part 1](https://padiazg.github.io/posts/numerical-root-finding-part1/)
-- [Numerical root-finding algorithms: Bisection, Newton-Raphson and Secant. Part2](https://padiazg.github.io/posts/numerical-root-finding-part2/)
+
+- [Numerical root-finding algorithms: Foundations, theory, and advanced methods. Part 1](https://padiazg.github.io/blog/numerical-root-finding-part1/)
+- [Numerical root-finding algorithms: Bisection, Newton-Raphson and Secant. Part2](https://padiazg.github.io/blog/numerical-root-finding-part2/)
 - Numerical root-finding algorithms: An unconventional approach. Part3

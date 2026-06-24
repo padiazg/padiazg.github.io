@@ -10,11 +10,6 @@ draft: false
 
 # Projects
 
-## HexaGo
-
-![Hexago Gopher](https://raw.githubusercontent.com/padiazg/hexago/refs/heads/master/logo.png)
-**Role:** Owner  [github](https://github.com/padiazg/hexago)  
-An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Automates project structure and component generation with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), component generators (services, domain entities, adapters, workers, database migrations), architecture compliance validation, and a multi-source customizable template system.
 
 ## Go Struct Analyzer
 
@@ -22,15 +17,26 @@ An opinionated CLI scaffolding tool for Go developers building applications foll
 A VS Code extension to show memory size and padding information for Go structs, helping you optimize memory usage and understand struct layout.
 Published at [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=PatricioDiaz.go-struct-analyzer) and [Open VSX Registry](https://open-vsx.org/extension/PatricioDiaz/go-struct-analyzer), featured at [The Applied Go Weekly Newsletter](https://newsletter.appliedgo.net/archive/2025-06-22-go-before-you-wait/)
 
+## HexaGo
+
+![Hexago Gopher](https://raw.githubusercontent.com/padiazg/hexago/refs/heads/master/logo.png)
+**Role:** Owner  [docs](https://padiazg.github.io/hexago/) [github](https://github.com/padiazg/hexago)  
+An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Automates project structure and component generation with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), component generators (services, domain entities, adapters, workers, database migrations), architecture compliance validation, and a multi-source customizable template system.
+
 ## go-crap
 
-**Role:** Owner  [github](https://github.com/padiazg/go-testgen)  
+**Role:** Owner  [docs](https://padiazg.github.io/go-crap/) [github](https://github.com/padiazg/go-crap)  
 CRAP score calculator for Go projects. Calculates the CRAP score (cyclomatic complexity × coverage) for every function in a Go module.
 
 ## go-testgen
 
-**Role:** Owner  [github](https://github.com/padiazg/go-testgen)  
+**Role:** Owner  [docs](https://padiazg.github.io/go-testgen/) [github](https://github.com/padiazg/go-testgen)  
 A CLI tool to generate unit test scaffolding for Go projects. It produces closure-based check functions, a before hook for mock setup, and table-driven tests that compose cleanly as test suites grow.
+
+## unit-test-book
+
+**Role:** Owner  [docs](https://padiazg.github.io/unit-test-book/) [github](https://github.com/padiazg/unit-test-book)  
+A hands-on guide to Go unit testing through real-world patterns extracted from 7 production Go projects. Covers table-driven tests, closure-check pattern, mocking, HTTP/I/O, concurrency, and integration testing.
 
 ## test-finder
 

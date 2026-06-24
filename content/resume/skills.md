@@ -13,12 +13,14 @@ draft: false
 ## Programming Languages
 
 ### Expert
+
 - Go
 - JavaScript/TypeScript
 - Delphi
 - Visual FoxPro
 
 ### Proficient
+
 - Python
 - PHP
 - Java
@@ -28,6 +30,7 @@ draft: false
 - C/C++
 
 ### Legacy Experience
+
 - BASIC
 - Clipper
 - RPG
@@ -36,6 +39,7 @@ draft: false
 ## Databases & Data Storage
 
 ### SQL
+
 - Oracle
 - PostgreSQL
 - MySQL
@@ -43,13 +47,16 @@ draft: false
 - DB2
 
 ### NoSQL
+
 - MongoDB
 - Redis
 
 ### Time-Series
+
 - InfluxDB
 
 ### Legacy
+
 - dBase
 - Clipper
 - FoxPro
@@ -58,24 +65,29 @@ draft: false
 ## Cloud & Infrastructure
 
 ### Platforms
+
 - Google Cloud Platform (GCP)
 - Amazon Web Services (AWS)
 
 ### Containers
+
 - Docker
 - Kubernetes
 - Docker Swarm
 
 ### FaaS
+
 - OpenFaaS
 - Cloud Functions
 
 ### Monitoring
+
 - Prometheus
 - Grafana
 - Fluentd
 
 ### Message Queues
+
 - NATS
 - MQTT
 - AMQP
@@ -86,35 +98,42 @@ draft: false
 ## Development Tools & Frameworks
 
 ### Version Control
+
 - Git
 - SVN
 
 ### CI/CD
+
 - Jenkins
 - GitHub Actions
 - GitLab CI/CD
 
 ### Frontend
+
 - React
 - Vue.js
 
 ### API
+
 - REST
 - gRPC
 - GraphQL
 - SOAP
 
 ### Testing
+
 - Test-Driven Development (TDD)
 - Unit Testing
 - E2E Testing
 - Mutation Testing
 
 ### Authentication
+
 - Authentik
 - Keycloak
 
 ### Architecture
+
 - Microservices
 - Hexagonal Architecture
 - CQRS
@@ -127,42 +146,50 @@ draft: false
 ## Operating Systems
 
 ### Linux (since 1993)
+
 - Slackware
 - Debian
 - Ubuntu
 - Alpine
 
 ### Enterprise
+
 - IBM i OS
 - IBM z/OS
 - AIX
 
 ### Other
+
 - Windows Server
 - MacOS
 
 ### Legacy
+
 - DOS
 - Earlier Windows (3.x, 95, 98, and so on)
 
 ## Infrastructure & Networking
 
 ### Protocols
+
 - TCP/IP
 - VoIP
 - WebSocket
 
 ### Security
+
 - OAuth2/OIDC
 - JWT
 - Firewalls
 - VPN
 
 ### Hardware
+
 - CISCO Systems
 - Structured Networks
 
 ### Services
+
 - DNS
 - Load Balancing
 - Proxy
@@ -182,28 +209,34 @@ draft: false
 ## Programming Journey
 
 ### 1986-1988
+
 - BASIC on Commodore 128 (hobby)
 
 ### 1988-1991
+
 - dBase III+
 - Foxbase
 - DOS programming
 
 ### 1991-1993
+
 - Clipper
 - Pascal
 - C, C++
 
 ### 1993
+
 - Early Linux adopter (Slackware 1.1, MySQL)
 - Began open source journey
 
 ### 1994-2000
+
 - Visual Basic
 - Visual FoxPro
 - Web technologies
 
 ### 2000-2010
+
 - Delphi
 - Oracle
 - Java
@@ -211,4 +244,5 @@ draft: false
 - Advanced Linux/open source
 
 ### 2010-present
+
 - Modern stack (Go, JavaScript, Rust, Cloud platforms)

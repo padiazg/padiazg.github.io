@@ -1,6 +1,9 @@
 <div class="project-card">
   <h3>{{ .Get "name" }}</h3>
   <p><strong>Role:</strong> {{ .Get "role" }}</p>
-  <p><a href="{{ .Get "url" }}" target="_blank">GitHub Repository</a></p>
+  <p>
+    {{ with .Get "docs_url" }}<a href="{{ . }}" target="_blank">Docs</a> | {{ end }}
+    <a href="{{ .Get "url" }}" target="_blank">GitHub</a>
+  </p>
   <p>{{ .Get "description" }}</p>
 </div>
