@@ -12,8 +12,8 @@ draft: false
 
 ## Education
 
-**Computer Science (not graduated)**  
-*Facultad Politécnica - UNA* | 1997 - 2011
+**Computer Science (Currently enrolled)**  
+*Facultad Politécnica - UNA*
 
 ## Certifications
 

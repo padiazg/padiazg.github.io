@@ -16,7 +16,13 @@ draft: false
 
 ## Profile Summary
 
-Senior Software Engineer and Technical Leader with 16+ years of experience delivering scalable solutions and leading high-performing engineering teams. Currently serving dual Technical Leadership roles, architecting cloud-native payment solutions and leading cross-border financial integrations. Proven track record of transforming proof-of-concepts into production-ready enterprise products, mentoring 20+ developers, and implementing DevOps practices that reduced deployment time by 80%. Expert in Go, microservices architecture, hexagonal architecture, CQRS, DDD, and cloud technologies with experience scaling teams from 1 to 8 members while maintaining 95%+ feature delivery rates.
+Go developer and open-source maintainer with a track record of building tools the Go community actually uses.
+Specialized in taking ambiguous or AI-generated (“vibe-coded”) codebases and turning them into tested,
+maintainable systems — raising coverage, cutting cyclomatic complexity, and enforcing clean-architecture
+practices. Comfortable owning a project end-to-end, from first commit through production, with a habit of
+solid code review and mentoring that sticks after the handoff.
+
+Available for immediate remote opportunities globally.
 
 ---
 
@@ -109,15 +115,16 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 - **IoT Platform:** Designed and developed a zero-dependency Go library for decoding BLE sensor payloads from 11+ device types (vibration, leak, motion, distance, beacons, presence) using a registration-based registry pattern
 - **Data Pipeline:** Built a real-time IoT sensor data processing pipeline implementing hexagonal architecture: ingesting data via MQTT, decoding with a concurrent worker pool, and persisting to InfluxDB with exponential-backoff retry logic and full Prometheus observability (12 metrics, liveness/readiness endpoints)
 - **Payment Gateway:** Led development of POSsible Payments, a cloud-native payment processing system covering the full transaction lifecycle (authorization, batching, clearing, settlement) using CQRS, Event Sourcing, and NATS JetStream
+- **Authentication:** Implemented OAuth2/OIDC authentication with RBAC-based multi-tenant merchant isolation using Authentik
 - **Architecture Design:** Applied hexagonal architecture, CQRS, Event Sourcing, and Domain-Driven Design (DDD) across all systems to ensure scalability, maintainability, and testability
-- **Infrastructure & DevOps:** Built comprehensive observability stack with Prometheus, Grafana, and Fluentd; implemented OAuth2/OIDC authentication using Authentik with RBAC-based multi-tenant merchant isolation
+- **Infrastructure & DevOps:** Built comprehensive observability stack with Prometheus, Grafana, and Fluentd across all services
 - **Mentorship:** Guided engineering teams on cloud-native best practices, architectural patterns, and code quality standards
 
 **Technologies:** Go, BLE, MQTT, InfluxDB, Hexagonal Architecture, CQRS, Event Sourcing, DDD, NATS JetStream, PostgreSQL, Redis, JWT, OAuth2/OIDC, Authentik, Prometheus, Grafana, Fluentd, Docker, Kubernetes
 
 ---
 
-### Sr. Software Engineer / Technical Leader
+### Senior Software Engineer / Technical Lead
 
 **[Tyk Technologies Ltd](https://www.tyk.io)** | *Nov 2020 - May 2024*
 
@@ -162,7 +169,7 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 
 ---
 
-### External IT Consultant
+### Senior IT Consultant
 
 **Vision Banco SAECA** | *May 2012 - Oct 2019*
 
@@ -175,6 +182,7 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 - Developed at least 8 to 10 mid-level components/libraries for internal use.
 - Implemented 2 private clouds (development/staging and production including Docker Swarm, Kubernetes, DNS, Load balancer, Minio, OpenFaaS, MongoDB, NATS, Fluentd, Prometheus, Grafana, etc) for deploying serverless functions.
 - Mentored and trained at least 10 developers from 4 teams.
+- Provided technical guidance to the CTO for 30% of working hours.
 
 **Key Achievements:**
 
@@ -318,8 +326,8 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 
 ## Education
 
-**Computer Science (not graduated)**  
-*Facultad Politécnica - UNA* | 1997 - 2011
+**Computer Science (Currently enrolled)**  
+*Facultad Politécnica - UNA*
 
 ---
 
@@ -402,17 +410,17 @@ Published at [Visual Studio Code Marketplace](https://marketplace.visualstudio.c
 ### hexago
 
 **Role:** Owner  [docs](https://padiazg.github.io/hexago/) [github](https://github.com/padiazg/hexago)
-An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Automates project structure and component generation with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), component generators (services, domain entities, adapters, workers, database migrations), architecture compliance validation, and a multi-source customizable template system.
+An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Generates fully-wired project structure (domain, ports, adapters, services, workers, migrations) from a single command, with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), a multi-source customizable template system, and architecture validation that keeps generated code within hexagonal boundaries over time. Designed for AI coding agent compatibility — structured output makes it easy for LLMs to navigate and extend code.
 
 ## go-crap
 
 **Role:** Owner  [docs](https://padiazg.github.io/go-crap/) [github](https://github.com/padiazg/go-crap)  
-CRAP score calculator for Go projects. Calculates the CRAP score (cyclomatic complexity × coverage) for every function in a Go module.
+CRAP score (Change Risk Anti-Pattern) calculator with mutation testing integration. Calculates cyclomatic complexity × coverage ratio per function, integrates with go-gremlins for mutation testing (flags CoverageUntrusted when mutations survive, computing EffectiveCRAP), and outputs SARIF 2.1.0 (IDE/GitHub Code Scanning), PR-comment, and text formats for CI pipelines — the final guardrail ensuring AI-generated tests aren't just coverage theater.
 
 ## go-testgen
 
 **Role:** Owner  [docs](https://padiazg.github.io/go-testgen/) [github](https://github.com/padiazg/go-testgen)  
-A CLI tool to generate unit test scaffolding for Go projects. It produces closure-based check functions, a before hook for mock setup, and table-driven tests that compose cleanly as test suites grow.
+A domain-aware unit test scaffolding generator. Parses Go source code to produce table-driven tests grounded in actual domain structs and interfaces, with closure-based check patterns, before hooks for mock setup, and clean test composition. Bridges the gap between LLM-generated code and meaningful tests — ensuring AI tests reflect real domain behavior.
 
 ## unit-test-book
 
@@ -444,9 +452,19 @@ Automatically generate RESTful API documentation for GO projects - aligned with 
 **Role:** Contributor  [github](https://github.com/openfaas/faas/blob/master/community.md)  
 OpenFaaS® makes it easy for developers to deploy event-driven functions and microservices to Kubernetes without repetitive, boilerplate coding. Actively collaborated with the project in its early days, researching, testing and advocating.
 
+### ClusterHAT Images
+
+**Role:** Owner  
+Created Raspbian/Ubuntu/Debian images for Orange Pi CM4 and Banana Pi M2 Zero.
+
 ---
 
 ## Publications and Talks
+
+### Cup o' Go Podcast E164
+
+**Date:** July 2026  
+**Guest:** Featured guest discussing go-crap, mutation testing, and CRAP score analysis; also covered HexaGo, go-testgen, and Go Struct Analyzer. [Listen here](https://cupogo.dev/episodes/oh-crap-new-versions-of-go-gopherjs-and-typescript-are-less-crappy-than-before-or-are-they)  
 
 ### Hacktoberfest 2022
 

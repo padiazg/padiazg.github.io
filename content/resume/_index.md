@@ -1,33 +1,40 @@
 ---
 title: "Patricio Díaz"
-subtitle: "Senior Software Engineer & Technical Leader"
+subtitle: "Go developer | Open-source maintainer"
 date: 2025-04-27
 draft: false
 ---
 
 **Location:** Paraguay  
 **Contact:** [+595961178540](wa.me/595961178540) | [padiazg@gmail.com](mailto:padiazg@gmail.com)  
-**Links:** [LinkedIn](https://www.linkedin.com/in/patricio-diaz-g/) | [GitHub](https://github.com/padiazg) | [Blog](https://padiazg.github.io)
+**Links:** [LinkedIn](https://www.linkedin.com/in/patricio-diaz-g/) | [GitHub](https://github.com/padiazg) | [Blog](https://padiazg.github.dev)
 
 ---
 
 ## Profile Summary
 
-Senior Software Engineer and Technical Leader with 16+ years of experience delivering scalable solutions and leading high-performing engineering teams. Currently serving dual Technical Leadership roles, architecting cloud-native payment solutions and leading cross-border financial integrations. Proven track record of transforming proof-of-concepts into production-ready enterprise products, mentoring 20+ developers, and implementing DevOps practices that reduced deployment time by 80%. Expert in Go, microservices architecture, hexagonal architecture, CQRS, DDD, and cloud technologies with experience scaling teams from 1 to 8 members while maintaining 95%+ feature delivery rates.
+Go developer and open-source maintainer with a track record of building tools the Go community actually uses.
+Specialized in taking ambiguous or AI-generated (“vibe-coded”) codebases and turning them into tested,
+maintainable systems — raising coverage, cutting cyclomatic complexity, and enforcing clean-architecture
+practices. Comfortable owning a project end-to-end, from first commit through production, with a habit of solid code review and mentoring that sticks after the handoff.
 
-> Looking for a challenging remote role to drive impactful results in software engineering. Available to join any role immediately.
+> Available for immediate remote opportunities globally.
 
 ---
 
 ## Expertise Highlights
 
-- **Programming Languages:** Go (Golang), JavaScript, Node.js, PHP, Java, Python, TypeScript
-- **Cloud & DevOps:** AWS (Lambda, EC2, API Gateway, Aurora, EventBridge, Secrets Manager), Google Cloud Platform (GCP), Docker, Kubernetes, LocalStack, CI/CD, Terraform
-- **Databases:** PostgreSQL, MySQL/MariaDB, MongoDB, Oracle, IBM DB2, Redis
-- **Architecture Patterns:** Microservices, Hexagonal Architecture, CQRS, DDD, Event-Driven Architecture, Serverless (FaaS), Distributed Systems
-- **Frameworks & Tools:** React, Vue.js, gRPC, REST APIs, GraphQL, WebSockets, AMQP, GORM, QOR, NATS, OpenID Connect.
-- **Monitoring & Observability:** Prometheus, Grafana, Fluentd
-- **Leadership:** Team Building, Technical Mentoring, Project Management, Agile/Scrum, Stakeholder Management
+**Languages:** Go (Golang), JavaScript, TypeScript, Node.js, Python, PHP, Java  
+**Architecture:** Domain-Driven Design, Event-Driven Architecture, CQRS, Event Sourcing,
+Hexagonal / Ports & Adapters, Microservices, Serverless (FaaS)  
+**Cloud & DevOps:** Google Cloud Platform (GCP), AWS (Lambda, EC2, API Gateway, Aurora,
+EventBridge, Secrets Manager), Docker, Kubernetes, Terraform, CI/CD, LocalStack  
+**Messaging & APIs:** NATS JetStream, AMQP, MQTT, gRPC, REST, GraphQL, WebSockets  
+**Databases:** PostgreSQL, MySQL/MariaDB, MongoDB, Redis, InfluxDB, Oracle, IBM DB2  
+**Identity & Auth:** OAuth2/OIDC, JWT, RBAC, multi-tenant access control, Authentik  
+**Observability:** Prometheus, Grafana, Fluentd, OpenTelemetry  
+**Frameworks:** React, Vue.js, GORM, QOR, Echo, Gin, Chi, Fiber  
+**Testing & Quality:** Unit / E2E / mutation testing, static analysis (go/packages), CRAP score analysis  
 
 ---
 
@@ -37,19 +44,19 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
     company="SEGEL SI"
     position="Senior Software Engineer"
     period="June 2025 - Feb 2026"
-    highlight="Architecting payment gateway solution and modernizing enterprise technology stack. Designed and developed a Go library for decoding BLE IoT sensor payloads and a real-time IoT sensor data processing pipeline implementing hexagonal architecture: ingesting data via MQTT, decoding with a concurrent worker pool, and persisting to InfluxDB with exponential-backoff retry logic and full Prometheus observability"
+    highlight="IoT data pipeline, payment gateway, and enterprise technology modernization. Designed a zero-dependency Go library for BLE IoT sensor payload decoding, built a real-time hexagonal IoT pipeline (MQTT ingestion → concurrent worker pool → InfluxDB with exponential-backoff retry, 12 Prometheus metrics), and led development of POSsible Payments, a cloud-native payment system covering the full transaction lifecycle (authorization → batching → clearing → settlement) with CQRS, Event Sourcing, and NATS JetStream, plus OAuth2/OIDC with RBAC-based multi-tenant merchant isolation via Authentik and a Prometheus/Grafana/Fluentd observability stack"
 >}}
 
 {{< experience
-    company="Santex Group"
-    position="Technical Leader"
+    company="AR Santex LLC (Client Project)"
+    position="Technical Lead — Golang Backend"
     period="Jun 2025 - Oct 2025 (4 month project)"
-    highlight="Leading cross-border financial integration between Argentinian digital wallet and Chilean banking institution"
+    highlight="Cross-border financial integration between Argentinian digital wallet and Chilean banking institution. Led a 3-engineer team delivering a scalable integration platform end-to-end on a serverless AWS architecture (Lambda, API Gateway, Aurora, EventBridge, Secrets Manager) with a LocalStack + Docker + Kubernetes local dev environment; mentored 2 backend developers"
 >}}
 
 {{< experience
     company="Tyk Technologies Ltd"
-    position="Sr. Software Engineer / Technical Leader"
+    position="Senior Software Engineer / Technical Lead"
     period="Nov 2020 - May 2024"
     highlight="Incubated the Enterprise Developer Portal from PoC to production-ready product, built the team from 1 dev to a full squad, and delivered 100% of the roadmap"
 >}}
@@ -63,7 +70,7 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 
 {{< experience
     company="Vision Banco SAECA"
-    position="External IT Consultant"
+    position="Senior IT Consultant"
     period="May 2012 - Oct 2019"
     highlight="Developed 3 mission-critical systems introducing cutting-edge technologies and implemented private cloud solutions for serverless functions"
 >}}
@@ -94,7 +101,7 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
     role="Owner"
     url="https://github.com/padiazg/go-crap"
     docs_url="https://padiazg.github.io/go-crap/"
-    description="CRAP score calculator for Go projects. Calculates the CRAP score (cyclomatic complexity × coverage) for every function in a Go module."
+    description="CRAP score (Change Risk Anti-Pattern) calculator with mutation testing integration. Calculates cyclomatic complexity × coverage per function, flags CoverageUntrusted when go-gremlins mutations survive, and outputs SARIF 2.1.0 (IDE/GitHub Code Scanning), PR-comment, and text formats — the final guardrail ensuring AI-generated tests aren't just coverage theater."
 >}}
 
 {{< project
@@ -147,6 +154,7 @@ Senior Software Engineer and Technical Leader with 16+ years of experience deliv
 
 ## Speaking Engagements
 
+- **Cup o' Go Podcast (E164, July 2026):** Featured guest discussing go-crap, mutation testing, and CRAP score analysis — also covering HexaGo, go-testgen, and Go Struct Analyzer. [Listen here](https://cupogo.dev/episodes/oh-crap-new-versions-of-go-gopherjs-and-typescript-are-less-crappy-than-before-or-are-they)
 - **Kubecon + Cloudnativecon North America 2018:** [Digital Transformation of Vision Banco Paraguay with serverless functions](https://www.youtube.com/watch?v=mPjI34qj5vU)
 
 [View All Publications and Talks](publicatons-n-talks)

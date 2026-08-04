@@ -21,17 +21,17 @@ Published at [Visual Studio Code Marketplace](https://marketplace.visualstudio.c
 
 ![Hexago Gopher](https://raw.githubusercontent.com/padiazg/hexago/refs/heads/master/logo.png)
 **Role:** Owner  [docs](https://padiazg.github.io/hexago/) [github](https://github.com/padiazg/hexago)  
-An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Automates project structure and component generation with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), component generators (services, domain entities, adapters, workers, database migrations), architecture compliance validation, and a multi-source customizable template system.
+An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Generates fully-wired project structure (domain, ports, adapters, services, workers, migrations) from a single command, with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), a multi-source customizable template system, and architecture validation that keeps generated code within hexagonal boundaries over time. Designed for AI coding agent compatibility — structured output makes it easy for LLMs to navigate and extend code.
 
 ## go-crap
 
 **Role:** Owner  [docs](https://padiazg.github.io/go-crap/) [github](https://github.com/padiazg/go-crap)  
-CRAP score calculator for Go projects. Calculates the CRAP score (cyclomatic complexity × coverage) for every function in a Go module.
+CRAP score (Change Risk Anti-Pattern) calculator with mutation testing integration. Calculates cyclomatic complexity × coverage ratio per function, integrates with go-gremlins for mutation testing (flags CoverageUntrusted when mutations survive, computing EffectiveCRAP), and outputs SARIF 2.1.0 (IDE/GitHub Code Scanning), PR-comment, and text formats for CI pipelines — the final guardrail ensuring AI-generated tests aren't just coverage theater.
 
 ## go-testgen
 
 **Role:** Owner  [docs](https://padiazg.github.io/go-testgen/) [github](https://github.com/padiazg/go-testgen)  
-A CLI tool to generate unit test scaffolding for Go projects. It produces closure-based check functions, a before hook for mock setup, and table-driven tests that compose cleanly as test suites grow.
+A domain-aware unit test scaffolding generator. Parses Go source code to produce table-driven tests grounded in actual domain structs and interfaces, with closure-based check patterns, before hooks for mock setup, and clean test composition. Bridges the gap between LLM-generated code and meaningful tests — ensuring AI tests reflect real domain behavior.
 
 ## unit-test-book
 
@@ -71,3 +71,7 @@ Automatically generate RESTful API documentation for GO projects - aligned with 
 ## OpenFaaS
 **Role:** Contributor  [github](https://github.com/openfaas/faas/blob/master/community.md)  
 OpenFaaS® makes it easy for developers to deploy event-driven functions and microservices to Kubernetes without repetitive, boilerplate coding. Actively collaborated with the project in its early days, researching, testing and advocating.
+
+## ClusterHAT Images
+**Role:** Owner  
+Created Raspbian/Ubuntu/Debian images for Orange Pi CM4 and Banana Pi M2 Zero.

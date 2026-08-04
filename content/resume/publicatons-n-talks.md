@@ -9,6 +9,11 @@ draft: false
 ---
 # Publications and Talks
 
+## Cup o' Go Podcast E164
+
+**Date:** July 2026  
+**Guest:** Featured guest discussing go-crap, mutation testing, and CRAP score analysis; also covered HexaGo, go-testgen, and Go Struct Analyzer. [Listen here](https://cupogo.dev/episodes/oh-crap-new-versions-of-go-gopherjs-and-typescript-are-less-crappy-than-before-or-are-they)  
+
 ## Hacktoberfest 2022
 
 **Date:** October 2022  

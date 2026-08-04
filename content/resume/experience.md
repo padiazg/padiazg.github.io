@@ -12,13 +12,17 @@ draft: false
 
 ---
 
-## Sr. Software Engineer
+## Senior Software Engineer
 
 **SEGEL SI** | *Jun 2025 - Feb 2026*
 
-- Designed and developed a Go library for decoding BLE IoT sensor payloads from 11+ device types using a registration-based registry pattern with zero external runtime dependencies.
-- Built a real-time IoT sensor data processing pipeline implementing hexagonal architecture: ingesting data via MQTT, decoding with a concurrent worker pool, and persisting to InfluxDB with exponential-backoff retry logic and full Prometheus observability.
-- Developed a scalable microservices payment processing system  covering the full credit card transaction lifecycle—authorization, batching, clearing, and settlement—using CQRS, Event Sourcing, NATS JetStream messaging, PostgreSQL, Redis, and OAuth2/OIDC authentication.
+*IoT data pipeline, payment gateway, and enterprise technology modernization*
+
+- Designed a zero-dependency Go library for BLE sensor payload decoding (11+ device types) using a registration-based registry pattern.
+- Built a real-time IoT data pipeline with hexagonal architecture: MQTT ingestion → concurrent worker pool → InfluxDB with exponential-backoff retry; 12 Prometheus metrics, liveness/readiness probes.
+- Led development of POSsible Payments, a cloud-native payment system covering the full transaction lifecycle — authorization → batching → clearing → settlement — using CQRS, Event Sourcing, and NATS JetStream.
+- Implemented OAuth2/OIDC authentication with RBAC-based multi-tenant merchant isolation using Authentik.
+- Built observability stack: Prometheus + Grafana + Fluentd across all services.
 
 **Key Achievements:**
 
@@ -26,11 +30,31 @@ draft: false
 - Architected an end-to-end IoT pipeline with graceful shutdown, structured JSON logging, and full observability (12 Prometheus metrics, liveness/readiness health endpoints).
 - Designed a payment microservices system with 4 independent services, event-driven inter-service communication via NATS JetStream, and RBAC-based multi-tenant merchant isolation.
 
-**Skills:** Golang, IoT, BLE, MQTT, InfluxDB, Hexagonal Architecture, Microservices, CQRS, Event Sourcing, NATS JetStream, PostgreSQL, Redis, JWT, OAuth2/OIDC, Prometheus, Grafana, Docker, Cobra, Viper
+**Skills:** Golang, IoT, BLE, MQTT, InfluxDB, Hexagonal Architecture, Microservices, CQRS, Event Sourcing, NATS JetStream, PostgreSQL, Redis, JWT, OAuth2/OIDC, Authentik, Prometheus, Grafana, Fluentd, Docker, Kubernetes, Cobra, Viper
 
 ---
 
-## Sr. Software Engineer / Technical Leader
+## Technical Lead — Golang Backend
+
+**[AR Santex LLC](https://santexgroup.com)** (Client Project) | *Remote* | *Jun 2025 - Oct 2025*
+
+*Cross-border financial integration between Argentinian digital wallet and Chilean banking institution*
+
+- Led a 3-engineer team delivering a scalable financial integration platform end-to-end.
+- Designed serverless architecture on AWS: Lambda, API Gateway, Aurora, EventBridge, Secrets Manager.
+- Established local dev environment with LocalStack + Docker + Kubernetes; enabled full parity with production.
+- Mentored 2 backend developers; conducted code reviews and established team best practices.
+
+**Key Achievements:**
+
+- Delivered a scalable integration platform end-to-end, from architecture design to stakeholder reporting.
+- Ensured high availability and security compliance for financial transactions via AWS serverless architecture.
+
+**Skills:** Golang, AWS Lambda, API Gateway, Aurora, EventBridge, Secrets Manager, LocalStack, Docker, Kubernetes
+
+---
+
+## Senior Software Engineer / Technical Lead
 
 **[Tyk Technologies Ltd](https://www.tyk.io)** | *Nov 2020 - May 2024*
 
@@ -75,19 +99,18 @@ draft: false
 
 ---
 
-## External IT Consultant
+## Senior IT Consultant
 
 **Vision Banco SAECA** | *May 2012 - Oct 2019*
 
-- Solved technical issues on internal applications that caused server crashes.
-- Provided technical advice to CTO, Team Leads and Developers.
-- Developed 3 mission-critical systems using cutting-edge technologies:
-  - Rewrote customers' data managing application
-  - Created a faster Loan installment calculator in Node.js, increasing installment count limit 5x and reducing calculation time from seconds to milliseconds
-  - Developed a distributed Customer Service Queue Manager with 4 async components using AMQP queues, WebSockets, and priority sorting algorithms
-- Developed mid-level components/libraries for internal use.
-- Implemented private clouds for serverless functions deployment.
-- Mentored and trained developers across multiple teams.
+*Banking technology modernization and digital transformation leadership*
+
+- Built 3 mission-critical systems including a complete rewrite of the customer data management application.
+- Redesigned loan quota calculator in Node.js — 5× throughput increase, processing time from seconds to milliseconds.
+- Designed a distributed customer service queue manager with 4 async components: AMQP, WebSockets, priority sorting.
+- Deployed 2 private clouds (dev/staging + production) with Docker Swarm, Kubernetes, and monitoring stack.
+- Mentored 10+ developers across 4 teams; provided technical guidance to CTO for 30% of working hours.
+- Eliminated critical server stability issues that caused hours-long recovery windows.
 
 **Key Achievements:**
 
