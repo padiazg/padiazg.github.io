@@ -17,16 +17,26 @@ draft: false
 A VS Code extension to show memory size and padding information for Go structs, helping you optimize memory usage and understand struct layout.
 Published at [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=PatricioDiaz.go-struct-analyzer) and [Open VSX Registry](https://open-vsx.org/extension/PatricioDiaz/go-struct-analyzer), featured at [The Applied Go Weekly Newsletter](https://newsletter.appliedgo.net/archive/2025-06-22-go-before-you-wait/)
 
+## go-crap
+
+**Role:** Owner  [docs](https://padiazg.github.io/go-crap/) [github](https://github.com/padiazg/go-crap)  
+CRAP score (Change Risk Anti-Pattern) calculator with mutation testing integration. Calculates cyclomatic complexity × coverage ratio per function, integrates with go-gremlins for mutation testing (flags CoverageUntrusted when mutations survive, computing EffectiveCRAP), and outputs SARIF 2.1.0 (IDE/GitHub Code Scanning), PR-comment, and text formats for CI pipelines — the final guardrail ensuring AI-generated tests aren't just coverage theater.
+
+## go-crap-action
+
+**Role:** Owner  [github](https://github.com/padiazg/go-crap-action)
+Run go-crap in GitHub Actions without installing the tool or a Go toolchain. The action executes the published ghcr.io/padiazg/go-crap Docker image against your checked-out code.
+
+## go-crap-tracker
+
+**Role:** Owner  [docs](https://padiazg.github.io/go-crap-tracker/) [github](https://github.com/padiazg/go-crap-tracker)
+Distributed, async scan tracker for go-crap. Schedule repository scans over NATS JetStream, workers run go-crap scan, results stored in Postgres, and live updates stream via SSE with an embedded web UI.
+
 ## HexaGo
 
 ![Hexago Gopher](https://raw.githubusercontent.com/padiazg/hexago/refs/heads/master/logo.png)
 **Role:** Owner  [docs](https://padiazg.github.io/hexago/) [github](https://github.com/padiazg/hexago)  
 An opinionated CLI scaffolding tool for Go developers building applications following the Hexagonal Architecture (Ports & Adapters) pattern. Generates fully-wired project structure (domain, ports, adapters, services, workers, migrations) from a single command, with support for multiple HTTP frameworks (stdlib, Echo, Gin, Chi, Fiber), a multi-source customizable template system, and architecture validation that keeps generated code within hexagonal boundaries over time. Designed for AI coding agent compatibility — structured output makes it easy for LLMs to navigate and extend code.
-
-## go-crap
-
-**Role:** Owner  [docs](https://padiazg.github.io/go-crap/) [github](https://github.com/padiazg/go-crap)  
-CRAP score (Change Risk Anti-Pattern) calculator with mutation testing integration. Calculates cyclomatic complexity × coverage ratio per function, integrates with go-gremlins for mutation testing (flags CoverageUntrusted when mutations survive, computing EffectiveCRAP), and outputs SARIF 2.1.0 (IDE/GitHub Code Scanning), PR-comment, and text formats for CI pipelines — the final guardrail ensuring AI-generated tests aren't just coverage theater.
 
 ## go-testgen
 
