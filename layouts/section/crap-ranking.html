@@ -1,0 +1,66 @@
+{{- define "main" }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>
+    {{ .Title }}
+    {{- with .OutputFormats.Get "rss" }}
+    <a href="{{ .RelPermalink }}" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+    {{- end }}
+  </h1>
+</header>
+
+{{- $size := int (.Param "paginate") | default 10 }}
+{{- $paginator := .Paginate (union .RegularPages .Sections) $size }}
+
+<div class="post-content md-content">
+  {{- if eq $paginator.PageNumber 1 }}
+  {{ .Content }}
+  {{- end }}
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Repo</th>
+        <th>Stars</th>
+        <th>Combined</th>
+        <th>Average</th>
+        <th>Funcs</th>
+        <th>Analyzed</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{- range $i, $p := $paginator.Pages }}
+      <tr>
+        <td>{{ add (mul (sub $paginator.PageNumber 1) $size) (add $i 1) }}</td>
+        <td><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></td>
+        <td>{{ $p.Params.stars }}</td>
+        <td>{{ printf "%.2f" $p.Params.combined }}</td>
+        <td>{{ printf "%.2f" $p.Params.average }}</td>
+        <td>{{ $p.Params.funcs }}</td>
+        <td>{{ $p.Date.Format "2006-01-02" }}</td>
+      </tr>
+      {{- end }}
+    </tbody>
+  </table>
+</div>
+
+{{- if gt $paginator.TotalPages 1 }}
+<footer class="page-footer">
+  <nav class="pagination">
+    {{- if $paginator.HasPrev }}
+    <a class="prev" href="{{ $paginator.Prev.URL | relURL }}">«&nbsp;Prev</a>
+    {{- end }}
+    {{- if $paginator.HasNext }}
+    <a class="next" href="{{ $paginator.Next.URL | relURL }}">Next&nbsp;»</a>
+    {{- end }}
+  </nav>
+</footer>
+{{- end }}
+{{- end }}

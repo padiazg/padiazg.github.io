@@ -26,8 +26,12 @@ menu:
       url: search/
     - name: Resume
       url: resume/
+    - name: CRAP
+      url: crap-ranking/
 
 params:
+  defaultTheme: auto
+  comments: true
   env: production
   author: Pato Diaz
 
@@ -42,18 +46,14 @@ params:
   # relativeURLs: true
   # baseURL: "https://padiazg.github.io/"
 
-  defaultTheme: auto
-
-  comments: true
-
   profileMode:
     enabled: true
     title: "Pato Diaz"
     subtitle: "Senior Software Engineer · Go · Open Source · Cloud"
     imageUrl: "profile.jpg"
     imageTitle: "Pato Diaz"
-    imageWidth: 160
-    imageHeight: 160
+    imageWidth: 320
+    imageHeight: 320
     buttons:
       - name: Blog
         url: "/blog"
