@@ -5,7 +5,7 @@ slug: caddyserver-caddy
 tags: ["crap", "report"]
 draft: false
 repo: caddyserver/caddy
-weight: 7
+weight: 8
 stars: 75031
 combined: 169791.14
 average: 84.90
@@ -21,7 +21,7 @@ Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS
 </div>
 
 - **Repository**: github.com/caddyserver/caddy
-- **Commit**: `45ba3278b5822f6fa6107a44ca41669b6e722482` · HEAD up to date
+- **Commit**: `45ba3278b5822f6fa6107a44ca41669b6e722482` · HEAD now `0cf03d3` — re-scan to update
 - **Analyzed**: 2026-08-19T22:55:55-03:00 (354.5s)
 - **Engine**: local · go-crap 0.5.1
 

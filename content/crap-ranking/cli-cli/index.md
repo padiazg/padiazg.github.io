@@ -5,7 +5,7 @@ slug: cli-cli
 tags: ["crap", "report"]
 draft: false
 repo: cli/cli
-weight: 10
+weight: 11
 stars: 45894
 combined: 48855.97
 average: 13.95
@@ -21,7 +21,7 @@ GitHub’s official command line tool
 </div>
 
 - **Repository**: github.com/cli/cli
-- **Commit**: `95d3a1db45abd547c2dafbee4f8a68ca53fb9c80` · HEAD up to date
+- **Commit**: `95d3a1db45abd547c2dafbee4f8a68ca53fb9c80` · HEAD now `5d3c481` — re-scan to update
 - **Analyzed**: 2026-08-19T23:14:55-03:00 (272.9s)
 - **Engine**: local · go-crap 0.5.1
 

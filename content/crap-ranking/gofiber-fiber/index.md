@@ -5,7 +5,7 @@ slug: gofiber-fiber
 tags: ["crap", "report"]
 draft: false
 repo: gofiber/fiber
-weight: 13
+weight: 14
 stars: 40069
 combined: 8247.03
 average: 4.53
@@ -21,7 +21,7 @@ ShowToc: false
 </div>
 
 - **Repository**: github.com/gofiber/fiber
-- **Commit**: `fec5891c18437669ade008e10bb82b8a3b7ed530` · HEAD up to date
+- **Commit**: `fec5891c18437669ade008e10bb82b8a3b7ed530` · HEAD now `c344047` — re-scan to update
 - **Analyzed**: 2026-08-19T22:49:57-03:00 (160.4s)
 - **Engine**: local · go-crap 0.5.1
 

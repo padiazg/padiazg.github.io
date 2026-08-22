@@ -5,7 +5,7 @@ slug: traefik-traefik
 tags: ["crap", "report"]
 draft: false
 repo: traefik/traefik
-weight: 8
+weight: 9
 stars: 64499
 combined: 150456.00
 average: 42.59
@@ -21,7 +21,7 @@ The Cloud Native Application Proxy
 </div>
 
 - **Repository**: github.com/traefik/traefik
-- **Commit**: `6fc09bbb36e0fec6f6a7dec2fbdb2721b0c0cb22` · HEAD up to date
+- **Commit**: `6fc09bbb36e0fec6f6a7dec2fbdb2721b0c0cb22` · HEAD now `9bb0e55` — re-scan to update
 - **Analyzed**: 2026-08-19T23:27:29-03:00 (663.2s)
 - **Engine**: local · go-crap 0.5.1
 

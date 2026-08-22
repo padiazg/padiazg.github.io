@@ -1,13 +1,13 @@
 ---
 title: "labstack/echo"
-date: 2026-08-19
+date: 2026-08-21
 slug: labstack-echo
 tags: ["crap", "report"]
 draft: false
 repo: labstack/echo
-weight: 15
-stars: 32640
-combined: 1925.29
+weight: 16
+stars: 32649
+combined: 1927.55
 average: 3.64
 funcs: 529
 toc: false
@@ -21,19 +21,20 @@ High performance, minimalist Go web framework
 </div>
 
 - **Repository**: github.com/labstack/echo
-- **Commit**: `05489dc1730161df26b72d1ae2a3ba6fb8178fc7` · HEAD up to date
-- **Analyzed**: 2026-08-19T22:47:13-03:00 (3.3s)
+- **Commit**: `4ec116dc9b5bff1da7513c0dc86095d0e8ce9654` · HEAD up to date
+- **Analyzed**: 2026-08-21T22:47:52-03:00 (153ms)
 - **Engine**: local · go-crap 0.5.1
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0"/><circle cx="3.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="3.0" y="10" font-size="9" fill="#555" text-anchor="end">1925</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 117.0,3.0"/><circle cx="117.0" cy="3.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">1928</text></svg>
 
 ## History
 
 | Date | Commit | Combined | Average | Funcs | Exceeded | Engine |
 |------|--------|----------|---------|-------|----------|--------|
 | 2026-08-19 | `05489dc` | 1925.29 | 3.64 | 529 | 6 | local |
+| 2026-08-21 | `4ec116d` | 1927.55 | 3.64 | 529 | 6 | local |
 
 ## Top offenders
 
@@ -45,7 +46,7 @@ High performance, minimalist Go web framework
 | 39.01 | 39 | 98.5% | `RequestLoggerConfig.ToMiddleware` | [middleware/request_logger.go:246](https://github.com/labstack/echo/blob/master/middleware/request_logger.go#L246) |
 | 36.25 | 32 | 83.9% | `StaticConfig.ToMiddleware` | [middleware/static.go:177](https://github.com/labstack/echo/blob/master/middleware/static.go#L177) |
 | 31.09 | 31 | 95.5% | `*DefaultRouter.Remove` | [router.go:384](https://github.com/labstack/echo/blob/master/router.go#L384) |
-| 28.11 | 28 | 94.7% | `CSRFConfig.ToMiddleware` | [middleware/csrf.go:126](https://github.com/labstack/echo/blob/master/middleware/csrf.go#L126) |
+| 29.11 | 29 | 94.9% | `CSRFConfig.ToMiddleware` | [middleware/csrf.go:127](https://github.com/labstack/echo/blob/master/middleware/csrf.go#L127) |
 | 26.17 | 26 | 93.8% | `CORSConfig.ToMiddleware` | [middleware/cors.go:151](https://github.com/labstack/echo/blob/master/middleware/cors.go#L151) |
-| 26.00 | 26 | 100.0% | `*ValueBinder.uints` | [binder.go:805](https://github.com/labstack/echo/blob/master/binder.go#L805) |
 | 26.00 | 26 | 100.0% | `*ValueBinder.ints` | [binder.go:577](https://github.com/labstack/echo/blob/master/binder.go#L577) |
+| 26.00 | 26 | 100.0% | `*ValueBinder.uints` | [binder.go:805](https://github.com/labstack/echo/blob/master/binder.go#L805) |

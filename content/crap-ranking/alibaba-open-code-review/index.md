@@ -5,7 +5,7 @@ slug: alibaba-open-code-review
 tags: ["crap", "report"]
 draft: false
 repo: alibaba/open-code-review
-weight: 14
+weight: 15
 stars: 20891
 combined: 5575.73
 average: 5.77
@@ -21,7 +21,7 @@ Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code revi
 </div>
 
 - **Repository**: github.com/alibaba/open-code-review
-- **Commit**: `756203c31a5aa408d89b0eda7711c34fba4ecedc` · HEAD now `699c914` — re-scan to update
+- **Commit**: `756203c31a5aa408d89b0eda7711c34fba4ecedc` · HEAD now `6612029` — re-scan to update
 - **Analyzed**: 2026-08-19T23:10:17-03:00 (177.6s)
 - **Engine**: local · go-crap 0.5.1
 

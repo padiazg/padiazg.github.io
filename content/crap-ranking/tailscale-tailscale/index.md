@@ -5,7 +5,7 @@ slug: tailscale-tailscale
 tags: ["crap", "report"]
 draft: false
 repo: tailscale/tailscale
-weight: 2
+weight: 3
 stars: 35371
 combined: 597932.51
 average: 49.57
@@ -21,7 +21,7 @@ The easiest, most secure way to use WireGuard and 2FA.
 </div>
 
 - **Repository**: github.com/tailscale/tailscale
-- **Commit**: `c87680a0bf4c66f455a5b6f2c1cb56bf4a15ae76` · HEAD up to date
+- **Commit**: `c87680a0bf4c66f455a5b6f2c1cb56bf4a15ae76` · HEAD now `86e5d38` — re-scan to update
 - **Analyzed**: 2026-08-19T23:25:56-03:00 (652.7s)
 - **Engine**: local · go-crap 0.5.1
 

@@ -21,7 +21,7 @@ SDLC evidence store and policy engine for your Software Supply Chain attestation
 </div>
 
 - **Repository**: github.com/chainloop-dev/chainloop
-- **Commit**: `9e58df4d136238acab2e288e34dbe3fe2379518c` · HEAD up to date
+- **Commit**: `9e58df4d136238acab2e288e34dbe3fe2379518c` · HEAD now `40014e9` — re-scan to update
 - **Analyzed**: 2026-08-19T23:15:53-03:00 (643.4s)
 - **Engine**: local · go-crap 0.5.1
 

@@ -1,15 +1,15 @@
 ---
 title: "go/chi/chi"
-date: 2026-08-19
+date: 2026-08-21
 slug: go-chi-chi
 tags: ["crap", "report"]
 draft: false
 repo: go-chi/chi
-weight: 17
-stars: 22697
-combined: 757.65
-average: 4.16
-funcs: 182
+weight: 18
+stars: 22713
+combined: 771.02
+average: 4.19
+funcs: 184
 toc: false
 ShowToc: false
 ---
@@ -21,31 +21,32 @@ lightweight, idiomatic and composable router for building Go HTTP services
 </div>
 
 - **Repository**: github.com/go-chi/chi
-- **Commit**: `8b258c7bb28f97a5f2a856ff7ef962578fec9215` · HEAD up to date
-- **Analyzed**: 2026-08-19T22:47:08-03:00 (682ms)
+- **Commit**: `735ae2b87f8c733d616e809ae86e0985c1bc3350` · HEAD up to date
+- **Analyzed**: 2026-08-21T22:47:47-03:00 (27.3s)
 - **Engine**: local · go-crap 0.5.1
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0"/><circle cx="3.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="3.0" y="10" font-size="9" fill="#555" text-anchor="end">758</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 117.0,3.0"/><circle cx="117.0" cy="3.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">771</text></svg>
 
 ## History
 
 | Date | Commit | Combined | Average | Funcs | Exceeded | Engine |
 |------|--------|----------|---------|-------|----------|--------|
 | 2026-08-19 | `8b258c7` | 757.65 | 4.16 | 182 | 1 | local |
+| 2026-08-21 | `735ae2b` | 771.02 | 4.19 | 184 | 1 | local |
 
 ## Top offenders
 
 | Crap | Complexity | Coverage | Function | File |
 |----------|------|------|------------|----------|
-| 37.23 | 37 | 94.4% | `*node.findRoute` | [tree.go:409](https://github.com/go-chi/chi/blob/master/tree.go#L409) |
+| 39.23 | 39 | 94.6% | `*node.findRoute` | [tree.go:410](https://github.com/go-chi/chi/blob/master/tree.go#L410) |
 | 20.00 | 4 | 0.0% | `NoCache` | [middleware/nocache.go:40](https://github.com/go-chi/chi/blob/master/middleware/nocache.go#L40) |
 | 20.00 | 4 | 0.0% | `BasicAuth` | [middleware/basic_auth.go:10](https://github.com/go-chi/chi/blob/master/middleware/basic_auth.go#L10) |
-| 20.00 | 4 | 0.0% | `*compressResponseWriter.Flush` | [middleware/compress.go:339](https://github.com/go-chi/chi/blob/master/middleware/compress.go#L339) |
+| 20.00 | 4 | 0.0% | `*compressResponseWriter.Flush` | [middleware/compress.go:357](https://github.com/go-chi/chi/blob/master/middleware/compress.go#L357) |
 | 20.00 | 4 | 0.0% | `Heartbeat` | [middleware/heartbeat.go:12](https://github.com/go-chi/chi/blob/master/middleware/heartbeat.go#L12) |
-| 18.02 | 18 | 96.2% | `patNextSegment` | [tree.go:695](https://github.com/go-chi/chi/blob/master/tree.go#L695) |
+| 18.02 | 18 | 96.2% | `patNextSegment` | [tree.go:735](https://github.com/go-chi/chi/blob/master/tree.go#L735) |
 | 17.05 | 17 | 94.4% | `*Mux.Mount` | [mux.go:295](https://github.com/go-chi/chi/blob/master/mux.go#L295) |
-| 13.02 | 13 | 95.0% | `*node.routes` | [tree.go:628](https://github.com/go-chi/chi/blob/master/tree.go#L628) |
+| 16.00 | 16 | 100.0% | `*node.routes` | [tree.go:633](https://github.com/go-chi/chi/blob/master/tree.go#L633) |
 | 12.34 | 12 | 86.7% | `ThrottleWithOpts` | [middleware/throttle.go:44](https://github.com/go-chi/chi/blob/master/middleware/throttle.go#L44) |
-| 12.09 | 11 | 79.2% | `walk` | [tree.go:846](https://github.com/go-chi/chi/blob/master/tree.go#L846) |
+| 12.09 | 11 | 79.2% | `walk` | [tree.go:886](https://github.com/go-chi/chi/blob/master/tree.go#L886) |

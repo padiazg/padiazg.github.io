@@ -5,7 +5,7 @@ slug: go-gorm-gorm
 tags: ["crap", "report"]
 draft: false
 repo: go-gorm/gorm
-weight: 9
+weight: 10
 stars: 39910
 combined: 68211.65
 average: 120.73
