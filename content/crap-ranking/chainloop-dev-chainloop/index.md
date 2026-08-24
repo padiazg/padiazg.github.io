@@ -1,15 +1,15 @@
 ---
 title: "chainloop/dev/chainloop"
-date: 2026-08-19
+date: 2026-08-23
 slug: chainloop-dev-chainloop
 tags: ["crap", "report"]
 draft: false
 repo: chainloop-dev/chainloop
 weight: 5
-stars: 581
-combined: 297321.66
-average: 18.50
-funcs: 16068
+stars: 582
+combined: 266862.02
+average: 16.49
+funcs: 16182
 toc: false
 ShowToc: false
 ---
@@ -21,13 +21,19 @@ SDLC evidence store and policy engine for your Software Supply Chain attestation
 </div>
 
 - **Repository**: github.com/chainloop-dev/chainloop
-- **Commit**: `9e58df4d136238acab2e288e34dbe3fe2379518c` · HEAD now `40014e9` — re-scan to update
-- **Analyzed**: 2026-08-19T23:15:53-03:00 (643.4s)
+- **Commit**: `40014e92b10624d9b6fe755b4088853a608a22fc` · HEAD up to date
+- **Analyzed**: 2026-08-23T23:59:19-03:00 (13.0s)
 - **Engine**: local · go-crap 0.5.1
+
+## go-crap command
+
+```shell
+go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profile .go-crap-cover.out ./...
+```
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">297322</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.0 60.0,3.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">266862</text></svg>
 
 ## History
 
@@ -35,6 +41,7 @@ SDLC evidence store and policy engine for your Software Supply Chain attestation
 |------|--------|----------|---------|-------|----------|--------|
 | 2026-08-18 | `34f0f6f` | 297321.66 | 18.50 | 16068 | 1177 | local |
 | 2026-08-19 | `9e58df4` | 297321.66 | 18.50 | 16068 | 1177 | local |
+| 2026-08-23 | `40014e9` | 266862.02 | 16.49 | 16182 | 954 | local |
 
 ## Top offenders
 
@@ -49,4 +56,4 @@ SDLC evidence store and policy engine for your Software Supply Chain attestation
 | 3540.00 | 59 | 0.0% | `*WorkflowUpdate.sqlSave` | [app/controlplane/pkg/data/ent/workflow_update.go:509](https://github.com/chainloop-dev/chainloop/blob/main/app/controlplane/pkg/data/ent/workflow_update.go#L509) |
 | 2970.00 | 54 | 0.0% | `*CASBackend.assignValues` | [app/controlplane/pkg/data/ent/casbackend.go:116](https://github.com/chainloop-dev/chainloop/blob/main/app/controlplane/pkg/data/ent/casbackend.go#L116) |
 | 2862.00 | 53 | 0.0% | `*Workflow.assignValues` | [app/controlplane/pkg/data/ent/workflow.go:194](https://github.com/chainloop-dev/chainloop/blob/main/app/controlplane/pkg/data/ent/workflow.go#L194) |
-| 2450.00 | 49 | 0.0% | `Craft` | [pkg/attestation/crafter/materials/materials.go:330](https://github.com/chainloop-dev/chainloop/blob/main/pkg/attestation/crafter/materials/materials.go#L330) |
+| 2256.00 | 47 | 0.0% | `*Organization.assignValues` | [app/controlplane/pkg/data/ent/organization.go:186](https://github.com/chainloop-dev/chainloop/blob/main/app/controlplane/pkg/data/ent/organization.go#L186) |

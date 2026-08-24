@@ -1,15 +1,15 @@
 ---
 title: "traefik/traefik"
-date: 2026-08-19
+date: 2026-08-23
 slug: traefik-traefik
 tags: ["crap", "report"]
 draft: false
 repo: traefik/traefik
-weight: 9
-stars: 64499
-combined: 150456.00
-average: 42.59
-funcs: 3533
+weight: 10
+stars: 64552
+combined: 45611.73
+average: 12.84
+funcs: 3552
 toc: false
 ShowToc: false
 ---
@@ -21,13 +21,19 @@ The Cloud Native Application Proxy
 </div>
 
 - **Repository**: github.com/traefik/traefik
-- **Commit**: `6fc09bbb36e0fec6f6a7dec2fbdb2721b0c0cb22` · HEAD now `9bb0e55` — re-scan to update
-- **Analyzed**: 2026-08-19T23:27:29-03:00 (663.2s)
+- **Commit**: `9bb0e55e86610836eb564513a788325359adb0b8` · HEAD up to date
+- **Analyzed**: 2026-08-23T23:59:29-03:00 (1.2s)
 - **Engine**: local · go-crap 0.5.1
+
+## go-crap command
+
+```shell
+go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profile .go-crap-cover.out ./...
+```
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 117.0,3.0"/><circle cx="117.0" cy="3.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">150456</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.2 60.0,3.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">45612</text></svg>
 
 ## History
 
@@ -35,18 +41,19 @@ The Cloud Native Application Proxy
 |------|--------|----------|---------|-------|----------|--------|
 | 2026-08-18 | `b51bd71` | 149626.00 | 42.46 | 3524 | 593 | local |
 | 2026-08-19 | `6fc09bb` | 150456.00 | 42.59 | 3533 | 593 | local |
+| 2026-08-23 | `9bb0e55` | 45611.73 | 12.84 | 3552 | 183 | local |
 
 ## Top offenders
 
 | Crap | Complexity | Coverage | Function | File |
 |----------|------|------|------------|----------|
-| 6480.00 | 80 | 0.0% | `*Provider.build` | [pkg/provider/kubernetes/ingress-nginx/build.go:55](https://github.com/traefik/traefik/blob/master/pkg/provider/kubernetes/ingress-nginx/build.go#L55) |
-| 6006.00 | 77 | 0.0% | `*Builder.buildConstructor` | [pkg/server/middleware/middlewares.go:101](https://github.com/traefik/traefik/blob/master/pkg/server/middleware/middlewares.go#L101) |
-| 4970.00 | 70 | 0.0% | `*Provider.loadConfigurationFromCRD` | [pkg/provider/kubernetes/crd/kubernetes.go:248](https://github.com/traefik/traefik/blob/master/pkg/provider/kubernetes/crd/kubernetes.go#L248) |
 | 4032.00 | 63 | 0.0% | `ForKind` | [pkg/provider/kubernetes/crd/generated/applyconfiguration/utils.go:40](https://github.com/traefik/traefik/blob/master/pkg/provider/kubernetes/crd/generated/applyconfiguration/utils.go#L40) |
-| 2970.00 | 54 | 0.0% | `*Configuration.SetEffectiveConfiguration` | [pkg/config/static/static_config.go:294](https://github.com/traefik/traefik/blob/master/pkg/config/static/static_config.go#L294) |
-| 2450.00 | 49 | 0.0% | `*Provider.loadConfigurationFromIngresses` | [pkg/provider/kubernetes/ingress/kubernetes.go:220](https://github.com/traefik/traefik/blob/master/pkg/provider/kubernetes/ingress/kubernetes.go#L220) |
-| 2450.00 | 49 | 0.0% | `*Configuration.ValidateConfiguration` | [pkg/config/static/static_config.go:451](https://github.com/traefik/traefik/blob/master/pkg/config/static/static_config.go#L451) |
-| 1892.00 | 43 | 0.0% | `*Provider.loadService` | [pkg/provider/kubernetes/ingress/kubernetes.go:583](https://github.com/traefik/traefik/blob/master/pkg/provider/kubernetes/ingress/kubernetes.go#L583) |
+| 2168.02 | 77 | 29.3% | `*Builder.buildConstructor` | [pkg/server/middleware/middlewares.go:101](https://github.com/traefik/traefik/blob/master/pkg/server/middleware/middlewares.go#L101) |
 | 1560.00 | 39 | 0.0% | `setupServer` | [cmd/traefik/traefik.go:174](https://github.com/traefik/traefik/blob/master/cmd/traefik/traefik.go#L174) |
-| 1406.00 | 37 | 0.0% | `configBuilder.loadServers` | [pkg/provider/kubernetes/crd/kubernetes_http.go:558](https://github.com/traefik/traefik/blob/master/pkg/provider/kubernetes/crd/kubernetes_http.go#L558) |
+| 1332.00 | 36 | 0.0% | `*Provider.watchNewDomains` | [pkg/provider/acme/provider.go:515](https://github.com/traefik/traefik/blob/master/pkg/provider/acme/provider.go#L515) |
+| 1122.00 | 33 | 0.0% | `*Provider.listInstances` | [pkg/provider/ecs/ecs.go:207](https://github.com/traefik/traefik/blob/master/pkg/provider/ecs/ecs.go#L207) |
+| 812.00 | 28 | 0.0% | `*MiddlewareSpec.DeepCopyInto` | [pkg/provider/kubernetes/crd/traefikio/v1alpha1/zz_generated.deepcopy.go:905](https://github.com/traefik/traefik/blob/master/pkg/provider/kubernetes/crd/traefikio/v1alpha1/zz_generated.deepcopy.go#L905) |
+| 691.61 | 49 | 35.6% | `*Configuration.ValidateConfiguration` | [pkg/config/static/static_config.go:453](https://github.com/traefik/traefik/blob/master/pkg/config/static/static_config.go#L453) |
+| 650.00 | 25 | 0.0% | `fill` | [pkg/collector/hydratation/hydration.go:26](https://github.com/traefik/traefik/blob/master/pkg/collector/hydratation/hydration.go#L26) |
+| 600.00 | 24 | 0.0% | `*Provider.getClient` | [pkg/provider/acme/provider.go:276](https://github.com/traefik/traefik/blob/master/pkg/provider/acme/provider.go#L276) |
+| 462.00 | 21 | 0.0% | `NewProviderAggregator` | [pkg/provider/aggregator/aggregator.go:71](https://github.com/traefik/traefik/blob/master/pkg/provider/aggregator/aggregator.go#L71) |

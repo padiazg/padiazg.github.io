@@ -1,11 +1,11 @@
 ---
 title: "gorilla/mux"
-date: 2026-08-21
+date: 2026-08-23
 slug: gorilla-mux
 tags: ["crap", "report"]
 draft: false
 repo: gorilla/mux
-weight: 19
+weight: 18
 stars: 21839
 combined: 357.79
 average: 3.31
@@ -22,8 +22,14 @@ Package gorilla/mux is a powerful HTTP router and URL matcher for building Go we
 
 - **Repository**: github.com/gorilla/mux
 - **Commit**: `db9d1d0073d27a0a2d9a8c1bc52aa0af4374d265` · HEAD up to date
-- **Analyzed**: 2026-08-21T22:47:19-03:00 (32ms)
+- **Analyzed**: 2026-08-23T23:59:15-03:00 (33ms)
 - **Engine**: local · go-crap 0.5.1
+
+## go-crap command
+
+```shell
+go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profile .go-crap-cover.out ./...
+```
 
 ## Trend
 
@@ -33,7 +39,7 @@ Package gorilla/mux is a powerful HTTP router and URL matcher for building Go we
 
 | Date | Commit | Combined | Average | Funcs | Exceeded | Engine |
 |------|--------|----------|---------|-------|----------|--------|
-| 2026-08-21 | `db9d1d0` | 357.79 | 3.31 | 108 | 0 | local |
+| 2026-08-23 | `db9d1d0` | 357.79 | 3.31 | 108 | 0 | local |
 
 ## Top offenders
 

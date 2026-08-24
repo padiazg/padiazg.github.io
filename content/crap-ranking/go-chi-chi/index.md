@@ -1,12 +1,12 @@
 ---
 title: "go/chi/chi"
-date: 2026-08-21
+date: 2026-08-23
 slug: go-chi-chi
 tags: ["crap", "report"]
 draft: false
 repo: go-chi/chi
-weight: 18
-stars: 22713
+weight: 17
+stars: 22716
 combined: 771.02
 average: 4.19
 funcs: 184
@@ -22,8 +22,14 @@ lightweight, idiomatic and composable router for building Go HTTP services
 
 - **Repository**: github.com/go-chi/chi
 - **Commit**: `735ae2b87f8c733d616e809ae86e0985c1bc3350` · HEAD up to date
-- **Analyzed**: 2026-08-21T22:47:47-03:00 (27.3s)
+- **Analyzed**: 2026-08-23T23:59:11-03:00 (51ms)
 - **Engine**: local · go-crap 0.5.1
+
+## go-crap command
+
+```shell
+go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profile .go-crap-cover.out ./...
+```
 
 ## Trend
 
@@ -34,7 +40,7 @@ lightweight, idiomatic and composable router for building Go HTTP services
 | Date | Commit | Combined | Average | Funcs | Exceeded | Engine |
 |------|--------|----------|---------|-------|----------|--------|
 | 2026-08-19 | `8b258c7` | 757.65 | 4.16 | 182 | 1 | local |
-| 2026-08-21 | `735ae2b` | 771.02 | 4.19 | 184 | 1 | local |
+| 2026-08-23 | `735ae2b` | 771.02 | 4.19 | 184 | 1 | local |
 
 ## Top offenders
 

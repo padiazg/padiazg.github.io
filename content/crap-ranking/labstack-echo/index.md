@@ -1,12 +1,12 @@
 ---
 title: "labstack/echo"
-date: 2026-08-21
+date: 2026-08-23
 slug: labstack-echo
 tags: ["crap", "report"]
 draft: false
 repo: labstack/echo
-weight: 16
-stars: 32649
+weight: 15
+stars: 32652
 combined: 1927.55
 average: 3.64
 funcs: 529
@@ -22,8 +22,14 @@ High performance, minimalist Go web framework
 
 - **Repository**: github.com/labstack/echo
 - **Commit**: `4ec116dc9b5bff1da7513c0dc86095d0e8ce9654` · HEAD up to date
-- **Analyzed**: 2026-08-21T22:47:52-03:00 (153ms)
+- **Analyzed**: 2026-08-23T23:59:17-03:00 (150ms)
 - **Engine**: local · go-crap 0.5.1
+
+## go-crap command
+
+```shell
+go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profile .go-crap-cover.out ./...
+```
 
 ## Trend
 
@@ -34,7 +40,7 @@ High performance, minimalist Go web framework
 | Date | Commit | Combined | Average | Funcs | Exceeded | Engine |
 |------|--------|----------|---------|-------|----------|--------|
 | 2026-08-19 | `05489dc` | 1925.29 | 3.64 | 529 | 6 | local |
-| 2026-08-21 | `4ec116d` | 1927.55 | 3.64 | 529 | 6 | local |
+| 2026-08-23 | `4ec116d` | 1927.55 | 3.64 | 529 | 6 | local |
 
 ## Top offenders
 

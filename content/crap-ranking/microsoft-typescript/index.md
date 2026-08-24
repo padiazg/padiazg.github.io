@@ -6,7 +6,7 @@ tags: ["crap", "report"]
 draft: false
 repo: microsoft/typescript
 weight: 1
-stars: 110390
+stars: 110634
 combined: 5958697.68
 average: 410.63
 funcs: 14511
@@ -21,7 +21,7 @@ TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
 </div>
 
 - **Repository**: github.com/microsoft/typescript
-- **Commit**: `89d5d5b2849a0db0957065889ca58536fa6d2e4a` · HEAD now `d6c4afd` — re-scan to update
+- **Commit**: `89d5d5b2849a0db0957065889ca58536fa6d2e4a` · HEAD now `e9e4774` — re-scan to update
 - **Analyzed**: 2026-08-22T00:17:06-03:00 (660.4s)
 - **Engine**: local · go-crap 0.5.1
 

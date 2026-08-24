@@ -1,12 +1,12 @@
 ---
 title: "ollama/ollama"
-date: 2026-08-21
+date: 2026-08-23
 slug: ollama-ollama
 tags: ["crap", "report"]
 draft: false
 repo: ollama/ollama
-weight: 7
-stars: 179128
+weight: 6
+stars: 179287
 combined: 188734.36
 average: 32.57
 funcs: 5795
@@ -21,13 +21,19 @@ Get up and running with Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, gpt-oss, Qwen, Ge
 </div>
 
 - **Repository**: github.com/ollama/ollama
-- **Commit**: `add1f92bdd2ff96e9df40499e8e83e44cd702343` · HEAD now `fb30760` — re-scan to update
-- **Analyzed**: 2026-08-21T22:48:41-03:00 (49.2s)
+- **Commit**: `fb30760996871fa9460115c753afd2c60d4ab0f7` · HEAD up to date
+- **Analyzed**: 2026-08-23T23:59:22-03:00 (3.1s)
 - **Engine**: local · go-crap 0.5.1
+
+## go-crap command
+
+```shell
+go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profile .go-crap-cover.out ./...
+```
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.6 60.0,3.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">188734</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.6 41.0,3.0 79.0,29.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">188734</text></svg>
 
 ## History
 
@@ -36,6 +42,7 @@ Get up and running with Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, gpt-oss, Qwen, Ge
 | 2026-08-18 | `d67ad83` | 228126.59 | 46.60 | 4895 | 682 | local |
 | 2026-08-19 | `b7871fc` | 229127.85 | 46.77 | 4899 | 684 | local |
 | 2026-08-21 | `add1f92` | 188734.36 | 32.57 | 5795 | 633 | local |
+| 2026-08-23 | `fb30760` | 188734.36 | 32.57 | 5795 | 633 | local |
 
 ## Top offenders
 

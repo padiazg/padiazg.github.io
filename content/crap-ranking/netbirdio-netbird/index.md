@@ -1,15 +1,15 @@
 ---
 title: "netbirdio/netbird"
-date: 2026-08-21
+date: 2026-08-23
 slug: netbirdio-netbird
 tags: ["crap", "report"]
 draft: false
 repo: netbirdio/netbird
-weight: 6
-stars: 28577
-combined: 288952.75
-average: 19.75
-funcs: 14629
+weight: 4
+stars: 28614
+combined: 289265.15
+average: 19.69
+funcs: 14688
 toc: false
 ShowToc: false
 ---
@@ -21,13 +21,19 @@ Connect your devices into a secure WireGuard®-based overlay network with SSO, M
 </div>
 
 - **Repository**: github.com/netbirdio/netbird
-- **Commit**: `335adfe9c371cdd3b7433d62ec9ac888a57aa2c1` · HEAD up to date
-- **Analyzed**: 2026-08-21T22:51:20-03:00 (207.6s)
+- **Commit**: `f03853867b5a85919ed94933ed01dfa3d5d3e1b2` · HEAD up to date
+- **Analyzed**: 2026-08-23T23:59:28-03:00 (8.9s)
 - **Engine**: local · go-crap 0.5.1
+
+## go-crap command
+
+```shell
+go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profile .go-crap-cover.out ./...
+```
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,14.7 60.0,3.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">288953</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,14.7 31.5,3.0 60.0,29.0 88.5,29.0 117.0,28.9"/><circle cx="117.0" cy="28.9" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">289265</text></svg>
 
 ## History
 
@@ -36,6 +42,8 @@ Connect your devices into a secure WireGuard®-based overlay network with SSO, M
 | 2026-08-18 | `6210399` | 366921.05 | 27.73 | 13234 | 1764 | local |
 | 2026-08-19 | `9efa3c6` | 430518.16 | 32.41 | 13283 | 2026 | local |
 | 2026-08-21 | `335adfe` | 288952.75 | 19.75 | 14629 | 1241 | local |
+| 2026-08-22 | `ee253fe` | 288952.75 | 19.75 | 14629 | 1241 | local |
+| 2026-08-23 | `f038538` | 289265.15 | 19.69 | 14688 | 1241 | local |
 
 ## Top offenders
 
@@ -49,5 +57,5 @@ Connect your devices into a secure WireGuard®-based overlay network with SSO, M
 | 1482.00 | 38 | 0.0% | `runForDuration` | [client/cmd/debug.go:232](https://github.com/netbirdio/netbird/blob/main/client/cmd/debug.go#L232) |
 | 1260.00 | 35 | 0.0% | `parseStatus` | [client/iface/configurer/usp.go:529](https://github.com/netbirdio/netbird/blob/main/client/iface/configurer/usp.go#L529) |
 | 1122.00 | 33 | 0.0% | `restore` | [management/server/store/file_store.go:56](https://github.com/netbirdio/netbird/blob/main/management/server/store/file_store.go#L56) |
-| 870.00 | 29 | 0.0% | `*Tray.iconForState` | [client/ui/tray_icon.go:54](https://github.com/netbirdio/netbird/blob/main/client/ui/tray_icon.go#L54) |
 | 870.00 | 29 | 0.0% | `*NetworkMapComponents.getPeerConnectionResources` | [shared/management/types/networkmap_components.go:207](https://github.com/netbirdio/netbird/blob/main/shared/management/types/networkmap_components.go#L207) |
+| 870.00 | 29 | 0.0% | `*Tray.iconForState` | [client/ui/tray_icon.go:54](https://github.com/netbirdio/netbird/blob/main/client/ui/tray_icon.go#L54) |
