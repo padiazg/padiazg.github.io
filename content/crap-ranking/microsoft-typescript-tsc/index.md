@@ -47,13 +47,13 @@ GOFLAGS="-p=1 -parallel=2" go-crap scan --format json --no-progress --verbose -o
 
 | Crap | Complexity | Coverage | Function | File |
 |----------|------|------|------------|----------|
-| 97656.00 | 312 | 0.0% | `*LanguageService.getCompletionData` | [internal/ls/completions.go:529](https://github.com/microsoft/typescript/blob/main/internal/ls/completions.go#L529) |
-| 52670.00 | 229 | 0.0% | `*Relater.structuredTypeRelatedToWorker` | [internal/checker/relater.go:3293](https://github.com/microsoft/typescript/blob/main/internal/checker/relater.go#L3293) |
-| 37442.00 | 193 | 0.0% | `*Checker.checkGrammarModifiers` | [internal/checker/grammarchecks.go:214](https://github.com/microsoft/typescript/blob/main/internal/checker/grammarchecks.go#L214) |
-| 22052.00 | 148 | 0.0% | `getExistingNodeTreeVisitor` | [internal/checker/nodecopy.go:288](https://github.com/microsoft/typescript/blob/main/internal/checker/nodecopy.go#L288) |
-| 20592.00 | 143 | 0.0% | `*Session.HandleRequest` | [internal/api/session.go:583](https://github.com/microsoft/typescript/blob/main/internal/api/session.go#L583) |
-| 20022.00 | 141 | 0.0% | `*NameResolver.Resolve` | [internal/binder/nameresolver.go:25](https://github.com/microsoft/typescript/blob/main/internal/binder/nameresolver.go#L25) |
-| 19429.31 | 143 | 1.9% | `*Scanner.Scan` | [internal/scanner/scanner.go:469](https://github.com/microsoft/typescript/blob/main/internal/scanner/scanner.go#L469) |
-| 17556.00 | 132 | 0.0% | `getQuickInfoAndDeclarationAtLocation` | [internal/ls/hover.go:427](https://github.com/microsoft/typescript/blob/main/internal/ls/hover.go#L427) |
-| 11342.00 | 106 | 0.0% | `*Checker.resolveExternalModule` | [internal/checker/checker.go:15243](https://github.com/microsoft/typescript/blob/main/internal/checker/checker.go#L15243) |
-| 8372.00 | 91 | 0.0% | `*NodeBuilderImpl.typeToTypeNode` | [internal/checker/nodebuilderimpl.go:3224](https://github.com/microsoft/typescript/blob/main/internal/checker/nodebuilderimpl.go#L3224) |
+| 97656.00 | 312 | 0.0% | `*LanguageService.getCompletionData` | [internal/ls/completions.go:529](https://github.com/microsoft/typescript/blob/main/tsc/internal/ls/completions.go#L529) |
+| 52670.00 | 229 | 0.0% | `*Relater.structuredTypeRelatedToWorker` | [internal/checker/relater.go:3293](https://github.com/microsoft/typescript/blob/main/tsc/internal/checker/relater.go#L3293) |
+| 37442.00 | 193 | 0.0% | `*Checker.checkGrammarModifiers` | [internal/checker/grammarchecks.go:214](https://github.com/microsoft/typescript/blob/main/tsc/internal/checker/grammarchecks.go#L214) |
+| 22052.00 | 148 | 0.0% | `getExistingNodeTreeVisitor` | [internal/checker/nodecopy.go:288](https://github.com/microsoft/typescript/blob/main/tsc/internal/checker/nodecopy.go#L288) |
+| 20592.00 | 143 | 0.0% | `*Session.HandleRequest` | [internal/api/session.go:583](https://github.com/microsoft/typescript/blob/main/tsc/internal/api/session.go#L583) |
+| 20022.00 | 141 | 0.0% | `*NameResolver.Resolve` | [internal/binder/nameresolver.go:25](https://github.com/microsoft/typescript/blob/main/tsc/internal/binder/nameresolver.go#L25) |
+| 19429.31 | 143 | 1.9% | `*Scanner.Scan` | [internal/scanner/scanner.go:469](https://github.com/microsoft/typescript/blob/main/tsc/internal/scanner/scanner.go#L469) |
+| 17556.00 | 132 | 0.0% | `getQuickInfoAndDeclarationAtLocation` | [internal/ls/hover.go:427](https://github.com/microsoft/typescript/blob/main/tsc/internal/ls/hover.go#L427) |
+| 11342.00 | 106 | 0.0% | `*Checker.resolveExternalModule` | [internal/checker/checker.go:15243](https://github.com/microsoft/typescript/blob/main/tsc/internal/checker/checker.go#L15243) |
+| 8372.00 | 91 | 0.0% | `*NodeBuilderImpl.typeToTypeNode` | [internal/checker/nodebuilderimpl.go:3224](https://github.com/microsoft/typescript/blob/main/tsc/internal/checker/nodebuilderimpl.go#L3224) |
