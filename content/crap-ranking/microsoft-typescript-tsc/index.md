@@ -7,7 +7,7 @@ draft: false
 repo: microsoft/typescript
 weight: 1
 stars: 110634
-combined: 1022597.66
+combined: 1022617.83
 average: 83.53
 funcs: 12242
 toc: false
@@ -23,7 +23,7 @@ TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
 - **Repository**: github.com/microsoft/typescript
 - **Project**: `tsc`
 - **Commit**: `e9e477458d7b975ed5e43117fb85f6bc87363a6a` · HEAD up to date
-- **Analyzed**: 2026-08-24T00:00:27-03:00 (53.2s)
+- **Analyzed**: 2026-08-24T00:00:40-03:00 (53.2s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -34,13 +34,14 @@ GOFLAGS="-p=1 -parallel=2" go-crap scan --format json --no-progress --verbose -o
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0"/><circle cx="3.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="3.0" y="10" font-size="9" fill="#555" text-anchor="end">1022598</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 117.0,3.0"/><circle cx="117.0" cy="3.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">1022618</text></svg>
 
 ## History
 
 | Date | Commit | Combined | Average | Funcs | Exceeded | Engine |
 |------|--------|----------|---------|-------|----------|--------|
-| 2026-08-24 | `e9e4774` | 1022597.66 | 83.53 | 12242 | 2254 | local |
+| 2026-08-21 | `d6c4afd` | 1016537.19 | 83.04 | 12242 | 2251 | local |
+| 2026-08-24 | `e9e4774` | 1022617.83 | 83.53 | 12242 | 2254 | local |
 
 ## Top offenders
 
