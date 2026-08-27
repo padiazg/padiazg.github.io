@@ -8,7 +8,7 @@ paginate: 10
 
 This report tracks a set of popular Go repositories, each ranked by its
 **Combined** [CRAP score](https://padiazg.github.io/go-crap/concepts/) — higher is worse.
-CRAP (Cyclomatic Readability And Predictability) measures how expensive a function is
+CRAP (Change Risk Anti-Pattern) measures how expensive a function is
 to test by combining cyclomatic complexity with test coverage.
 
 **Columns** — **Combined**: total CRAP across all scanned functions (overall testing cost; higher is worse) ·
