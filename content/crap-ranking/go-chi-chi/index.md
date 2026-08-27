@@ -5,7 +5,7 @@ slug: go-chi-chi
 tags: ["crap", "report"]
 draft: false
 repo: go-chi/chi
-weight: 17
+weight: 18
 stars: 22716
 combined: 771.02
 average: 4.19

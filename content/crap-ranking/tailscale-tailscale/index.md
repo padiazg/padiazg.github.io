@@ -1,15 +1,15 @@
 ---
 title: "tailscale/tailscale"
-date: 2026-08-23
+date: 2026-08-26
 slug: tailscale-tailscale
 tags: ["crap", "report"]
 draft: false
 repo: tailscale/tailscale
 weight: 3
-stars: 35478
-combined: 322838.41
-average: 24.34
-funcs: 13265
+stars: 35598
+combined: 322628.91
+average: 24.30
+funcs: 13278
 toc: false
 ShowToc: false
 ---
@@ -21,8 +21,8 @@ The easiest, most secure way to use WireGuard and 2FA.
 </div>
 
 - **Repository**: github.com/tailscale/tailscale
-- **Commit**: `ed7d521caedb5c445db9641461169d6023333a27` · HEAD up to date
-- **Analyzed**: 2026-08-23T23:59:31-03:00 (6.4s)
+- **Commit**: `a7769cbc33a3eba62bb16fc803b97077c2969d16` · HEAD up to date
+- **Analyzed**: 2026-08-26T21:26:40-03:00 (226.8s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.1 41.0,3.0 79.0,29.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">322838</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.1 25.8,3.0 48.6,29.0 71.4,29.0 94.2,29.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">322629</text></svg>
 
 ## History
 
@@ -43,6 +43,8 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-19 | `c87680a` | 597932.51 | 49.57 | 12063 | 2340 | local |
 | 2026-08-22 | `de9ec7e` | 322718.41 | 24.33 | 13265 | 1323 | local |
 | 2026-08-23 | `ed7d521` | 322838.41 | 24.34 | 13265 | 1322 | local |
+| 2026-08-24 | `65d2226` | 322814.48 | 24.33 | 13268 | 1320 | local |
+| 2026-08-26 | `a7769cb` | 322628.91 | 24.30 | 13278 | 1320 | local |
 
 ## Top offenders
 

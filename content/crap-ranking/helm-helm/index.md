@@ -1,13 +1,13 @@
 ---
 title: "helm/helm"
-date: 2026-08-23
+date: 2026-08-26
 slug: helm-helm
 tags: ["crap", "report"]
 draft: false
 repo: helm/helm
 weight: 12
-stars: 30169
-combined: 13569.15
+stars: 30178
+combined: 13570.65
 average: 8.36
 funcs: 1624
 toc: false
@@ -21,8 +21,8 @@ The Kubernetes Package Manager
 </div>
 
 - **Repository**: github.com/helm/helm
-- **Commit**: `67d54fd8808ab47e93dad40f4238d5fe28d1efd0` · HEAD up to date
-- **Analyzed**: 2026-08-23T23:59:17-03:00 (375ms)
+- **Commit**: `d62bee21c2dd3ffcd647ae3718288b3760b7d421` · HEAD up to date
+- **Analyzed**: 2026-08-26T21:17:37-03:00 (74.1s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,28.6 41.0,3.0 79.0,29.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">13569</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,28.6 31.5,3.0 60.0,29.0 88.5,29.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">13571</text></svg>
 
 ## History
 
@@ -43,6 +43,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-19 | `9b447b4` | 37753.34 | 23.42 | 1612 | 191 | local |
 | 2026-08-22 | `e9b85e4` | 13544.90 | 8.36 | 1620 | 70 | local |
 | 2026-08-23 | `67d54fd` | 13569.15 | 8.36 | 1624 | 70 | local |
+| 2026-08-26 | `d62bee2` | 13570.65 | 8.36 | 1624 | 70 | local |
 
 ## Top offenders
 

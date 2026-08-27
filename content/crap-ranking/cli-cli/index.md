@@ -1,15 +1,15 @@
 ---
 title: "cli/cli"
-date: 2026-08-23
+date: 2026-08-26
 slug: cli-cli
 tags: ["crap", "report"]
 draft: false
 repo: cli/cli
 weight: 9
-stars: 45958
-combined: 48726.39
-average: 13.87
-funcs: 3512
+stars: 46011
+combined: 48153.35
+average: 13.40
+funcs: 3593
 toc: false
 ShowToc: false
 ---
@@ -21,8 +21,8 @@ GitHub’s official command line tool
 </div>
 
 - **Repository**: github.com/cli/cli
-- **Commit**: `5d3c4817f1619213951dbf15031bad04acb88392` · HEAD up to date
-- **Analyzed**: 2026-08-23T23:59:10-03:00 (1.3s)
+- **Commit**: `606cda4a9b1a703ad7c2e353a77bce0d93d21b0e` · HEAD up to date
+- **Analyzed**: 2026-08-26T21:16:20-03:00 (88.3s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.1 60.0,3.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">48726</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.0 41.0,3.0 79.0,7.8 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">48153</text></svg>
 
 ## History
 
@@ -42,6 +42,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-18 | `0eeec0b` | 48855.66 | 13.95 | 3501 | 204 | local |
 | 2026-08-19 | `95d3a1d` | 48855.97 | 13.95 | 3501 | 204 | local |
 | 2026-08-23 | `5d3c481` | 48726.39 | 13.87 | 3512 | 204 | local |
+| 2026-08-26 | `606cda4` | 48153.35 | 13.40 | 3593 | 201 | local |
 
 ## Top offenders
 
@@ -54,6 +55,6 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 812.00 | 28 | 0.0% | `EditFieldsSurvey` | [pkg/cmd/pr/shared/editable.go:371](https://github.com/cli/cli/blob/trunk/pkg/cmd/pr/shared/editable.go#L371) |
 | 812.00 | 28 | 0.0% | `creditsRun` | [pkg/cmd/repo/credits/credits.go:115](https://github.com/cli/cli/blob/trunk/pkg/cmd/repo/credits/credits.go#L115) |
 | 756.00 | 27 | 0.0% | `rootHelpFunc` | [pkg/cmd/root/help.go:90](https://github.com/cli/cli/blob/trunk/pkg/cmd/root/help.go#L90) |
-| 673.70 | 36 | 21.1% | `IssueGraphQL` | [api/query_builder.go:385](https://github.com/cli/cli/blob/trunk/api/query_builder.go#L385) |
-| 650.00 | 25 | 0.0% | `CreatePullRequest` | [api/queries_pr.go:465](https://github.com/cli/cli/blob/trunk/api/queries_pr.go#L465) |
-| 650.00 | 25 | 0.0% | `RepositoryGraphQL` | [api/query_builder.go:552](https://github.com/cli/cli/blob/trunk/api/query_builder.go#L552) |
+| 650.00 | 25 | 0.0% | `FetchOptions` | [pkg/cmd/pr/shared/editable.go:532](https://github.com/cli/cli/blob/trunk/pkg/cmd/pr/shared/editable.go#L532) |
+| 650.00 | 25 | 0.0% | `RepositoryGraphQL` | [api/query_builder.go:555](https://github.com/cli/cli/blob/trunk/api/query_builder.go#L555) |
+| 650.00 | 25 | 0.0% | `CreatePullRequest` | [api/queries_pr.go:490](https://github.com/cli/cli/blob/trunk/api/queries_pr.go#L490) |

@@ -1,12 +1,12 @@
 ---
 title: "labstack/echo"
-date: 2026-08-23
+date: 2026-08-24
 slug: labstack-echo
 tags: ["crap", "report"]
 draft: false
 repo: labstack/echo
 weight: 15
-stars: 32652
+stars: 32654
 combined: 1927.55
 average: 3.64
 funcs: 529
@@ -21,8 +21,8 @@ High performance, minimalist Go web framework
 </div>
 
 - **Repository**: github.com/labstack/echo
-- **Commit**: `4ec116dc9b5bff1da7513c0dc86095d0e8ce9654` · HEAD up to date
-- **Analyzed**: 2026-08-23T23:59:17-03:00 (150ms)
+- **Commit**: `e552b4de75b640bc622411fe01eed33f7704c8a0` · HEAD up to date
+- **Analyzed**: 2026-08-24T19:09:43-03:00 (2.7s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 117.0,3.0"/><circle cx="117.0" cy="3.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">1928</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 60.0,3.0 117.0,3.0"/><circle cx="117.0" cy="3.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">1928</text></svg>
 
 ## History
 
@@ -41,6 +41,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 |------|--------|----------|---------|-------|----------|--------|
 | 2026-08-19 | `05489dc` | 1925.29 | 3.64 | 529 | 6 | local |
 | 2026-08-23 | `4ec116d` | 1927.55 | 3.64 | 529 | 6 | local |
+| 2026-08-24 | `e552b4d` | 1927.55 | 3.64 | 529 | 6 | local |
 
 ## Top offenders
 
