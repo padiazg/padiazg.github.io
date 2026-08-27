@@ -5,7 +5,7 @@ slug: traefik-traefik
 tags: ["crap", "report"]
 draft: false
 repo: traefik/traefik
-weight: 10
+weight: 11
 stars: 64565
 combined: 45533.03
 average: 12.80

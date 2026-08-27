@@ -5,7 +5,7 @@ slug: caddyserver-caddy
 tags: ["crap", "report"]
 draft: false
 repo: caddyserver/caddy
-weight: 7
+weight: 8
 stars: 75231
 combined: 171874.20
 average: 83.88

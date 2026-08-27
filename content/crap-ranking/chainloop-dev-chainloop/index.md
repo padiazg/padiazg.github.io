@@ -1,6 +1,6 @@
 ---
 title: "chainloop/dev/chainloop"
-date: 2026-08-26
+date: 2026-08-27
 slug: chainloop-dev-chainloop
 tags: ["crap", "report"]
 draft: false
@@ -21,8 +21,8 @@ SDLC evidence store and policy engine for your Software Supply Chain attestation
 </div>
 
 - **Repository**: github.com/chainloop-dev/chainloop
-- **Commit**: `ed713961da3ce59d1242565119412d43a6bf0d14` · HEAD up to date
-- **Analyzed**: 2026-08-26T21:22:50-03:00 (506.1s)
+- **Commit**: `6037210405abf31b02fcb904e3069831b5d73d55` · HEAD up to date
+- **Analyzed**: 2026-08-27T11:53:55-03:00 (41.1s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.0 31.5,3.0 60.0,22.0 88.5,29.0 117.0,28.7"/><circle cx="117.0" cy="28.7" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">256040</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.0 25.8,3.0 48.6,22.0 71.4,29.0 94.2,28.7 117.0,28.7"/><circle cx="117.0" cy="28.7" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">256040</text></svg>
 
 ## History
 
@@ -44,6 +44,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-23 | `40014e9` | 266862.02 | 16.49 | 16182 | 954 | local |
 | 2026-08-24 | `eb5e738` | 255608.58 | 15.80 | 16182 | 872 | local |
 | 2026-08-26 | `ed71396` | 256039.74 | 15.78 | 16230 | 872 | local |
+| 2026-08-27 | `6037210` | 256039.74 | 15.78 | 16230 | 872 | local |
 
 ## Top offenders
 

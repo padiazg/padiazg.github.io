@@ -1,15 +1,15 @@
 ---
 title: "tailscale/tailscale"
-date: 2026-08-26
+date: 2026-08-27
 slug: tailscale-tailscale
 tags: ["crap", "report"]
 draft: false
 repo: tailscale/tailscale
 weight: 3
-stars: 35598
-combined: 322628.91
-average: 24.30
-funcs: 13278
+stars: 35643
+combined: 324782.91
+average: 24.46
+funcs: 13280
 toc: false
 ShowToc: false
 ---
@@ -21,8 +21,8 @@ The easiest, most secure way to use WireGuard and 2FA.
 </div>
 
 - **Repository**: github.com/tailscale/tailscale
-- **Commit**: `a7769cbc33a3eba62bb16fc803b97077c2969d16` · HEAD up to date
-- **Analyzed**: 2026-08-26T21:26:40-03:00 (226.8s)
+- **Commit**: `37317073bae97cd17b6d1064e280b6d0cfce5c2b` · HEAD up to date
+- **Analyzed**: 2026-08-27T11:55:27-03:00 (30.6s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.1 25.8,3.0 48.6,29.0 71.4,29.0 94.2,29.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">322629</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.1 22.0,3.0 41.0,29.0 60.0,29.0 79.0,29.0 98.0,29.0 117.0,28.8"/><circle cx="117.0" cy="28.8" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">324783</text></svg>
 
 ## History
 
@@ -45,14 +45,15 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-23 | `ed7d521` | 322838.41 | 24.34 | 13265 | 1322 | local |
 | 2026-08-24 | `65d2226` | 322814.48 | 24.33 | 13268 | 1320 | local |
 | 2026-08-26 | `a7769cb` | 322628.91 | 24.30 | 13278 | 1320 | local |
+| 2026-08-27 | `3731707` | 324782.91 | 24.46 | 13280 | 1321 | local |
 
 ## Top offenders
 
 | Crap | Complexity | Coverage | Function | File |
 |----------|------|------|------------|----------|
 | 23562.00 | 153 | 0.0% | `run` | [cmd/containerboot/main.go:330](https://github.com/tailscale/tailscale/blob/main/cmd/containerboot/main.go#L330) |
+| 7656.00 | 87 | 0.0% | `runTests` | [cmd/k8s-operator/e2e/setup.go:123](https://github.com/tailscale/tailscale/blob/main/cmd/k8s-operator/e2e/setup.go#L123) |
 | 5852.00 | 76 | 0.0% | `run` | [cmd/k8s-proxy/k8s-proxy.go:78](https://github.com/tailscale/tailscale/blob/main/cmd/k8s-proxy/k8s-proxy.go#L78) |
-| 5550.00 | 74 | 0.0% | `runTests` | [cmd/k8s-operator/e2e/setup.go:118](https://github.com/tailscale/tailscale/blob/main/cmd/k8s-operator/e2e/setup.go#L118) |
 | 4970.00 | 70 | 0.0% | `runUp` | [cmd/tailscale/cli/up.go:500](https://github.com/tailscale/tailscale/blob/main/cmd/tailscale/cli/up.go#L500) |
 | 3782.00 | 61 | 0.0% | `*Direct.sendMapRequest` | [control/controlclient/direct.go:1063](https://github.com/tailscale/tailscale/blob/main/control/controlclient/direct.go#L1063) |
 | 3660.00 | 60 | 0.0% | `configureInterface` | [wgengine/router/osrouter/ifconfig_windows.go:249](https://github.com/tailscale/tailscale/blob/main/wgengine/router/osrouter/ifconfig_windows.go#L249) |

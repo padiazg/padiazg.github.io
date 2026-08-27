@@ -5,7 +5,7 @@ slug: pocketbase-pocketbase
 tags: ["crap", "report"]
 draft: false
 repo: pocketbase/pocketbase
-weight: 11
+weight: 13
 stars: 60796
 combined: 25081.07
 average: 12.74

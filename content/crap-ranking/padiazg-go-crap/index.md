@@ -5,7 +5,7 @@ slug: padiazg-go-crap
 tags: ["crap", "report"]
 draft: false
 repo: padiazg/go-crap
-weight: 17
+weight: 20
 stars: 19
 combined: 884.60
 average: 4.66

@@ -22,7 +22,7 @@ TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
 
 - **Repository**: github.com/microsoft/typescript
 - **Project**: `tsc`
-- **Commit**: `e95d8e57a89f4c174604d76e683d1f14d148373d` · HEAD up to date
+- **Commit**: `e95d8e57a89f4c174604d76e683d1f14d148373d` · HEAD now `065f7ac` — re-scan to update
 - **Analyzed**: 2026-08-26T21:29:38-03:00 (790.5s)
 - **Engine**: local · go-crap 0.5.1
 

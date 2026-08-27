@@ -5,7 +5,7 @@ slug: gin-gonic-gin
 tags: ["crap", "report"]
 draft: false
 repo: gin-gonic/gin
-weight: 16
+weight: 19
 stars: 89103
 combined: 1411.76
 average: 2.82

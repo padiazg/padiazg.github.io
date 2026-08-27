@@ -1,13 +1,13 @@
 ---
 title: "podman/container/tools/podman"
-date: 2026-08-26
+date: 2026-08-27
 slug: podman-container-tools-podman
 tags: ["crap", "report"]
 draft: false
 repo: podman-container-tools/podman
 weight: 2
-stars: 32704
-combined: 583020.11
+stars: 32706
+combined: 583034.11
 average: 95.77
 funcs: 6088
 toc: false
@@ -21,8 +21,8 @@ Podman: A tool for managing OCI containers and pods.
 </div>
 
 - **Repository**: github.com/podman-container-tools/podman
-- **Commit**: `a1c4f9c0e602fa48e5b7f051cd7b927bcdb57926` · HEAD up to date
-- **Analyzed**: 2026-08-26T21:30:56-03:00 (600.6s)
+- **Commit**: `21326bf274b606186ae5d6ca15be74cc916d94c3` · HEAD up to date
+- **Analyzed**: 2026-08-27T12:04:30-03:00 (601.7s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 31.5,27.9 60.0,3.4 88.5,3.4 117.0,3.0"/><circle cx="117.0" cy="3.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">583020</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 25.8,27.9 48.6,3.5 71.4,3.4 94.2,3.0 117.0,3.0"/><circle cx="117.0" cy="3.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">583034</text></svg>
 
 ## History
 
@@ -44,6 +44,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-23 | `8efac90` | 582585.11 | 95.63 | 6092 | 1344 | local |
 | 2026-08-24 | `de350af` | 582638.11 | 95.64 | 6092 | 1344 | local |
 | 2026-08-26 | `a1c4f9c` | 583020.11 | 95.77 | 6088 | 1343 | local |
+| 2026-08-27 | `21326bf` | 583034.11 | 95.77 | 6088 | 1343 | local |
 
 ## Top offenders
 

@@ -5,7 +5,7 @@ slug: gorilla-mux
 tags: ["crap", "report"]
 draft: false
 repo: gorilla/mux
-weight: 19
+weight: 22
 stars: 21839
 combined: 357.79
 average: 3.31

@@ -5,7 +5,7 @@ slug: labstack-echo
 tags: ["crap", "report"]
 draft: false
 repo: labstack/echo
-weight: 15
+weight: 18
 stars: 32654
 combined: 1927.55
 average: 3.64

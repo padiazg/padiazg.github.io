@@ -5,7 +5,7 @@ slug: helm-helm
 tags: ["crap", "report"]
 draft: false
 repo: helm/helm
-weight: 12
+weight: 14
 stars: 30178
 combined: 13570.65
 average: 8.36
