@@ -1,15 +1,15 @@
 ---
 title: "chainloop/dev/chainloop"
-date: 2026-08-27
+date: 2026-08-30
 slug: chainloop-dev-chainloop
 tags: ["crap", "report"]
 draft: false
 repo: chainloop-dev/chainloop
 weight: 5
 stars: 583
-combined: 256039.74
-average: 15.78
-funcs: 16230
+combined: 256060.23
+average: 15.77
+funcs: 16233
 toc: false
 ShowToc: false
 ---
@@ -21,8 +21,8 @@ SDLC evidence store and policy engine for your Software Supply Chain attestation
 </div>
 
 - **Repository**: github.com/chainloop-dev/chainloop
-- **Commit**: `6037210405abf31b02fcb904e3069831b5d73d55` · HEAD up to date
-- **Analyzed**: 2026-08-27T11:53:55-03:00 (41.1s)
+- **Commit**: `294cad656b333f873add717aae984c26cb5195dc` · HEAD up to date
+- **Analyzed**: 2026-08-30T17:48:01-03:00 (483.6s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.0 25.8,3.0 48.6,22.0 71.4,29.0 94.2,28.7 117.0,28.7"/><circle cx="117.0" cy="28.7" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">256040</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.0 22.0,3.0 41.0,22.0 60.0,29.0 79.0,28.7 98.0,28.7 117.0,28.7"/><circle cx="117.0" cy="28.7" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">256060</text></svg>
 
 ## History
 
@@ -45,14 +45,15 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-24 | `eb5e738` | 255608.58 | 15.80 | 16182 | 872 | local |
 | 2026-08-26 | `ed71396` | 256039.74 | 15.78 | 16230 | 872 | local |
 | 2026-08-27 | `6037210` | 256039.74 | 15.78 | 16230 | 872 | local |
+| 2026-08-30 | `294cad6` | 256060.23 | 15.77 | 16233 | 872 | local |
 
 ## Top offenders
 
 | Crap | Complexity | Coverage | Function | File |
 |----------|------|------|------------|----------|
 | 6806.00 | 82 | 0.0% | `*OrganizationUpdateOne.sqlSave` | [app/controlplane/pkg/data/ent/organization_update.go:1651](https://github.com/chainloop-dev/chainloop/blob/main/app/controlplane/pkg/data/ent/organization_update.go#L1651) |
-| 6006.00 | 77 | 0.0% | `*WorkflowRun.assignValues` | [app/controlplane/pkg/data/ent/workflowrun.go:191](https://github.com/chainloop-dev/chainloop/blob/main/app/controlplane/pkg/data/ent/workflowrun.go#L191) |
 | 6006.00 | 77 | 0.0% | `*OrganizationUpdate.sqlSave` | [app/controlplane/pkg/data/ent/organization_update.go:596](https://github.com/chainloop-dev/chainloop/blob/main/app/controlplane/pkg/data/ent/organization_update.go#L596) |
+| 6006.00 | 77 | 0.0% | `*WorkflowRun.assignValues` | [app/controlplane/pkg/data/ent/workflowrun.go:191](https://github.com/chainloop-dev/chainloop/blob/main/app/controlplane/pkg/data/ent/workflowrun.go#L191) |
 | 4556.00 | 67 | 0.0% | `*WorkflowRunUpdateOne.sqlSave` | [app/controlplane/pkg/data/ent/workflowrun_update.go:1434](https://github.com/chainloop-dev/chainloop/blob/main/app/controlplane/pkg/data/ent/workflowrun_update.go#L1434) |
 | 4160.00 | 64 | 0.0% | `*WorkflowUpdateOne.sqlSave` | [app/controlplane/pkg/data/ent/workflow_update.go:1369](https://github.com/chainloop-dev/chainloop/blob/main/app/controlplane/pkg/data/ent/workflow_update.go#L1369) |
 | 3906.00 | 62 | 0.0% | `*WorkflowRunUpdate.sqlSave` | [app/controlplane/pkg/data/ent/workflowrun_update.go:587](https://github.com/chainloop-dev/chainloop/blob/main/app/controlplane/pkg/data/ent/workflowrun_update.go#L587) |

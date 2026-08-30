@@ -1,15 +1,15 @@
 ---
 title: "traefik/traefik"
-date: 2026-08-26
+date: 2026-08-30
 slug: traefik-traefik
 tags: ["crap", "report"]
 draft: false
 repo: traefik/traefik
 weight: 11
 stars: 64565
-combined: 45533.03
+combined: 45549.13
 average: 12.80
-funcs: 3557
+funcs: 3558
 toc: false
 ShowToc: false
 ---
@@ -21,8 +21,8 @@ The Cloud Native Application Proxy
 </div>
 
 - **Repository**: github.com/traefik/traefik
-- **Commit**: `83c3499fc31c96e9f80ea0bba4d975f608c7061d` · HEAD up to date
-- **Analyzed**: 2026-08-26T21:36:44-03:00 (601.2s)
+- **Commit**: `237f13c677edb45ab696b7347b517e1f6b46b849` · HEAD up to date
+- **Analyzed**: 2026-08-30T18:06:51-03:00 (601.2s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.2 31.5,3.0 60.0,29.0 88.5,29.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">45533</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.2 25.8,3.0 48.6,29.0 71.4,29.0 94.2,29.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">45549</text></svg>
 
 ## History
 
@@ -44,6 +44,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-23 | `9bb0e55` | 45611.73 | 12.84 | 3552 | 183 | local |
 | 2026-08-24 | `f2d0794` | 45614.81 | 12.84 | 3552 | 183 | local |
 | 2026-08-26 | `83c3499` | 45533.03 | 12.80 | 3557 | 182 | local |
+| 2026-08-30 | `237f13c` | 45549.13 | 12.80 | 3558 | 182 | local |
 
 ## Top offenders
 

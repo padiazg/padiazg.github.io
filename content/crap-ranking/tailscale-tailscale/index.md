@@ -1,15 +1,15 @@
 ---
 title: "tailscale/tailscale"
-date: 2026-08-27
+date: 2026-08-30
 slug: tailscale-tailscale
 tags: ["crap", "report"]
 draft: false
 repo: tailscale/tailscale
 weight: 3
 stars: 35643
-combined: 324782.91
-average: 24.46
-funcs: 13280
+combined: 322222.83
+average: 24.26
+funcs: 13282
 toc: false
 ShowToc: false
 ---
@@ -21,8 +21,8 @@ The easiest, most secure way to use WireGuard and 2FA.
 </div>
 
 - **Repository**: github.com/tailscale/tailscale
-- **Commit**: `37317073bae97cd17b6d1064e280b6d0cfce5c2b` · HEAD up to date
-- **Analyzed**: 2026-08-27T11:55:27-03:00 (30.6s)
+- **Commit**: `72780705eda81790e839a0793a90bdea4164d3ca` · HEAD up to date
+- **Analyzed**: 2026-08-30T17:56:47-03:00 (343.8s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.1 22.0,3.0 41.0,29.0 60.0,29.0 79.0,29.0 98.0,29.0 117.0,28.8"/><circle cx="117.0" cy="28.8" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">324783</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.1 19.3,3.0 35.6,29.0 51.9,28.9 68.1,28.9 84.4,29.0 100.7,28.8 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">322223</text></svg>
 
 ## History
 
@@ -46,6 +46,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-24 | `65d2226` | 322814.48 | 24.33 | 13268 | 1320 | local |
 | 2026-08-26 | `a7769cb` | 322628.91 | 24.30 | 13278 | 1320 | local |
 | 2026-08-27 | `3731707` | 324782.91 | 24.46 | 13280 | 1321 | local |
+| 2026-08-30 | `7278070` | 322222.83 | 24.26 | 13282 | 1296 | local |
 
 ## Top offenders
 

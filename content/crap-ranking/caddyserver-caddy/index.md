@@ -1,15 +1,15 @@
 ---
 title: "caddyserver/caddy"
-date: 2026-08-26
+date: 2026-08-30
 slug: caddyserver-caddy
 tags: ["crap", "report"]
 draft: false
 repo: caddyserver/caddy
 weight: 8
-stars: 75231
-combined: 171874.20
-average: 83.88
-funcs: 2049
+stars: 75344
+combined: 171873.41
+average: 83.80
+funcs: 2051
 toc: false
 ShowToc: false
 ---
@@ -21,8 +21,8 @@ Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS
 </div>
 
 - **Repository**: github.com/caddyserver/caddy
-- **Commit**: `d6637934e866e34f5676210f8a409b139098f954` · HEAD up to date
-- **Analyzed**: 2026-08-26T21:14:49-03:00 (27.8s)
+- **Commit**: `8257349b5872d98052155e1f4fe5a79f2b4e8f26` · HEAD up to date
+- **Analyzed**: 2026-08-30T17:40:34-03:00 (39.8s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,27.3 41.0,29.0 79.0,3.0 117.0,16.0"/><circle cx="117.0" cy="16.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">171874</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,27.3 31.5,29.0 60.0,3.0 88.5,16.0 117.0,16.0"/><circle cx="117.0" cy="16.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">171873</text></svg>
 
 ## History
 
@@ -43,6 +43,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-19 | `45ba327` | 169791.14 | 84.90 | 2000 | 325 | local |
 | 2026-08-23 | `0cf03d3` | 173947.22 | 84.89 | 2049 | 332 | local |
 | 2026-08-26 | `d663793` | 171874.20 | 83.88 | 2049 | 331 | local |
+| 2026-08-30 | `8257349` | 171873.41 | 83.80 | 2051 | 331 | local |
 
 ## Top offenders
 

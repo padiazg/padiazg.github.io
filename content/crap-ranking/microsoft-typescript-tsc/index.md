@@ -1,15 +1,15 @@
 ---
 title: "microsoft/typescript/tsc"
-date: 2026-08-26
+date: 2026-08-30
 slug: microsoft-typescript-tsc
 tags: ["crap", "report"]
 draft: false
 repo: microsoft/typescript
 weight: 1
-stars: 110715
-combined: 1016002.66
-average: 82.90
-funcs: 12256
+stars: 110786
+combined: 1015048.60
+average: 82.62
+funcs: 12286
 toc: false
 ShowToc: false
 ---
@@ -22,8 +22,8 @@ TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
 
 - **Repository**: github.com/microsoft/typescript
 - **Project**: `tsc`
-- **Commit**: `e95d8e57a89f4c174604d76e683d1f14d148373d` · HEAD now `065f7ac` — re-scan to update
-- **Analyzed**: 2026-08-26T21:29:38-03:00 (790.5s)
+- **Commit**: `9a8581c393a38961489cc8409ae4dfbe97fc25ec` · HEAD up to date
+- **Analyzed**: 2026-08-30T18:02:32-03:00 (1107.3s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -34,7 +34,7 @@ GOFLAGS="-p=1 -parallel=2" go-crap scan --format json --no-progress --verbose -o
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,25.8 25.8,3.0 48.6,3.0 71.4,28.9 94.2,29.0 117.0,27.8"/><circle cx="117.0" cy="27.8" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">1016003</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,23.9 22.0,3.0 41.0,3.0 60.0,26.8 79.0,26.9 98.0,25.7 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">1015049</text></svg>
 
 ## History
 
@@ -46,6 +46,7 @@ GOFLAGS="-p=1 -parallel=2" go-crap scan --format json --no-progress --verbose -o
 | 2026-08-26 | `5739027` | 1015688.59 | 82.91 | 12250 | 2250 | local |
 | 2026-08-26 | `889659e` | 1015672.49 | 82.91 | 12251 | 2250 | local |
 | 2026-08-26 | `e95d8e5` | 1016002.66 | 82.90 | 12256 | 2250 | local |
+| 2026-08-30 | `9a8581c` | 1015048.60 | 82.62 | 12286 | 2251 | local |
 
 ## Top offenders
 
@@ -56,8 +57,8 @@ GOFLAGS="-p=1 -parallel=2" go-crap scan --format json --no-progress --verbose -o
 | 37442.00 | 193 | 0.0% | `*Checker.checkGrammarModifiers` | [internal/checker/grammarchecks.go:214](https://github.com/microsoft/typescript/blob/main/tsc/internal/checker/grammarchecks.go#L214) |
 | 22052.00 | 148 | 0.0% | `getExistingNodeTreeVisitor` | [internal/checker/nodecopy.go:288](https://github.com/microsoft/typescript/blob/main/tsc/internal/checker/nodecopy.go#L288) |
 | 20022.00 | 141 | 0.0% | `*NameResolver.Resolve` | [internal/binder/nameresolver.go:25](https://github.com/microsoft/typescript/blob/main/tsc/internal/binder/nameresolver.go#L25) |
-| 19429.31 | 143 | 1.9% | `*Scanner.Scan` | [internal/scanner/scanner.go:469](https://github.com/microsoft/typescript/blob/main/tsc/internal/scanner/scanner.go#L469) |
-| 18730.97 | 145 | 4.0% | `*Session.HandleRequest` | [internal/api/session.go:584](https://github.com/microsoft/typescript/blob/main/tsc/internal/api/session.go#L584) |
+| 19281.09 | 147 | 4.0% | `*Session.HandleRequest` | [internal/api/session.go:584](https://github.com/microsoft/typescript/blob/main/tsc/internal/api/session.go#L584) |
+| 18340.23 | 139 | 2.0% | `*Scanner.Scan` | [internal/scanner/scanner.go:477](https://github.com/microsoft/typescript/blob/main/tsc/internal/scanner/scanner.go#L477) |
 | 17556.00 | 132 | 0.0% | `getQuickInfoAndDeclarationAtLocation` | [internal/ls/hover.go:427](https://github.com/microsoft/typescript/blob/main/tsc/internal/ls/hover.go#L427) |
 | 11342.00 | 106 | 0.0% | `*Checker.resolveExternalModule` | [internal/checker/checker.go:15246](https://github.com/microsoft/typescript/blob/main/tsc/internal/checker/checker.go#L15246) |
 | 8372.00 | 91 | 0.0% | `*NodeBuilderImpl.typeToTypeNode` | [internal/checker/nodebuilderimpl.go:3224](https://github.com/microsoft/typescript/blob/main/tsc/internal/checker/nodebuilderimpl.go#L3224) |

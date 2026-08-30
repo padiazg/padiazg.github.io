@@ -1,12 +1,12 @@
 ---
 title: "google/osv/scanner"
-date: 2026-08-27
+date: 2026-08-30
 slug: google-osv-scanner
 tags: ["crap", "report"]
 draft: false
 repo: google/osv-scanner
 weight: 15
-stars: 10928
+stars: 10947
 combined: 10129.57
 average: 16.88
 funcs: 600
@@ -21,8 +21,8 @@ Vulnerability scanner written in Go which uses the data provided by https://osv.
 </div>
 
 - **Repository**: github.com/google/osv-scanner
-- **Commit**: `a67bcfe99ef43c7aa46615ce93e79374cee248ab` · HEAD up to date
-- **Analyzed**: 2026-08-27T12:08:35-03:00 (417.5s)
+- **Commit**: `78bc2469a1ea51a9f6819e08b1ff84780fe233af` · HEAD up to date
+- **Analyzed**: 2026-08-30T17:47:12-03:00 (282.0s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,13 +33,14 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0"/><circle cx="3.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="3.0" y="10" font-size="9" fill="#555" text-anchor="end">10130</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">10130</text></svg>
 
 ## History
 
 | Date | Commit | Combined | Average | Funcs | Exceeded | Engine |
 |------|--------|----------|---------|-------|----------|--------|
 | 2026-08-27 | `a67bcfe` | 10129.57 | 16.88 | 600 | 50 | local |
+| 2026-08-30 | `78bc246` | 10129.57 | 16.88 | 600 | 50 | local |
 
 ## Top offenders
 

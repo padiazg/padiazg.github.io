@@ -1,15 +1,15 @@
 ---
 title: "netbirdio/netbird"
-date: 2026-08-27
+date: 2026-08-30
 slug: netbirdio-netbird
 tags: ["crap", "report"]
 draft: false
 repo: netbirdio/netbird
 weight: 4
-stars: 28682
-combined: 308208.49
-average: 20.26
-funcs: 15213
+stars: 28749
+combined: 307890.81
+average: 20.23
+funcs: 15221
 toc: false
 ShowToc: false
 ---
@@ -21,8 +21,8 @@ Connect your devices into a secure WireGuard®-based overlay network with SSO, M
 </div>
 
 - **Repository**: github.com/netbirdio/netbird
-- **Commit**: `6620219939739eb298a3f98fb43ece7f9306450f` · HEAD up to date
-- **Analyzed**: 2026-08-27T11:56:56-03:00 (177.8s)
+- **Commit**: `11733fd718fb7889cfbf8b4e6498c0b4e74a1eb0` · HEAD up to date
+- **Analyzed**: 2026-08-30T17:51:00-03:00 (224.8s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,14.7 19.3,3.0 35.6,29.0 51.9,29.0 68.1,28.9 84.4,29.0 100.7,28.7 117.0,25.5"/><circle cx="117.0" cy="25.5" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">308208</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,14.7 17.2,3.0 31.5,29.0 45.8,29.0 60.0,28.9 74.2,29.0 88.5,28.7 102.8,25.5 117.0,25.5"/><circle cx="117.0" cy="25.5" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">307891</text></svg>
 
 ## History
 
@@ -47,6 +47,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-24 | `3f90181` | 289047.02 | 19.68 | 14688 | 1241 | local |
 | 2026-08-26 | `473392a` | 290555.44 | 19.56 | 14853 | 1254 | local |
 | 2026-08-27 | `6620219` | 308208.49 | 20.26 | 15213 | 1334 | local |
+| 2026-08-30 | `11733fd` | 307890.81 | 20.23 | 15221 | 1329 | local |
 
 ## Top offenders
 
@@ -57,8 +58,8 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 12882.00 | 113 | 0.0% | `EventActivityCode.Valid` | [shared/management/http/api/types.gen.go:260](https://github.com/netbirdio/netbird/blob/main/shared/management/http/api/types.gen.go#L260) |
 | 3192.00 | 56 | 0.0% | `getPeersGroupsPoliciesRoutes` | [management/server/types/legacynmap/account_components.go:286](https://github.com/netbirdio/netbird/blob/main/management/server/types/legacynmap/account_components.go#L286) |
 | 2395.63 | 119 | 45.6% | `*Config.apply` | [client/internal/profilemanager/config.go:286](https://github.com/netbirdio/netbird/blob/main/client/internal/profilemanager/config.go#L286) |
-| 2256.00 | 47 | 0.0% | `*ConnectClient.run` | [client/internal/connect.go:174](https://github.com/netbirdio/netbird/blob/main/client/internal/connect.go#L174) |
 | 2256.00 | 47 | 0.0% | `GetPeerNetworkMapComponents` | [management/server/types/legacynmap/account_components.go:70](https://github.com/netbirdio/netbird/blob/main/management/server/types/legacynmap/account_components.go#L70) |
+| 2256.00 | 47 | 0.0% | `*ConnectClient.run` | [client/internal/connect.go:174](https://github.com/netbirdio/netbird/blob/main/client/internal/connect.go#L174) |
 | 1482.00 | 38 | 0.0% | `runForDuration` | [client/cmd/debug.go:232](https://github.com/netbirdio/netbird/blob/main/client/cmd/debug.go#L232) |
 | 1260.00 | 35 | 0.0% | `parseStatus` | [client/iface/configurer/usp.go:529](https://github.com/netbirdio/netbird/blob/main/client/iface/configurer/usp.go#L529) |
 | 1122.00 | 33 | 0.0% | `restore` | [management/server/store/file_store.go:56](https://github.com/netbirdio/netbird/blob/main/management/server/store/file_store.go#L56) |

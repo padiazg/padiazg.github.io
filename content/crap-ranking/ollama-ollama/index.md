@@ -1,15 +1,15 @@
 ---
 title: "ollama/ollama"
-date: 2026-08-27
+date: 2026-08-30
 slug: ollama-ollama
 tags: ["crap", "report"]
 draft: false
 repo: ollama/ollama
 weight: 7
-stars: 179558
-combined: 193519.56
-average: 32.53
-funcs: 5949
+stars: 179794
+combined: 193030.56
+average: 32.55
+funcs: 5931
 toc: false
 ShowToc: false
 ---
@@ -21,8 +21,8 @@ Get up and running with Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, gpt-oss, Qwen, Ge
 </div>
 
 - **Repository**: github.com/ollama/ollama
-- **Commit**: `39f7f91563f65dd8e6183a5be1855820bf6e0ba8` · HEAD up to date
-- **Analyzed**: 2026-08-27T11:54:25-03:00 (25.8s)
+- **Commit**: `f96e7aa0513b9973a0ccc71be414c2ecb9d65b1a` · HEAD up to date
+- **Analyzed**: 2026-08-30T17:48:59-03:00 (55.1s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.6 22.0,3.0 41.0,28.9 60.0,28.9 79.0,29.0 98.0,26.3 117.0,25.9"/><circle cx="117.0" cy="25.9" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">193520</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.6 19.3,3.0 35.6,28.9 51.9,28.9 68.1,29.0 84.4,26.3 100.7,25.9 117.0,26.2"/><circle cx="117.0" cy="26.2" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">193031</text></svg>
 
 ## History
 
@@ -46,6 +46,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-24 | `02dc3ea` | 188655.49 | 32.55 | 5795 | 633 | local |
 | 2026-08-26 | `13f2fb8` | 192807.76 | 32.46 | 5939 | 660 | local |
 | 2026-08-27 | `39f7f91` | 193519.56 | 32.53 | 5949 | 663 | local |
+| 2026-08-30 | `f96e7aa` | 193030.56 | 32.55 | 5931 | 660 | local |
 
 ## Top offenders
 
@@ -59,5 +60,5 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2450.00 | 49 | 0.0% | `resolveMamba2ScanDims` | [x/mlxrunner/mlx/mamba2_scan.go:100](https://github.com/ollama/ollama/blob/main/x/mlxrunner/mlx/mamba2_scan.go#L100) |
 | 2256.00 | 47 | 0.0% | `*Model.LoadWeights` | [x/models/laguna/laguna.go:979](https://github.com/ollama/ollama/blob/main/x/models/laguna/laguna.go#L979) |
 | 2224.35 | 50 | 4.5% | `*Server.EmbedHandler` | [server/routes.go:795](https://github.com/ollama/ollama/blob/main/server/routes.go#L795) |
-| 2162.00 | 46 | 0.0% | `applyClaudeDesktopMappingsWithOpen` | [app/cmd/app/app_darwin.go:1519](https://github.com/ollama/ollama/blob/main/app/cmd/app/app_darwin.go#L1519) |
 | 2162.00 | 46 | 0.0% | `main` | [app/cmd/app/app.go:60](https://github.com/ollama/ollama/blob/main/app/cmd/app/app.go#L60) |
+| 2162.00 | 46 | 0.0% | `applyClaudeDesktopMappingsWithOpen` | [app/cmd/app/app_darwin.go:1512](https://github.com/ollama/ollama/blob/main/app/cmd/app/app_darwin.go#L1512) |

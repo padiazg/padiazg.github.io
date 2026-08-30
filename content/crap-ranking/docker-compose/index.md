@@ -1,13 +1,13 @@
 ---
 title: "docker/compose"
-date: 2026-08-27
+date: 2026-08-30
 slug: docker-compose
 tags: ["crap", "report"]
 draft: false
 repo: docker/compose
 weight: 12
-stars: 38065
-combined: 25150.86
+stars: 38080
+combined: 25150.95
 average: 14.80
 funcs: 1699
 toc: false
@@ -21,8 +21,8 @@ Define and run multi-container applications with Docker
 </div>
 
 - **Repository**: github.com/docker/compose
-- **Commit**: `720da6847526c35fcf605f5a5900568960aba531` · HEAD up to date
-- **Analyzed**: 2026-08-27T12:05:29-03:00 (51.7s)
+- **Commit**: `727fa0e67d952f93757fa5d86d2ff91d96f0ad1b` · HEAD up to date
+- **Analyzed**: 2026-08-30T17:42:05-03:00 (17.1s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,13 +33,14 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0"/><circle cx="3.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="3.0" y="10" font-size="9" fill="#555" text-anchor="end">25151</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 117.0,3.0"/><circle cx="117.0" cy="3.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">25151</text></svg>
 
 ## History
 
 | Date | Commit | Combined | Average | Funcs | Exceeded | Engine |
 |------|--------|----------|---------|-------|----------|--------|
 | 2026-08-27 | `720da68` | 25150.86 | 14.80 | 1699 | 153 | local |
+| 2026-08-30 | `727fa0e` | 25150.95 | 14.80 | 1699 | 153 | local |
 
 ## Top offenders
 

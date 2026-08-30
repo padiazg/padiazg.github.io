@@ -1,15 +1,15 @@
 ---
 title: "containerd/containerd"
-date: 2026-08-27
+date: 2026-08-30
 slug: containerd-containerd
 tags: ["crap", "report"]
 draft: false
 repo: containerd/containerd
 weight: 6
-stars: 21201
-combined: 213967.74
-average: 27.10
-funcs: 7895
+stars: 21222
+combined: 214452.41
+average: 27.16
+funcs: 7897
 toc: false
 ShowToc: false
 ---
@@ -21,8 +21,8 @@ An open and reliable container runtime
 </div>
 
 - **Repository**: github.com/containerd/containerd
-- **Commit**: `a9eb76fb198ed3efe7b2419c7fd7874582f1831c` · HEAD up to date
-- **Analyzed**: 2026-08-27T12:04:48-03:00 (50.4s)
+- **Commit**: `716cbaf51212adb5e80ca1c30b644bfeb9c9d779` · HEAD up to date
+- **Analyzed**: 2026-08-30T17:42:27-03:00 (71.9s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,13 +33,14 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0"/><circle cx="3.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="3.0" y="10" font-size="9" fill="#555" text-anchor="end">213968</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 117.0,3.0"/><circle cx="117.0" cy="3.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">214452</text></svg>
 
 ## History
 
 | Date | Commit | Combined | Average | Funcs | Exceeded | Engine |
 |------|--------|----------|---------|-------|----------|--------|
 | 2026-08-27 | `a9eb76f` | 213967.74 | 27.10 | 7895 | 759 | local |
+| 2026-08-30 | `716cbaf` | 214452.41 | 27.16 | 7897 | 759 | local |
 
 ## Top offenders
 
@@ -54,4 +55,4 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 3306.00 | 57 | 0.0% | `file_services_content_v1_content_proto_init` | [api/services/content/v1/content.pb.go:1544](https://github.com/containerd/containerd/blob/main/api/services/content/v1/content.pb.go#L1544) |
 | 3306.00 | 57 | 0.0% | `file_services_snapshots_v1_snapshots_proto_init` | [api/services/snapshots/v1/snapshots.pb.go:1479](https://github.com/containerd/containerd/blob/main/api/services/snapshots/v1/snapshots.pb.go#L1479) |
 | 3192.00 | 56 | 0.0% | `*criService.RunPodSandbox` | [internal/cri/server/sandbox_run.go:54](https://github.com/containerd/containerd/blob/main/internal/cri/server/sandbox_run.go#L54) |
-| 2756.00 | 52 | 0.0% | `*Controller.Start` | [internal/cri/server/podsandbox/sandbox_run.go:62](https://github.com/containerd/containerd/blob/main/internal/cri/server/podsandbox/sandbox_run.go#L62) |
+| 2862.00 | 53 | 0.0% | `*Controller.Start` | [internal/cri/server/podsandbox/sandbox_run.go:61](https://github.com/containerd/containerd/blob/main/internal/cri/server/podsandbox/sandbox_run.go#L61) |
