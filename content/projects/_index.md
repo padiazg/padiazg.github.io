@@ -25,3 +25,5 @@ title: "Projects"
 {{< project-card name="pantry" repo="padiazg/pantry" description="A simple pantry management backend. Example project built using Hexago and Claude Code" >}}{{< /project-card >}}
 
 {{< project-card name="chuck-norris-jokes" repo="padiazg/chuck-norris-jokes" description="Chuck Norrys jokes.Example project built using Hexago and Claude Code" >}}{{< /project-card >}}
+
+{{< project-card name="broken-hexagon" repo="padiazg/broken-hexagon" description="Intentionally broken hexagonal architecture — demonstration of hexago validate for the Gophercon LATAM 2026 presentation." >}}{{< /project-card >}}
