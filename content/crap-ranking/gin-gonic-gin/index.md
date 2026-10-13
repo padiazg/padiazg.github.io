@@ -1,15 +1,15 @@
 ---
 title: "gin/gonic/gin"
-date: 2026-08-23
+date: 2026-10-12
 slug: gin-gonic-gin
 tags: ["crap", "report"]
 draft: false
 repo: gin-gonic/gin
 weight: 19
-stars: 89103
-combined: 1411.76
-average: 2.82
-funcs: 501
+stars: 89331
+combined: 1417.26
+average: 2.81
+funcs: 504
 toc: false
 ShowToc: false
 ---
@@ -21,8 +21,8 @@ Gin is a high-performance HTTP web framework written in Go. It provides a Martin
 </div>
 
 - **Repository**: github.com/gin-gonic/gin
-- **Commit**: `dcaa4296d111981ffb31ac3eba90bb63e1eb5ab9` · HEAD up to date
-- **Analyzed**: 2026-08-23T23:59:09-03:00 (107ms)
+- **Commit**: `0f09c3a9b4626d9fe9979cf4d0521d6ae32ab646` · HEAD up to date
+- **Analyzed**: 2026-10-12T18:52:37-03:00 (34.0s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,25 +33,26 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0"/><circle cx="3.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="3.0" y="10" font-size="9" fill="#555" text-anchor="end">1412</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 117.0,3.0"/><circle cx="117.0" cy="3.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">1417</text></svg>
 
 ## History
 
 | Date | Commit | Combined | Average | Funcs | Exceeded | Engine |
 |------|--------|----------|---------|-------|----------|--------|
 | 2026-08-23 | `dcaa429` | 1411.76 | 2.82 | 501 | 3 | local |
+| 2026-10-12 | `0f09c3a` | 1417.26 | 2.81 | 504 | 3 | local |
 
 ## Top offenders
 
 | Crap | Complexity | Coverage | Function | File |
 |----------|------|------|------------|----------|
 | 90.00 | 9 | 0.0% | `Default` | [binding/binding_nomsgpack.go:91](https://github.com/gin-gonic/gin/blob/master/binding/binding_nomsgpack.go#L91) |
-| 65.52 | 61 | 89.3% | `*node.findCaseInsensitivePathRec` | [tree.go:703](https://github.com/gin-gonic/gin/blob/master/tree.go#L703) |
+| 65.52 | 61 | 89.3% | `*node.findCaseInsensitivePathRec` | [tree.go:710](https://github.com/gin-gonic/gin/blob/master/tree.go#L710) |
 | 60.00 | 60 | 100.0% | `*node.getValue` | [tree.go:418](https://github.com/gin-gonic/gin/blob/master/tree.go#L418) |
 | 27.00 | 27 | 100.0% | `cleanPath` | [path.go:23](https://github.com/gin-gonic/gin/blob/master/path.go#L23) |
 | 27.00 | 27 | 100.0% | `setByForm` | [binding/form_mapping.go:245](https://github.com/gin-gonic/gin/blob/master/binding/form_mapping.go#L245) |
 | 25.00 | 25 | 100.0% | `setWithProperType` | [binding/form_mapping.go:323](https://github.com/gin-gonic/gin/blob/master/binding/form_mapping.go#L323) |
 | 22.00 | 22 | 100.0% | `*node.addRoute` | [tree.go:135](https://github.com/gin-gonic/gin/blob/master/tree.go#L135) |
-| 21.00 | 21 | 100.0% | `*Engine.handleHTTPRequest` | [gin.go:690](https://github.com/gin-gonic/gin/blob/master/gin.go#L690) |
+| 21.00 | 21 | 100.0% | `*Engine.handleHTTPRequest` | [gin.go:719](https://github.com/gin-gonic/gin/blob/master/gin.go#L719) |
 | 17.00 | 17 | 100.0% | `mapping` | [binding/form_mapping.go:84](https://github.com/gin-gonic/gin/blob/master/binding/form_mapping.go#L84) |
 | 14.00 | 14 | 100.0% | `LoggerWithConfig` | [logger.go:245](https://github.com/gin-gonic/gin/blob/master/logger.go#L245) |

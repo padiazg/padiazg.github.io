@@ -1,15 +1,15 @@
 ---
 title: "go/chi/chi"
-date: 2026-08-27
+date: 2026-10-12
 slug: go-chi-chi
 tags: ["crap", "report"]
 draft: false
 repo: go-chi/chi
 weight: 21
-stars: 22739
-combined: 727.09
-average: 3.95
-funcs: 184
+stars: 22950
+combined: 733.59
+average: 3.90
+funcs: 188
 toc: false
 ShowToc: false
 ---
@@ -21,8 +21,8 @@ lightweight, idiomatic and composable router for building Go HTTP services
 </div>
 
 - **Repository**: github.com/go-chi/chi
-- **Commit**: `36611d24579aaca3250ed9732e17e085c5026334` · HEAD up to date
-- **Analyzed**: 2026-08-27T11:53:56-03:00 (28.3s)
+- **Commit**: `7f9b7448f51d28804fac98c0a17bc2a7cec1079f` · HEAD up to date
+- **Analyzed**: 2026-10-12T18:52:34-03:00 (30.2s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,10.9 60.0,3.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">727</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,10.3 31.5,3.0 60.0,26.8 88.5,29.0 117.0,23.3"/><circle cx="117.0" cy="23.3" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">734</text></svg>
 
 ## History
 
@@ -42,6 +42,8 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-19 | `8b258c7` | 757.65 | 4.16 | 182 | 1 | local |
 | 2026-08-23 | `735ae2b` | 771.02 | 4.19 | 184 | 1 | local |
 | 2026-08-27 | `36611d2` | 727.09 | 3.95 | 184 | 1 | local |
+| 2026-09-02 | `ae6be74` | 723.09 | 3.93 | 184 | 1 | local |
+| 2026-10-12 | `7f9b744` | 733.59 | 3.90 | 188 | 1 | local |
 
 ## Top offenders
 
@@ -55,5 +57,5 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 16.00 | 16 | 100.0% | `*node.routes` | [tree.go:633](https://github.com/go-chi/chi/blob/master/tree.go#L633) |
 | 12.34 | 12 | 86.7% | `ThrottleWithOpts` | [middleware/throttle.go:44](https://github.com/go-chi/chi/blob/master/middleware/throttle.go#L44) |
 | 12.09 | 11 | 79.2% | `walk` | [tree.go:886](https://github.com/go-chi/chi/blob/master/tree.go#L886) |
-| 12.00 | 3 | 0.0% | `*Context.URLParam` | [context.go:127](https://github.com/go-chi/chi/blob/master/context.go#L127) |
+| 12.00 | 3 | 0.0% | `*Context.URLParam` | [context.go:124](https://github.com/go-chi/chi/blob/master/context.go#L124) |
 | 12.00 | 3 | 0.0% | `PageRoute` | [middleware/page_route.go:10](https://github.com/go-chi/chi/blob/master/middleware/page_route.go#L10) |

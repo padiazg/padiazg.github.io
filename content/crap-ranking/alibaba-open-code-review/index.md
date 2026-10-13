@@ -1,28 +1,28 @@
 ---
 title: "alibaba/open/code/review"
-date: 2026-08-30
+date: 2026-10-12
 slug: alibaba-open-code-review
 tags: ["crap", "report"]
 draft: false
 repo: alibaba/open-code-review
-weight: 17
-stars: 21665
-combined: 6839.79
-average: 6.39
-funcs: 1070
+weight: 14
+stars: 46521
+combined: 20556.95
+average: 14.20
+funcs: 1448
 toc: false
 ShowToc: false
 ---
 
-Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.
+Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.
 
 <div class="project-badges">
 <img src="https://img.shields.io/github/stars/alibaba/open-code-review?style=flat-square&label=stars" alt="stars" loading="lazy"><img src="https://img.shields.io/github/forks/alibaba/open-code-review?style=flat-square&label=forks" alt="forks" loading="lazy"><img src="https://img.shields.io/github/license/alibaba/open-code-review?style=flat-square&label=license" alt="license" loading="lazy"><img src="https://img.shields.io/github/last-commit/alibaba/open-code-review?style=flat-square&label=updated" alt="updated" loading="lazy"><img src="https://img.shields.io/github/v/release/alibaba/open-code-review?style=flat-square&label=release" alt="release" loading="lazy">
 </div>
 
 - **Repository**: github.com/alibaba/open-code-review
-- **Commit**: `124bfc3b9e978a83eef9692a7f9bdf64617064d1` · HEAD up to date
-- **Analyzed**: 2026-08-30T17:40:42-03:00 (50.7s)
+- **Commit**: `4a3844c42fe07eabe5ca47cdd4c07b7a5d232544` · HEAD up to date
+- **Analyzed**: 2026-10-12T18:48:41-03:00 (128.8s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 22.0,28.7 41.0,16.1 60.0,13.2 79.0,8.4 98.0,7.2 117.0,3.0"/><circle cx="117.0" cy="3.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">6840</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 15.7,29.0 28.3,27.9 41.0,27.7 53.7,27.2 66.3,27.1 79.0,26.8 91.7,26.6 104.3,26.4 117.0,3.0"/><circle cx="117.0" cy="3.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">20557</text></svg>
 
 ## History
 
@@ -46,18 +46,21 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-26 | `89ec55b` | 6575.04 | 6.27 | 1049 | 18 | local |
 | 2026-08-27 | `eda2548` | 6632.60 | 6.26 | 1059 | 18 | local |
 | 2026-08-30 | `124bfc3` | 6839.79 | 6.39 | 1070 | 20 | local |
+| 2026-09-02 | `4cecf1e` | 6941.36 | 6.40 | 1084 | 21 | local |
+| 2026-09-04 | `af7f922` | 7062.84 | 6.33 | 1115 | 21 | local |
+| 2026-10-12 | `4a3844c` | 20556.95 | 14.20 | 1448 | 81 | local |
 
 ## Top offenders
 
 | Crap | Complexity | Coverage | Function | File |
 |----------|------|------|------------|----------|
-| 342.00 | 18 | 0.0% | `executeScan` | [cmd/opencodereview/scan_cmd.go:111](https://github.com/alibaba/open-code-review/blob/main/cmd/opencodereview/scan_cmd.go#L111) |
-| 272.00 | 16 | 0.0% | `runConfigModel` | [cmd/opencodereview/provider_cmd.go:317](https://github.com/alibaba/open-code-review/blob/main/cmd/opencodereview/provider_cmd.go#L317) |
-| 240.00 | 15 | 0.0% | `isNonEnglish` | [scripts/verify-english-only.go:116](https://github.com/alibaba/open-code-review/blob/main/scripts/verify-english-only.go#L116) |
-| 156.00 | 12 | 0.0% | `run` | [scripts/verify-english-only.go:204](https://github.com/alibaba/open-code-review/blob/main/scripts/verify-english-only.go#L204) |
-| 132.00 | 11 | 0.0% | `NativeTurn.EstimatedTokens` | [internal/llm/client.go:106](https://github.com/alibaba/open-code-review/blob/main/internal/llm/client.go#L106) |
-| 119.43 | 13 | 14.3% | `runLLMTest` | [cmd/opencodereview/llm_cmd.go:53](https://github.com/alibaba/open-code-review/blob/main/cmd/opencodereview/llm_cmd.go#L53) |
-| 103.21 | 14 | 23.1% | `*Agent.Run` | [internal/agent/agent.go:278](https://github.com/alibaba/open-code-review/blob/main/internal/agent/agent.go#L278) |
-| 69.12 | 69 | 97.1% | `LoadSession` | [internal/viewer/store.go:322](https://github.com/alibaba/open-code-review/blob/main/internal/viewer/store.go#L322) |
-| 59.98 | 51 | 84.9% | `providerTUIModel.Update` | [cmd/opencodereview/provider_tui.go:636](https://github.com/alibaba/open-code-review/blob/main/cmd/opencodereview/provider_tui.go#L636) |
-| 56.55 | 25 | 63.0% | `executeReviewContext` | [cmd/opencodereview/review_cmd.go:112](https://github.com/alibaba/open-code-review/blob/main/cmd/opencodereview/review_cmd.go#L112) |
+| 1260.00 | 35 | 0.0% | `*Parser.parseSlash` | [acp/internal/intent/slash.go:13](https://github.com/alibaba/open-code-review/blob/main/acp/internal/intent/slash.go#L13) |
+| 1260.00 | 35 | 0.0% | `Progress.Collect` | [acp/internal/adapter/presentation/progress.go:27](https://github.com/alibaba/open-code-review/blob/main/acp/internal/adapter/presentation/progress.go#L27) |
+| 812.00 | 28 | 0.0% | `*ProcessRunner.run` | [acp/internal/orchestrator/runner.go:17](https://github.com/alibaba/open-code-review/blob/main/acp/internal/orchestrator/runner.go#L17) |
+| 756.00 | 27 | 0.0% | `*Agent.Prompt` | [acp/internal/adapter/prompt.go:20](https://github.com/alibaba/open-code-review/blob/main/acp/internal/adapter/prompt.go#L20) |
+| 650.00 | 25 | 0.0% | `writeReport` | [acp/internal/adapter/presentation/report.go:66](https://github.com/alibaba/open-code-review/blob/main/acp/internal/adapter/presentation/report.go#L66) |
+| 420.00 | 20 | 0.0% | `promptContent` | [acp/internal/adapter/resources.go:18](https://github.com/alibaba/open-code-review/blob/main/acp/internal/adapter/resources.go#L18) |
+| 380.00 | 19 | 0.0% | `OpenLocalFile` | [acp/internal/adapter/workspace/files.go:23](https://github.com/alibaba/open-code-review/blob/main/acp/internal/adapter/workspace/files.go#L23) |
+| 380.00 | 19 | 0.0% | `*Client.requestFailure` | [acp/internal/intent/llm/diagnostics.go:64](https://github.com/alibaba/open-code-review/blob/main/acp/internal/intent/llm/diagnostics.go#L64) |
+| 306.00 | 17 | 0.0% | `ResolveBinary` | [acp/internal/orchestrator/resolve.go:46](https://github.com/alibaba/open-code-review/blob/main/acp/internal/orchestrator/resolve.go#L46) |
+| 306.00 | 17 | 0.0% | `BuildReviewArgs` | [acp/internal/contract/intent.go:87](https://github.com/alibaba/open-code-review/blob/main/acp/internal/contract/intent.go#L87) |

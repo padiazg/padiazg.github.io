@@ -1,15 +1,15 @@
 ---
 title: "helm/helm"
-date: 2026-08-30
+date: 2026-10-12
 slug: helm-helm
 tags: ["crap", "report"]
 draft: false
 repo: helm/helm
-weight: 14
-stars: 30195
-combined: 13578.65
-average: 8.36
-funcs: 1624
+weight: 15
+stars: 30312
+combined: 13858.36
+average: 8.17
+funcs: 1697
 toc: false
 ShowToc: false
 ---
@@ -21,8 +21,8 @@ The Kubernetes Package Manager
 </div>
 
 - **Repository**: github.com/helm/helm
-- **Commit**: `d2de64e64bc64cbef584a0ccb13eb8cb0c96bded` · HEAD up to date
-- **Analyzed**: 2026-08-30T17:44:00-03:00 (53.8s)
+- **Commit**: `dc56a44fee5ac036807348bc48653bc93d714953` · HEAD up to date
+- **Analyzed**: 2026-10-12T18:56:33-03:00 (162.3s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,28.6 25.8,3.0 48.6,29.0 71.4,29.0 94.2,29.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">13579</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,28.6 17.2,3.0 31.5,29.0 45.8,29.0 60.0,29.0 74.2,29.0 88.5,29.0 102.8,28.8 117.0,28.7"/><circle cx="117.0" cy="28.7" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">13858</text></svg>
 
 ## History
 
@@ -45,18 +45,21 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-23 | `67d54fd` | 13569.15 | 8.36 | 1624 | 70 | local |
 | 2026-08-26 | `d62bee2` | 13570.65 | 8.36 | 1624 | 70 | local |
 | 2026-08-30 | `d2de64e` | 13578.65 | 8.36 | 1624 | 70 | local |
+| 2026-09-02 | `67946bb` | 13558.79 | 8.34 | 1626 | 70 | local |
+| 2026-09-02 | `fa11636` | 13765.82 | 8.47 | 1626 | 73 | local |
+| 2026-10-12 | `dc56a44` | 13858.36 | 8.17 | 1697 | 70 | local |
 
 ## Top offenders
 
 | Crap | Complexity | Coverage | Function | File |
 |----------|------|------|------------|----------|
-| 462.00 | 21 | 0.0% | `*ChartPathOptions.LocateChart` | [pkg/action/install.go:889](https://github.com/helm/helm/blob/main/pkg/action/install.go#L889) |
+| 462.00 | 21 | 0.0% | `*ChartPathOptions.LocateChart` | [pkg/action/install.go:900](https://github.com/helm/helm/blob/main/pkg/action/install.go#L900) |
 | 462.00 | 21 | 0.0% | `*Client.processPluginPull` | [pkg/registry/plugin.go:79](https://github.com/helm/helm/blob/main/pkg/registry/plugin.go#L79) |
 | 420.00 | 20 | 0.0% | `volumeName` | [internal/third_party/dep/fs/fs.go:341](https://github.com/helm/helm/blob/main/internal/third_party/dep/fs/fs.go#L341) |
 | 342.00 | 18 | 0.0% | `fixLongPath` | [internal/third_party/dep/fs/fs.go:257](https://github.com/helm/helm/blob/main/internal/third_party/dep/fs/fs.go#L257) |
 | 210.00 | 14 | 0.0% | `structToMap` | [pkg/chart/common.go:184](https://github.com/helm/helm/blob/main/pkg/chart/common.go#L184) |
 | 182.00 | 13 | 0.0% | `*pluginInstallOptions.run` | [pkg/cmd/plugin_install.go:122](https://github.com/helm/helm/blob/main/pkg/cmd/plugin_install.go#L122) |
-| 182.00 | 13 | 0.0% | `*Client.ValidateReference` | [pkg/registry/client.go:848](https://github.com/helm/helm/blob/main/pkg/registry/client.go#L848) |
+| 182.00 | 13 | 0.0% | `*Client.ValidateReference` | [pkg/registry/client.go:847](https://github.com/helm/helm/blob/main/pkg/registry/client.go#L847) |
 | 168.04 | 48 | 62.7% | `*Uninstall.Run` | [pkg/action/uninstall.go:62](https://github.com/helm/helm/blob/main/pkg/action/uninstall.go#L62) |
 | 156.00 | 12 | 0.0% | `LoadFile` | [pkg/chart/loader/load.go:113](https://github.com/helm/helm/blob/main/pkg/chart/loader/load.go#L113) |
 | 139.36 | 50 | 67.1% | `*Configuration.renderResources` | [pkg/action/action.go:279](https://github.com/helm/helm/blob/main/pkg/action/action.go#L279) |

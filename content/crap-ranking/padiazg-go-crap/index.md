@@ -1,12 +1,12 @@
 ---
 title: "padiazg/go/crap"
-date: 2026-08-24
+date: 2026-10-12
 slug: padiazg-go-crap
 tags: ["crap", "report"]
 draft: false
 repo: padiazg/go-crap
 weight: 20
-stars: 19
+stars: 26
 combined: 884.60
 average: 4.66
 funcs: 190
@@ -21,8 +21,8 @@ A CLI tool that calculates the CRAP score (cyclomatic complexity x coverage) for
 </div>
 
 - **Repository**: github.com/padiazg/go-crap
-- **Commit**: `e38ff206b7f1920299e779d62a58ed094a261531` · HEAD up to date
-- **Analyzed**: 2026-08-24T01:49:29-03:00 (6.7s)
+- **Commit**: `fdd4a05c044fb409aa62cbe84a5c3b1e8f692861` · HEAD up to date
+- **Analyzed**: 2026-10-12T19:01:09-03:00 (13.9s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,13 +33,14 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0"/><circle cx="3.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="3.0" y="10" font-size="9" fill="#555" text-anchor="end">885</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">885</text></svg>
 
 ## History
 
 | Date | Commit | Combined | Average | Funcs | Exceeded | Engine |
 |------|--------|----------|---------|-------|----------|--------|
 | 2026-08-24 | `e38ff20` | 884.60 | 4.66 | 190 | 0 | local |
+| 2026-10-12 | `fdd4a05` | 884.60 | 4.66 | 190 | 0 | local |
 
 ## Top offenders
 

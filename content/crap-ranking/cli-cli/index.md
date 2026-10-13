@@ -1,15 +1,15 @@
 ---
 title: "cli/cli"
-date: 2026-08-30
+date: 2026-10-12
 slug: cli-cli
 tags: ["crap", "report"]
 draft: false
 repo: cli/cli
-weight: 10
-stars: 46073
-combined: 47904.58
-average: 13.36
-funcs: 3587
+weight: 11
+stars: 46669
+combined: 42890.91
+average: 11.72
+funcs: 3660
 toc: false
 ShowToc: false
 ---
@@ -21,8 +21,8 @@ GitHub’s official command line tool
 </div>
 
 - **Repository**: github.com/cli/cli
-- **Commit**: `40b742f76d68e6b1f472942a6368db4b5d765641` · HEAD up to date
-- **Analyzed**: 2026-08-30T17:41:45-03:00 (68.2s)
+- **Commit**: `54a671d9a8f8c7a785c132d6f6a25375dc96acc1` · HEAD up to date
+- **Analyzed**: 2026-10-12T18:50:49-03:00 (159.5s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.0 25.8,3.0 48.6,6.5 71.4,22.2 94.2,22.1 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">47905</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.0 15.7,3.0 28.3,3.6 41.0,6.1 53.7,6.0 66.3,7.1 79.0,10.2 91.7,10.4 104.3,11.1 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">42891</text></svg>
 
 ## History
 
@@ -45,18 +45,22 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-26 | `606cda4` | 48153.35 | 13.40 | 3593 | 201 | local |
 | 2026-08-27 | `d76da60` | 48156.35 | 13.40 | 3593 | 201 | local |
 | 2026-08-30 | `40b742f` | 47904.58 | 13.36 | 3587 | 199 | local |
+| 2026-09-02 | `0da5ee8` | 47199.08 | 13.15 | 3589 | 200 | local |
+| 2026-09-02 | `adda317` | 47158.67 | 13.05 | 3614 | 199 | local |
+| 2026-09-04 | `cba9646` | 47007.07 | 12.99 | 3620 | 198 | local |
+| 2026-10-12 | `54a671d` | 42890.91 | 11.72 | 3660 | 189 | local |
 
 ## Top offenders
 
 | Crap | Complexity | Coverage | Function | File |
 |----------|------|------|------------|----------|
-| 2162.00 | 46 | 0.0% | `Main` | [internal/ghcmd/cmd.go:52](https://github.com/cli/cli/blob/trunk/internal/ghcmd/cmd.go#L52) |
-| 1482.00 | 38 | 0.0% | `ExtBrowse` | [pkg/cmd/extension/browse/browse.go:374](https://github.com/cli/cli/blob/trunk/pkg/cmd/extension/browse/browse.go#L374) |
-| 1406.00 | 37 | 0.0% | `gardenRun` | [pkg/cmd/repo/garden/garden.go:125](https://github.com/cli/cli/blob/trunk/pkg/cmd/repo/garden/garden.go#L125) |
+| 1980.00 | 44 | 0.0% | `Main` | [internal/ghcmd/cmd.go:51](https://github.com/cli/cli/blob/trunk/internal/ghcmd/cmd.go#L51) |
 | 992.00 | 31 | 0.0% | `Discussion.ExportData` | [pkg/cmd/discussion/client/types.go:34](https://github.com/cli/cli/blob/trunk/pkg/cmd/discussion/client/types.go#L34) |
 | 812.00 | 28 | 0.0% | `creditsRun` | [pkg/cmd/repo/credits/credits.go:115](https://github.com/cli/cli/blob/trunk/pkg/cmd/repo/credits/credits.go#L115) |
-| 756.00 | 27 | 0.0% | `rootHelpFunc` | [pkg/cmd/root/help.go:90](https://github.com/cli/cli/blob/trunk/pkg/cmd/root/help.go#L90) |
 | 702.00 | 26 | 0.0% | `EditFieldsSurvey` | [pkg/cmd/pr/shared/editable.go:372](https://github.com/cli/cli/blob/trunk/pkg/cmd/pr/shared/editable.go#L372) |
 | 650.00 | 25 | 0.0% | `RepositoryGraphQL` | [api/query_builder.go:555](https://github.com/cli/cli/blob/trunk/api/query_builder.go#L555) |
 | 650.00 | 25 | 0.0% | `CreatePullRequest` | [api/queries_pr.go:490](https://github.com/cli/cli/blob/trunk/api/queries_pr.go#L490) |
 | 650.00 | 25 | 0.0% | `FetchOptions` | [pkg/cmd/pr/shared/editable.go:517](https://github.com/cli/cli/blob/trunk/pkg/cmd/pr/shared/editable.go#L517) |
+| 600.00 | 24 | 0.0% | `*Session.ExportData` | [pkg/cmd/agent-task/capi/sessions.go:122](https://github.com/cli/cli/blob/trunk/pkg/cmd/agent-task/capi/sessions.go#L122) |
+| 599.86 | 37 | 25.6% | `IssueGraphQL` | [api/query_builder.go:385](https://github.com/cli/cli/blob/trunk/api/query_builder.go#L385) |
+| 552.00 | 23 | 0.0% | `GetRuns` | [pkg/cmd/run/shared/shared.go:368](https://github.com/cli/cli/blob/trunk/pkg/cmd/run/shared/shared.go#L368) |

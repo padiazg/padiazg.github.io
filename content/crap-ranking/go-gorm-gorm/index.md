@@ -1,14 +1,14 @@
 ---
 title: "go/gorm/gorm"
-date: 2026-08-23
+date: 2026-10-12
 slug: go-gorm-gorm
 tags: ["crap", "report"]
 draft: false
 repo: go-gorm/gorm
 weight: 9
-stars: 39921
-combined: 61984.86
-average: 109.71
+stars: 39981
+combined: 61975.68
+average: 109.69
 funcs: 565
 toc: false
 ShowToc: false
@@ -21,8 +21,8 @@ The fantastic ORM library for Golang, aims to be developer friendly
 </div>
 
 - **Repository**: github.com/go-gorm/gorm
-- **Commit**: `1d6ce99528060be18a42be09aca8d39efcb47f28` · HEAD up to date
-- **Analyzed**: 2026-08-23T23:59:12-03:00 (314ms)
+- **Commit**: `b3d3bf219f0283f8e2e985bac509cb643170f729` · HEAD up to date
+- **Analyzed**: 2026-10-12T18:53:30-03:00 (53.3s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,13 +33,14 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0"/><circle cx="3.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="3.0" y="10" font-size="9" fill="#555" text-anchor="end">61985</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,3.0 117.0,29.0"/><circle cx="117.0" cy="29.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">61976</text></svg>
 
 ## History
 
 | Date | Commit | Combined | Average | Funcs | Exceeded | Engine |
 |------|--------|----------|---------|-------|----------|--------|
 | 2026-08-23 | `1d6ce99` | 61984.86 | 109.71 | 565 | 88 | local |
+| 2026-10-12 | `b3d3bf2` | 61975.68 | 109.69 | 565 | 88 | local |
 
 ## Top offenders
 

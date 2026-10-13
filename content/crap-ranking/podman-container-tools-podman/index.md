@@ -1,15 +1,15 @@
 ---
 title: "podman/container/tools/podman"
-date: 2026-08-30
+date: 2026-10-12
 slug: podman-container-tools-podman
 tags: ["crap", "report"]
 draft: false
 repo: podman-container-tools/podman
 weight: 2
-stars: 32706
-combined: 583069.79
-average: 95.60
-funcs: 6099
+stars: 33029
+combined: 595216.90
+average: 96.14
+funcs: 6191
 toc: false
 ShowToc: false
 ---
@@ -21,8 +21,8 @@ Podman: A tool for managing OCI containers and pods.
 </div>
 
 - **Repository**: github.com/podman-container-tools/podman
-- **Commit**: `7a6c0a05045dd78eb368438d7e21c985b4aa661c` · HEAD up to date
-- **Analyzed**: 2026-08-30T17:59:03-03:00 (600.7s)
+- **Commit**: `b17e7db1d3ad0c6ca56e292aa95273facb80f8ad` · HEAD up to date
+- **Analyzed**: 2026-10-12T19:12:40-03:00 (601.9s)
 - **Engine**: local · go-crap 0.5.1
 
 ## go-crap command
@@ -33,7 +33,7 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 
 ## Trend
 
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 22.0,27.9 41.0,3.5 60.0,3.4 79.0,3.1 98.0,3.0 117.0,3.0"/><circle cx="117.0" cy="3.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">583070</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" role="img" aria-label="CRAP score trend"><polyline fill="none" stroke="#e53e3e" stroke-width="1.5" points="3.0,29.0 17.2,28.2 31.5,11.7 45.8,11.7 60.0,11.4 74.2,11.4 88.5,11.4 102.8,7.9 117.0,3.0"/><circle cx="117.0" cy="3.0" r="2.5" fill="#e53e3e"/><text x="117.0" y="10" font-size="9" fill="#555" text-anchor="end">595217</text></svg>
 
 ## History
 
@@ -46,18 +46,20 @@ go-crap scan --format json --no-progress --verbose -o tmp.json --coverage-profil
 | 2026-08-26 | `a1c4f9c` | 583020.11 | 95.77 | 6088 | 1343 | local |
 | 2026-08-27 | `21326bf` | 583034.11 | 95.77 | 6088 | 1343 | local |
 | 2026-08-30 | `7a6c0a0` | 583069.79 | 95.60 | 6099 | 1343 | local |
+| 2026-09-02 | `f9d0a4d` | 588095.03 | 96.27 | 6109 | 1347 | local |
+| 2026-10-12 | `b17e7db` | 595216.90 | 96.14 | 6191 | 1357 | local |
 
 ## Top offenders
 
 | Crap | Complexity | Coverage | Function | File |
 |----------|------|------|------------|----------|
-| 37830.00 | 194 | 0.0% | `FillOutSpecGen` | [pkg/specgenutil/specgen.go:324](https://github.com/podman-container-tools/podman/blob/main/pkg/specgenutil/specgen.go#L324) |
-| 20306.00 | 142 | 0.0% | `*Container.generateSpec` | [libpod/container_internal_common.go:235](https://github.com/podman-container-tools/podman/blob/main/libpod/container_internal_common.go#L235) |
-| 16770.00 | 129 | 0.0% | `*ContainerEngine.playKubePod` | [pkg/domain/infra/abi/play.go:684](https://github.com/podman-container-tools/podman/blob/main/pkg/domain/infra/abi/play.go#L684) |
+| 39800.00 | 199 | 0.0% | `FillOutSpecGen` | [pkg/specgenutil/specgen.go:334](https://github.com/podman-container-tools/podman/blob/main/pkg/specgenutil/specgen.go#L334) |
+| 24806.00 | 157 | 0.0% | `*Container.generateSpec` | [libpod/container_internal_common.go:235](https://github.com/podman-container-tools/podman/blob/main/libpod/container_internal_common.go#L235) |
+| 16770.00 | 129 | 0.0% | `*ContainerEngine.playKubePod` | [pkg/domain/infra/abi/play.go:730](https://github.com/podman-container-tools/podman/blob/main/pkg/domain/infra/abi/play.go#L730) |
 | 13806.00 | 117 | 0.0% | `prepareParams` | [pkg/bindings/images/build.go:135](https://github.com/podman-container-tools/podman/blob/main/pkg/bindings/images/build.go#L135) |
-| 10920.00 | 104 | 0.0% | `ToSpecGen` | [pkg/specgen/generate/kube/kube.go:208](https://github.com/podman-container-tools/podman/blob/main/pkg/specgen/generate/kube/kube.go#L208) |
-| 10302.00 | 101 | 0.0% | `*Container.restore` | [libpod/container_internal_common.go:1557](https://github.com/podman-container-tools/podman/blob/main/libpod/container_internal_common.go#L1557) |
-| 10100.00 | 100 | 0.0% | `createContainerOptions` | [pkg/specgen/generate/container_create.go:373](https://github.com/podman-container-tools/podman/blob/main/pkg/specgen/generate/container_create.go#L373) |
+| 10920.00 | 104 | 0.0% | `ToSpecGen` | [pkg/specgen/generate/kube/kube.go:209](https://github.com/podman-container-tools/podman/blob/main/pkg/specgen/generate/kube/kube.go#L209) |
+| 10302.00 | 101 | 0.0% | `*Container.restore` | [libpod/container_internal_common.go:1617](https://github.com/podman-container-tools/podman/blob/main/libpod/container_internal_common.go#L1617) |
+| 10100.00 | 100 | 0.0% | `createContainerOptions` | [pkg/specgen/generate/container_create.go:383](https://github.com/podman-container-tools/podman/blob/main/pkg/specgen/generate/container_create.go#L383) |
 | 9702.00 | 98 | 0.0% | `*Runtime.setupContainer` | [libpod/runtime_ctr.go:245](https://github.com/podman-container-tools/podman/blob/main/libpod/runtime_ctr.go#L245) |
-| 9506.00 | 97 | 0.0% | `buildFlagsWrapperToOptions` | [cmd/podman/common/build.go:311](https://github.com/podman-container-tools/podman/blob/main/cmd/podman/common/build.go#L311) |
+| 9506.00 | 97 | 0.0% | `buildFlagsWrapperToOptions` | [cmd/podman/common/build.go:316](https://github.com/podman-container-tools/podman/blob/main/cmd/podman/common/build.go#L316) |
 | 9506.00 | 97 | 0.0% | `namespaceOptions` | [pkg/specgen/generate/namespaces.go:124](https://github.com/podman-container-tools/podman/blob/main/pkg/specgen/generate/namespaces.go#L124) |
